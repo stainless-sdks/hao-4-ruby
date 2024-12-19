@@ -4,14 +4,14 @@ require_relative "../../test_helper"
 
 class Unit::Test::Resources::Statements::HTMLTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_retrieve
-    response = @hao_4.statements.html.retrieve("statementId")
+    response = @unit.statements.html.retrieve("statementId")
 
     assert_pattern do
       response => String

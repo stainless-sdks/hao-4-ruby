@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create_required_params
-    response = @hao_4.check_payments.create(
+    response = @unit.check_payments.create(
       data: {
         "attributes" => {
           "amount" => 1,
@@ -42,7 +42,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.check_payments.retrieve("checkPaymentId")
+    response = @unit.check_payments.retrieve("checkPaymentId")
 
     assert_pattern do
       response => Unit::Models::CheckPaymentRetrieveResponse
@@ -50,7 +50,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.check_payments.list
+    response = @unit.check_payments.list
 
     assert_pattern do
       response => Unit::Models::CheckPaymentListResponse
@@ -58,7 +58,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_approve
-    response = @hao_4.check_payments.approve("checkPaymentId")
+    response = @unit.check_payments.approve("checkPaymentId")
 
     assert_pattern do
       response => Unit::Models::CheckPaymentApproveResponse
@@ -66,7 +66,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_back
-    response = @hao_4.check_payments.back("checkPaymentId")
+    response = @unit.check_payments.back("checkPaymentId")
 
     assert_pattern do
       response => Unit::Unknown
@@ -74,7 +74,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_cancel
-    response = @hao_4.check_payments.cancel("checkPaymentId")
+    response = @unit.check_payments.cancel("checkPaymentId")
 
     assert_pattern do
       response => Unit::Models::CheckPaymentCancelResponse
@@ -82,7 +82,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_front
-    response = @hao_4.check_payments.front("checkPaymentId")
+    response = @unit.check_payments.front("checkPaymentId")
 
     assert_pattern do
       response => Unit::Unknown
@@ -90,7 +90,7 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
   end
 
   def test_return_
-    response = @hao_4.check_payments.return_("checkPaymentId")
+    response = @unit.check_payments.return_("checkPaymentId")
 
     assert_pattern do
       response => Unit::Models::CheckPaymentReturnResponse

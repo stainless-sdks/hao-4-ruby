@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::ApplicationFormsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create
-    response = @hao_4.application_forms.create
+    response = @unit.application_forms.create
 
     assert_pattern do
       response => Unit::Models::ApplicationFormCreateResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::ApplicationFormsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.application_forms.retrieve("applicationFormId")
+    response = @unit.application_forms.retrieve("applicationFormId")
 
     assert_pattern do
       response => Unit::Models::ApplicationFormRetrieveResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::ApplicationFormsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.application_forms.list
+    response = @unit.application_forms.list
 
     assert_pattern do
       response => Unit::Models::ApplicationFormListResponse

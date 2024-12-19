@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create_required_params
-    response = @hao_4.recurring_payments.create(
+    response = @unit.recurring_payments.create(
       data: {
         "attributes" => {
           "amount" => 1,
@@ -32,7 +32,7 @@ class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.recurring_payments.retrieve("paymentId")
+    response = @unit.recurring_payments.retrieve("paymentId")
 
     assert_pattern do
       response => Unit::Models::RecurringPaymentRetrieveResponse
@@ -40,7 +40,7 @@ class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.recurring_payments.list
+    response = @unit.recurring_payments.list
 
     assert_pattern do
       response => Unit::Models::RecurringPaymentListResponse
@@ -48,7 +48,7 @@ class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
   end
 
   def test_disable_required_params
-    response = @hao_4.recurring_payments.disable("paymentId", body: {})
+    response = @unit.recurring_payments.disable("paymentId", body: {})
 
     assert_pattern do
       response => Unit::Models::RecurringPaymentDisableResponse
@@ -56,7 +56,7 @@ class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
   end
 
   def test_enable_required_params
-    response = @hao_4.recurring_payments.enable("paymentId", body: {})
+    response = @unit.recurring_payments.enable("paymentId", body: {})
 
     assert_pattern do
       response => Unit::Models::RecurringPaymentEnableResponse

@@ -16,11 +16,11 @@ before making any information public.
 ## Reporting Non-SDK Related Security Issues
 
 If you encounter security issues that are not directly related to SDKs but pertain to the services
-or products provided by Hao 4 please follow the respective company's security reporting guidelines.
+or products provided by Unit please follow the respective company's security reporting guidelines.
 
-### Hao 4 Terms and Policies
+### Unit Terms and Policies
 
-Please contact dev-feedback@hao-4.com for any questions or concerns regarding security of our services.
+Please contact dev-feedback@hao-test.com for any questions or concerns regarding security of our services.
 
 ---
 

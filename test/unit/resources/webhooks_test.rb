@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::WebhooksTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create
-    response = @hao_4.webhooks.create
+    response = @unit.webhooks.create
 
     assert_pattern do
       response => Unit::Models::WebhookCreateResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::WebhooksTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.webhooks.retrieve("webhookId")
+    response = @unit.webhooks.retrieve("webhookId")
 
     assert_pattern do
       response => Unit::Models::WebhookRetrieveResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::WebhooksTest < Minitest::Test
   end
 
   def test_update
-    response = @hao_4.webhooks.update("webhookId")
+    response = @unit.webhooks.update("webhookId")
 
     assert_pattern do
       response => Unit::Models::WebhookUpdateResponse
@@ -35,7 +35,7 @@ class Unit::Test::Resources::WebhooksTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.webhooks.list
+    response = @unit.webhooks.list
 
     assert_pattern do
       response => Unit::Models::WebhookListResponse
@@ -43,7 +43,7 @@ class Unit::Test::Resources::WebhooksTest < Minitest::Test
   end
 
   def test_disable
-    response = @hao_4.webhooks.disable("webhookId")
+    response = @unit.webhooks.disable("webhookId")
 
     assert_pattern do
       response => Unit::Models::WebhookDisableResponse
@@ -51,7 +51,7 @@ class Unit::Test::Resources::WebhooksTest < Minitest::Test
   end
 
   def test_enable
-    response = @hao_4.webhooks.enable("webhookId")
+    response = @unit.webhooks.enable("webhookId")
 
     assert_pattern do
       response => Unit::Models::WebhookEnableResponse

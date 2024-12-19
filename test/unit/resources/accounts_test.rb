@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::AccountsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create_required_params
-    response = @hao_4.accounts.create(data: {})
+    response = @unit.accounts.create(data: {})
 
     assert_pattern do
       response => Unit::Models::AccountCreateResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.accounts.retrieve("accountId")
+    response = @unit.accounts.retrieve("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountRetrieveResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_update_required_params
-    response = @hao_4.accounts.update("accountId", data: {"attributes" => {}, "type" => "depositAccount"})
+    response = @unit.accounts.update("accountId", data: {"attributes" => {}, "type" => "depositAccount"})
 
     assert_pattern do
       response => Unit::Models::AccountUpdateResponse
@@ -35,7 +35,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.accounts.list
+    response = @unit.accounts.list
 
     assert_pattern do
       response => Unit::Models::AccountListResponse
@@ -43,7 +43,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_activate_daca
-    response = @hao_4.accounts.activate_daca("accountId")
+    response = @unit.accounts.activate_daca("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountActivateDacaResponse
@@ -51,7 +51,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_close
-    response = @hao_4.accounts.close("accountId")
+    response = @unit.accounts.close("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountCloseResponse
@@ -59,7 +59,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_deactivate_daca
-    response = @hao_4.accounts.deactivate_daca("accountId")
+    response = @unit.accounts.deactivate_daca("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountDeactivateDacaResponse
@@ -67,7 +67,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_enter_daca
-    response = @hao_4.accounts.enter_daca("accountId")
+    response = @unit.accounts.enter_daca("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountEnterDacaResponse
@@ -75,7 +75,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_freeze_
-    response = @hao_4.accounts.freeze_("accountId")
+    response = @unit.accounts.freeze_("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountFreezeResponse
@@ -83,7 +83,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_reopen
-    response = @hao_4.accounts.reopen("accountId")
+    response = @unit.accounts.reopen("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountReopenResponse
@@ -91,7 +91,7 @@ class Unit::Test::Resources::AccountsTest < Minitest::Test
   end
 
   def test_unfreeze
-    response = @hao_4.accounts.unfreeze("accountId")
+    response = @unit.accounts.unfreeze("accountId")
 
     assert_pattern do
       response => Unit::Models::AccountUnfreezeResponse

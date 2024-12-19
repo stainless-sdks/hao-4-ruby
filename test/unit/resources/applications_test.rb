@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::ApplicationsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create_required_params
-    response = @hao_4.applications.create(
+    response = @unit.applications.create(
       data: {
         "attributes" => {
           "address" => {
@@ -36,7 +36,7 @@ class Unit::Test::Resources::ApplicationsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.applications.retrieve("applicationId")
+    response = @unit.applications.retrieve("applicationId")
 
     assert_pattern do
       response => Unit::Models::ApplicationRetrieveResponse
@@ -44,7 +44,7 @@ class Unit::Test::Resources::ApplicationsTest < Minitest::Test
   end
 
   def test_update_required_params
-    response = @hao_4.applications.update(
+    response = @unit.applications.update(
       "applicationId",
       data: {"attributes" => {}, "type" => "businessApplication"}
     )
@@ -55,7 +55,7 @@ class Unit::Test::Resources::ApplicationsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.applications.list
+    response = @unit.applications.list
 
     assert_pattern do
       response => Unit::Models::ApplicationListResponse
@@ -63,7 +63,7 @@ class Unit::Test::Resources::ApplicationsTest < Minitest::Test
   end
 
   def test_cancel
-    response = @hao_4.applications.cancel("applicationId")
+    response = @unit.applications.cancel("applicationId")
 
     assert_pattern do
       response => Unit::Models::ApplicationCancelResponse
