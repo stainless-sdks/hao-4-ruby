@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::CounterpartiesTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create
-    response = @hao_4.counterparties.create
+    response = @unit.counterparties.create
 
     assert_pattern do
       response => Unit::Models::CounterpartyCreateResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::CounterpartiesTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.counterparties.retrieve("counterpartyId")
+    response = @unit.counterparties.retrieve("counterpartyId")
 
     assert_pattern do
       response => Unit::Models::CounterpartyRetrieveResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::CounterpartiesTest < Minitest::Test
   end
 
   def test_update_required_params
-    response = @hao_4.counterparties.update(
+    response = @unit.counterparties.update(
       "counterpartyId",
       data: {"attributes" => {}, "type" => "counterparty"}
     )
@@ -38,7 +38,7 @@ class Unit::Test::Resources::CounterpartiesTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.counterparties.list
+    response = @unit.counterparties.list
 
     assert_pattern do
       response => Unit::Models::CounterpartyListResponse
@@ -46,7 +46,7 @@ class Unit::Test::Resources::CounterpartiesTest < Minitest::Test
   end
 
   def test_delete
-    response = @hao_4.counterparties.delete("counterpartyId")
+    response = @unit.counterparties.delete("counterpartyId")
 
     assert_pattern do
       response => nil

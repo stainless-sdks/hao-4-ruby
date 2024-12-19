@@ -72,72 +72,72 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_default_request_default_retry_attempts
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
     end
 
     assert_equal(3, requester.attempts.length)
   end
 
   def test_client_given_request_default_retry_attempts
-    hao_4 = Unit::Client.new(
+    unit = Unit::Client.new(
       base_url: "http://localhost:4010",
       bearer_token: "My Bearer Token",
       max_retries: 3
     )
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
     end
 
     assert_equal(4, requester.attempts.length)
   end
 
   def test_client_default_request_given_retry_attempts
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", max_retries: 3)
+      unit.stop_payments.retrieve("stopPaymentId", max_retries: 3)
     end
 
     assert_equal(4, requester.attempts.length)
   end
 
   def test_client_given_request_given_retry_attempts
-    hao_4 = Unit::Client.new(
+    unit = Unit::Client.new(
       base_url: "http://localhost:4010",
       bearer_token: "My Bearer Token",
       max_retries: 3
     )
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", max_retries: 4)
+      unit.stop_payments.retrieve("stopPaymentId", max_retries: 4)
     end
 
     assert_equal(5, requester.attempts.length)
   end
 
   def test_client_retry_after_seconds
-    hao_4 = Unit::Client.new(
+    unit = Unit::Client.new(
       base_url: "http://localhost:4010",
       bearer_token: "My Bearer Token",
       max_retries: 1
     )
     requester = MockRequester.new(500, {"retry-after" => "1.3"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
     end
 
     assert_equal(2, requester.attempts.length)
@@ -145,17 +145,17 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_retry_after_date
-    hao_4 = Unit::Client.new(
+    unit = Unit::Client.new(
       base_url: "http://localhost:4010",
       bearer_token: "My Bearer Token",
       max_retries: 1
     )
     requester = MockRequester.new(500, {"retry-after" => (Time.now + 10).httpdate}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
       Thread.current.thread_variable_set(:time_now, Time.now)
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
       Thread.current.thread_variable_set(:time_now, nil)
     end
 
@@ -164,16 +164,16 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_retry_after_ms
-    hao_4 = Unit::Client.new(
+    unit = Unit::Client.new(
       base_url: "http://localhost:4010",
       bearer_token: "My Bearer Token",
       max_retries: 1
     )
     requester = MockRequester.new(500, {"retry-after-ms" => "1300"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
     end
 
     assert_equal(2, requester.attempts.length)
@@ -181,12 +181,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_retry_count_header
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId")
+      unit.stop_payments.retrieve("stopPaymentId")
     end
 
     retry_count_headers = requester.attempts.map { |a| a[:headers]["x-stainless-retry-count"] }
@@ -194,12 +194,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_omit_retry_count_header
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => nil})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => nil})
     end
 
     retry_count_headers = requester.attempts.map { |a| a[:headers]["x-stainless-retry-count"] }
@@ -207,12 +207,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_overwrite_retry_count_header
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(500, {}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => "42"})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => "42"})
     end
 
     retry_count_headers = requester.attempts.map { |a| a[:headers]["x-stainless-retry-count"] }
@@ -220,12 +220,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_redirect_307
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(307, {"location" => "/redirected"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {})
     end
 
     assert_equal("/redirected", requester.attempts.last[:url].path)
@@ -238,12 +238,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_redirect_303
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(303, {"location" => "/redirected"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {})
     end
 
     assert_equal("/redirected", requester.attempts.last[:url].path)
@@ -253,12 +253,12 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_redirect_auth_keep_same_origin
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(307, {"location" => "/redirected"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
     end
 
     assert_equal(
@@ -268,22 +268,22 @@ class UnitTest < Minitest::Test
   end
 
   def test_client_redirect_auth_strip_cross_origin
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(307, {"location" => "https://example.com/redirected"}, {})
-    hao_4.requester = requester
+    unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      hao_4.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
+      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
     end
 
     assert_nil(requester.attempts.last[:headers]["Authorization"])
   end
 
   def test_default_headers
-    hao_4 = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
+    unit = Unit::Client.new(base_url: "http://localhost:4010", bearer_token: "My Bearer Token")
     requester = MockRequester.new(200, {}, {})
-    hao_4.requester = requester
-    hao_4.stop_payments.retrieve("stopPaymentId")
+    unit.requester = requester
+    unit.stop_payments.retrieve("stopPaymentId")
     headers = requester.attempts.first[:headers]
 
     refute_empty(headers["x-stainless-lang"])

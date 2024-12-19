@@ -5,9 +5,9 @@ require_relative "lib/unit/version"
 Gem::Specification.new do |s|
   s.name = "unit"
   s.version = Unit::VERSION
-  s.summary = "Ruby library to access the Hao 4 API"
-  s.authors = ["Hao 4"]
-  s.email = "dev-feedback@hao-4.com"
+  s.summary = "Ruby library to access the Unit API"
+  s.authors = ["Unit"]
+  s.email = "dev-feedback@hao-test.com"
   s.files = Dir["lib/**/*.rb"]
   s.extra_rdoc_files = ["README.md"]
   s.required_ruby_version = ">= 3.0.0"

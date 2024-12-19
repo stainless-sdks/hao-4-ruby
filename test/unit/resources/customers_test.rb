@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::CustomersTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_retrieve
-    response = @hao_4.customers.retrieve("customerId")
+    response = @unit.customers.retrieve("customerId")
 
     assert_pattern do
       response => Unit::Models::CustomerRetrieveResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::CustomersTest < Minitest::Test
   end
 
   def test_update
-    response = @hao_4.customers.update("customerId")
+    response = @unit.customers.update("customerId")
 
     assert_pattern do
       response => Unit::Models::CustomerUpdateResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::CustomersTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.customers.list
+    response = @unit.customers.list
 
     assert_pattern do
       response => Unit::Models::CustomerListResponse
@@ -35,7 +35,7 @@ class Unit::Test::Resources::CustomersTest < Minitest::Test
   end
 
   def test_archive
-    response = @hao_4.customers.archive("customerId")
+    response = @unit.customers.archive("customerId")
 
     assert_pattern do
       response => Unit::Models::CustomerArchiveResponse

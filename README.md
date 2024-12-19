@@ -1,6 +1,6 @@
-# Hao 4 Ruby API library
+# Unit Ruby API library
 
-The Hao 4 Ruby library provides convenient access to the Hao 4 REST API from any Ruby 3.0+
+The Unit Ruby library provides convenient access to the Unit REST API from any Ruby 3.0+
 application.
 
 It is generated with [Stainless](https://www.stainlessapi.com/).
@@ -9,7 +9,7 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 
 Documentation for the most recent version of this gem can be found [on RubyDoc](https://rubydoc.info/github/stainless-sdks/hao-4-ruby).
 
-The underlying REST API documentation can be found on [docs.hao-4.com](https://docs.hao-4.com).
+The underlying REST API documentation can be found on [docs.hao-test.com](https://docs.hao-test.com).
 
 ## Installation
 
@@ -38,11 +38,11 @@ bundle update unit
 ```ruby
 require "unit"
 
-hao_4 = Unit::Client.new(
+unit = Unit::Client.new(
   bearer_token: "My Bearer Token" # defaults to ENV["BEARER_TOKEN"]
 )
 
-stop_payment = hao_4.stop_payments.retrieve("REPLACE_ME")
+stop_payment = unit.stop_payments.retrieve("REPLACE_ME")
 
 puts(stop_payment.data)
 ```
@@ -55,7 +55,7 @@ non-success status code (i.e., 4xx or 5xx response), a subclass of
 
 ```ruby
 begin
-  stop_payment = hao_4.stop_payments.retrieve("REPLACE_ME")
+  stop_payment = unit.stop_payments.retrieve("REPLACE_ME")
 rescue Unit::Error => e
   puts(e.code) # 400
 end
@@ -88,12 +88,12 @@ You can use the `max_retries` option to configure or disable this:
 
 ```ruby
 # Configure the default for all requests:
-hao_4 = Unit::Client.new(
+unit = Unit::Client.new(
   max_retries: 0 # default is 2
 )
 
 # Or, configure per-request:
-hao_4.stop_payments.retrieve("REPLACE_ME", max_retries: 5)
+unit.stop_payments.retrieve("REPLACE_ME", max_retries: 5)
 ```
 
 ### Timeouts
@@ -106,12 +106,12 @@ You can use the `timeout` option to configure or disable this:
 
 ```ruby
 # Configure the default for all requests:
-hao_4 = Unit::Client.new(
+unit = Unit::Client.new(
   timeout: nil # default is 60
 )
 
 # Or, configure per-request:
-hao_4.stop_payments.retrieve("REPLACE_ME", timeout: 5)
+unit.stop_payments.retrieve("REPLACE_ME", timeout: 5)
 ```
 
 ## Versioning

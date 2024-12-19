@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::CardsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_create
-    response = @hao_4.cards.create
+    response = @unit.cards.create
 
     assert_pattern do
       response => Unit::Models::CardCreateResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_retrieve
-    response = @hao_4.cards.retrieve("cardId")
+    response = @unit.cards.retrieve("cardId")
 
     assert_pattern do
       response => Unit::Models::CardRetrieveResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_update_required_params
-    response = @hao_4.cards.update("cardId", data: {"attributes" => {}, "type" => "individualDebitCard"})
+    response = @unit.cards.update("cardId", data: {"attributes" => {}, "type" => "individualDebitCard"})
 
     assert_pattern do
       response => Unit::Models::CardUpdateResponse
@@ -35,7 +35,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.cards.list
+    response = @unit.cards.list
 
     assert_pattern do
       response => Unit::Models::CardListResponse
@@ -43,7 +43,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_close
-    response = @hao_4.cards.close("cardId")
+    response = @unit.cards.close("cardId")
 
     assert_pattern do
       response => Unit::Models::CardCloseResponse
@@ -51,7 +51,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_freeze_
-    response = @hao_4.cards.freeze_("cardId")
+    response = @unit.cards.freeze_("cardId")
 
     assert_pattern do
       response => Unit::Models::CardFreezeResponse
@@ -59,7 +59,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_replace_required_params
-    response = @hao_4.cards.replace(
+    response = @unit.cards.replace(
       "cardId",
       data: {
         "attributes" => {
@@ -81,7 +81,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_report_lost
-    response = @hao_4.cards.report_lost("cardId")
+    response = @unit.cards.report_lost("cardId")
 
     assert_pattern do
       response => Unit::Models::CardReportLostResponse
@@ -89,7 +89,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_report_stolen
-    response = @hao_4.cards.report_stolen("cardId")
+    response = @unit.cards.report_stolen("cardId")
 
     assert_pattern do
       response => Unit::Models::CardReportStolenResponse
@@ -97,7 +97,7 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
   end
 
   def test_unfreeze
-    response = @hao_4.cards.unfreeze("cardId")
+    response = @unit.cards.unfreeze("cardId")
 
     assert_pattern do
       response => Unit::Models::CardUnfreezeResponse

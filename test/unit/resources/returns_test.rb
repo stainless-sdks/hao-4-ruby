@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::ReturnsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_return__required_params
-    response = @hao_4.returns.return_(
+    response = @unit.returns.return_(
       "transactionId",
       data: {
         "attributes" => {"reason" => "InsufficientFunds"},

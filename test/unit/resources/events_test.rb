@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::EventsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_retrieve
-    response = @hao_4.events.retrieve("eventId")
+    response = @unit.events.retrieve("eventId")
 
     assert_pattern do
       response => Unit::Models::EventRetrieveResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::EventsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.events.list
+    response = @unit.events.list
 
     assert_pattern do
       response => Unit::Models::EventListResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::EventsTest < Minitest::Test
   end
 
   def test_fire
-    response = @hao_4.events.fire("eventId")
+    response = @unit.events.fire("eventId")
 
     assert_pattern do
       response => Unit::Models::EventFireResponse

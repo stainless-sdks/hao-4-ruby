@@ -4,14 +4,14 @@ require_relative "../test_helper"
 
 class Unit::Test::Resources::AuthorizationRequestsTest < Minitest::Test
   def setup
-    @hao_4 = Unit::Client.new(
+    @unit = Unit::Client.new(
       base_url: ENV.fetch("TEST_API_BASE_URL", "http://localhost:4010"),
       bearer_token: "My Bearer Token"
     )
   end
 
   def test_retrieve
-    response = @hao_4.authorization_requests.retrieve("authorizationId")
+    response = @unit.authorization_requests.retrieve("authorizationId")
 
     assert_pattern do
       response => Unit::Models::AuthorizationRequestRetrieveResponse
@@ -19,7 +19,7 @@ class Unit::Test::Resources::AuthorizationRequestsTest < Minitest::Test
   end
 
   def test_list
-    response = @hao_4.authorization_requests.list
+    response = @unit.authorization_requests.list
 
     assert_pattern do
       response => Unit::Models::AuthorizationRequestListResponse
@@ -27,7 +27,7 @@ class Unit::Test::Resources::AuthorizationRequestsTest < Minitest::Test
   end
 
   def test_approve
-    response = @hao_4.authorization_requests.approve("authorizationId")
+    response = @unit.authorization_requests.approve("authorizationId")
 
     assert_pattern do
       response => Unit::Models::AuthorizationRequestApproveResponse
@@ -35,7 +35,7 @@ class Unit::Test::Resources::AuthorizationRequestsTest < Minitest::Test
   end
 
   def test_decline
-    response = @hao_4.authorization_requests.decline("authorizationId")
+    response = @unit.authorization_requests.decline("authorizationId")
 
     assert_pattern do
       response => Unit::Models::AuthorizationRequestDeclineResponse
