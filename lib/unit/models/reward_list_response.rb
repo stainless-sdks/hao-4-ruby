@@ -102,6 +102,8 @@ module Unit
           class Status < Unit::Enum
             REJECTED = :Rejected
             SENT = :Sent
+
+            finalize!
           end
         end
 
@@ -215,6 +217,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end
@@ -307,6 +311,8 @@ module Unit
                 ACCOUNT = :account
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
+
+                finalize!
               end
             end
           end
@@ -427,6 +433,8 @@ module Unit
               # ```
               class Type < Unit::Enum
                 TRANSACTION = :transaction
+
+                finalize!
               end
             end
           end
@@ -442,6 +450,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           REWARD = :reward
+
+          finalize!
         end
       end
     end

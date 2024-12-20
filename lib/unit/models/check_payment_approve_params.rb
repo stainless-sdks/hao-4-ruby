@@ -38,6 +38,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ADDITIONAL_VERIFICATION = :additionalVerification
+
+          finalize!
         end
       end
     end

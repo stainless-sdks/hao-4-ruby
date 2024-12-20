@@ -65,6 +65,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CUSTOMER_BEARER_TOKEN = :customerBearerToken
+
+            finalize!
           end
         end
       end

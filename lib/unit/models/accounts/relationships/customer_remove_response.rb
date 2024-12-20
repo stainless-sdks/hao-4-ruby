@@ -223,6 +223,8 @@ module Unit
                 OPEN = :Open
                 CLOSED = :Closed
                 FROZEN = :Frozen
+
+                finalize!
               end
 
               # @example
@@ -251,6 +253,8 @@ module Unit
                 BREACH_OF_TERMS_AND_CONDITIONS = :BreachOfTermsAndConditions
                 NO_ACCOUNT_ACTIVITY = :NoAccountActivity
                 PROGRAM_CHANGE = :ProgramChange
+
+                finalize!
               end
 
               # @example
@@ -266,6 +270,8 @@ module Unit
               class DacaStatus < Unit::Enum
                 ACTIVATED = :Activated
                 ENTERED = :Entered
+
+                finalize!
               end
 
               # @example
@@ -295,6 +301,8 @@ module Unit
                 CLIENT_IDENTIFIED = :ClientIdentified
                 IDENTITY_THEFT = :IdentityTheft
                 LINKED_TO_FRAUDULENT_CUSTOMER = :LinkedToFraudulentCustomer
+
+                finalize!
               end
 
               class SecondaryAccountNumber < Unit::BaseModel
@@ -384,6 +392,8 @@ module Unit
                     CUSTOMER = :customer
                     BUSINESS_CUSTOMER = :businessCustomer
                     INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                    finalize!
                   end
                 end
               end

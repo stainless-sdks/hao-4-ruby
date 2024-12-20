@@ -82,6 +82,8 @@ module Unit
           RETURNED = :Returned
           SENT = :Sent
           REJECTED = :Rejected
+
+          finalize!
         end
 
         # @example
@@ -97,6 +99,8 @@ module Unit
         class Type < Unit::Enum
           ACH_REPAYMENT = :AchRepayment
           BOOK_REPAYMENT = :BookRepayment
+
+          finalize!
         end
       end
 

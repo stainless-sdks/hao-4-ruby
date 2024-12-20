@@ -59,6 +59,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACCOUNT_DEPOSIT_PRODUCT = :accountDepositProduct
+
+            finalize!
           end
         end
       end

@@ -103,6 +103,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CREDIT_ACCOUNT_REPAYMENT_INFORMATION = :creditAccountRepaymentInformation
+
+            finalize!
           end
         end
       end

@@ -140,6 +140,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ADD_AUTHORIZED_USERS = :addAuthorizedUsers
+
+            finalize!
           end
         end
       end

@@ -74,6 +74,8 @@ module Unit
             FRAUD_ACCOUNT_ACTIVITY = :FraudAccountActivity
             FRAUD_CLIENT_IDENTIFIED = :FraudClientIdentified
             FRAUD_LINKED_TO_FRAUDULENT_CUSTOMER = :FraudLinkedToFraudulentCustomer
+
+            finalize!
           end
         end
 
@@ -87,6 +89,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ARCHIVE_CUSTOMER = :archiveCustomer
+
+          finalize!
         end
       end
     end

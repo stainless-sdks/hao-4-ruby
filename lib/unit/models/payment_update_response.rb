@@ -50,6 +50,8 @@ module Unit
           ACH_PAYMENT = :achPayment
           BOOK_PAYMENT = :bookPayment
           WIRE_PAYMENT = :wirePayment
+
+          finalize!
         end
       end
     end

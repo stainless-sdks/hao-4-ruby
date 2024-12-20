@@ -52,6 +52,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               CUSTOMER = :customer
+
+              finalize!
             end
           end
         end

@@ -142,6 +142,8 @@ module Unit
           PENDING_REVIEW = :PendingReview
           MARKED_FOR_RETURN = :MarkedForReturn
           RETURNED = :Returned
+
+          finalize!
         end
       end
 

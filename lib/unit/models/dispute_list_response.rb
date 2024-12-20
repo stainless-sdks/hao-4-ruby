@@ -112,6 +112,8 @@ module Unit
               DEPOSIT_ACCOUNT = :depositAccount
               CREDIT_ACCOUNT = :creditAccount
               BATCH_ACCOUNT = :batchAccount
+
+              finalize!
             end
           end
         end
@@ -167,6 +169,8 @@ module Unit
               CUSTOMER = :customer
               BUSINESS_CUSTOMER = :businessCustomer
               INDIVIDUAL_CUSTOMER = :individualCustomer
+
+              finalize!
             end
           end
         end
@@ -216,6 +220,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               TRANSACTION = :transaction
+
+              finalize!
             end
           end
         end
@@ -231,6 +237,8 @@ module Unit
       # ```
       class Type < Unit::Enum
         DISPUTE = :dispute
+
+        finalize!
       end
 
       class Attributes < Unit::BaseModel
@@ -322,6 +330,8 @@ module Unit
         class Source < Unit::Enum
           DEBIT_CARD = :DebitCard
           ACH = :ACH
+
+          finalize!
         end
 
         class StatusHistory < Unit::BaseModel

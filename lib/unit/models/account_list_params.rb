@@ -89,6 +89,8 @@ module Unit
           OPEN = :Open
           FROZEN = :Frozen
           CLOSED = :Closed
+
+          finalize!
         end
 
         # @example
@@ -104,6 +106,8 @@ module Unit
         class Type < Unit::Enum
           DEPOSIT = :deposit
           CREDIT = :credit
+
+          finalize!
         end
       end
 

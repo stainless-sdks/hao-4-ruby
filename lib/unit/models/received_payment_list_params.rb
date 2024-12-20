@@ -143,6 +143,8 @@ module Unit
           MARKED_FOR_RETURN = :MarkedForReturn
           RETURNED = :Returned
           COMPLETED = :Completed
+
+          finalize!
         end
       end
 

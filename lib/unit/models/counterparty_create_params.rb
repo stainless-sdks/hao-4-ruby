@@ -153,6 +153,8 @@ module Unit
               CHECKING = :Checking
               SAVINGS = :Savings
               LOAN = :Loan
+
+              finalize!
             end
 
             # @example
@@ -171,6 +173,8 @@ module Unit
               BUSINESS = :Business
               PERSON = :Person
               UNKNOWN = :Unknown
+
+              finalize!
             end
 
             # @example
@@ -189,6 +193,8 @@ module Unit
               CREDIT_ONLY = :CreditOnly
               DEBIT_ONLY = :DebitOnly
               CREDIT_AND_DEBIT = :CreditAndDebit
+
+              finalize!
             end
           end
 
@@ -258,6 +264,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -273,6 +281,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_COUNTERPARTY = :achCounterparty
+
+            finalize!
           end
         end
 
@@ -388,6 +398,8 @@ module Unit
               BUSINESS = :Business
               PERSON = :Person
               UNKNOWN = :Unknown
+
+              finalize!
             end
 
             # @example
@@ -406,6 +418,8 @@ module Unit
               CREDIT_ONLY = :CreditOnly
               DEBIT_ONLY = :DebitOnly
               CREDIT_AND_DEBIT = :CreditAndDebit
+
+              finalize!
             end
           end
 
@@ -475,6 +489,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -490,6 +506,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_COUNTERPARTY = :achCounterparty
+
+            finalize!
           end
         end
       end

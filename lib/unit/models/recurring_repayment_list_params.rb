@@ -83,6 +83,8 @@ module Unit
         class Status < Unit::Enum
           ACTIVE = :Active
           DISABLED = :Disabled
+
+          finalize!
         end
       end
 
@@ -120,7 +122,9 @@ module Unit
       # ```
       class Sort < Unit::Enum
         CREATED_AT = :createdAt
-        -CREATED_AT = :"-createdAt"
+        CREATED_AT = :"-createdAt"
+
+        finalize!
       end
     end
   end

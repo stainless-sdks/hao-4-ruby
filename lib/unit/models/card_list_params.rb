@@ -94,6 +94,8 @@ module Unit
           FROZEN = :Frozen
           CLOSED_BY_CUSTOMER = :ClosedByCustomer
           SUSPECTED_FRAUD = :SuspectedFraud
+
+          finalize!
         end
       end
 

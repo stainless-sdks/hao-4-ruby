@@ -76,6 +76,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           TAX_FORM = :taxForm
+
+          finalize!
         end
 
         class Relationships < Unit::BaseModel
@@ -157,6 +159,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -218,6 +222,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -273,6 +279,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end

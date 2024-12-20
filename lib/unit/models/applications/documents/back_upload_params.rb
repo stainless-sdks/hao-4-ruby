@@ -47,6 +47,8 @@ module Unit
             APPLICATION_PDF = :"application/pdf"
             IMAGE_PNG = :"image/png"
             IMAGE_JPEG = :"image/jpeg"
+
+            finalize!
           end
         end
       end

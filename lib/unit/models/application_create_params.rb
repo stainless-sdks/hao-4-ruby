@@ -340,6 +340,8 @@ module Unit
               BETWEEN50K_AND100K = :Between50kAnd100k
               BETWEEN100K_AND250K = :Between100kAnd250k
               OVER250K = :Over250k
+
+              finalize!
             end
 
             class DeviceFingerprint < Unit::BaseModel
@@ -374,6 +376,8 @@ module Unit
               # ```
               class Provider < Unit::Enum
                 IOVATION = :iovation
+
+                finalize!
               end
             end
 
@@ -416,6 +420,8 @@ module Unit
                 NEVER = :Never
                 REPLACE_IDENTIFICATION = :ReplaceIdentification
                 ALWAYS = :Always
+
+                finalize!
               end
             end
 
@@ -450,6 +456,8 @@ module Unit
               OTHER_PROFESSIONAL_SERVICES = :OtherProfessionalServices
               ONLINE_RETAILER = :OnlineRetailer
               OTHER_EDUCATION_SERVICES = :OtherEducationServices
+
+              finalize!
             end
 
             # @example
@@ -494,6 +502,8 @@ module Unit
               SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
               SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
               STUDENT = :Student
+
+              finalize!
             end
 
             class PowerOfAttorneyAgent < Unit::BaseModel
@@ -717,6 +727,8 @@ module Unit
                   NEVER = :Never
                   REPLACE_IDENTIFICATION = :ReplaceIdentification
                   ALWAYS = :Always
+
+                  finalize!
                 end
               end
             end
@@ -746,6 +758,8 @@ module Unit
               PERSONAL_INVESTMENTS = :PersonalInvestments
               BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
               GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+              finalize!
             end
           end
 
@@ -759,6 +773,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             INDIVIDUAL_APPLICATION = :individualApplication
+
+            finalize!
           end
         end
 
@@ -1138,6 +1154,8 @@ module Unit
               BETWEEN50K_AND100K = :Between50kAnd100k
               BETWEEN100K_AND250K = :Between100kAnd250k
               OVER250K = :Over250k
+
+              finalize!
             end
 
             # @example
@@ -1162,6 +1180,8 @@ module Unit
               BETWEEN100K_AND200K = :Between100kAnd200k
               BETWEEN200K_AND500K = :Between200kAnd500k
               OVER500K = :Over500k
+
+              finalize!
             end
 
             # @example
@@ -1213,6 +1233,8 @@ module Unit
               TRANSPORTATION_OR_WAREHOUSING = :TransportationOrWarehousing
               UTILITIES = :Utilities
               WHOLESALE_TRADE = :WholesaleTrade
+
+              finalize!
             end
 
             class DeviceFingerprint < Unit::BaseModel
@@ -1247,6 +1269,8 @@ module Unit
               # ```
               class Provider < Unit::Enum
                 IOVATION = :iovation
+
+                finalize!
               end
             end
 
@@ -1289,6 +1313,8 @@ module Unit
                 NEVER = :Never
                 REPLACE_IDENTIFICATION = :ReplaceIdentification
                 ALWAYS = :Always
+
+                finalize!
               end
             end
 
@@ -1323,6 +1349,8 @@ module Unit
               OTHER_PROFESSIONAL_SERVICES = :OtherProfessionalServices
               ONLINE_RETAILER = :OnlineRetailer
               OTHER_EDUCATION_SERVICES = :OtherEducationServices
+
+              finalize!
             end
 
             # @example
@@ -1344,6 +1372,8 @@ module Unit
               BETWEEN2_AND5 = :Between2And5
               BETWEEN5_AND10 = :Between5And10
               OVER10 = :Over10
+
+              finalize!
             end
 
             # @example
@@ -1388,6 +1418,8 @@ module Unit
               SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
               SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
               STUDENT = :Student
+
+              finalize!
             end
 
             class PowerOfAttorneyAgent < Unit::BaseModel
@@ -1611,6 +1643,8 @@ module Unit
                   NEVER = :Never
                   REPLACE_IDENTIFICATION = :ReplaceIdentification
                   ALWAYS = :Always
+
+                  finalize!
                 end
               end
             end
@@ -1640,6 +1674,8 @@ module Unit
               PERSONAL_INVESTMENTS = :PersonalInvestments
               BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
               GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+              finalize!
             end
           end
 
@@ -1653,6 +1689,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             INDIVIDUAL_APPLICATION = :individualApplication
+
+            finalize!
           end
         end
 
@@ -2183,6 +2221,8 @@ module Unit
                 BETWEEN50K_AND100K = :Between50kAnd100k
                 BETWEEN100K_AND250K = :Between100kAnd250k
                 OVER250K = :Over250k
+
+                finalize!
               end
 
               class EvaluationParams < Unit::BaseModel
@@ -2224,6 +2264,8 @@ module Unit
                   NEVER = :Never
                   REPLACE_IDENTIFICATION = :ReplaceIdentification
                   ALWAYS = :Always
+
+                  finalize!
                 end
               end
 
@@ -2269,6 +2311,8 @@ module Unit
                 SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
                 SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
                 STUDENT = :Student
+
+                finalize!
               end
 
               # @example
@@ -2296,6 +2340,8 @@ module Unit
                 PERSONAL_INVESTMENTS = :PersonalInvestments
                 BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
                 GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+                finalize!
               end
             end
 
@@ -2401,6 +2447,8 @@ module Unit
               PUBLICLY_TRADED_CORPORATION = :PubliclyTradedCorporation
               PRIVATELY_HELD_CORPORATION = :PrivatelyHeldCorporation
               NOT_FOR_PROFIT_ORGANIZATION = :NotForProfitOrganization
+
+              finalize!
             end
 
             class Officer < Unit::BaseModel
@@ -2642,6 +2690,8 @@ module Unit
                 SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
                 SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
                 STUDENT = :Student
+
+                finalize!
               end
 
               class Phone < Unit::BaseModel
@@ -2689,6 +2739,8 @@ module Unit
                 BETWEEN50K_AND100K = :Between50kAnd100k
                 BETWEEN100K_AND250K = :Between100kAnd250k
                 OVER250K = :Over250k
+
+                finalize!
               end
 
               class EvaluationParams < Unit::BaseModel
@@ -2730,6 +2782,8 @@ module Unit
                   NEVER = :Never
                   REPLACE_IDENTIFICATION = :ReplaceIdentification
                   ALWAYS = :Always
+
+                  finalize!
                 end
               end
 
@@ -2758,6 +2812,8 @@ module Unit
                 PERSONAL_INVESTMENTS = :PersonalInvestments
                 BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
                 GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+                finalize!
               end
 
               # @example
@@ -2793,6 +2849,8 @@ module Unit
                 MANAGER = :Manager
                 PARTNER = :Partner
                 MEMBER = :Member
+
+                finalize!
               end
             end
 
@@ -2838,6 +2896,8 @@ module Unit
               BETWEEN500K_AND1M = :Between500kAnd1m
               BETWEEN1M_AND5M = :Between1mAnd5m
               OVER5M = :Over5m
+
+              finalize!
             end
 
             # @example
@@ -2889,6 +2949,8 @@ module Unit
               TRANSPORTATION_OR_WAREHOUSING = :TransportationOrWarehousing
               UTILITIES = :Utilities
               WHOLESALE_TRADE = :WholesaleTrade
+
+              finalize!
             end
 
             # @example
@@ -2904,6 +2966,8 @@ module Unit
             class CashFlow < Unit::Enum
               UNPREDICTABLE = :Unpredictable
               PREDICTABLE = :Predictable
+
+              finalize!
             end
 
             class DeviceFingerprint < Unit::BaseModel
@@ -2938,6 +3002,8 @@ module Unit
               # ```
               class Provider < Unit::Enum
                 IOVATION = :iovation
+
+                finalize!
               end
             end
 
@@ -2972,6 +3038,8 @@ module Unit
               OTHER_PROFESSIONAL_SERVICES = :OtherProfessionalServices
               ONLINE_RETAILER = :OnlineRetailer
               OTHER_EDUCATION_SERVICES = :OtherEducationServices
+
+              finalize!
             end
 
             # @example
@@ -2996,6 +3064,8 @@ module Unit
               BETWEEN50_AND100 = :Between50And100
               BETWEEN100_AND500 = :Between100And500
               OVER500 = :Over500
+
+              finalize!
             end
           end
 
@@ -3009,6 +3079,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_APPLICATION = :businessApplication
+
+            finalize!
           end
         end
       end

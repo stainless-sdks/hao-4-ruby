@@ -152,6 +152,8 @@ module Unit
         class Direction < Unit::Enum
           DEBIT = :Debit
           CREDIT = :Credit
+
+          finalize!
         end
 
         # @example
@@ -167,6 +169,8 @@ module Unit
         class Feature < Unit::Enum
           SAME_DAY = :SameDay
           RECURRING_PAYMENT = :RecurringPayment
+
+          finalize!
         end
 
         # @example
@@ -195,6 +199,8 @@ module Unit
           CLEARING = :Clearing
           SENT = :Sent
           RETURNED = :Returned
+
+          finalize!
         end
 
         # @example
@@ -213,6 +219,8 @@ module Unit
           ACH_PAYMENT = :AchPayment
           BOOK_PAYMENT = :BookPayment
           WIRE_PAYMENT = :WirePayment
+
+          finalize!
         end
       end
 

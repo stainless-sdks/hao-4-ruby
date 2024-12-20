@@ -153,6 +153,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -168,6 +170,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_RECEIVED_PAYMENT = :achReceivedPayment
+
+            finalize!
           end
         end
       end

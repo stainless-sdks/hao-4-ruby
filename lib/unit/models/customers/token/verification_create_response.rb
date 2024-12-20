@@ -66,6 +66,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               CUSTOMER_TOKEN_VERIFICATION = :customerTokenVerification
+
+              finalize!
             end
           end
         end

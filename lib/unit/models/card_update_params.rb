@@ -197,6 +197,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             INDIVIDUAL_DEBIT_CARD = :individualDebitCard
+
+            finalize!
           end
         end
 
@@ -292,6 +294,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             INDIVIDUAL_VIRTUAL_DEBIT_CARD = :individualVirtualDebitCard
+
+            finalize!
           end
         end
 
@@ -546,6 +550,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_DEBIT_CARD = :businessDebitCard
+
+            finalize!
           end
         end
 
@@ -725,6 +731,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_VIRTUAL_DEBIT_CARD = :businessVirtualDebitCard
+
+            finalize!
           end
         end
 
@@ -977,6 +985,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_CREDIT_CARD = :businessCreditCard
+
+            finalize!
           end
         end
 
@@ -1156,6 +1166,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_VIRTUAL_CREDIT_CARD = :businessVirtualCreditCard
+
+            finalize!
           end
         end
       end

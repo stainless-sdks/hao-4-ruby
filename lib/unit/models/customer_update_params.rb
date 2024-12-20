@@ -260,6 +260,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             INDIVIDUAL_CUSTOMER = :individualCustomer
+
+            finalize!
           end
         end
 
@@ -570,6 +572,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BUSINESS_CUSTOMER = :businessCustomer
+
+            finalize!
           end
         end
       end

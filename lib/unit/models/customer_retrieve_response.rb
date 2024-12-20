@@ -47,6 +47,8 @@ module Unit
         class Type < Unit::Enum
           INDIVIDUAL_CUSTOMER = :individualCustomer
           BUSINESS_CUSTOMER = :businessCustomer
+
+          finalize!
         end
       end
     end

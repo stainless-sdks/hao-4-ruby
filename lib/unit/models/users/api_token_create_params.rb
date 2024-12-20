@@ -110,6 +110,8 @@ module Unit
               class Type < Unit::Enum
                 CARD = :card
                 ACCOUNT = :account
+
+                finalize!
               end
             end
           end
@@ -124,6 +126,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             API_TOKEN = :apiToken
+
+            finalize!
           end
         end
       end

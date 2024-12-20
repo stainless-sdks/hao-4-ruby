@@ -94,6 +94,8 @@ module Unit
           class Direction < Unit::Enum
             CREDIT = :Credit
             DEBIT = :Debit
+
+            finalize!
           end
         end
 
@@ -182,6 +184,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -271,6 +275,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end

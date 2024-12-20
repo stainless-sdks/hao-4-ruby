@@ -117,6 +117,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -173,6 +175,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -188,6 +192,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             COUNTERPARTY_BALANCE = :counterpartyBalance
+
+            finalize!
           end
 
           class Attributes < Unit::BaseModel

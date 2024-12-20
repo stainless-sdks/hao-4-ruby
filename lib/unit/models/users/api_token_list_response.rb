@@ -89,6 +89,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             API_TOKEN = :apiToken
+
+            finalize!
           end
         end
       end

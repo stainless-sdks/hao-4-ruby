@@ -45,6 +45,8 @@ module Unit
             LIMITS = :limits
             CREDIT_LIMITS = :creditLimits
             WALLET_LIMITS = :walletLimits
+
+            finalize!
           end
         end
       end

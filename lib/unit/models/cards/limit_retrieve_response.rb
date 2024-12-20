@@ -171,6 +171,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             LIMITS = :limits
+
+            finalize!
           end
         end
       end

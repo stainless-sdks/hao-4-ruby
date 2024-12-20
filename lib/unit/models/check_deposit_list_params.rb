@@ -98,6 +98,8 @@ module Unit
           CANCELED = :Canceled
           RETURNED = :Returned
           AWAITING_CUSTOMER_CONFIRMATION = :AwaitingCustomerConfirmation
+
+          finalize!
         end
       end
 

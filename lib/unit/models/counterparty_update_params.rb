@@ -90,6 +90,8 @@ module Unit
             CREDIT_ONLY = :CreditOnly
             DEBIT_ONLY = :DebitOnly
             CREDIT_AND_DEBIT = :CreditAndDebit
+
+            finalize!
           end
         end
 
@@ -103,6 +105,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           COUNTERPARTY = :counterparty
+
+          finalize!
         end
       end
     end

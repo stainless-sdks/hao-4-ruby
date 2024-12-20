@@ -192,6 +192,8 @@ module Unit
             SENT = :Sent
             CANCELED = :Canceled
             RETURNED = :Returned
+
+            finalize!
           end
 
           class Counterparty < Unit::BaseModel
@@ -292,6 +294,8 @@ module Unit
                 SENT = :Sent
                 CANCELED = :Canceled
                 RETURNED = :Returned
+
+                finalize!
               end
             end
           end
@@ -388,6 +392,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -446,6 +452,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end
@@ -532,6 +540,8 @@ module Unit
               # ```
               class Type < Unit::Enum
                 TRANSACTION = :transaction
+
+                finalize!
               end
             end
           end
@@ -547,6 +557,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           CHECK_DEPOSIT = :checkDeposit
+
+          finalize!
         end
       end
     end

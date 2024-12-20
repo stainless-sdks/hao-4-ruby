@@ -104,6 +104,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           REPLACE_CARD = :replaceCard
+
+          finalize!
         end
       end
     end

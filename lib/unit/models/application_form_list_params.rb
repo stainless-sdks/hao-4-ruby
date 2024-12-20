@@ -74,6 +74,8 @@ module Unit
         class Status < Unit::Enum
           PENDING = :Pending
           APPROVED = :Approved
+
+          finalize!
         end
       end
 

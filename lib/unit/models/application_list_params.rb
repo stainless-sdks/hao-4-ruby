@@ -86,6 +86,8 @@ module Unit
           APPROVED = :Approved
           DENIED = :Denied
           CANCELED = :Canceled
+
+          finalize!
         end
       end
 

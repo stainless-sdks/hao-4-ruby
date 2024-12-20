@@ -58,6 +58,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ACH_RECEIVED_PAYMENT = :achReceivedPayment
+
+          finalize!
         end
       end
     end

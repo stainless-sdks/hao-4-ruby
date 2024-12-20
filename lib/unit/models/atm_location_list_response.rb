@@ -156,6 +156,8 @@ module Unit
       # ```
       class Type < Unit::Enum
         ATM_LOCATION = :atmLocation
+
+        finalize!
       end
     end
 
