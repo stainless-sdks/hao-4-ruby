@@ -155,6 +155,8 @@ module Unit
         class Direction < Unit::Enum
           DEBIT = :Debit
           CREDIT = :Credit
+
+          finalize!
         end
       end
 

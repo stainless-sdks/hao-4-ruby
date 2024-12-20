@@ -192,6 +192,8 @@ module Unit
           class Direction < Unit::Enum
             DEBIT = :Debit
             CREDIT = :Credit
+
+            finalize!
           end
 
           # @example
@@ -219,6 +221,8 @@ module Unit
             MARKED_FOR_RETURN = :MarkedForReturn
             RETURNED = :Returned
             COMPLETED = :Completed
+
+            finalize!
           end
         end
 
@@ -340,6 +344,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -398,6 +404,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end
@@ -518,6 +526,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ACH_RECEIVED_PAYMENT = :achReceivedPayment
+
+          finalize!
         end
       end
     end

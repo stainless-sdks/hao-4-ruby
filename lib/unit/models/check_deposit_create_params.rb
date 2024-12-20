@@ -145,6 +145,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -160,6 +162,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           CHECK_DEPOSIT = :checkDeposit
+
+          finalize!
         end
       end
     end

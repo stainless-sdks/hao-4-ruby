@@ -47,6 +47,8 @@ module Unit
         class Type < Unit::Enum
           CHECK_STOP_PAYMENT = :checkStopPayment
           ACH_STOP_PAYMENT = :achStopPayment
+
+          finalize!
         end
       end
     end

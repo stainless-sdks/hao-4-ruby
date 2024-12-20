@@ -37,6 +37,8 @@ module Unit
         PURCHASE_AUTHORIZATION_REQUEST = :purchaseAuthorizationRequest
         CARD_TRANSACTION_AUTHORIZATION_REQUEST = :cardTransactionAuthorizationRequest
         ATM_AUTHORIZATION_REQUEST = :atmAuthorizationRequest
+
+        finalize!
       end
     end
   end

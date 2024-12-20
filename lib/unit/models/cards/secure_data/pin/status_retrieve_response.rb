@@ -70,6 +70,8 @@ module Unit
                 class Status < Unit::Enum
                   SET = :Set
                   NOT_SET = :NotSet
+
+                  finalize!
                 end
               end
 
@@ -83,6 +85,8 @@ module Unit
               # ```
               class Type < Unit::Enum
                 PIN_STATUS = :pinStatus
+
+                finalize!
               end
             end
           end

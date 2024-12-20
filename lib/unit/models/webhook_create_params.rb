@@ -100,6 +100,8 @@ module Unit
           class ContentType < Unit::Enum
             JSON = :Json
             JSON_API = :JsonAPI
+
+            finalize!
           end
 
           # @example
@@ -115,6 +117,8 @@ module Unit
           class SubscriptionType < Unit::Enum
             ALL = :All
             ONLY_AUTHORIZATION_REQUEST = :OnlyAuthorizationRequest
+
+            finalize!
           end
         end
       end

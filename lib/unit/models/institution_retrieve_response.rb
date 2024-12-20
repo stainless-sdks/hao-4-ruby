@@ -82,6 +82,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           INSTITUTION = :institution
+
+          finalize!
         end
       end
     end

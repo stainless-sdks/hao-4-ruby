@@ -46,6 +46,8 @@ module Unit
         INDIVIDUAL_VIRTUAL_DEBIT_CARD = :individualVirtualDebitCard
         BUSINESS_CREDIT_CARD = :businessCreditCard
         BUSINESS_VIRTUAL_CREDIT_CARD = :businessVirtualCreditCard
+
+        finalize!
       end
     end
   end

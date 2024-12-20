@@ -58,6 +58,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           APPLICATION_CANCEL = :applicationCancel
+
+          finalize!
         end
       end
     end

@@ -34,6 +34,8 @@ module Unit
       class Type < Unit::Enum
         INDIVIDUAL_APPLICATION = :individualApplication
         BUSINESS_APPLICATION = :businessApplication
+
+        finalize!
       end
     end
   end

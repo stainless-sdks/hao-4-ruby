@@ -235,6 +235,8 @@ module Unit
         BETWEEN50K_AND100K = :Between50kAnd100k
         BETWEEN100K_AND250K = :Between100kAnd250k
         OVER250K = :Over250k
+
+        finalize!
       end
 
       class FullName < Unit::BaseModel
@@ -299,6 +301,8 @@ module Unit
         SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
         SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
         STUDENT = :Student
+
+        finalize!
       end
 
       class Phone < Unit::BaseModel
@@ -346,6 +350,8 @@ module Unit
         PERSONAL_INVESTMENTS = :PersonalInvestments
         BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
         GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+        finalize!
       end
     end
   end

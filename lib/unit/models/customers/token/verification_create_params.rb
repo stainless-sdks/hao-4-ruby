@@ -92,6 +92,8 @@ module Unit
               class Channel < Unit::Enum
                 SMS = :sms
                 CALL = :call
+
+                finalize!
               end
 
               # @example
@@ -154,6 +156,8 @@ module Unit
                 TH = :th
                 TR = :tr
                 VI = :vi
+
+                finalize!
               end
 
               class Phone < Unit::BaseModel
@@ -187,6 +191,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               CUSTOMER_TOKEN_VERIFICATION = :customerTokenVerification
+
+              finalize!
             end
           end
         end

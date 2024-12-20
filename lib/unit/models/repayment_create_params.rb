@@ -182,6 +182,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -235,6 +237,8 @@ module Unit
                 class Type < Unit::Enum
                   ACCOUNT = :account
                   DEPOSIT_ACCOUNT = :depositAccount
+
+                  finalize!
                 end
               end
             end
@@ -285,6 +289,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   CREDIT_ACCOUNT = :creditAccount
+
+                  finalize!
                 end
               end
             end
@@ -300,6 +306,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BOOK_REPAYMENT = :bookRepayment
+
+            finalize!
           end
         end
 
@@ -435,6 +443,8 @@ module Unit
                 class Type < Unit::Enum
                   ACCOUNT = :account
                   DEPOSIT_ACCOUNT = :depositAccount
+
+                  finalize!
                 end
               end
             end
@@ -485,6 +495,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   CREDIT_ACCOUNT = :creditAccount
+
+                  finalize!
                 end
               end
             end
@@ -500,6 +512,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CAPITAL_PARTNER_BOOK_REPAYMENT = :capitalPartnerBookRepayment
+
+            finalize!
           end
         end
 
@@ -656,6 +670,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -706,6 +722,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -756,6 +774,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   CREDIT_ACCOUNT = :creditAccount
+
+                  finalize!
                 end
               end
             end
@@ -771,6 +791,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_REPAYMENT = :achRepayment
+
+            finalize!
           end
         end
 
@@ -912,6 +934,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -962,6 +986,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   CREDIT_ACCOUNT = :creditAccount
+
+                  finalize!
                 end
               end
             end
@@ -977,6 +1003,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CAPITAL_PARTNER_ACH_REPAYMENT = :capitalPartnerAchRepayment
+
+            finalize!
           end
         end
       end

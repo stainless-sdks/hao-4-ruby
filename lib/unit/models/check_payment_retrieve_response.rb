@@ -259,6 +259,8 @@ module Unit
             RETURNED = :Returned
             PROCESSED = :Processed
             PENDING_REVIEW = :PendingReview
+
+            finalize!
           end
 
           # @example
@@ -277,6 +279,8 @@ module Unit
             REQUIRED = :Required
             NOT_REQUIRED = :NotRequired
             APPROVED = :Approved
+
+            finalize!
           end
 
           class Counterparty < Unit::BaseModel
@@ -372,6 +376,8 @@ module Unit
             DELIVERED = :Delivered
             REROUTED = :Rerouted
             RETURNED_TO_SENDER = :ReturnedToSender
+
+            finalize!
           end
 
           # @example
@@ -387,6 +393,8 @@ module Unit
           class PendingReviewReason < Unit::Enum
             NAME_MISS_MATCH = :NameMissMatch
             SOFT_LIMIT = :SoftLimit
+
+            finalize!
           end
 
           # @example
@@ -420,6 +428,8 @@ module Unit
             MISSING_SIGNATURE = :MissingSignature
             IRREGULAR_ENDORSEMENT = :IrregularEndorsement
             OTHER = :Other
+
+            finalize!
           end
         end
 
@@ -517,6 +527,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -575,6 +587,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end
@@ -664,6 +678,8 @@ module Unit
               # ```
               class Type < Unit::Enum
                 TRANSACTION = :transaction
+
+                finalize!
               end
             end
           end
@@ -679,6 +695,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           CHECK_PAYMENT = :checkPayment
+
+          finalize!
         end
       end
     end

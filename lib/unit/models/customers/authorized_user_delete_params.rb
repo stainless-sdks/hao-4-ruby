@@ -59,6 +59,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             REMOVE_AUTHORIZED_USERS = :removeAuthorizedUsers
+
+            finalize!
           end
         end
       end

@@ -113,6 +113,8 @@ module Unit
             IMPROPER_SOURCE_DOCUMENT = :ImproperSourceDocument
             INVALID_INDIVIDUAL_OR_COMPANY_NAME = :InvalidIndividualOrCompanyName
             INCORRECTLY_CODED_OUTBOUND_INTERNATIONAL_PAYMENT = :IncorrectlyCodedOutboundInternationalPayment
+
+            finalize!
           end
         end
 
@@ -183,6 +185,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -198,6 +202,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ATM_TRANSACTION = :atmTransaction
+
+          finalize!
         end
       end
     end

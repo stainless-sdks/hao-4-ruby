@@ -88,6 +88,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               TRANSACTION = :transaction
+
+              finalize!
             end
           end
 
@@ -151,6 +153,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               BOOK_TRANSACTION = :bookTransaction
+
+              finalize!
             end
 
             class Relationships < Unit::BaseModel
@@ -222,6 +226,8 @@ module Unit
                     DEPOSIT_ACCOUNT = :depositAccount
                     CREDIT_ACCOUNT = :creditAccount
                     BATCH_ACCOUNT = :batchAccount
+
+                    finalize!
                   end
                 end
               end
@@ -288,6 +294,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               CHARGEBACK_TRANSACTION = :chargebackTransaction
+
+              finalize!
             end
 
             class Relationships < Unit::BaseModel
@@ -359,6 +367,8 @@ module Unit
                     DEPOSIT_ACCOUNT = :depositAccount
                     CREDIT_ACCOUNT = :creditAccount
                     BATCH_ACCOUNT = :batchAccount
+
+                    finalize!
                   end
                 end
               end

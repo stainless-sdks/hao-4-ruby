@@ -50,6 +50,8 @@ module Unit
           RECURRING_CREDIT_ACH_PAYMENT = :recurringCreditAchPayment
           RECURRING_DEBIT_ACH_PAYMENT = :recurringDebitAchPayment
           RECURRING_CREDIT_BOOK_PAYMENT = :recurringCreditBookPayment
+
+          finalize!
         end
       end
     end

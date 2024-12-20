@@ -70,6 +70,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           APPROVE_AUTHORIZATION_REQUEST = :approveAuthorizationRequest
+
+          finalize!
         end
       end
     end

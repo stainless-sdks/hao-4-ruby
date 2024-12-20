@@ -207,6 +207,8 @@ module Unit
                 CHECKING = :Checking
                 SAVINGS = :Savings
                 LOAN = :Loan
+
+                finalize!
               end
             end
 
@@ -223,6 +225,8 @@ module Unit
             class Direction < Unit::Enum
               DEBIT = :Debit
               CREDIT = :Credit
+
+              finalize!
             end
 
             # @example
@@ -241,6 +245,8 @@ module Unit
               WEB = :WEB
               CCD = :CCD
               PPD = :PPD
+
+              finalize!
             end
           end
 
@@ -313,6 +319,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -328,6 +336,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_PAYMENT = :achPayment
+
+            finalize!
           end
         end
 
@@ -455,6 +465,8 @@ module Unit
             class Direction < Unit::Enum
               DEBIT = :Debit
               CREDIT = :Credit
+
+              finalize!
             end
 
             # @example
@@ -473,6 +485,8 @@ module Unit
               WEB = :WEB
               CCD = :CCD
               PPD = :PPD
+
+              finalize!
             end
           end
 
@@ -552,6 +566,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -602,6 +618,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -617,6 +635,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_PAYMENT = :achPayment
+
+            finalize!
           end
         end
 
@@ -757,6 +777,8 @@ module Unit
             class Direction < Unit::Enum
               DEBIT = :Debit
               CREDIT = :Credit
+
+              finalize!
             end
 
             # @example
@@ -775,6 +797,8 @@ module Unit
               WEB = :WEB
               CCD = :CCD
               PPD = :PPD
+
+              finalize!
             end
           end
 
@@ -847,6 +871,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -862,6 +888,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_PAYMENT = :achPayment
+
+            finalize!
           end
         end
 
@@ -1010,6 +1038,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -1063,6 +1093,8 @@ module Unit
                 class Type < Unit::Enum
                   ACCOUNT = :account
                   DEPOSIT_ACCOUNT = :depositAccount
+
+                  finalize!
                 end
               end
             end
@@ -1078,6 +1110,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BOOK_PAYMENT = :bookPayment
+
+            finalize!
           end
         end
 
@@ -1243,6 +1277,8 @@ module Unit
             # ```
             class Direction < Unit::Enum
               CREDIT = :Credit
+
+              finalize!
             end
           end
 
@@ -1315,6 +1351,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -1330,6 +1368,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             WIRE_PAYMENT = :wirePayment
+
+            finalize!
           end
         end
 
@@ -1553,6 +1593,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -1568,6 +1610,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             PUSH_TO_CARD_PAYMENT = :pushToCardPayment
+
+            finalize!
           end
         end
       end

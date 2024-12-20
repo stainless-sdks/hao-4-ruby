@@ -133,6 +133,8 @@ module Unit
               class Type < Unit::Enum
                 CARD = :card
                 ACCOUNT = :account
+
+                finalize!
               end
             end
           end
@@ -147,6 +149,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CUSTOMER_TOKEN = :customerToken
+
+            finalize!
           end
         end
       end

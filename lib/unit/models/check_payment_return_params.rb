@@ -78,6 +78,8 @@ module Unit
             MISSING_SIGNATURE = :MissingSignature
             IRREGULAR_ENDORSEMENT = :IrregularEndorsement
             OTHER = :Other
+
+            finalize!
           end
         end
 
@@ -91,6 +93,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           CHECK_PAYMENT_RETURN = :checkPaymentReturn
+
+          finalize!
         end
       end
     end

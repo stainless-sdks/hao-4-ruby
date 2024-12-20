@@ -82,6 +82,8 @@ module Unit
             MISSING_CDD_EDD = :MissingCddEdd
             NON_US_OPERATION = :NonUsOperation
             SUSPECTED_FRAUD = :SuspectedFraud
+
+            finalize!
           end
 
           # @example
@@ -111,6 +113,8 @@ module Unit
             CLIENT_IDENTIFIED = :ClientIdentified
             IDENTITY_THEFT = :IdentityTheft
             LINKED_TO_FRAUDULENT_CUSTOMER = :LinkedToFraudulentCustomer
+
+            finalize!
           end
 
           # @example
@@ -126,6 +130,8 @@ module Unit
           class Reason < Unit::Enum
             BY_CUSTOMER = :ByCustomer
             FRAUD = :Fraud
+
+            finalize!
           end
         end
 
@@ -145,6 +151,8 @@ module Unit
           CREDIT_ACCOUNT_CLOSE = :creditAccountClose
           DEPOSIT_ACCOUNT_CLOSE = :depositAccountClose
           WALLET_ACCOUNT_CLOSE = :walletAccountClose
+
+          finalize!
         end
       end
     end

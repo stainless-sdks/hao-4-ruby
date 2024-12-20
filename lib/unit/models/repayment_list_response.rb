@@ -59,6 +59,8 @@ module Unit
           BOOK_REPAYMENT = :bookRepayment
           CAPITAL_PARTNER_ACH_REPAYMENT = :capitalPartnerAchRepayment
           CAPITAL_PARTNER_BOOK_REPAYMENT = :capitalPartnerBookRepayment
+
+          finalize!
         end
       end
 

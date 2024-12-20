@@ -64,6 +64,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           CHECK_DEPOSIT = :checkDeposit
+
+          finalize!
         end
       end
     end

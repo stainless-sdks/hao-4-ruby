@@ -83,6 +83,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_PAYMENT = :achPayment
+
+            finalize!
           end
         end
 
@@ -129,6 +131,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             BOOK_PAYMENT = :bookPayment
+
+            finalize!
           end
         end
 
@@ -178,6 +182,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             ACH_RECEIVED_PAYMENT = :achReceivedPayment
+
+            finalize!
           end
         end
       end

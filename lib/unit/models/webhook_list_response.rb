@@ -124,6 +124,8 @@ module Unit
           class ContentType < Unit::Enum
             JSON = :Json
             JSON_API = :JsonAPI
+
+            finalize!
           end
 
           # @example
@@ -139,6 +141,8 @@ module Unit
           class DeliveryMode < Unit::Enum
             AT_MOST_ONCE = :AtMostOnce
             AT_LEAST_ONCE = :AtLeastOnce
+
+            finalize!
           end
         end
 
@@ -152,6 +156,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           WEBHOOK = :webhook
+
+          finalize!
         end
       end
     end

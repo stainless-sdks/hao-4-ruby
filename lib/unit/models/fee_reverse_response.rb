@@ -133,6 +133,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -182,6 +184,8 @@ module Unit
               # ```
               class Type < Unit::Enum
                 TRANSACTION = :transaction
+
+                finalize!
               end
             end
           end
@@ -197,6 +201,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           FEE_REVERSAL = :feeReversal
+
+          finalize!
         end
       end
     end

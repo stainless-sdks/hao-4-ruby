@@ -160,6 +160,8 @@ module Unit
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
                 BATCH_ACCOUNT = :batchAccount
+
+                finalize!
               end
             end
           end
@@ -218,6 +220,8 @@ module Unit
                 CUSTOMER = :customer
                 BUSINESS_CUSTOMER = :businessCustomer
                 INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                finalize!
               end
             end
           end
@@ -233,6 +237,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           ACCOUNT_END_OF_DAY = :accountEndOfDay
+
+          finalize!
         end
       end
     end

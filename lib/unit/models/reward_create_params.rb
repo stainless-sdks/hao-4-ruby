@@ -157,6 +157,8 @@ module Unit
                 ACCOUNT = :account
                 DEPOSIT_ACCOUNT = :depositAccount
                 CREDIT_ACCOUNT = :creditAccount
+
+                finalize!
               end
             end
           end
@@ -243,6 +245,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           REWARD = :reward
+
+          finalize!
         end
       end
     end

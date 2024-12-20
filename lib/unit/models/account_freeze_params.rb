@@ -66,6 +66,8 @@ module Unit
           class Reason < Unit::Enum
             FRAUD = :Fraud
             OTHER = :Other
+
+            finalize!
           end
         end
 
@@ -85,6 +87,8 @@ module Unit
           CREDIT_ACCOUNT_FREEZE = :creditAccountFreeze
           ACCOUNT_FREEZE = :accountFreeze
           WALLET_ACCOUNT_FREEZE = :walletAccountFreeze
+
+          finalize!
         end
       end
     end

@@ -199,6 +199,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   WEEKLY = :Weekly
+
+                  finalize!
                 end
               end
 
@@ -272,6 +274,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   MONTHLY = :Monthly
+
+                  finalize!
                 end
 
                 # @example
@@ -300,6 +304,8 @@ module Unit
                   THURSDAY = :Thursday
                   FRIDAY = :Friday
                   SATURDAY = :Saturday
+
+                  finalize!
                 end
               end
             end
@@ -370,6 +376,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 WEEKLY = :Weekly
+
+                finalize!
               end
             end
 
@@ -443,6 +451,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 MONTHLY = :Monthly
+
+                finalize!
               end
 
               # @example
@@ -471,6 +481,8 @@ module Unit
                 THURSDAY = :Thursday
                 FRIDAY = :Friday
                 SATURDAY = :Saturday
+
+                finalize!
               end
             end
           end
@@ -551,6 +563,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -601,6 +615,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -616,6 +632,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             RECURRING_CREDIT_ACH_PAYMENT = :recurringCreditAchPayment
+
+            finalize!
           end
         end
 
@@ -811,6 +829,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   WEEKLY = :Weekly
+
+                  finalize!
                 end
               end
 
@@ -884,6 +904,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   MONTHLY = :Monthly
+
+                  finalize!
                 end
 
                 # @example
@@ -912,6 +934,8 @@ module Unit
                   THURSDAY = :Thursday
                   FRIDAY = :Friday
                   SATURDAY = :Saturday
+
+                  finalize!
                 end
               end
             end
@@ -982,6 +1006,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 WEEKLY = :Weekly
+
+                finalize!
               end
             end
 
@@ -1055,6 +1081,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 MONTHLY = :Monthly
+
+                finalize!
               end
 
               # @example
@@ -1083,6 +1111,8 @@ module Unit
                 THURSDAY = :Thursday
                 FRIDAY = :Friday
                 SATURDAY = :Saturday
+
+                finalize!
               end
             end
           end
@@ -1163,6 +1193,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -1213,6 +1245,8 @@ module Unit
                 # ```
                 class Type < Unit::Enum
                   COUNTERPARTY = :counterparty
+
+                  finalize!
                 end
               end
             end
@@ -1228,6 +1262,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             RECURRING_DEBIT_ACH_PAYMENT = :recurringDebitAchPayment
+
+            finalize!
           end
         end
 
@@ -1392,6 +1428,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   WEEKLY = :Weekly
+
+                  finalize!
                 end
               end
 
@@ -1465,6 +1503,8 @@ module Unit
                 # ```
                 class Interval < Unit::Enum
                   MONTHLY = :Monthly
+
+                  finalize!
                 end
 
                 # @example
@@ -1493,6 +1533,8 @@ module Unit
                   THURSDAY = :Thursday
                   FRIDAY = :Friday
                   SATURDAY = :Saturday
+
+                  finalize!
                 end
               end
             end
@@ -1563,6 +1605,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 WEEKLY = :Weekly
+
+                finalize!
               end
             end
 
@@ -1636,6 +1680,8 @@ module Unit
               # ```
               class Interval < Unit::Enum
                 MONTHLY = :Monthly
+
+                finalize!
               end
 
               # @example
@@ -1664,6 +1710,8 @@ module Unit
                 THURSDAY = :Thursday
                 FRIDAY = :Friday
                 SATURDAY = :Saturday
+
+                finalize!
               end
             end
           end
@@ -1747,6 +1795,8 @@ module Unit
                   DEPOSIT_ACCOUNT = :depositAccount
                   CREDIT_ACCOUNT = :creditAccount
                   BATCH_ACCOUNT = :batchAccount
+
+                  finalize!
                 end
               end
             end
@@ -1800,6 +1850,8 @@ module Unit
                 class Type < Unit::Enum
                   ACCOUNT = :account
                   DEPOSIT_ACCOUNT = :depositAccount
+
+                  finalize!
                 end
               end
             end
@@ -1815,6 +1867,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             RECURRING_CREDIT_BOOK_PAYMENT = :recurringCreditBookPayment
+
+            finalize!
           end
         end
       end

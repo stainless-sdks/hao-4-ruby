@@ -37,6 +37,8 @@ module Unit
         DEPOSIT_ACCOUNT = :depositAccount
         CREDIT_ACCOUNT = :creditAccount
         WALLET_ACCOUNT = :walletAccount
+
+        finalize!
       end
     end
   end

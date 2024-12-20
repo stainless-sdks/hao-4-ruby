@@ -158,6 +158,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           STORE_LOCATION = :storeLocation
+
+          finalize!
         end
       end
 

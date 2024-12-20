@@ -252,6 +252,8 @@ module Unit
             # ```
             class Type < Unit::Enum
               DOCUMENT = :document
+
+              finalize!
             end
           end
         end

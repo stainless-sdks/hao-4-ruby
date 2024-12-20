@@ -77,6 +77,8 @@ module Unit
             REFER_TO_CARD_ISSUER = :ReferToCardIssuer
             RESTRICTED_CARD = :RestrictedCard
             TRANSACTION_NOT_PERMITTED_TO_CARDHOLDER = :TransactionNotPermittedToCardholder
+
+            finalize!
           end
         end
 
@@ -90,6 +92,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           DECLINE_AUTHORIZATION_REQUEST = :declineAuthorizationRequest
+
+          finalize!
         end
       end
     end

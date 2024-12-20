@@ -74,6 +74,8 @@ module Unit
         class Status < Unit::Enum
           ACTIVE = :Active
           ARCHIVED = :Archived
+
+          finalize!
         end
       end
 

@@ -137,6 +137,8 @@ module Unit
           COMPLETED = :Completed
           CANCELED = :Canceled
           DECLINED = :Declined
+
+          finalize!
         end
       end
 

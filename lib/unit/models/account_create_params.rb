@@ -161,6 +161,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -176,6 +178,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             CREDIT_ACCOUNT = :creditAccount
+
+            finalize!
           end
         end
 
@@ -307,6 +311,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -359,6 +365,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             DEPOSIT_ACCOUNT = :depositAccount
+
+            finalize!
           end
         end
 
@@ -483,6 +491,8 @@ module Unit
                   CUSTOMER = :customer
                   BUSINESS_CUSTOMER = :businessCustomer
                   INDIVIDUAL_CUSTOMER = :individualCustomer
+
+                  finalize!
                 end
               end
             end
@@ -498,6 +508,8 @@ module Unit
           # ```
           class Type < Unit::Enum
             WALLET_ACCOUNT = :walletAccount
+
+            finalize!
           end
         end
       end

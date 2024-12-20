@@ -117,6 +117,8 @@ module Unit
         class Status < Unit::Enum
           ACTIVE = :Active
           DISABLED = :Disabled
+
+          finalize!
         end
       end
 

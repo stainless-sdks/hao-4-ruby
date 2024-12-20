@@ -117,6 +117,8 @@ module Unit
           INDIVIDUAL = :Individual
           BUSINESS = :Business
           SOLE_PROPRIETORSHIP = :SoleProprietorship
+
+          finalize!
         end
 
         class ApplicantDetails < Unit::BaseModel
@@ -362,6 +364,8 @@ module Unit
             INDIVIDUAL = :Individual
             BUSINESS = :Business
             SOLE_PROPRIETORSHIP = :SoleProprietorship
+
+            finalize!
           end
 
           class BeneficialOwner < Unit::BaseModel
@@ -603,6 +607,8 @@ module Unit
               BETWEEN50K_AND100K = :Between50kAnd100k
               BETWEEN100K_AND250K = :Between100kAnd250k
               OVER250K = :Over250k
+
+              finalize!
             end
 
             class EvaluationParams < Unit::BaseModel
@@ -644,6 +650,8 @@ module Unit
                 NEVER = :Never
                 REPLACE_IDENTIFICATION = :ReplaceIdentification
                 ALWAYS = :Always
+
+                finalize!
               end
             end
 
@@ -689,6 +697,8 @@ module Unit
               SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
               SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
               STUDENT = :Student
+
+              finalize!
             end
 
             # @example
@@ -716,6 +726,8 @@ module Unit
               PERSONAL_INVESTMENTS = :PersonalInvestments
               BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
               GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+              finalize!
             end
           end
 
@@ -768,6 +780,8 @@ module Unit
             TRANSPORTATION_OR_WAREHOUSING = :TransportationOrWarehousing
             UTILITIES = :Utilities
             WHOLESALE_TRADE = :WholesaleTrade
+
+            finalize!
           end
 
           class Contact < Unit::BaseModel
@@ -872,6 +886,8 @@ module Unit
             PUBLICLY_TRADED_CORPORATION = :PubliclyTradedCorporation
             PRIVATELY_HELD_CORPORATION = :PrivatelyHeldCorporation
             NOT_FOR_PROFIT_ORGANIZATION = :NotForProfitOrganization
+
+            finalize!
           end
 
           class FullName < Unit::BaseModel
@@ -925,6 +941,8 @@ module Unit
             OTHER_PROFESSIONAL_SERVICES = :OtherProfessionalServices
             ONLINE_RETAILER = :OnlineRetailer
             OTHER_EDUCATION_SERVICES = :OtherEducationServices
+
+            finalize!
           end
 
           # @example
@@ -969,6 +987,8 @@ module Unit
             SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
             SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
             STUDENT = :Student
+
+            finalize!
           end
 
           class Officer < Unit::BaseModel
@@ -1212,6 +1232,8 @@ module Unit
               SALES_REPRESENTATIVE_BROKER_AGENT = :SalesRepresentativeBrokerAgent
               SCIENTIST_OR_TECHNOLOGIST = :ScientistOrTechnologist
               STUDENT = :Student
+
+              finalize!
             end
 
             class Phone < Unit::BaseModel
@@ -1259,6 +1281,8 @@ module Unit
               BETWEEN50K_AND100K = :Between50kAnd100k
               BETWEEN100K_AND250K = :Between100kAnd250k
               OVER250K = :Over250k
+
+              finalize!
             end
 
             class EvaluationParams < Unit::BaseModel
@@ -1300,6 +1324,8 @@ module Unit
                 NEVER = :Never
                 REPLACE_IDENTIFICATION = :ReplaceIdentification
                 ALWAYS = :Always
+
+                finalize!
               end
             end
 
@@ -1328,6 +1354,8 @@ module Unit
               PERSONAL_INVESTMENTS = :PersonalInvestments
               BUSINESS_OWNERSHIP_INTERESTS = :BusinessOwnershipInterests
               GOVERNMENT_BENEFITS = :GovernmentBenefits
+
+              finalize!
             end
 
             # @example
@@ -1363,6 +1391,8 @@ module Unit
               MANAGER = :Manager
               PARTNER = :Partner
               MEMBER = :Member
+
+              finalize!
             end
           end
 
@@ -1519,6 +1549,8 @@ module Unit
           ENTER_SOLE_PROPRIETORSHIP_BUSINESS_INFORMATION = :EnterSoleProprietorshipBusinessInformation
           SOLE_PROPRIETORSHIP_PHONE_VERIFICATION = :SoleProprietorshipPhoneVerification
           SOLE_PROPRIETORSHIP_APPLICATION_CREATED = :SoleProprietorshipApplicationCreated
+
+          finalize!
         end
       end
 
@@ -1532,6 +1564,8 @@ module Unit
       # ```
       class Type < Unit::Enum
         APPLICATION_FORM = :applicationForm
+
+        finalize!
       end
 
       class Relationships < Unit::BaseModel
@@ -1595,6 +1629,8 @@ module Unit
               BUSINESS_APPLICATION = :businessApplication
               INDIVIDUAL_APPLICATION = :individualApplication
               APPLICATION = :application
+
+              finalize!
             end
           end
         end

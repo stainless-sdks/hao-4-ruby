@@ -59,6 +59,8 @@ module Unit
           RECURRING_BOOK_REPAYMENT = :recurringBookRepayment
           RECURRING_CAPITAL_PARTNER_ACH_REPAYMENT = :recurringCapitalPartnerAchRepayment
           RECURRIN_CAPITAL_PARTNER_BOOK_REPAYMENT = :recurrinCapitalPartnerBookRepayment
+
+          finalize!
         end
       end
 

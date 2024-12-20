@@ -50,6 +50,8 @@ module Unit
         # ```
         class Type < Unit::Enum
           BENEFICIAL_OWNER = :beneficialOwner
+
+          finalize!
         end
       end
     end

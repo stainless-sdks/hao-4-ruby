@@ -63,6 +63,8 @@ module Unit
         class ServiceType < Unit::Enum
           SWIPE = :Swipe
           BARCODE = :Barcode
+
+          finalize!
         end
 
         class Coordinates < Unit::BaseModel

@@ -75,6 +75,8 @@ module Unit
           CARD_REVERSAL_TRANSACTION = :cardReversalTransaction
           FEE_REVERSAL_TRANSACTION = :feeReversalTransaction
           PUSH_TO_CARD_REVERSAL_TRANSACTION = :pushToCardReversalTransaction
+
+          finalize!
         end
       end
     end
