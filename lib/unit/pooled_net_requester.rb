@@ -53,10 +53,10 @@ module Unit
       content_type = headers["content-type"]
 
       # This timeout is for acquiring a connection from the pool
-      # The default 5 seconds seems too short, lets just have a nearly unbounded queue for now
+      # The default 5 seconds seems too short, lets just have an unbounded queue for now
       #
       # TODO: revisit this around granular timeout / concurrency control
-      get_pool(url).with(timeout: 600) do |conn|
+      get_pool(url).with(timeout: 2**32) do |conn|
         conn.open_timeout = timeout
         conn.read_timeout = timeout
         conn.write_timeout = timeout
@@ -88,12 +88,11 @@ module Unit
         end
 
         conn.request(request)
-      rescue StandardError => e
-        conn.finish if conn.started?
-        raise e
+      rescue Timeout::Error
+        raise Unit::APITimeoutError.new(url: url)
       end
     rescue ConnectionPool::TimeoutError
-      raise Unit::APITimeoutError.new(url: url)
+      raise Unit::APIConnectionError.new(url: url)
     end
     # rubocop:enable Metrics/BlockLength
   end
