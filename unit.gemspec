@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["README.md"]
   s.required_ruby_version = ">= 3.0.0"
   s.add_dependency "connection_pool"
-  s.homepage = "https://rubydoc.info/github/stainless-sdks/hao-4-ruby"
+  s.homepage = "https://gemdocs.org/gems/unit/latest"
   s.metadata["homepage_uri"] = s.homepage
   s.metadata["source_code_uri"] = "https://github.com/stainless-sdks/hao-4-ruby"
   s.metadata["rubygems_mfa_required"] = "true"
