@@ -7,7 +7,7 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 
 ## Documentation
 
-Documentation for the most recent version of this gem can be found [on RubyDoc](https://rubydoc.info/github/stainless-sdks/hao-4-ruby).
+Documentation for the most recent release of this gem can be found [on RubyDoc](https://gemdocs.org/gems/unit/latest).
 
 The underlying REST API documentation can be found on [docs.hao-test.com](https://docs.hao-test.com).
 
