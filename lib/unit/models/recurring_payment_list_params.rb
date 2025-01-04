@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::RecurringPaymentListParams::Filter, nil]
+      #   # @param filter [Unit::Models::RecurringPaymentListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::RecurringPaymentListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::RecurringPaymentListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -72,14 +72,14 @@ module Unit
         optional :type, Unit::ArrayOf[enum: -> { Unit::Models::RecurringPaymentListParams::Filter::Type }]
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param from_end_time [String, nil]
-        #   # @param from_start_time [String, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param to_end_time [String, nil]
-        #   # @param to_start_time [String, nil]
-        #   # @param type [Array<String>, nil]
+        #   # @param account_id [String]
+        #   # @param customer_id [String]
+        #   # @param from_end_time [String]
+        #   # @param from_start_time [String]
+        #   # @param status [Array<String>]
+        #   # @param to_end_time [String]
+        #   # @param to_start_time [String]
+        #   # @param type [Array<String>]
         #   #
         #   def initialize(
         #     account_id: nil,
@@ -132,8 +132,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

@@ -14,8 +14,8 @@ module Unit
       optional :meta, -> { Unit::Models::RecurringPaymentListResponse::Meta }
 
       # @!parse
-      #   # @param data [Array<Unit::Models::RecurringPaymentListResponse::Data>, nil]
-      #   # @param meta [Unit::Models::RecurringPaymentListResponse::Meta, nil]
+      #   # @param data [Array<Unit::Models::RecurringPaymentListResponse::Data>]
+      #   # @param meta [Unit::Models::RecurringPaymentListResponse::Meta]
       #   #
       #   def initialize(data: nil, meta: nil, **) = super
 
@@ -33,8 +33,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::RecurringPaymentListResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, type: nil, **) = super
 
@@ -68,7 +68,7 @@ module Unit
         optional :pagination, -> { Unit::Models::RecurringPaymentListResponse::Meta::Pagination }
 
         # @!parse
-        #   # @param pagination [Unit::Models::RecurringPaymentListResponse::Meta::Pagination, nil]
+        #   # @param pagination [Unit::Models::RecurringPaymentListResponse::Meta::Pagination]
         #   #
         #   def initialize(pagination: nil, **) = super
 
@@ -91,9 +91,9 @@ module Unit
           optional :total, Integer
 
           # @!parse
-          #   # @param limit [Integer, nil]
-          #   # @param offset [Integer, nil]
-          #   # @param total [Integer, nil]
+          #   # @param limit [Integer]
+          #   # @param offset [Integer]
+          #   # @param total [Integer]
           #   #
           #   def initialize(limit: nil, offset: nil, total: nil, **) = super
 

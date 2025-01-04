@@ -50,13 +50,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CheckPaymentListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::CheckPaymentListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::CheckPaymentListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::CheckPaymentListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -79,7 +79,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentApproveParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CheckPaymentApproveParams::Data, nil] :data
+      #   @option params [Unit::Models::CheckPaymentApproveParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -156,7 +156,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentReturnParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CheckPaymentReturnParams::Data, nil] :data
+      #   @option params [Unit::Models::CheckPaymentReturnParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

@@ -138,7 +138,7 @@ module Unit
         #
         #   @option params [String] :application_id Path param: ID of the application to verify a file for
         #
-        #   @option params [String, nil] :job_id Body param:
+        #   @option params [String] :job_id Body param:
         #
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #

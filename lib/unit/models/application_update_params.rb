@@ -128,15 +128,15 @@ module Unit
             optional :year_of_incorporation, String, api_name: :yearOfIncorporation
 
             # @!parse
-            #   # @param annual_revenue [String, nil]
-            #   # @param business_vertical [String, nil]
-            #   # @param cash_flow [String, nil]
-            #   # @param countries_of_operation [Array<String>, nil]
-            #   # @param number_of_employees [String, nil]
-            #   # @param stock_symbol [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param website [String, nil]
-            #   # @param year_of_incorporation [String, nil]
+            #   # @param annual_revenue [String]
+            #   # @param business_vertical [String]
+            #   # @param cash_flow [String]
+            #   # @param countries_of_operation [Array<String>]
+            #   # @param number_of_employees [String]
+            #   # @param stock_symbol [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param website [String]
+            #   # @param year_of_incorporation [String]
             #   #
             #   def initialize(
             #     annual_revenue: nil,
@@ -350,10 +350,10 @@ module Unit
                      }
 
             # @!parse
-            #   # @param annual_income [String, nil]
-            #   # @param occupation [String, nil]
-            #   # @param relationships [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships, nil]
-            #   # @param source_of_income [String, nil]
+            #   # @param annual_income [String]
+            #   # @param occupation [String]
+            #   # @param relationships [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships]
+            #   # @param source_of_income [String]
             #   #
             #   def initialize(annual_income: nil, occupation: nil, relationships: nil, source_of_income: nil, **) = super
 
@@ -442,7 +442,7 @@ module Unit
                        -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application }
 
               # @!parse
-              #   # @param application [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application, nil]
+              #   # @param application [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application]
               #   #
               #   def initialize(application: nil, **) = super
 
@@ -614,11 +614,11 @@ module Unit
             optional :website, String
 
             # @!parse
-            #   # @param annual_revenue [String, nil]
-            #   # @param business_vertical [String, nil]
-            #   # @param number_of_employees [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param website [String, nil]
+            #   # @param annual_revenue [String]
+            #   # @param business_vertical [String]
+            #   # @param number_of_employees [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param website [String]
             #   #
             #   def initialize(annual_revenue: nil, business_vertical: nil, number_of_employees: nil, tags: nil, website: nil, **) = super
 
@@ -796,10 +796,10 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param annual_income [String, nil]
-            #   # @param occupation [String, nil]
-            #   # @param source_of_income [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param annual_income [String]
+            #   # @param occupation [String]
+            #   # @param source_of_income [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(annual_income: nil, occupation: nil, source_of_income: nil, tags: nil, **) = super
 
@@ -956,7 +956,7 @@ module Unit
                      -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer }
 
             # @!parse
-            #   # @param officer [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer, nil]
+            #   # @param officer [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer]
             #   #
             #   def initialize(officer: nil, **) = super
 
@@ -990,9 +990,9 @@ module Unit
                        }
 
               # @!parse
-              #   # @param annual_income [String, nil]
-              #   # @param occupation [String, nil]
-              #   # @param source_of_income [String, nil]
+              #   # @param annual_income [String]
+              #   # @param occupation [String]
+              #   # @param source_of_income [String]
               #   #
               #   def initialize(annual_income: nil, occupation: nil, source_of_income: nil, **) = super
 

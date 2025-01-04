@@ -14,8 +14,8 @@ module Unit
       optional :included, Unit::ArrayOf[-> { Unit::Models::ApplicationRetrieveResponse::Included }]
 
       # @!parse
-      #   # @param data [Unit::Models::Application, nil]
-      #   # @param included [Array<Unit::Models::ApplicationRetrieveResponse::Included>, nil]
+      #   # @param data [Unit::Models::Application]
+      #   # @param included [Array<Unit::Models::ApplicationRetrieveResponse::Included>]
       #   #
       #   def initialize(data: nil, included: nil, **) = super
 
@@ -43,10 +43,10 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Object, nil]
-        #   # @param relationships [Object, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Object]
+        #   # @param relationships [Object]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 

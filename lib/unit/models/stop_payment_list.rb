@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::StopPaymentList::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::StopPaymentList::Data>, nil]
+      #   # @param data [Array<Unit::Models::StopPaymentList::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 

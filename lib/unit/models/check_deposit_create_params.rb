@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::CheckDepositCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CheckDepositCreateParams::Data, nil]
+      #   # @param data [Unit::Models::CheckDepositCreateParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -69,9 +69,9 @@ module Unit
           # @!parse
           #   # @param amount [Integer]
           #   # @param description [String]
-          #   # @param clearing_days_override [Integer, nil]
-          #   # @param idempotency_key [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param clearing_days_override [Integer]
+          #   # @param idempotency_key [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, description:, clearing_days_override: nil, idempotency_key: nil, tags: nil, **) = super
 

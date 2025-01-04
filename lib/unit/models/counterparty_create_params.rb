@@ -9,7 +9,7 @@ module Unit
       optional :data, union: -> { Unit::Models::CounterpartyCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty, nil]
+      #   # @param data [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -117,9 +117,9 @@ module Unit
             #   # @param name [String]
             #   # @param routing_number [String]
             #   # @param type [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param permissions [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param idempotency_key [String]
+            #   # @param permissions [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     account_number:,
@@ -361,11 +361,11 @@ module Unit
             # @!parse
             #   # @param plaid_processor_token [String]
             #   # @param type [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param name [String, nil]
-            #   # @param permissions [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param verify_name [Boolean, nil]
+            #   # @param idempotency_key [String]
+            #   # @param name [String]
+            #   # @param permissions [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param verify_name [Boolean]
             #   #
             #   def initialize(
             #     plaid_processor_token:,

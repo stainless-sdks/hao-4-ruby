@@ -14,8 +14,8 @@ module Unit
       optional :meta, -> { Unit::Models::StoreLocationListResponse::Meta }
 
       # @!parse
-      #   # @param data [Array<Unit::Models::StoreLocationListResponse::Data>, nil]
-      #   # @param meta [Unit::Models::StoreLocationListResponse::Meta, nil]
+      #   # @param data [Array<Unit::Models::StoreLocationListResponse::Data>]
+      #   # @param meta [Unit::Models::StoreLocationListResponse::Meta]
       #   #
       #   def initialize(data: nil, meta: nil, **) = super
 
@@ -111,7 +111,7 @@ module Unit
 
             # @!attribute street2
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :street2, String
 
             # @!parse
@@ -170,7 +170,7 @@ module Unit
         optional :pagination, -> { Unit::Models::StoreLocationListResponse::Meta::Pagination }
 
         # @!parse
-        #   # @param pagination [Unit::Models::StoreLocationListResponse::Meta::Pagination, nil]
+        #   # @param pagination [Unit::Models::StoreLocationListResponse::Meta::Pagination]
         #   #
         #   def initialize(pagination: nil, **) = super
 
@@ -193,9 +193,9 @@ module Unit
           optional :total, Integer
 
           # @!parse
-          #   # @param limit [Integer, nil]
-          #   # @param offset [Integer, nil]
-          #   # @param total [Integer, nil]
+          #   # @param limit [Integer]
+          #   # @param offset [Integer]
+          #   # @param total [Integer]
           #   #
           #   def initialize(limit: nil, offset: nil, total: nil, **) = super
 

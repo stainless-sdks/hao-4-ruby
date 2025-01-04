@@ -32,9 +32,9 @@ module Unit
         optional :type, enum: -> { Unit::Models::BeneficialOwnerUpdateResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Unit::Models::BeneficialOwner, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Unit::Models::BeneficialOwner]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, type: nil, **) = super
 

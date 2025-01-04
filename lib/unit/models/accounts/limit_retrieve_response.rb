@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Accounts::LimitRetrieveResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Accounts::LimitRetrieveResponse::Data, nil]
+        #   # @param data [Unit::Models::Accounts::LimitRetrieveResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -23,7 +23,7 @@ module Unit
           optional :type, enum: -> { Unit::Models::Accounts::LimitRetrieveResponse::Data::Type }
 
           # @!parse
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(type: nil, **) = super
 

@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::CashDeposits::BarcodeCreateResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::CashDeposits::BarcodeCreateResponse::Data, nil]
+        #   # @param data [Unit::Models::CashDeposits::BarcodeCreateResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -61,9 +61,9 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param barcode_number [String, nil]
-            #   # @param expiration [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param barcode_number [String]
+            #   # @param expiration [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(barcode_number: nil, expiration: nil, tags: nil, **) = super
 

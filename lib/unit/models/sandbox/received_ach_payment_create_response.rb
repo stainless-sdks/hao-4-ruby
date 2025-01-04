@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data, nil]
+        #   # @param data [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -42,10 +42,10 @@ module Unit
           optional :type, enum: -> { Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Type }
 
           # @!parse
-          #   # @param id [String, nil]
-          #   # @param attributes [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Attributes, nil]
-          #   # @param relationships [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships, nil]
-          #   # @param type [String, nil]
+          #   # @param id [String]
+          #   # @param attributes [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Attributes]
+          #   # @param relationships [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships]
+          #   # @param type [String]
           #   #
           #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -155,12 +155,12 @@ module Unit
             #   # @param status [String]
             #   # @param trace_number [String]
             #   # @param was_advanced [Boolean]
-            #   # @param addenda [String, nil]
-            #   # @param is_advaceable [Boolean, nil]
-            #   # @param is_advanceable [Boolean, nil]
-            #   # @param receiving_entity_name [String, nil]
-            #   # @param return_reason [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param addenda [String]
+            #   # @param is_advaceable [Boolean]
+            #   # @param is_advanceable [Boolean]
+            #   # @param receiving_entity_name [String]
+            #   # @param return_reason [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     amount:,
@@ -277,9 +277,9 @@ module Unit
             # @!parse
             #   # @param account [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::Account]
             #   # @param customer [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::Customer]
-            #   # @param payment_advance_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::PaymentAdvanceTransaction, nil]
-            #   # @param receive_payment_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::ReceivePaymentTransaction, nil]
-            #   # @param repay_payment_advance_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::RepayPaymentAdvanceTransaction, nil]
+            #   # @param payment_advance_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::PaymentAdvanceTransaction]
+            #   # @param receive_payment_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::ReceivePaymentTransaction]
+            #   # @param repay_payment_advance_transaction [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
             #   #
             #   def initialize(
             #     account:,

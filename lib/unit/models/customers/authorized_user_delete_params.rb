@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Customers::AuthorizedUserDeleteParams::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteParams::Data, nil]
+        #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteParams::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -28,8 +28,8 @@ module Unit
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -42,7 +42,7 @@ module Unit
             optional :authorized_users_emails, Unit::ArrayOf[String], api_name: :authorizedUsersEmails
 
             # @!parse
-            #   # @param authorized_users_emails [Array<String>, nil]
+            #   # @param authorized_users_emails [Array<String>]
             #   #
             #   def initialize(authorized_users_emails: nil, **) = super
 

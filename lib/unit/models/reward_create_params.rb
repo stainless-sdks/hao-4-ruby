@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::RewardCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::RewardCreateParams::Data, nil]
+      #   # @param data [Unit::Models::RewardCreateParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -64,8 +64,8 @@ module Unit
           # @!parse
           #   # @param amount [Integer]
           #   # @param description [String]
-          #   # @param idempotency_key [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param idempotency_key [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, description:, idempotency_key: nil, tags: nil, **) = super
 
@@ -96,8 +96,8 @@ module Unit
 
           # @!parse
           #   # @param receiving_account [Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount]
-          #   # @param funding_account [Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount, nil]
-          #   # @param rewarded_transaction [Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction, nil]
+          #   # @param funding_account [Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount]
+          #   # @param rewarded_transaction [Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction]
           #   #
           #   def initialize(receiving_account:, funding_account: nil, rewarded_transaction: nil, **) = super
 

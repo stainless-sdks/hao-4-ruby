@@ -12,7 +12,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CheckDepositCreateParams::Data, nil] :data
+      #   @option params [Unit::Models::CheckDepositCreateParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -73,13 +73,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CheckDepositListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::CheckDepositListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::CheckDepositListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::CheckDepositListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

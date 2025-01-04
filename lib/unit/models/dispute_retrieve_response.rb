@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::DisputeRetrieveResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::DisputeRetrieveResponse::Data, nil]
+      #   # @param data [Unit::Models::DisputeRetrieveResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -40,7 +40,7 @@ module Unit
         #   # @param id [String]
         #   # @param relationships [Unit::Models::DisputeRetrieveResponse::Data::Relationships]
         #   # @param type [String]
-        #   # @param attributes [Unit::Models::DisputeRetrieveResponse::Data::Attributes, nil]
+        #   # @param attributes [Unit::Models::DisputeRetrieveResponse::Data::Attributes]
         #   #
         #   def initialize(id:, relationships:, type:, attributes: nil, **) = super
 
@@ -317,9 +317,9 @@ module Unit
           #   # @param external_id [String]
           #   # @param source [String]
           #   # @param status [String]
-          #   # @param decision_reason [String, nil]
-          #   # @param link [String, nil]
-          #   # @param status_history [Array<Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory>, nil]
+          #   # @param decision_reason [String]
+          #   # @param link [String]
+          #   # @param status_history [Array<Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory>]
           #   #
           #   def initialize(
           #     amount:,
@@ -367,8 +367,8 @@ module Unit
             optional :updated_at, Time, api_name: :updatedAt
 
             # @!parse
-            #   # @param type [String, nil]
-            #   # @param updated_at [String, nil]
+            #   # @param type [String]
+            #   # @param updated_at [String]
             #   #
             #   def initialize(type: nil, updated_at: nil, **) = super
 

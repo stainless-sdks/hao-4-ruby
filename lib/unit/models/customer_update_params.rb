@@ -9,7 +9,7 @@ module Unit
       optional :data, union: -> { Unit::Models::CustomerUpdateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer, nil]
+      #   # @param data [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -46,8 +46,8 @@ module Unit
                    }
 
           # @!parse
-          #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -56,13 +56,13 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
-            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address]
+            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address }
 
             # @!attribute authorized_users
             #
-            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>]
+            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>, nil]
             optional :authorized_users,
                      Unit::ArrayOf[-> {
                        Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser
@@ -71,22 +71,22 @@ module Unit
 
             # @!attribute dba
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :dba, String
 
             # @!attribute email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
             # @!attribute jwt_subject
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :jwt_subject, String, api_name: :jwtSubject
 
             # @!attribute phone
             #
-            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone]
+            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone, nil]
             optional :phone,
                      -> { Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone }
 
@@ -102,7 +102,7 @@ module Unit
             #   # @param email [String, nil]
             #   # @param jwt_subject [String, nil]
             #   # @param phone [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(address: nil, authorized_users: nil, dba: nil, email: nil, jwt_subject: nil, phone: nil, tags: nil, **) = super
 
@@ -136,7 +136,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -175,7 +175,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse
@@ -280,8 +280,8 @@ module Unit
           optional :type, enum: -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -290,13 +290,13 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
-            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address]
+            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address }
 
             # @!attribute authorized_users
             #
-            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>]
+            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>, nil]
             optional :authorized_users,
                      Unit::ArrayOf[-> {
                        Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser
@@ -305,13 +305,13 @@ module Unit
 
             # @!attribute contact
             #
-            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact]
+            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact, nil]
             optional :contact,
                      -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact }
 
             # @!attribute dba
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :dba, String
 
             # @!attribute ein
@@ -321,13 +321,13 @@ module Unit
 
             # @!attribute phone
             #
-            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone]
+            #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone, nil]
             optional :phone,
                      -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone }
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol => String}, nil]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -335,7 +335,7 @@ module Unit
             #   # @param authorized_users [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>, nil]
             #   # @param contact [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact, nil]
             #   # @param dba [String, nil]
-            #   # @param ein [String, nil]
+            #   # @param ein [String]
             #   # @param phone [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone, nil]
             #   # @param tags [Hash{Symbol => String}, nil]
             #   #
@@ -371,7 +371,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -410,7 +410,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse
@@ -487,7 +487,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse

@@ -50,11 +50,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::RecurringPaymentListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::RecurringPaymentListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::RecurringPaymentListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::RecurringPaymentListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -77,7 +77,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentDisableParams] Attributes to send in this request.
       #
-      #   @option params [Object] :body
+      #   @option params [Object, nil] :body
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -103,7 +103,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentEnableParams] Attributes to send in this request.
       #
-      #   @option params [Object] :body
+      #   @option params [Object, nil] :body
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

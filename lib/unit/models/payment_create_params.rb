@@ -9,7 +9,7 @@ module Unit
       optional :data, union: -> { Unit::Models::PaymentCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment, nil]
+      #   # @param data [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -68,7 +68,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -133,11 +133,11 @@ module Unit
             #   # @param counterparty [Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty]
             #   # @param description [String]
             #   # @param direction [String]
-            #   # @param addenda [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param addenda [String]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     amount:,
@@ -365,7 +365,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -428,12 +428,12 @@ module Unit
             #   # @param amount [Integer]
             #   # @param description [String]
             #   # @param direction [String]
-            #   # @param addenda [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param verify_counterparty_balance [Boolean, nil]
+            #   # @param addenda [String]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
             #     amount:,
@@ -663,7 +663,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -737,13 +737,13 @@ module Unit
             #   # @param description [String]
             #   # @param direction [String]
             #   # @param plaid_processor_token [String]
-            #   # @param addenda [String, nil]
-            #   # @param counterparty_name [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param verify_counterparty_balance [Boolean, nil]
+            #   # @param addenda [String]
+            #   # @param counterparty_name [String]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
             #     amount:,
@@ -915,7 +915,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -950,9 +950,9 @@ module Unit
             # @!parse
             #   # @param amount [Integer]
             #   # @param description [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
 
@@ -1137,7 +1137,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -1182,9 +1182,9 @@ module Unit
             #   # @param amount [Integer]
             #   # @param counterparty [Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Counterparty]
             #   # @param description [String]
-            #   # @param direction [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param direction [String]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(amount:, counterparty:, description:, direction: nil, idempotency_key: nil, tags: nil, **) = super
 
@@ -1250,7 +1250,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -1396,7 +1396,7 @@ module Unit
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes]
           #   # @param relationships [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships]
-          #   # @param type [String, nil]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes:, relationships:, type: nil, **) = super
 
@@ -1433,8 +1433,8 @@ module Unit
             #   # @param amount [Integer]
             #   # @param configuration [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration]
             #   # @param description [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(amount:, configuration:, description:, idempotency_key: nil, tags: nil, **) = super
 
@@ -1448,7 +1448,7 @@ module Unit
                        -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra }
 
               # @!parse
-              #   # @param astra [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra, nil]
+              #   # @param astra [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra]
               #   #
               #   def initialize(astra: nil, **) = super
 
@@ -1502,8 +1502,8 @@ module Unit
                 #   # @param institution_id [String]
                 #   # @param reference_id [String]
                 #   # @param routing_number [String]
-                #   # @param account_name [String, nil]
-                #   # @param auth_token [String, nil]
+                #   # @param account_name [String]
+                #   # @param auth_token [String]
                 #   #
                 #   def initialize(
                 #     account_number:,

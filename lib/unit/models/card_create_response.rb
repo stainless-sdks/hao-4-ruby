@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::Card }
 
       # @!parse
-      #   # @param data [Unit::Models::Card, nil]
+      #   # @param data [Unit::Models::Card]
       #   #
       #   def initialize(data: nil, **) = super
 

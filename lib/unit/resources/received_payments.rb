@@ -14,7 +14,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::ReceivedPaymentRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :included
+      #   @option params [String] :included
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -58,13 +58,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::ReceivedPaymentListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::ReceivedPaymentListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::ReceivedPaymentListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::ReceivedPaymentListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::ReceivedPaymentListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

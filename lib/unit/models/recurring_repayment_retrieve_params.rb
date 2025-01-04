@@ -9,7 +9,7 @@ module Unit
       optional :include, String
 
       # @!parse
-      #   # @param include [String, nil]
+      #   # @param include [String]
       #   #
       #   def initialize(include: nil, **) = super
 

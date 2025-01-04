@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data, nil]
+        #   # @param data [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 

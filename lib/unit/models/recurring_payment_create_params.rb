@@ -106,9 +106,9 @@ module Unit
             #   # @param amount [Integer]
             #   # @param description [String]
             #   # @param schedule [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule]
-            #   # @param addenda [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param addenda [String]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(amount:, description:, schedule:, addenda: nil, idempotency_key: nil, tags: nil, **) = super
 
@@ -170,10 +170,10 @@ module Unit
                 # @!parse
                 #   # @param interval [String]
                 #   # @param next_scheduled_action [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -244,11 +244,11 @@ module Unit
 
                 # @!parse
                 #   # @param interval [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param day_of_week [String, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param day_of_week [String]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -347,10 +347,10 @@ module Unit
               # @!parse
               #   # @param interval [String]
               #   # @param next_scheduled_action [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,
@@ -421,11 +421,11 @@ module Unit
 
               # @!parse
               #   # @param interval [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param day_of_week [String, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param day_of_week [String]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,
@@ -720,12 +720,12 @@ module Unit
             #   # @param amount [Integer]
             #   # @param description [String]
             #   # @param schedule [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule]
-            #   # @param addenda [String, nil]
-            #   # @param clearing_days_override [Integer, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param verify_counterparty_balance [Boolean, nil]
+            #   # @param addenda [String]
+            #   # @param clearing_days_override [Integer]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
             #     amount:,
@@ -800,10 +800,10 @@ module Unit
                 # @!parse
                 #   # @param interval [String]
                 #   # @param next_scheduled_action [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -874,11 +874,11 @@ module Unit
 
                 # @!parse
                 #   # @param interval [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param day_of_week [String, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param day_of_week [String]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -977,10 +977,10 @@ module Unit
               # @!parse
               #   # @param interval [String]
               #   # @param next_scheduled_action [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,
@@ -1051,11 +1051,11 @@ module Unit
 
               # @!parse
               #   # @param interval [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param day_of_week [String, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param day_of_week [String]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,
@@ -1335,9 +1335,9 @@ module Unit
             #   # @param amount [Integer]
             #   # @param description [String]
             #   # @param schedule [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, schedule:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
 
@@ -1399,10 +1399,10 @@ module Unit
                 # @!parse
                 #   # @param interval [String]
                 #   # @param next_scheduled_action [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -1473,11 +1473,11 @@ module Unit
 
                 # @!parse
                 #   # @param interval [String]
-                #   # @param day_of_month [Integer, nil]
-                #   # @param day_of_week [String, nil]
-                #   # @param end_time [String, nil]
-                #   # @param start_time [String, nil]
-                #   # @param total_number_of_payments [Integer, nil]
+                #   # @param day_of_month [Integer]
+                #   # @param day_of_week [String]
+                #   # @param end_time [String]
+                #   # @param start_time [String]
+                #   # @param total_number_of_payments [Integer]
                 #   #
                 #   def initialize(
                 #     interval:,
@@ -1576,10 +1576,10 @@ module Unit
               # @!parse
               #   # @param interval [String]
               #   # @param next_scheduled_action [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,
@@ -1650,11 +1650,11 @@ module Unit
 
               # @!parse
               #   # @param interval [String]
-              #   # @param day_of_month [Integer, nil]
-              #   # @param day_of_week [String, nil]
-              #   # @param end_time [String, nil]
-              #   # @param start_time [String, nil]
-              #   # @param total_number_of_payments [Integer, nil]
+              #   # @param day_of_month [Integer]
+              #   # @param day_of_week [String]
+              #   # @param end_time [String]
+              #   # @param start_time [String]
+              #   # @param total_number_of_payments [Integer]
               #   #
               #   def initialize(
               #     interval:,

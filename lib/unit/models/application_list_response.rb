@@ -14,8 +14,8 @@ module Unit
       optional :meta, -> { Unit::Models::ApplicationListResponse::Meta }
 
       # @!parse
-      #   # @param data [Array<Unit::Models::Application>, nil]
-      #   # @param meta [Unit::Models::ApplicationListResponse::Meta, nil]
+      #   # @param data [Array<Unit::Models::Application>]
+      #   # @param meta [Unit::Models::ApplicationListResponse::Meta]
       #   #
       #   def initialize(data: nil, meta: nil, **) = super
 
@@ -28,7 +28,7 @@ module Unit
         optional :pagination, -> { Unit::Models::ApplicationListResponse::Meta::Pagination }
 
         # @!parse
-        #   # @param pagination [Unit::Models::ApplicationListResponse::Meta::Pagination, nil]
+        #   # @param pagination [Unit::Models::ApplicationListResponse::Meta::Pagination]
         #   #
         #   def initialize(pagination: nil, **) = super
 
@@ -51,9 +51,9 @@ module Unit
           optional :total, Integer
 
           # @!parse
-          #   # @param limit [Integer, nil]
-          #   # @param offset [Integer, nil]
-          #   # @param total [Integer, nil]
+          #   # @param limit [Integer]
+          #   # @param offset [Integer]
+          #   # @param total [Integer]
           #   #
           #   def initialize(limit: nil, offset: nil, total: nil, **) = super
 

@@ -64,8 +64,8 @@ module Unit
           # @!parse
           #   # @param amount [Integer]
           #   # @param description [String]
-          #   # @param idempotency_key [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param idempotency_key [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, description:, idempotency_key: nil, tags: nil, **) = super
 

@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Customers::AuthorizedUserCreateParams::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Customers::AuthorizedUserCreateParams::Data, nil]
+        #   # @param data [Unit::Models::Customers::AuthorizedUserCreateParams::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -28,8 +28,8 @@ module Unit
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -46,7 +46,7 @@ module Unit
                      api_name: :authorizedUsers
 
             # @!parse
-            #   # @param authorized_users [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>, nil]
+            #   # @param authorized_users [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>]
             #   #
             #   def initialize(authorized_users: nil, **) = super
 
@@ -75,7 +75,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse

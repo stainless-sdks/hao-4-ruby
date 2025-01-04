@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::WebhookCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::WebhookCreateParams::Data, nil]
+      #   # @param data [Unit::Models::WebhookCreateParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param attributes [Unit::Models::WebhookCreateParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::WebhookCreateParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -80,8 +80,8 @@ module Unit
           #   # @param delivery_mode [String]
           #   # @param label [String]
           #   # @param url [String]
-          #   # @param include_resources [Boolean, nil]
-          #   # @param subscription_type [String, nil]
+          #   # @param include_resources [Boolean]
+          #   # @param subscription_type [String]
           #   #
           #   def initialize(token:, content_type:, delivery_mode:, label:, url:, include_resources: nil, subscription_type: nil, **) = super
 

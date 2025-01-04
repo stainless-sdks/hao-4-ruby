@@ -9,7 +9,7 @@ module Unit
       optional :data, union: -> { Unit::Models::CardCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest, nil]
+      #   # @param data [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -144,18 +144,18 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param active_for_online_use [Boolean, nil]
-            #   # @param additional_embossed_text [String, nil]
-            #   # @param bin [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin, nil]
-            #   # @param card_design_id [String, nil]
-            #   # @param card_qualifier [String, nil]
-            #   # @param design [String, nil]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits, nil]
-            #   # @param print_only_business_name [Boolean, nil]
-            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param active_for_online_use [Boolean]
+            #   # @param additional_embossed_text [String]
+            #   # @param bin [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin]
+            #   # @param card_design_id [String]
+            #   # @param card_qualifier [String]
+            #   # @param design [String]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits]
+            #   # @param print_only_business_name [Boolean]
+            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     active_for_online_use: nil,
@@ -219,10 +219,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -257,7 +257,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -298,8 +298,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 
@@ -608,18 +608,18 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::FullName]
             #   # @param phone [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Phone]
-            #   # @param active_for_online_use [Boolean, nil]
-            #   # @param additional_embossed_text [String, nil]
-            #   # @param design [String, nil]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits, nil]
-            #   # @param nationality [String, nil]
-            #   # @param passport [String, nil]
-            #   # @param print_only_business_name [Boolean, nil]
-            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress, nil]
-            #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param active_for_online_use [Boolean]
+            #   # @param additional_embossed_text [String]
+            #   # @param design [String]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits]
+            #   # @param nationality [String]
+            #   # @param passport [String]
+            #   # @param print_only_business_name [Boolean]
+            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress]
+            #   # @param ssn [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address:,
@@ -674,7 +674,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -752,10 +752,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -790,7 +790,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -831,8 +831,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 
@@ -1141,18 +1141,18 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::FullName]
             #   # @param phone [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Phone]
-            #   # @param active_for_online_use [Boolean, nil]
-            #   # @param additional_embossed_text [String, nil]
-            #   # @param design [String, nil]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits, nil]
-            #   # @param nationality [String, nil]
-            #   # @param passport [String, nil]
-            #   # @param print_only_business_name [Boolean, nil]
-            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress, nil]
-            #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param active_for_online_use [Boolean]
+            #   # @param additional_embossed_text [String]
+            #   # @param design [String]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits]
+            #   # @param nationality [String]
+            #   # @param passport [String]
+            #   # @param print_only_business_name [Boolean]
+            #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress]
+            #   # @param ssn [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address:,
@@ -1207,7 +1207,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -1285,10 +1285,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -1323,7 +1323,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -1364,8 +1364,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 
@@ -1605,12 +1605,12 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param bin [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin, nil]
-            #   # @param card_qualifier [String, nil]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param bin [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin]
+            #   # @param card_qualifier [String]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(bin: nil, card_qualifier: nil, expiry_date: nil, idempotency_key: nil, limits: nil, tags: nil, **) = super
 
@@ -1658,10 +1658,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -1693,8 +1693,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 
@@ -1974,13 +1974,13 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::FullName]
             #   # @param phone [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Phone]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits, nil]
-            #   # @param nationality [String, nil]
-            #   # @param passport [String, nil]
-            #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits]
+            #   # @param nationality [String]
+            #   # @param passport [String]
+            #   # @param ssn [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address:,
@@ -2030,7 +2030,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -2108,10 +2108,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -2143,8 +2143,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 
@@ -2424,13 +2424,13 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::FullName]
             #   # @param phone [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Phone]
-            #   # @param expiry_date [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits, nil]
-            #   # @param nationality [String, nil]
-            #   # @param passport [String, nil]
-            #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param expiry_date [String]
+            #   # @param idempotency_key [String]
+            #   # @param limits [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits]
+            #   # @param nationality [String]
+            #   # @param passport [String]
+            #   # @param ssn [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address:,
@@ -2480,7 +2480,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -2558,10 +2558,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -2593,8 +2593,8 @@ module Unit
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account]
-            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer, nil]
-            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount, nil]
+            #   # @param customer [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer]
+            #   # @param default_funding_account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount]
             #   #
             #   def initialize(account:, customer: nil, default_funding_account: nil, **) = super
 

@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Customers::TokenCreateResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Customers::TokenCreateResponse::Data, nil]
+        #   # @param data [Unit::Models::Customers::TokenCreateResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -47,8 +47,8 @@ module Unit
             optional :expires_in, Integer, api_name: :expiresIn
 
             # @!parse
-            #   # @param token [String, nil]
-            #   # @param expires_in [Integer, nil]
+            #   # @param token [String]
+            #   # @param expires_in [Integer]
             #   #
             #   def initialize(token: nil, expires_in: nil, **) = super
 

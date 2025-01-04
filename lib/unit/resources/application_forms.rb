@@ -12,7 +12,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::ApplicationFormCreateParams::Data, nil] :data
+      #   @option params [Unit::Models::ApplicationFormCreateParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -35,7 +35,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :included
+      #   @option params [String] :included
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -56,11 +56,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::ApplicationFormListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::ApplicationFormListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::ApplicationFormListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::ApplicationFormListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

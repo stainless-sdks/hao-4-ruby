@@ -55,9 +55,9 @@ module Unit
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes, nil]
-          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes]
+          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -87,8 +87,8 @@ module Unit
             # @!parse
             #   # @param credit_limit [Integer]
             #   # @param credit_terms [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(credit_limit:, credit_terms:, idempotency_key: nil, tags: nil, **) = super
 
@@ -204,9 +204,9 @@ module Unit
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes, nil]
-          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes]
+          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -230,8 +230,8 @@ module Unit
 
             # @!parse
             #   # @param deposit_product [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(deposit_product:, idempotency_key: nil, tags: nil, **) = super
 
@@ -252,8 +252,8 @@ module Unit
                      -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers }
 
             # @!parse
-            #   # @param customer [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer, nil]
-            #   # @param customers [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers, nil]
+            #   # @param customer [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer]
+            #   # @param customers [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers]
             #   #
             #   def initialize(customer: nil, customers: nil, **) = super
 
@@ -345,8 +345,8 @@ module Unit
                 optional :type, String
 
                 # @!parse
-                #   # @param id [String, nil]
-                #   # @param type [String, nil]
+                #   # @param id [String]
+                #   # @param type [String]
                 #   #
                 #   def initialize(id: nil, type: nil, **) = super
 
@@ -391,9 +391,9 @@ module Unit
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes, nil]
-          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes]
+          #   # @param relationships [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -417,8 +417,8 @@ module Unit
 
             # @!parse
             #   # @param wallet_terms [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(wallet_terms:, idempotency_key: nil, tags: nil, **) = super
 

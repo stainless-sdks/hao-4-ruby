@@ -25,13 +25,13 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::TransactionListParams::Filter, nil]
+      #   # @param filter [Unit::Models::TransactionListParams::Filter]
       #   #
-      #   # @param include [String, nil]
+      #   # @param include [String]
       #   #
-      #   # @param page [Unit::Models::TransactionListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::TransactionListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, sort: nil, **) = super
 
@@ -107,19 +107,19 @@ module Unit
         optional :until_, String, api_name: :until
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param account_type [String, nil]
-        #   # @param card_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param direction [Array<String>, nil]
-        #   # @param exclude_fees [Boolean, nil]
-        #   # @param from_amount [Integer, nil]
-        #   # @param query [String, nil]
-        #   # @param since [String, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
-        #   # @param to_amount [Integer, nil]
-        #   # @param type [Array<String>, nil]
-        #   # @param until_ [String, nil]
+        #   # @param account_id [String]
+        #   # @param account_type [String]
+        #   # @param card_id [String]
+        #   # @param customer_id [String]
+        #   # @param direction [Array<String>]
+        #   # @param exclude_fees [Boolean]
+        #   # @param from_amount [Integer]
+        #   # @param query [String]
+        #   # @param since [String]
+        #   # @param tags [Hash{Symbol => String}]
+        #   # @param to_amount [Integer]
+        #   # @param type [Array<String>]
+        #   # @param until_ [String]
         #   #
         #   def initialize(
         #     account_id: nil,
@@ -174,8 +174,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

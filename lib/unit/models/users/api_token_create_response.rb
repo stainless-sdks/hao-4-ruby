@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Users::APITokenCreateResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Users::APITokenCreateResponse::Data, nil]
+        #   # @param data [Unit::Models::Users::APITokenCreateResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -33,9 +33,9 @@ module Unit
           optional :type, enum: -> { Unit::Models::Users::APITokenCreateResponse::Data::Type }
 
           # @!parse
-          #   # @param id [String, nil]
-          #   # @param attributes [Unit::Models::Users::APITokenCreateResponse::Data::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param id [String]
+          #   # @param attributes [Unit::Models::Users::APITokenCreateResponse::Data::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(id: nil, attributes: nil, type: nil, **) = super
 
@@ -69,10 +69,10 @@ module Unit
 
             # @!parse
             #   # @param created_at [String]
-            #   # @param token [String, nil]
-            #   # @param description [String, nil]
-            #   # @param expiration [String, nil]
-            #   # @param source_ip [String, nil]
+            #   # @param token [String]
+            #   # @param description [String]
+            #   # @param expiration [String]
+            #   # @param source_ip [String]
             #   #
             #   def initialize(created_at:, token: nil, description: nil, expiration: nil, source_ip: nil, **) = super
 

@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::CheckPaymentListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::CheckPaymentListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::CheckPaymentListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -188,25 +188,25 @@ module Unit
           #   # @param originated [Boolean]
           #   # @param status [String]
           #   # @param updated_at [String]
-          #   # @param additional_verification_status [String, nil]
-          #   # @param check_number [String, nil]
-          #   # @param counterparty [Unit::Models::CheckPaymentListResponse::Data::Attributes::Counterparty, nil]
-          #   # @param counterparty_routing_number [String, nil]
-          #   # @param delivery_status [String, nil]
-          #   # @param description [String, nil]
-          #   # @param expected_delivery [String, nil]
-          #   # @param expiration_date [String, nil]
-          #   # @param memo [String, nil]
-          #   # @param on_us [String, nil]
-          #   # @param on_us_auxiliary [String, nil]
-          #   # @param pending_review_reasons [Array<String>, nil]
-          #   # @param postal_code [String, nil]
-          #   # @param reject_reason [String, nil]
-          #   # @param return_cutoff_time [String, nil]
-          #   # @param return_reason [String, nil]
-          #   # @param send_at [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
-          #   # @param tracked_at [String, nil]
+          #   # @param additional_verification_status [String]
+          #   # @param check_number [String]
+          #   # @param counterparty [Unit::Models::CheckPaymentListResponse::Data::Attributes::Counterparty]
+          #   # @param counterparty_routing_number [String]
+          #   # @param delivery_status [String]
+          #   # @param description [String]
+          #   # @param expected_delivery [String]
+          #   # @param expiration_date [String]
+          #   # @param memo [String]
+          #   # @param on_us [String]
+          #   # @param on_us_auxiliary [String]
+          #   # @param pending_review_reasons [Array<String>]
+          #   # @param postal_code [String]
+          #   # @param reject_reason [String]
+          #   # @param return_cutoff_time [String]
+          #   # @param return_reason [String]
+          #   # @param send_at [String]
+          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tracked_at [String]
           #   #
           #   def initialize(
           #     amount:,
@@ -303,9 +303,9 @@ module Unit
             optional :name, String
 
             # @!parse
-            #   # @param address [Unit::Models::CheckPaymentListResponse::Data::Attributes::Counterparty::Address, nil]
-            #   # @param counterparty_moved [Boolean, nil]
-            #   # @param name [String, nil]
+            #   # @param address [Unit::Models::CheckPaymentListResponse::Data::Attributes::Counterparty::Address]
+            #   # @param counterparty_moved [Boolean]
+            #   # @param name [String]
             #   #
             #   def initialize(address: nil, counterparty_moved: nil, name: nil, **) = super
 
@@ -339,7 +339,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -461,9 +461,9 @@ module Unit
 
           # @!parse
           #   # @param account [Unit::Models::CheckPaymentListResponse::Data::Relationships::Account]
-          #   # @param customer [Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer, nil]
-          #   # @param customers [Unit::Models::CheckPaymentListResponse::Data::Relationships::Customers, nil]
-          #   # @param transaction [Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction, nil]
+          #   # @param customer [Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer]
+          #   # @param customers [Unit::Models::CheckPaymentListResponse::Data::Relationships::Customers]
+          #   # @param transaction [Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction]
           #   #
           #   def initialize(account:, customer: nil, customers: nil, transaction: nil, **) = super
 
@@ -614,8 +614,8 @@ module Unit
               optional :type, String
 
               # @!parse
-              #   # @param id [String, nil]
-              #   # @param type [String, nil]
+              #   # @param id [String]
+              #   # @param type [String]
               #   #
               #   def initialize(id: nil, type: nil, **) = super
 

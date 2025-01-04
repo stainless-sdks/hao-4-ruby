@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::ApplicationCancelParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::ApplicationCancelParams::Data, nil]
+      #   # @param data [Unit::Models::ApplicationCancelParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::ApplicationCancelParams::Data::Type }
 
         # @!parse
-        #   # @param attributes [Unit::Models::ApplicationCancelParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::ApplicationCancelParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -41,7 +41,7 @@ module Unit
           optional :reason, String
 
           # @!parse
-          #   # @param reason [String, nil]
+          #   # @param reason [String]
           #   #
           #   def initialize(reason: nil, **) = super
 

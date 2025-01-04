@@ -5,7 +5,7 @@ module Unit
     class RecurringPaymentDisableParams < Unit::BaseModel
       # @!attribute body
       #
-      #   @return [Object]
+      #   @return [Object, nil]
       required :body, Unit::Unknown
 
       # @!parse

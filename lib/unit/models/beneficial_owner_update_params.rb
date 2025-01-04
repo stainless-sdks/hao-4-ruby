@@ -64,9 +64,9 @@ module Unit
                    enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome }
 
           # @!parse
-          #   # @param annual_income [String, nil]
-          #   # @param occupation [String, nil]
-          #   # @param source_of_income [String, nil]
+          #   # @param annual_income [String]
+          #   # @param occupation [String]
+          #   # @param source_of_income [String]
           #   #
           #   def initialize(annual_income: nil, occupation: nil, source_of_income: nil, **) = super
 

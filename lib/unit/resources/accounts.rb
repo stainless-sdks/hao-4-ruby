@@ -58,7 +58,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AccountRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -102,11 +102,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AccountListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AccountListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::AccountListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::AccountListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::AccountListParams::Page] :page Parameters for paginated list requests
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -146,7 +146,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AccountCloseParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AccountCloseParams::Data, nil] :data
+      #   @option params [Unit::Models::AccountCloseParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -206,7 +206,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AccountFreezeParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AccountFreezeParams::Data, nil] :data
+      #   @option params [Unit::Models::AccountFreezeParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

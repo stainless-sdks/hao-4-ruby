@@ -39,7 +39,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CustomerUpdateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer, nil] :data
+      #   @option params [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -60,11 +60,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CustomerListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CustomerListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::CustomerListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::CustomerListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::CustomerListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -87,7 +87,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CustomerArchiveParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CustomerArchiveParams::Data, nil] :data
+      #   @option params [Unit::Models::CustomerArchiveParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

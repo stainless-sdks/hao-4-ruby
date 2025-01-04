@@ -12,7 +12,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::PaymentCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment, nil] :data
+      #   @option params [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -38,7 +38,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::PaymentRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :included
+      #   @option params [String] :included
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -82,13 +82,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::PaymentListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::PaymentListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::PaymentListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::PaymentListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::PaymentListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -111,7 +111,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::PaymentCancelParams] Attributes to send in this request.
       #
-      #   @option params [Object] :body
+      #   @option params [Object, nil] :body
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

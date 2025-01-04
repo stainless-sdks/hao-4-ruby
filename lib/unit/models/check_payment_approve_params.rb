@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::CheckPaymentApproveParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CheckPaymentApproveParams::Data, nil]
+      #   # @param data [Unit::Models::CheckPaymentApproveParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -22,7 +22,7 @@ module Unit
         optional :type, enum: -> { Unit::Models::CheckPaymentApproveParams::Data::Type }
 
         # @!parse
-        #   # @param type [String, nil]
+        #   # @param type [String]
         #   #
         #   def initialize(type: nil, **) = super
 

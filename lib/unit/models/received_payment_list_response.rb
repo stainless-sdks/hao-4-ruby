@@ -19,9 +19,9 @@ module Unit
       optional :meta, -> { Unit::Models::ReceivedPaymentListResponse::Meta }
 
       # @!parse
-      #   # @param data [Array<Unit::Models::ReceivedPaymentListResponse::Data>, nil]
-      #   # @param included [Array<Unit::Models::ReceivedPaymentListResponse::Included>, nil]
-      #   # @param meta [Unit::Models::ReceivedPaymentListResponse::Meta, nil]
+      #   # @param data [Array<Unit::Models::ReceivedPaymentListResponse::Data>]
+      #   # @param included [Array<Unit::Models::ReceivedPaymentListResponse::Included>]
+      #   # @param meta [Unit::Models::ReceivedPaymentListResponse::Meta]
       #   #
       #   def initialize(data: nil, included: nil, meta: nil, **) = super
 
@@ -49,10 +49,10 @@ module Unit
         optional :type, enum: -> { Unit::Models::ReceivedPaymentListResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Unit::Models::ReceivedPaymentListResponse::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::ReceivedPaymentListResponse::Data::Relationships, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Unit::Models::ReceivedPaymentListResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::ReceivedPaymentListResponse::Data::Relationships]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -159,12 +159,12 @@ module Unit
           #   # @param status [String]
           #   # @param trace_number [String]
           #   # @param was_advanced [Boolean]
-          #   # @param addenda [String, nil]
-          #   # @param is_advaceable [Boolean, nil]
-          #   # @param is_advanceable [Boolean, nil]
-          #   # @param receiving_entity_name [String, nil]
-          #   # @param return_reason [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param addenda [String]
+          #   # @param is_advaceable [Boolean]
+          #   # @param is_advanceable [Boolean]
+          #   # @param receiving_entity_name [String]
+          #   # @param return_reason [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(
           #     amount:,
@@ -279,9 +279,9 @@ module Unit
           # @!parse
           #   # @param account [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::Account]
           #   # @param customer [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::Customer]
-          #   # @param payment_advance_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction, nil]
-          #   # @param receive_payment_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction, nil]
-          #   # @param repay_payment_advance_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction, nil]
+          #   # @param payment_advance_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction]
+          #   # @param receive_payment_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction]
+          #   # @param repay_payment_advance_transaction [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
           #   #
           #   def initialize(
           #     account:,
@@ -562,10 +562,10 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Object, nil]
-        #   # @param relationships [Object, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Object]
+        #   # @param relationships [Object]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -579,7 +579,7 @@ module Unit
         optional :pagination, -> { Unit::Models::ReceivedPaymentListResponse::Meta::Pagination }
 
         # @!parse
-        #   # @param pagination [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination, nil]
+        #   # @param pagination [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination]
         #   #
         #   def initialize(pagination: nil, **) = super
 
@@ -602,9 +602,9 @@ module Unit
           optional :total, Integer
 
           # @!parse
-          #   # @param limit [Integer, nil]
-          #   # @param offset [Integer, nil]
-          #   # @param total [Integer, nil]
+          #   # @param limit [Integer]
+          #   # @param offset [Integer]
+          #   # @param total [Integer]
           #   #
           #   def initialize(limit: nil, offset: nil, total: nil, **) = super
 

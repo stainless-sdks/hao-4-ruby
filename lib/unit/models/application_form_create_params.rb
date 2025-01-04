@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::ApplicationFormCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::ApplicationFormCreateParams::Data, nil]
+      #   # @param data [Unit::Models::ApplicationFormCreateParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -33,8 +33,8 @@ module Unit
 
         # @!parse
         #   # @param type [String]
-        #   # @param attributes [Unit::Models::ApplicationFormCreateParams::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::ApplicationFormCreateParams::Data::Relationships, nil]
+        #   # @param attributes [Unit::Models::ApplicationFormCreateParams::Data::Attributes]
+        #   # @param relationships [Unit::Models::ApplicationFormCreateParams::Data::Relationships]
         #   #
         #   def initialize(type:, attributes: nil, relationships: nil, **) = super
 
@@ -103,13 +103,13 @@ module Unit
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param allowed_application_types [Array<String>, nil]
-          #   # @param applicant_details [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails, nil]
-          #   # @param hide_application_progress_tracker [Boolean, nil]
-          #   # @param lang [String, nil]
-          #   # @param require_id_verification [Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification, nil]
-          #   # @param settings_override [Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param allowed_application_types [Array<String>]
+          #   # @param applicant_details [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails]
+          #   # @param hide_application_progress_tracker [Boolean]
+          #   # @param lang [String]
+          #   # @param require_id_verification [Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification]
+          #   # @param settings_override [Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(
           #     allowed_application_types: nil,
@@ -234,7 +234,7 @@ module Unit
 
             # @!attribute jwt_subject
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :jwt_subject, String, api_name: :jwtSubject
 
             # @!attribute name
@@ -288,28 +288,28 @@ module Unit
             optional :website, String
 
             # @!parse
-            #   # @param address [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address, nil]
-            #   # @param application_type [String, nil]
-            #   # @param beneficial_owners [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner>, nil]
-            #   # @param business_vertical [String, nil]
-            #   # @param contact [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact, nil]
-            #   # @param date_of_birth [String, nil]
-            #   # @param dba [String, nil]
-            #   # @param ein [String, nil]
-            #   # @param email [String, nil]
-            #   # @param entity_type [String, nil]
-            #   # @param full_name [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName, nil]
-            #   # @param industry [String, nil]
+            #   # @param address [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address]
+            #   # @param application_type [String]
+            #   # @param beneficial_owners [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner>]
+            #   # @param business_vertical [String]
+            #   # @param contact [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact]
+            #   # @param date_of_birth [String]
+            #   # @param dba [String]
+            #   # @param ein [String]
+            #   # @param email [String]
+            #   # @param entity_type [String]
+            #   # @param full_name [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName]
+            #   # @param industry [String]
             #   # @param jwt_subject [String, nil]
-            #   # @param name [String, nil]
-            #   # @param nationality [String, nil]
-            #   # @param occupation [String, nil]
-            #   # @param officer [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer, nil]
-            #   # @param passport [String, nil]
-            #   # @param phone [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone, nil]
-            #   # @param ssn [String, nil]
-            #   # @param state_of_incorporation [String, nil]
-            #   # @param website [String, nil]
+            #   # @param name [String]
+            #   # @param nationality [String]
+            #   # @param occupation [String]
+            #   # @param officer [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer]
+            #   # @param passport [String]
+            #   # @param phone [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone]
+            #   # @param ssn [String]
+            #   # @param state_of_incorporation [String]
+            #   # @param website [String]
             #   #
             #   def initialize(
             #     address: nil,
@@ -369,7 +369,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -503,15 +503,15 @@ module Unit
               #   # @param email [String]
               #   # @param full_name [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::FullName]
               #   # @param phone [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Phone]
-              #   # @param annual_income [String, nil]
-              #   # @param evaluation_params [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param occupation [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param percentage [Integer, nil]
-              #   # @param source_of_income [String, nil]
-              #   # @param ssn [String, nil]
+              #   # @param annual_income [String]
+              #   # @param evaluation_params [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param occupation [String]
+              #   # @param passport [String]
+              #   # @param percentage [Integer]
+              #   # @param source_of_income [String]
+              #   # @param ssn [String]
               #   #
               #   def initialize(
               #     address:,
@@ -563,7 +563,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -664,8 +664,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -844,7 +844,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse
@@ -1130,14 +1130,14 @@ module Unit
               #   # @param full_name [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::FullName]
               #   # @param occupation [String]
               #   # @param phone [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Phone]
-              #   # @param annual_income [String, nil]
-              #   # @param evaluation_params [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param source_of_income [String, nil]
-              #   # @param ssn [String, nil]
-              #   # @param title [String, nil]
+              #   # @param annual_income [String]
+              #   # @param evaluation_params [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param passport [String]
+              #   # @param source_of_income [String]
+              #   # @param ssn [String]
+              #   # @param title [String]
               #   #
               #   def initialize(
               #     address:,
@@ -1189,7 +1189,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -1336,8 +1336,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -1486,9 +1486,9 @@ module Unit
             optional :officer, Unit::BooleanModel
 
             # @!parse
-            #   # @param beneficial_owners [Boolean, nil]
-            #   # @param individual [Boolean, nil]
-            #   # @param officer [Boolean, nil]
+            #   # @param beneficial_owners [Boolean]
+            #   # @param individual [Boolean]
+            #   # @param officer [Boolean]
             #   #
             #   def initialize(beneficial_owners: nil, individual: nil, officer: nil, **) = super
 
@@ -1546,15 +1546,15 @@ module Unit
             optional :redirect_url, String, api_name: :redirectUrl
 
             # @!parse
-            #   # @param additional_disclosures [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure>, nil]
-            #   # @param cardholder_terms_url [String, nil]
-            #   # @param cash_advanced_terms_url [String, nil]
-            #   # @param client_terms_url [String, nil]
-            #   # @param debit_card_disclosure_url [String, nil]
-            #   # @param deposit_terms_url [String, nil]
-            #   # @param electronic_disclosures_url [String, nil]
-            #   # @param privacy_policy_url [String, nil]
-            #   # @param redirect_url [String, nil]
+            #   # @param additional_disclosures [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure>]
+            #   # @param cardholder_terms_url [String]
+            #   # @param cash_advanced_terms_url [String]
+            #   # @param client_terms_url [String]
+            #   # @param debit_card_disclosure_url [String]
+            #   # @param deposit_terms_url [String]
+            #   # @param electronic_disclosures_url [String]
+            #   # @param privacy_policy_url [String]
+            #   # @param redirect_url [String]
             #   #
             #   def initialize(
             #     additional_disclosures: nil,
@@ -1585,8 +1585,8 @@ module Unit
               optional :url, String
 
               # @!parse
-              #   # @param title [String, nil]
-              #   # @param url [String, nil]
+              #   # @param title [String]
+              #   # @param url [String]
               #   #
               #   def initialize(title: nil, url: nil, **) = super
 

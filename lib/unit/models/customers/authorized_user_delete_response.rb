@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Customers::AuthorizedUserDeleteResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data, nil]
+        #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -28,8 +28,8 @@ module Unit
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type }
 
           # @!parse
-          #   # @param id [String, nil]
-          #   # @param type [String, nil]
+          #   # @param id [String]
+          #   # @param type [String]
           #   #
           #   def initialize(id: nil, type: nil, **) = super
 

@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::ReturnReturnResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::ReturnReturnResponse::Data, nil]
+      #   # @param data [Unit::Models::ReturnReturnResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -75,7 +75,7 @@ module Unit
           #   # @param direction [String]
           #   # @param reason [String]
           #   # @param summary [String]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, balance:, company_name:, created_at:, direction:, reason:, summary:, tags: nil, **) = super
 
@@ -123,8 +123,8 @@ module Unit
           # @!parse
           #   # @param account [Unit::Models::ReturnReturnResponse::Data::Relationships::Account]
           #   # @param returned [Unit::Models::ReturnReturnResponse::Data::Relationships::Returned]
-          #   # @param customer [Unit::Models::ReturnReturnResponse::Data::Relationships::Customer, nil]
-          #   # @param customers [Unit::Models::ReturnReturnResponse::Data::Relationships::Customers, nil]
+          #   # @param customer [Unit::Models::ReturnReturnResponse::Data::Relationships::Customer]
+          #   # @param customers [Unit::Models::ReturnReturnResponse::Data::Relationships::Customers]
           #   #
           #   def initialize(account:, returned:, customer: nil, customers: nil, **) = super
 
@@ -309,8 +309,8 @@ module Unit
               optional :type, String
 
               # @!parse
-              #   # @param id [String, nil]
-              #   # @param type [String, nil]
+              #   # @param id [String]
+              #   # @param type [String]
               #   #
               #   def initialize(id: nil, type: nil, **) = super
 

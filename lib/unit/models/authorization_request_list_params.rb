@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::AuthorizationRequestListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::AuthorizationRequestListParams::Filter, nil]
+      #   # @param filter [Unit::Models::AuthorizationRequestListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::AuthorizationRequestListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AuthorizationRequestListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -50,11 +50,11 @@ module Unit
         optional :to_amount, Integer, api_name: :toAmount
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param from_amount [Integer, nil]
-        #   # @param merchant_category_code [Array<String>, nil]
-        #   # @param to_amount [Integer, nil]
+        #   # @param account_id [String]
+        #   # @param customer_id [String]
+        #   # @param from_amount [Integer]
+        #   # @param merchant_category_code [Array<String>]
+        #   # @param to_amount [Integer]
         #   #
         #   def initialize(account_id: nil, customer_id: nil, from_amount: nil, merchant_category_code: nil, to_amount: nil, **) = super
 
@@ -75,8 +75,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

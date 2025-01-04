@@ -11,7 +11,7 @@ module Unit
           optional :data, -> { Unit::Models::Applications::Documents::BackUploadResponse::Data }
 
           # @!parse
-          #   # @param data [Unit::Models::Applications::Documents::BackUploadResponse::Data, nil]
+          #   # @param data [Unit::Models::Applications::Documents::BackUploadResponse::Data]
           #   #
           #   def initialize(data: nil, **) = super
 
@@ -149,25 +149,25 @@ module Unit
 
               # @!parse
               #   # @param status [String]
-              #   # @param address [Unit::Models::Applications::Documents::BackUploadResponse::Data::Attributes::Address, nil]
-              #   # @param back_document_id [String, nil]
-              #   # @param back_document_store_id [String, nil]
-              #   # @param date_of_birth [String, nil]
-              #   # @param date_of_incorporation [String, nil]
-              #   # @param description [String, nil]
-              #   # @param document_type [String, nil]
-              #   # @param ein [String, nil]
-              #   # @param evaluation_id [String, nil]
-              #   # @param front_document_id [String, nil]
-              #   # @param front_document_store_id [String, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param name [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param reason [String, nil]
-              #   # @param reason_code [String, nil]
-              #   # @param ssn [String, nil]
-              #   # @param state_of_incorporation [String, nil]
+              #   # @param address [Unit::Models::Applications::Documents::BackUploadResponse::Data::Attributes::Address]
+              #   # @param back_document_id [String]
+              #   # @param back_document_store_id [String]
+              #   # @param date_of_birth [String]
+              #   # @param date_of_incorporation [String]
+              #   # @param description [String]
+              #   # @param document_type [String]
+              #   # @param ein [String]
+              #   # @param evaluation_id [String]
+              #   # @param front_document_id [String]
+              #   # @param front_document_store_id [String]
+              #   # @param matricula_consular [String]
+              #   # @param name [String]
+              #   # @param nationality [String]
+              #   # @param passport [String]
+              #   # @param reason [String]
+              #   # @param reason_code [String]
+              #   # @param ssn [String]
+              #   # @param state_of_incorporation [String]
               #   #
               #   def initialize(
               #     status:,
@@ -225,7 +225,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse

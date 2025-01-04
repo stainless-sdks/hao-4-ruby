@@ -27,7 +27,7 @@ module Unit
       #   # @param id [String]
       #   # @param relationships [Unit::Models::DisputeListResponseItem::Relationships]
       #   # @param type [String]
-      #   # @param attributes [Unit::Models::DisputeListResponseItem::Attributes, nil]
+      #   # @param attributes [Unit::Models::DisputeListResponseItem::Attributes]
       #   #
       #   def initialize(id:, relationships:, type:, attributes: nil, **) = super
 
@@ -296,9 +296,9 @@ module Unit
         #   # @param external_id [String]
         #   # @param source [String]
         #   # @param status [String]
-        #   # @param decision_reason [String, nil]
-        #   # @param link [String, nil]
-        #   # @param status_history [Array<Unit::Models::DisputeListResponseItem::Attributes::StatusHistory>, nil]
+        #   # @param decision_reason [String]
+        #   # @param link [String]
+        #   # @param status_history [Array<Unit::Models::DisputeListResponseItem::Attributes::StatusHistory>]
         #   #
         #   def initialize(
         #     amount:,
@@ -346,8 +346,8 @@ module Unit
           optional :updated_at, Time, api_name: :updatedAt
 
           # @!parse
-          #   # @param type [String, nil]
-          #   # @param updated_at [String, nil]
+          #   # @param type [String]
+          #   # @param updated_at [String]
           #   #
           #   def initialize(type: nil, updated_at: nil, **) = super
 

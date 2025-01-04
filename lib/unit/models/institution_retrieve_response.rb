@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::InstitutionRetrieveResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::InstitutionRetrieveResponse::Data, nil]
+      #   # @param data [Unit::Models::InstitutionRetrieveResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -65,7 +65,7 @@ module Unit
           #   # @param is_wire_supported [Boolean]
           #   # @param name [String]
           #   # @param routing_number [String]
-          #   # @param address [String, nil]
+          #   # @param address [String]
           #   #
           #   def initialize(is_ach_supported:, is_wire_supported:, name:, routing_number:, address: nil, **) = super
 

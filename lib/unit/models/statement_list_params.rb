@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::StatementListParams::Filter, nil]
+      #   # @param filter [Unit::Models::StatementListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::StatementListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::StatementListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -47,9 +47,9 @@ module Unit
         optional :period, String
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param period [String, nil]
+        #   # @param account_id [String]
+        #   # @param customer_id [String]
+        #   # @param period [String]
         #   #
         #   def initialize(account_id: nil, customer_id: nil, period: nil, **) = super
 
@@ -70,8 +70,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

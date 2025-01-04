@@ -18,8 +18,8 @@ module Unit
                  }]
 
         # @!parse
-        #   # @param data [Unit::Models::Accounts::Transaction, nil]
-        #   # @param included [Array<Unit::Models::Accounts::TransactionRetrieveResponse::Included>, nil]
+        #   # @param data [Unit::Models::Accounts::Transaction]
+        #   # @param included [Array<Unit::Models::Accounts::TransactionRetrieveResponse::Included>]
         #   #
         #   def initialize(data: nil, included: nil, **) = super
 
@@ -47,10 +47,10 @@ module Unit
           optional :type, String
 
           # @!parse
-          #   # @param id [String, nil]
-          #   # @param attributes [Object, nil]
-          #   # @param relationships [Object, nil]
-          #   # @param type [String, nil]
+          #   # @param id [String]
+          #   # @param attributes [Object]
+          #   # @param relationships [Object]
+          #   # @param type [String]
           #   #
           #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 

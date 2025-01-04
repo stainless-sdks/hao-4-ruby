@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::TaxFormListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::TaxFormListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::TaxFormListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -40,7 +40,7 @@ module Unit
         #   # @param id [String]
         #   # @param attributes [Unit::Models::TaxFormListResponse::Data::Attributes]
         #   # @param type [String]
-        #   # @param relationships [Unit::Models::TaxFormListResponse::Data::Relationships, nil]
+        #   # @param relationships [Unit::Models::TaxFormListResponse::Data::Relationships]
         #   #
         #   def initialize(id:, attributes:, type:, relationships: nil, **) = super
 
@@ -97,9 +97,9 @@ module Unit
           optional :customer, -> { Unit::Models::TaxFormListResponse::Data::Relationships::Customer }
 
           # @!parse
-          #   # @param account [Unit::Models::TaxFormListResponse::Data::Relationships::Account, nil]
-          #   # @param accounts [Unit::Models::TaxFormListResponse::Data::Relationships::Accounts, nil]
-          #   # @param customer [Unit::Models::TaxFormListResponse::Data::Relationships::Customer, nil]
+          #   # @param account [Unit::Models::TaxFormListResponse::Data::Relationships::Account]
+          #   # @param accounts [Unit::Models::TaxFormListResponse::Data::Relationships::Accounts]
+          #   # @param customer [Unit::Models::TaxFormListResponse::Data::Relationships::Customer]
           #   #
           #   def initialize(account: nil, accounts: nil, customer: nil, **) = super
 

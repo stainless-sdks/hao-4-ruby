@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::AuthorizationListParams::Filter, nil]
+      #   # @param filter [Unit::Models::AuthorizationListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::AuthorizationListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AuthorizationListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -87,17 +87,17 @@ module Unit
         optional :until_, String, api_name: :until
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param account_type [String, nil]
-        #   # @param card_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param from_amount [Integer, nil]
-        #   # @param include_non_authorized [Boolean, nil]
-        #   # @param merchant_category_code [Array<String>, nil]
-        #   # @param since [String, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param to_amount [Integer, nil]
-        #   # @param until_ [String, nil]
+        #   # @param account_id [String]
+        #   # @param account_type [String]
+        #   # @param card_id [String]
+        #   # @param customer_id [String]
+        #   # @param from_amount [Integer]
+        #   # @param include_non_authorized [Boolean]
+        #   # @param merchant_category_code [Array<String>]
+        #   # @param since [String]
+        #   # @param status [Array<String>]
+        #   # @param to_amount [Integer]
+        #   # @param until_ [String]
         #   #
         #   def initialize(
         #     account_id: nil,
@@ -156,8 +156,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

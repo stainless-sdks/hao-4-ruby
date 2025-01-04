@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::EventRetrieveResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::EventRetrieveResponse::Data, nil]
+      #   # @param data [Unit::Models::EventRetrieveResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -39,8 +39,8 @@ module Unit
         # @!parse
         #   # @param id [String]
         #   # @param type [String]
-        #   # @param attributes [Object, nil]
-        #   # @param relationships [Object, nil]
+        #   # @param attributes [Object]
+        #   # @param relationships [Object]
         #   #
         #   def initialize(id:, type:, attributes: nil, relationships: nil, **) = super
 

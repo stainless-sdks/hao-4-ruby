@@ -115,27 +115,27 @@ module Unit
       optional :status, String
 
       # @!parse
-      #   # @param address [Unit::Models::BeneficialOwner::Address, nil]
-      #   # @param annual_income [String, nil]
-      #   # @param date_of_birth [String, nil]
-      #   # @param email [String, nil]
-      #   # @param evaluation_codes [Array<String>, nil]
-      #   # @param evaluation_flags [Array<String>, nil]
-      #   # @param evaluation_id [String, nil]
-      #   # @param full_name [Unit::Models::BeneficialOwner::FullName, nil]
-      #   # @param id_theft_score [Integer, nil]
-      #   # @param masked_matricula_consular [String, nil]
-      #   # @param masked_passport [String, nil]
-      #   # @param masked_ssn [String, nil]
-      #   # @param matricula_consular [String, nil]
-      #   # @param nationality [String, nil]
-      #   # @param occupation [String, nil]
-      #   # @param passport [String, nil]
-      #   # @param percentage [Integer, nil]
-      #   # @param phone [Unit::Models::BeneficialOwner::Phone, nil]
-      #   # @param source_of_income [String, nil]
-      #   # @param ssn [String, nil]
-      #   # @param status [String, nil]
+      #   # @param address [Unit::Models::BeneficialOwner::Address]
+      #   # @param annual_income [String]
+      #   # @param date_of_birth [String]
+      #   # @param email [String]
+      #   # @param evaluation_codes [Array<String>]
+      #   # @param evaluation_flags [Array<String>]
+      #   # @param evaluation_id [String]
+      #   # @param full_name [Unit::Models::BeneficialOwner::FullName]
+      #   # @param id_theft_score [Integer]
+      #   # @param masked_matricula_consular [String]
+      #   # @param masked_passport [String]
+      #   # @param masked_ssn [String]
+      #   # @param matricula_consular [String]
+      #   # @param nationality [String]
+      #   # @param occupation [String]
+      #   # @param passport [String]
+      #   # @param percentage [Integer]
+      #   # @param phone [Unit::Models::BeneficialOwner::Phone]
+      #   # @param source_of_income [String]
+      #   # @param ssn [String]
+      #   # @param status [String]
       #   #
       #   def initialize(
       #     address: nil,
@@ -194,7 +194,7 @@ module Unit
 
         # @!attribute street2
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :street2, String
 
         # @!parse

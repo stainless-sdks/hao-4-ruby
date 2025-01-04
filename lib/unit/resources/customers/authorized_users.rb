@@ -15,7 +15,7 @@ module Unit
         #
         # @param params [Hash{Symbol => Object}, Unit::Models::Customers::AuthorizedUserCreateParams] Attributes to send in this request.
         #
-        #   @option params [Unit::Models::Customers::AuthorizedUserCreateParams::Data, nil] :data
+        #   @option params [Unit::Models::Customers::AuthorizedUserCreateParams::Data] :data
         #
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
@@ -41,7 +41,7 @@ module Unit
         #
         # @param params [Hash{Symbol => Object}, Unit::Models::Customers::AuthorizedUserDeleteParams] Attributes to send in this request.
         #
-        #   @option params [Unit::Models::Customers::AuthorizedUserDeleteParams::Data, nil] :data
+        #   @option params [Unit::Models::Customers::AuthorizedUserDeleteParams::Data] :data
         #
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #

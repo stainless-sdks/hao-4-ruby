@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::DisputeListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::DisputeListParams::Filter, nil]
+      #   # @param filter [Unit::Models::DisputeListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::DisputeListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::DisputeListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -30,7 +30,7 @@ module Unit
         optional :query, String
 
         # @!parse
-        #   # @param query [String, nil]
+        #   # @param query [String]
         #   #
         #   def initialize(query: nil, **) = super
 
@@ -51,8 +51,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::RewardListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::RewardListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::RewardListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -83,7 +83,7 @@ module Unit
           #   # @param description [String]
           #   # @param status [String]
           #   # @param tags [Hash{Symbol => String}]
-          #   # @param reject_reason [String, nil]
+          #   # @param reject_reason [String]
           #   #
           #   def initialize(amount:, created_at:, description:, status:, tags:, reject_reason: nil, **) = super
 
@@ -148,9 +148,9 @@ module Unit
           #   # @param customer [Unit::Models::RewardListResponse::Data::Relationships::Customer]
           #   # @param funding_account [Unit::Models::RewardListResponse::Data::Relationships::FundingAccount]
           #   # @param receiving_account [Unit::Models::RewardListResponse::Data::Relationships::ReceivingAccount]
-          #   # @param card [Unit::Models::RewardListResponse::Data::Relationships::Card, nil]
-          #   # @param rewarded_transaction [Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction, nil]
-          #   # @param transaction [Unit::Models::RewardListResponse::Data::Relationships::Transaction, nil]
+          #   # @param card [Unit::Models::RewardListResponse::Data::Relationships::Card]
+          #   # @param rewarded_transaction [Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction]
+          #   # @param transaction [Unit::Models::RewardListResponse::Data::Relationships::Transaction]
           #   #
           #   def initialize(
           #     customer:,

@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::Authorization }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::Authorization>, nil]
+      #   # @param data [Array<Unit::Models::Authorization>]
       #   #
       #   def initialize(data: nil, **) = super
 

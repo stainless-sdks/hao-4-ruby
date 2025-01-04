@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::Authorization }
 
       # @!parse
-      #   # @param data [Unit::Models::Authorization, nil]
+      #   # @param data [Unit::Models::Authorization]
       #   #
       #   def initialize(data: nil, **) = super
 

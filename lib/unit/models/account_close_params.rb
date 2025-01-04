@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::AccountCloseParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::AccountCloseParams::Data, nil]
+      #   # @param data [Unit::Models::AccountCloseParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::AccountCloseParams::Data::Type }
 
         # @!parse
-        #   # @param attributes [Unit::Models::AccountCloseParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::AccountCloseParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -37,14 +37,14 @@ module Unit
         class Attributes < Unit::BaseModel
           # @!attribute bank_reason
           #
-          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::BankReason]
+          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::BankReason, nil]
           optional :bank_reason,
                    api_name: :bankReason,
                    enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::BankReason }
 
           # @!attribute fraud_reason
           #
-          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::FraudReason]
+          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::FraudReason, nil]
           optional :fraud_reason,
                    api_name: :fraudReason,
                    enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::FraudReason }
@@ -57,7 +57,7 @@ module Unit
           # @!parse
           #   # @param bank_reason [String, nil]
           #   # @param fraud_reason [String, nil]
-          #   # @param reason [String, nil]
+          #   # @param reason [String]
           #   #
           #   def initialize(bank_reason: nil, fraud_reason: nil, reason: nil, **) = super
 

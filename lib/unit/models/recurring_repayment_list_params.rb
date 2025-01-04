@@ -20,11 +20,11 @@ module Unit
       optional :sort, enum: -> { Unit::Models::RecurringRepaymentListParams::Sort }
 
       # @!parse
-      #   # @param filter [Unit::Models::RecurringRepaymentListParams::Filter, nil]
+      #   # @param filter [Unit::Models::RecurringRepaymentListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::RecurringRepaymentListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::RecurringRepaymentListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -60,11 +60,11 @@ module Unit
         optional :to_start_time, Date, api_name: :toStartTime
 
         # @!parse
-        #   # @param credit_account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param from_start_time [String, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param to_start_time [String, nil]
+        #   # @param credit_account_id [String]
+        #   # @param customer_id [String]
+        #   # @param from_start_time [String]
+        #   # @param status [Array<String>]
+        #   # @param to_start_time [String]
         #   #
         #   def initialize(credit_account_id: nil, customer_id: nil, from_start_time: nil, status: nil, to_start_time: nil, **) = super
 
@@ -102,8 +102,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

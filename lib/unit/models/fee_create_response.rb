@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::FeeCreateResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::FeeCreateResponse::Data, nil]
+      #   # @param data [Unit::Models::FeeCreateResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -37,10 +37,10 @@ module Unit
         optional :type, enum: -> { Unit::Models::FeeCreateResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Unit::Models::FeeCreateResponse::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::FeeCreateResponse::Data::Relationships, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Unit::Models::FeeCreateResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::FeeCreateResponse::Data::Relationships]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -65,7 +65,7 @@ module Unit
           # @!parse
           #   # @param amount [Integer]
           #   # @param description [String]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, description:, tags: nil, **) = super
 

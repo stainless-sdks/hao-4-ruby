@@ -77,7 +77,7 @@ module Unit
 
             # @!attribute street2
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :street2, String
 
             # @!parse

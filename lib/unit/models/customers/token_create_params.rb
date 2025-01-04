@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Customers::TokenCreateParams::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Customers::TokenCreateParams::Data, nil]
+        #   # @param data [Unit::Models::Customers::TokenCreateParams::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -28,8 +28,8 @@ module Unit
           optional :type, enum: -> { Unit::Models::Customers::TokenCreateParams::Data::Type }
 
           # @!parse
-          #   # @param attributes [Unit::Models::Customers::TokenCreateParams::Data::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param attributes [Unit::Models::Customers::TokenCreateParams::Data::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -75,13 +75,13 @@ module Unit
             optional :verification_token, String, api_name: :verificationToken
 
             # @!parse
-            #   # @param expires_in [Integer, nil]
-            #   # @param jwt_token [String, nil]
-            #   # @param resources [Array<Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource>, nil]
-            #   # @param scope [String, nil]
-            #   # @param upgradable_scope [String, nil]
-            #   # @param verification_code [String, nil]
-            #   # @param verification_token [String, nil]
+            #   # @param expires_in [Integer]
+            #   # @param jwt_token [String]
+            #   # @param resources [Array<Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource>]
+            #   # @param scope [String]
+            #   # @param upgradable_scope [String]
+            #   # @param verification_code [String]
+            #   # @param verification_token [String]
             #   #
             #   def initialize(
             #     expires_in: nil,
@@ -113,8 +113,8 @@ module Unit
                        }
 
               # @!parse
-              #   # @param ids [Array<String>, nil]
-              #   # @param type [String, nil]
+              #   # @param ids [Array<String>]
+              #   # @param type [String]
               #   #
               #   def initialize(ids: nil, type: nil, **) = super
 

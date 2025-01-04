@@ -46,8 +46,8 @@ module Unit
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param clearing_days_override [Integer, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param clearing_days_override [Integer]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(clearing_days_override: nil, tags: nil, **) = super
 

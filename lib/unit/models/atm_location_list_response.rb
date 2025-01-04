@@ -58,13 +58,13 @@ module Unit
         optional :surcharge_free, Unit::BooleanModel, api_name: :surchargeFree
 
         # @!parse
-        #   # @param accept_deposits [Boolean, nil]
-        #   # @param address [Unit::Models::AtmLocationListResponseItem::Attributes::Address, nil]
-        #   # @param coordinates [Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates, nil]
-        #   # @param distance [Integer, nil]
-        #   # @param location_name [String, nil]
-        #   # @param network [String, nil]
-        #   # @param surcharge_free [Boolean, nil]
+        #   # @param accept_deposits [Boolean]
+        #   # @param address [Unit::Models::AtmLocationListResponseItem::Attributes::Address]
+        #   # @param coordinates [Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates]
+        #   # @param distance [Integer]
+        #   # @param location_name [String]
+        #   # @param network [String]
+        #   # @param surcharge_free [Boolean]
         #   #
         #   def initialize(
         #     accept_deposits: nil,
@@ -109,7 +109,7 @@ module Unit
 
           # @!attribute street2
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :street2, String
 
           # @!parse

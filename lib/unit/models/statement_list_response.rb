@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::StatementListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::StatementListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::StatementListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -53,7 +53,7 @@ module Unit
           optional :period, String
 
           # @!parse
-          #   # @param period [String, nil]
+          #   # @param period [String]
           #   #
           #   def initialize(period: nil, **) = super
 
@@ -77,9 +77,9 @@ module Unit
           optional :customers, -> { Unit::Models::StatementListResponse::Data::Relationships::Customers }
 
           # @!parse
-          #   # @param account [Unit::Models::StatementListResponse::Data::Relationships::Account, nil]
-          #   # @param customer [Unit::Models::StatementListResponse::Data::Relationships::Customer, nil]
-          #   # @param customers [Unit::Models::StatementListResponse::Data::Relationships::Customers, nil]
+          #   # @param account [Unit::Models::StatementListResponse::Data::Relationships::Account]
+          #   # @param customer [Unit::Models::StatementListResponse::Data::Relationships::Customer]
+          #   # @param customers [Unit::Models::StatementListResponse::Data::Relationships::Customers]
           #   #
           #   def initialize(account: nil, customer: nil, customers: nil, **) = super
 
@@ -230,8 +230,8 @@ module Unit
               optional :type, String
 
               # @!parse
-              #   # @param id [String, nil]
-              #   # @param type [String, nil]
+              #   # @param id [String]
+              #   # @param type [String]
               #   #
               #   def initialize(id: nil, type: nil, **) = super
 

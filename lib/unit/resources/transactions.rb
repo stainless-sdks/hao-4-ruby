@@ -12,13 +12,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::TransactionListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::TransactionListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::TransactionListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::TransactionListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::TransactionListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
