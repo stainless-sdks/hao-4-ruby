@@ -12,9 +12,9 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AccountEndOfDayListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AccountEndOfDayListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::AccountEndOfDayListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::AccountEndOfDayListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::AccountEndOfDayListParams::Page] :page Parameters for paginated list requests
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

@@ -14,8 +14,8 @@ module Unit
       optional :included, Unit::ArrayOf[Unit::ArrayOf[-> { Unit::Models::CardListResponse::Included }]]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::Card>, nil]
-      #   # @param included [Array<Array<Unit::Models::CardListResponse::Included>>, nil]
+      #   # @param data [Array<Unit::Models::Card>]
+      #   # @param included [Array<Array<Unit::Models::CardListResponse::Included>>]
       #   #
       #   def initialize(data: nil, included: nil, **) = super
 
@@ -43,10 +43,10 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Object, nil]
-        #   # @param relationships [Object, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Object]
+        #   # @param relationships [Object]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 

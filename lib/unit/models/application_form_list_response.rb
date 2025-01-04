@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::ApplicationForm }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::ApplicationForm>, nil]
+      #   # @param data [Array<Unit::Models::ApplicationForm>]
       #   #
       #   def initialize(data: nil, **) = super
 

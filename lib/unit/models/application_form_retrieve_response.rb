@@ -14,8 +14,8 @@ module Unit
       optional :included, -> { Unit::Models::Application }
 
       # @!parse
-      #   # @param data [Unit::Models::ApplicationForm, nil]
-      #   # @param included [Unit::Models::Application, nil]
+      #   # @param data [Unit::Models::ApplicationForm]
+      #   # @param included [Unit::Models::Application]
       #   #
       #   def initialize(data: nil, included: nil, **) = super
 

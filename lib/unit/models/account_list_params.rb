@@ -20,11 +20,11 @@ module Unit
       optional :page, -> { Unit::Models::AccountListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::AccountListParams::Filter, nil]
+      #   # @param filter [Unit::Models::AccountListParams::Filter]
       #   #
-      #   # @param include [String, nil]
+      #   # @param include [String]
       #   #
-      #   # @param page [Unit::Models::AccountListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AccountListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, **) = super
 
@@ -62,12 +62,12 @@ module Unit
         optional :type, Unit::ArrayOf[enum: -> { Unit::Models::AccountListParams::Filter::Type }]
 
         # @!parse
-        #   # @param customer_id [String, nil]
-        #   # @param from_balance [Float, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
-        #   # @param to_balance [Float, nil]
-        #   # @param type [Array<String>, nil]
+        #   # @param customer_id [String]
+        #   # @param from_balance [Float]
+        #   # @param status [Array<String>]
+        #   # @param tags [Hash{Symbol => String}]
+        #   # @param to_balance [Float]
+        #   # @param type [Array<String>]
         #   #
         #   def initialize(customer_id: nil, from_balance: nil, status: nil, tags: nil, to_balance: nil, type: nil, **) = super
 
@@ -125,8 +125,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

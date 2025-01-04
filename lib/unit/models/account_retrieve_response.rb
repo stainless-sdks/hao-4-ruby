@@ -14,8 +14,8 @@ module Unit
       optional :included, Unit::ArrayOf[-> { Unit::Models::AccountRetrieveResponse::Included }]
 
       # @!parse
-      #   # @param data [Unit::Models::Account, nil]
-      #   # @param included [Array<Unit::Models::AccountRetrieveResponse::Included>, nil]
+      #   # @param data [Unit::Models::Account]
+      #   # @param included [Array<Unit::Models::AccountRetrieveResponse::Included>]
       #   #
       #   def initialize(data: nil, included: nil, **) = super
 
@@ -33,8 +33,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::AccountRetrieveResponse::Included::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, type: nil, **) = super
 

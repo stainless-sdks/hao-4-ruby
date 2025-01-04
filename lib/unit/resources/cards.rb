@@ -20,7 +20,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CardCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest, nil] :data
+      #   @option params [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -46,7 +46,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CardRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :included
+      #   @option params [String] :included
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -90,13 +90,13 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::CardListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::CardListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::CardListParams::Filter] :filter
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
-      #   @option params [Unit::Models::CardListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::CardListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

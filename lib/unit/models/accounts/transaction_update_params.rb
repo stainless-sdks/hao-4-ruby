@@ -117,7 +117,7 @@ module Unit
             # @!parse
             #   # @param attributes [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Attributes]
             #   # @param type [String]
-            #   # @param relationships [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships, nil]
+            #   # @param relationships [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships]
             #   #
             #   def initialize(attributes:, type:, relationships: nil, **) = super
 
@@ -135,8 +135,8 @@ module Unit
               optional :tags, Unit::HashOf[String]
 
               # @!parse
-              #   # @param summary [String, nil]
-              #   # @param tags [Hash{Symbol => String}, nil]
+              #   # @param summary [String]
+              #   # @param tags [Hash{Symbol => String}]
               #   #
               #   def initialize(summary: nil, tags: nil, **) = super
 
@@ -258,7 +258,7 @@ module Unit
             # @!parse
             #   # @param attributes [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Attributes]
             #   # @param type [String]
-            #   # @param relationships [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships, nil]
+            #   # @param relationships [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships]
             #   #
             #   def initialize(attributes:, type:, relationships: nil, **) = super
 
@@ -276,8 +276,8 @@ module Unit
               optional :tags, Unit::HashOf[String]
 
               # @!parse
-              #   # @param summary [String, nil]
-              #   # @param tags [Hash{Symbol => String}, nil]
+              #   # @param summary [String]
+              #   # @param tags [Hash{Symbol => String}]
               #   #
               #   def initialize(summary: nil, tags: nil, **) = super
 

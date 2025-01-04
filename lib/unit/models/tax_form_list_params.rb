@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::TaxFormListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::TaxFormListParams::Filter, nil]
+      #   # @param filter [Unit::Models::TaxFormListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::TaxFormListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::TaxFormListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -45,10 +45,10 @@ module Unit
         optional :tax_year, Unit::ArrayOf[String], api_name: :taxYear
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param tax_form_types [Array<String>, nil]
-        #   # @param tax_year [Array<String>, nil]
+        #   # @param account_id [String]
+        #   # @param customer_id [String]
+        #   # @param tax_form_types [Array<String>]
+        #   # @param tax_year [Array<String>]
         #   #
         #   def initialize(account_id: nil, customer_id: nil, tax_form_types: nil, tax_year: nil, **) = super
 
@@ -69,8 +69,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

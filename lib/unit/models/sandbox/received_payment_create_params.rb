@@ -75,7 +75,7 @@ module Unit
             #   # @param company_name [String]
             #   # @param completion_date [String]
             #   # @param description [String]
-            #   # @param sec_code [String, nil]
+            #   # @param sec_code [String]
             #   #
             #   def initialize(amount:, company_name:, completion_date:, description:, sec_code: nil, **) = super
 

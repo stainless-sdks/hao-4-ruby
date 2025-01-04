@@ -12,7 +12,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::WebhookCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::WebhookCreateParams::Data, nil] :data
+      #   @option params [Unit::Models::WebhookCreateParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -52,7 +52,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::WebhookUpdateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::WebhookUpdateParams::Data, nil] :data
+      #   @option params [Unit::Models::WebhookUpdateParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -73,11 +73,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::WebhookListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::WebhookListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::WebhookListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::WebhookListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::WebhookListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

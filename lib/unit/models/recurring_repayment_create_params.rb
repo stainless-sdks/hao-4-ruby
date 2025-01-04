@@ -9,7 +9,7 @@ module Unit
       optional :data, union: -> { Unit::Models::RecurringRepaymentCreateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment, nil]
+      #   # @param data [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -107,11 +107,11 @@ module Unit
 
             # @!parse
             #   # @param description [String]
-            #   # @param addenda [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param addenda [String]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(description:, addenda: nil, idempotency_key: nil, same_day: nil, sec_code: nil, tags: nil, **) = super
 
@@ -383,9 +383,9 @@ module Unit
 
             # @!parse
             #   # @param description [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
 
@@ -673,11 +673,11 @@ module Unit
 
             # @!parse
             #   # @param description [String]
-            #   # @param addenda [String, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param addenda [String]
+            #   # @param idempotency_key [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(description:, addenda: nil, idempotency_key: nil, same_day: nil, sec_code: nil, tags: nil, **) = super
 
@@ -709,7 +709,7 @@ module Unit
             # @!parse
             #   # @param counterparty [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty]
             #   # @param credit_account [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::CreditAccount]
-            #   # @param account [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account, nil]
+            #   # @param account [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account]
             #   #
             #   def initialize(counterparty:, credit_account:, account: nil, **) = super
 
@@ -949,9 +949,9 @@ module Unit
 
             # @!parse
             #   # @param description [String]
-            #   # @param idempotency_key [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param idempotency_key [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
 

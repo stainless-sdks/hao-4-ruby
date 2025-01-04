@@ -27,7 +27,7 @@ module Unit
       #   # @param id [String]
       #   # @param relationships [Unit::Models::Authorization::Relationships]
       #   # @param type [String]
-      #   # @param attributes [Unit::Models::Authorization::Attributes, nil]
+      #   # @param attributes [Unit::Models::Authorization::Attributes]
       #   #
       #   def initialize(id:, relationships:, type:, attributes: nil, **) = super
 
@@ -59,8 +59,8 @@ module Unit
         # @!parse
         #   # @param account [Unit::Models::Authorization::Relationships::Account]
         #   # @param card [Unit::Models::Authorization::Relationships::Card]
-        #   # @param authorization_request [Unit::Models::Authorization::Relationships::AuthorizationRequest, nil]
-        #   # @param customer [Unit::Models::Authorization::Relationships::Customer, nil]
+        #   # @param authorization_request [Unit::Models::Authorization::Relationships::AuthorizationRequest]
+        #   # @param customer [Unit::Models::Authorization::Relationships::Customer]
         #   #
         #   def initialize(account:, card:, authorization_request: nil, customer: nil, **) = super
 
@@ -167,7 +167,7 @@ module Unit
                    }]
 
           # @!parse
-          #   # @param data [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>, nil]
+          #   # @param data [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
           #   #
           #   def initialize(data: nil, **) = super
 
@@ -185,8 +185,8 @@ module Unit
             optional :type, String
 
             # @!parse
-            #   # @param id [String, nil]
-            #   # @param type [String, nil]
+            #   # @param id [String]
+            #   # @param type [String]
             #   #
             #   def initialize(id: nil, type: nil, **) = super
 
@@ -343,14 +343,14 @@ module Unit
         #   # @param merchant [Unit::Models::Authorization::Attributes::Merchant]
         #   # @param recurring [Boolean]
         #   # @param status [String]
-        #   # @param card_network [String, nil]
-        #   # @param card_verification_data [Unit::Models::Authorization::Attributes::CardVerificationData, nil]
-        #   # @param cash_withdrawal_amount [Integer, nil]
-        #   # @param decline_reason [String, nil]
-        #   # @param digital_wallet [String, nil]
-        #   # @param payment_method [String, nil]
-        #   # @param summary [String, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
+        #   # @param card_network [String]
+        #   # @param card_verification_data [Unit::Models::Authorization::Attributes::CardVerificationData]
+        #   # @param cash_withdrawal_amount [Integer]
+        #   # @param decline_reason [String]
+        #   # @param digital_wallet [String]
+        #   # @param payment_method [String]
+        #   # @param summary [String]
+        #   # @param tags [Hash{Symbol => String}]
         #   #
         #   def initialize(
         #     amount:,
@@ -404,8 +404,8 @@ module Unit
           #   # @param category [String]
           #   # @param name [String]
           #   # @param type [Integer]
-          #   # @param id [String, nil]
-          #   # @param location [String, nil]
+          #   # @param id [String]
+          #   # @param location [String]
           #   #
           #   def initialize(category:, name:, type:, id: nil, location: nil, **) = super
 

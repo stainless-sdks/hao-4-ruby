@@ -84,9 +84,9 @@ module Unit
           #   # @param counterparty [Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty]
           #   # @param description [String]
           #   # @param idempotency_key [String]
-          #   # @param memo [String, nil]
-          #   # @param send_date [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param memo [String]
+          #   # @param send_date [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount:, counterparty:, description:, idempotency_key:, memo: nil, send_date: nil, tags: nil, **) = super
 
@@ -114,7 +114,7 @@ module Unit
             # @!parse
             #   # @param address [Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty::Address]
             #   # @param name [String]
-            #   # @param counterparty_moved [Boolean, nil]
+            #   # @param counterparty_moved [Boolean]
             #   #
             #   def initialize(address:, name:, counterparty_moved: nil, **) = super
 
@@ -148,7 +148,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse

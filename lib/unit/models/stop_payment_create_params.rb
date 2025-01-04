@@ -27,8 +27,8 @@ module Unit
         optional :tags, Unit::HashOf[String]
 
         # @!parse
-        #   # @param expiration [String, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
+        #   # @param expiration [String]
+        #   # @param tags [Hash{Symbol => String}]
         #   #
         #   def initialize(expiration: nil, tags: nil, **) = super
 

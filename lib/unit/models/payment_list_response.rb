@@ -19,9 +19,9 @@ module Unit
       optional :meta, -> { Unit::Models::PaymentListResponse::Meta }
 
       # @!parse
-      #   # @param data [Array<Unit::Models::PaymentListResponse::Data>, nil]
-      #   # @param included [Array<Unit::Models::PaymentListResponse::Included>, nil]
-      #   # @param meta [Unit::Models::PaymentListResponse::Meta, nil]
+      #   # @param data [Array<Unit::Models::PaymentListResponse::Data>]
+      #   # @param included [Array<Unit::Models::PaymentListResponse::Included>]
+      #   # @param meta [Unit::Models::PaymentListResponse::Meta]
       #   #
       #   def initialize(data: nil, included: nil, meta: nil, **) = super
 
@@ -39,8 +39,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::PaymentListResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, type: nil, **) = super
 
@@ -89,10 +89,10 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Object, nil]
-        #   # @param relationships [Object, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Object]
+        #   # @param relationships [Object]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -106,7 +106,7 @@ module Unit
         optional :pagination, -> { Unit::Models::PaymentListResponse::Meta::Pagination }
 
         # @!parse
-        #   # @param pagination [Unit::Models::PaymentListResponse::Meta::Pagination, nil]
+        #   # @param pagination [Unit::Models::PaymentListResponse::Meta::Pagination]
         #   #
         #   def initialize(pagination: nil, **) = super
 
@@ -129,9 +129,9 @@ module Unit
           optional :total, Integer
 
           # @!parse
-          #   # @param limit [Integer, nil]
-          #   # @param offset [Integer, nil]
-          #   # @param total [Integer, nil]
+          #   # @param limit [Integer]
+          #   # @param offset [Integer]
+          #   # @param total [Integer]
           #   #
           #   def initialize(limit: nil, offset: nil, total: nil, **) = super
 

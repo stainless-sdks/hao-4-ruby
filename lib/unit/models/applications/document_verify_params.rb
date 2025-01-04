@@ -16,7 +16,7 @@ module Unit
 
         # @!parse
         #   # @param application_id [String]
-        #   # @param job_id [String, nil]
+        #   # @param job_id [String]
         #   #
         #   def initialize(application_id:, job_id: nil, **) = super
 

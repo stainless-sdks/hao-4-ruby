@@ -41,7 +41,7 @@ module Unit
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(tags: nil, **) = super
 

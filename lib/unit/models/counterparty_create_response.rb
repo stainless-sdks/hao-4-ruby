@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::CounterpartyCreateResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CounterpartyCreateResponse::Data, nil]
+      #   # @param data [Unit::Models::CounterpartyCreateResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -37,10 +37,10 @@ module Unit
         optional :type, enum: -> { Unit::Models::CounterpartyCreateResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Unit::Models::CounterpartyCreateResponse::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::CounterpartyCreateResponse::Data::Relationships, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Unit::Models::CounterpartyCreateResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::CounterpartyCreateResponse::Data::Relationships]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -103,8 +103,8 @@ module Unit
           #   # @param permissions [String]
           #   # @param routing_number [String]
           #   # @param type [String]
-          #   # @param bank [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param bank [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(
           #     account_number:,

@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::AccountFreezeParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::AccountFreezeParams::Data, nil]
+      #   # @param data [Unit::Models::AccountFreezeParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::AccountFreezeParams::Data::Type }
 
         # @!parse
-        #   # @param attributes [Unit::Models::AccountFreezeParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::AccountFreezeParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -42,11 +42,11 @@ module Unit
 
           # @!attribute reason_text
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reason_text, String, api_name: :reasonText
 
           # @!parse
-          #   # @param reason [String, nil]
+          #   # @param reason [String]
           #   # @param reason_text [String, nil]
           #   #
           #   def initialize(reason: nil, reason_text: nil, **) = super

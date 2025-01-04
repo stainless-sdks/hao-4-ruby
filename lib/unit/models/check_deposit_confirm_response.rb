@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::CheckDepositConfirmResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CheckDepositConfirmResponse::Data, nil]
+      #   # @param data [Unit::Models::CheckDepositConfirmResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -82,7 +82,7 @@ module Unit
 
           # @!attribute reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reason, String
 
           # @!attribute reason_text
@@ -129,16 +129,16 @@ module Unit
           #   # @param created_at [String]
           #   # @param description [String]
           #   # @param status [String]
-          #   # @param check_number [String, nil]
-          #   # @param counterparty [Unit::Models::CheckDepositConfirmResponse::Data::Attributes::Counterparty, nil]
+          #   # @param check_number [String]
+          #   # @param counterparty [Unit::Models::CheckDepositConfirmResponse::Data::Attributes::Counterparty]
           #   # @param reason [String, nil]
-          #   # @param reason_text [String, nil]
-          #   # @param settlement_date [String, nil]
-          #   # @param status_created_at [String, nil]
-          #   # @param status_history [Array<Unit::Models::CheckDepositConfirmResponse::Data::Attributes::StatusHistory>, nil]
-          #   # @param status_set_by [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
-          #   # @param vendor [String, nil]
+          #   # @param reason_text [String]
+          #   # @param settlement_date [String]
+          #   # @param status_created_at [String]
+          #   # @param status_history [Array<Unit::Models::CheckDepositConfirmResponse::Data::Attributes::StatusHistory>]
+          #   # @param status_set_by [String]
+          #   # @param tags [Hash{Symbol => String}]
+          #   # @param vendor [String]
           #   #
           #   def initialize(
           #     amount:,
@@ -241,8 +241,8 @@ module Unit
 
             # @!parse
             #   # @param status [Unit::Models::CheckDepositConfirmResponse::Data::Attributes::StatusHistory::Status]
-            #   # @param updated_at [String, nil]
-            #   # @param updated_by [String, nil]
+            #   # @param updated_at [String]
+            #   # @param updated_by [String]
             #   #
             #   def initialize(status:, updated_at: nil, updated_by: nil, **) = super
 
@@ -258,7 +258,7 @@ module Unit
                        }
 
               # @!parse
-              #   # @param type [String, nil]
+              #   # @param type [String]
               #   #
               #   def initialize(type: nil, **) = super
 
@@ -327,9 +327,9 @@ module Unit
 
           # @!parse
           #   # @param account [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Account]
-          #   # @param customer [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Customer, nil]
-          #   # @param org [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Org, nil]
-          #   # @param transaction [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Transaction, nil]
+          #   # @param customer [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Customer]
+          #   # @param org [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Org]
+          #   # @param transaction [Unit::Models::CheckDepositConfirmResponse::Data::Relationships::Transaction]
           #   #
           #   def initialize(account:, customer: nil, org: nil, transaction: nil, **) = super
 

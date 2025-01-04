@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::TaxFormRetrieveResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::TaxFormRetrieveResponse::Data, nil]
+      #   # @param data [Unit::Models::TaxFormRetrieveResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -40,7 +40,7 @@ module Unit
         #   # @param id [String]
         #   # @param attributes [Unit::Models::TaxFormRetrieveResponse::Data::Attributes]
         #   # @param type [String]
-        #   # @param relationships [Unit::Models::TaxFormRetrieveResponse::Data::Relationships, nil]
+        #   # @param relationships [Unit::Models::TaxFormRetrieveResponse::Data::Relationships]
         #   #
         #   def initialize(id:, attributes:, type:, relationships: nil, **) = super
 
@@ -97,9 +97,9 @@ module Unit
           optional :customer, -> { Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer }
 
           # @!parse
-          #   # @param account [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account, nil]
-          #   # @param accounts [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts, nil]
-          #   # @param customer [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer, nil]
+          #   # @param account [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account]
+          #   # @param accounts [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts]
+          #   # @param customer [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer]
           #   #
           #   def initialize(account: nil, accounts: nil, customer: nil, **) = super
 

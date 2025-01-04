@@ -29,9 +29,9 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AuthorizationRequestListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::AuthorizationRequestListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::AuthorizationRequestListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::AuthorizationRequestListParams::Page] :page Parameters for paginated list requests
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -54,7 +54,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestApproveParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AuthorizationRequestApproveParams::Data, nil] :data
+      #   @option params [Unit::Models::AuthorizationRequestApproveParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -80,7 +80,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestDeclineParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AuthorizationRequestDeclineParams::Data, nil] :data
+      #   @option params [Unit::Models::AuthorizationRequestDeclineParams::Data] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

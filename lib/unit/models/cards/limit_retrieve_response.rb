@@ -58,7 +58,7 @@ module Unit
             # @!parse
             #   # @param daily_totals [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::DailyTotals]
             #   # @param monthly_totals [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::MonthlyTotals]
-            #   # @param limits [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits, nil]
+            #   # @param limits [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits]
             #   #
             #   def initialize(daily_totals:, monthly_totals:, limits: nil, **) = super
 
@@ -150,10 +150,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 

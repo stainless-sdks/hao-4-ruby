@@ -64,8 +64,8 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param deposit_product [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param deposit_product [String]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(deposit_product: nil, tags: nil, **) = super
 
@@ -121,8 +121,8 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param credit_limit [Integer, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param credit_limit [Integer]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(credit_limit: nil, tags: nil, **) = super
 

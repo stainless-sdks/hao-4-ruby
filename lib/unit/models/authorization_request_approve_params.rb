@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::AuthorizationRequestApproveParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::AuthorizationRequestApproveParams::Data, nil]
+      #   # @param data [Unit::Models::AuthorizationRequestApproveParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -51,9 +51,9 @@ module Unit
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param amount [Integer, nil]
-          #   # @param funding_account [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param amount [Integer]
+          #   # @param funding_account [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(amount: nil, funding_account: nil, tags: nil, **) = super
 

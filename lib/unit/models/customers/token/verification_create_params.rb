@@ -11,7 +11,7 @@ module Unit
           optional :data, -> { Unit::Models::Customers::Token::VerificationCreateParams::Data }
 
           # @!parse
-          #   # @param data [Unit::Models::Customers::Token::VerificationCreateParams::Data, nil]
+          #   # @param data [Unit::Models::Customers::Token::VerificationCreateParams::Data]
           #   #
           #   def initialize(data: nil, **) = super
 
@@ -71,9 +71,9 @@ module Unit
 
               # @!parse
               #   # @param channel [String]
-              #   # @param app_hash [String, nil]
-              #   # @param language [String, nil]
-              #   # @param phone [Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone, nil]
+              #   # @param app_hash [String]
+              #   # @param language [String]
+              #   # @param phone [Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone]
               #   #
               #   def initialize(channel:, app_hash: nil, language: nil, phone: nil, **) = super
 

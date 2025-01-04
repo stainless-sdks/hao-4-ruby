@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::StopPaymentListParams::Filter, nil]
+      #   # @param filter [Unit::Models::StopPaymentListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::StopPaymentListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::StopPaymentListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -77,15 +77,15 @@ module Unit
         optional :until_, String, api_name: :until
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param check_number [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param from_amount [Integer, nil]
-        #   # @param since [String, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
-        #   # @param to_amount [Integer, nil]
-        #   # @param until_ [String, nil]
+        #   # @param account_id [String]
+        #   # @param check_number [String]
+        #   # @param customer_id [String]
+        #   # @param from_amount [Integer]
+        #   # @param since [String]
+        #   # @param status [Array<String>]
+        #   # @param tags [Hash{Symbol => String}]
+        #   # @param to_amount [Integer]
+        #   # @param until_ [String]
         #   #
         #   def initialize(
         #     account_id: nil,
@@ -136,8 +136,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

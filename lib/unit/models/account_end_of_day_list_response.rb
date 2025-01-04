@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::AccountEndOfDayListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::AccountEndOfDayListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::AccountEndOfDayListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -77,7 +77,7 @@ module Unit
           #   # @param balance [Integer]
           #   # @param date [String]
           #   # @param hold [Integer]
-          #   # @param overdraft_limit [Integer, nil]
+          #   # @param overdraft_limit [Integer]
           #   #
           #   def initialize(available:, balance:, date:, hold:, overdraft_limit: nil, **) = super
 

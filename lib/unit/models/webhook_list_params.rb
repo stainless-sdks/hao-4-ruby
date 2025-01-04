@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::WebhookListParams::Filter, nil]
+      #   # @param filter [Unit::Models::WebhookListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::WebhookListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::WebhookListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -52,10 +52,10 @@ module Unit
         optional :until_, String, api_name: :until
 
         # @!parse
-        #   # @param from_id [Integer, nil]
-        #   # @param since [String, nil]
-        #   # @param to_id [Integer, nil]
-        #   # @param until_ [String, nil]
+        #   # @param from_id [Integer]
+        #   # @param since [String]
+        #   # @param to_id [Integer]
+        #   # @param until_ [String]
         #   #
         #   def initialize(from_id: nil, since: nil, to_id: nil, until_: nil, **) = super
 
@@ -76,8 +76,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

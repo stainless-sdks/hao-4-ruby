@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::CustomerArchiveParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::CustomerArchiveParams::Data, nil]
+      #   # @param data [Unit::Models::CustomerArchiveParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::CustomerArchiveParams::Data::Type }
 
         # @!parse
-        #   # @param attributes [Unit::Models::CustomerArchiveParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::CustomerArchiveParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -41,7 +41,7 @@ module Unit
           optional :reason, enum: -> { Unit::Models::CustomerArchiveParams::Data::Attributes::Reason }
 
           # @!parse
-          #   # @param reason [String, nil]
+          #   # @param reason [String]
           #   #
           #   def initialize(reason: nil, **) = super
 

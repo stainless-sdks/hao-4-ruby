@@ -78,9 +78,9 @@ module Unit
             #   # @param amount [Integer]
             #   # @param atm_name [String]
             #   # @param last4_digits [String]
-            #   # @param atm_location [String, nil]
-            #   # @param card_network [String, nil]
-            #   # @param surcharge [Integer, nil]
+            #   # @param atm_location [String]
+            #   # @param card_network [String]
+            #   # @param surcharge [Integer]
             #   #
             #   def initialize(amount:, atm_name:, last4_digits:, atm_location: nil, card_network: nil, surcharge: nil, **) = super
 

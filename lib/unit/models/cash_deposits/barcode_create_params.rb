@@ -73,8 +73,8 @@ module Unit
                      }
 
             # @!parse
-            #   # @param account [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account, nil]
-            #   # @param customer [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer, nil]
+            #   # @param account [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account]
+            #   # @param customer [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer]
             #   #
             #   def initialize(account: nil, customer: nil, **) = super
 

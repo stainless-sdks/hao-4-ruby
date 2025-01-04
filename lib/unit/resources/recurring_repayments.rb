@@ -12,7 +12,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentCreateParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment, nil] :data
+      #   @option params [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment] :data
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -38,7 +38,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [String, nil] :include
+      #   @option params [String] :include
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -59,11 +59,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::RecurringRepaymentListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::RecurringRepaymentListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::RecurringRepaymentListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::RecurringRepaymentListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [Symbol, Unit::Models::RecurringRepaymentListParams::Sort, nil] :sort
+      #   @option params [Symbol, Unit::Models::RecurringRepaymentListParams::Sort] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -86,9 +86,9 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentDisableParams] Attributes to send in this request.
       #
-      #   @option params [Object] :body Body param:
+      #   @option params [Object, nil] :body Body param:
       #
-      #   @option params [String, nil] :include Query param:
+      #   @option params [String] :include Query param:
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -115,9 +115,9 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentEnableParams] Attributes to send in this request.
       #
-      #   @option params [Object] :body Body param:
+      #   @option params [Object, nil] :body Body param:
       #
-      #   @option params [String, nil] :include Query param:
+      #   @option params [String] :include Query param:
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

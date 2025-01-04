@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::FeeReverseResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::FeeReverseResponse::Data, nil]
+      #   # @param data [Unit::Models::FeeReverseResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -32,9 +32,9 @@ module Unit
         optional :type, enum: -> { Unit::Models::FeeReverseResponse::Data::Type }
 
         # @!parse
-        #   # @param attributes [Unit::Models::FeeReverseResponse::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::FeeReverseResponse::Data::Relationships, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::FeeReverseResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::FeeReverseResponse::Data::Relationships]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -53,7 +53,7 @@ module Unit
 
           # @!parse
           #   # @param description [String]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(description:, tags: nil, **) = super
 
@@ -72,8 +72,8 @@ module Unit
           optional :transaction, -> { Unit::Models::FeeReverseResponse::Data::Relationships::Transaction }
 
           # @!parse
-          #   # @param account [Unit::Models::FeeReverseResponse::Data::Relationships::Account, nil]
-          #   # @param transaction [Unit::Models::FeeReverseResponse::Data::Relationships::Transaction, nil]
+          #   # @param account [Unit::Models::FeeReverseResponse::Data::Relationships::Account]
+          #   # @param transaction [Unit::Models::FeeReverseResponse::Data::Relationships::Transaction]
           #   #
           #   def initialize(account: nil, transaction: nil, **) = super
 

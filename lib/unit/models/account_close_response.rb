@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::Account }
 
       # @!parse
-      #   # @param data [Unit::Models::Account, nil]
+      #   # @param data [Unit::Models::Account]
       #   #
       #   def initialize(data: nil, **) = super
 

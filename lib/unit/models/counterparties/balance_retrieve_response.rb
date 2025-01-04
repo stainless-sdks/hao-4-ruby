@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Counterparties::BalanceRetrieveResponse::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Counterparties::BalanceRetrieveResponse::Data, nil]
+        #   # @param data [Unit::Models::Counterparties::BalanceRetrieveResponse::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -44,7 +44,7 @@ module Unit
           #   # @param id [String]
           #   # @param relationships [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships]
           #   # @param type [String]
-          #   # @param attributes [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes, nil]
+          #   # @param attributes [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes]
           #   #
           #   def initialize(id:, relationships:, type:, attributes: nil, **) = super
 
@@ -209,7 +209,7 @@ module Unit
 
             # @!parse
             #   # @param balance [Float]
-            #   # @param available [Float, nil]
+            #   # @param available [Float]
             #   #
             #   def initialize(balance:, available: nil, **) = super
 

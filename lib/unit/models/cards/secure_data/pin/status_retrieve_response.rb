@@ -12,7 +12,7 @@ module Unit
             optional :data, -> { Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data }
 
             # @!parse
-            #   # @param data [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data, nil]
+            #   # @param data [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data]
             #   #
             #   def initialize(data: nil, **) = super
 
@@ -34,8 +34,8 @@ module Unit
                        }
 
               # @!parse
-              #   # @param attributes [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes, nil]
-              #   # @param type [String, nil]
+              #   # @param attributes [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes]
+              #   # @param type [String]
               #   #
               #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -51,7 +51,7 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param status [String, nil]
+                #   # @param status [String]
                 #   #
                 #   def initialize(status: nil, **) = super
 

@@ -29,9 +29,9 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::TaxFormListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::TaxFormListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::TaxFormListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::TaxFormListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::TaxFormListParams::Page] :page Parameters for paginated list requests
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

@@ -10,7 +10,7 @@ module Unit
         optional :data, Unit::ArrayOf[-> { Unit::Models::Accounts::DepositProductListResponse::Data }]
 
         # @!parse
-        #   # @param data [Array<Unit::Models::Accounts::DepositProductListResponse::Data>, nil]
+        #   # @param data [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]
         #   #
         #   def initialize(data: nil, **) = super
 

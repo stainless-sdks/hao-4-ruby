@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::ApplicationFormListParams::Filter, nil]
+      #   # @param filter [Unit::Models::ApplicationFormListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::ApplicationFormListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::ApplicationFormListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -52,10 +52,10 @@ module Unit
         optional :tags, Unit::HashOf[String]
 
         # @!parse
-        #   # @param email [String, nil]
-        #   # @param query [String, nil]
-        #   # @param status [Array<String>, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
+        #   # @param email [String]
+        #   # @param query [String]
+        #   # @param status [Array<String>]
+        #   # @param tags [Hash{Symbol => String}]
         #   #
         #   def initialize(email: nil, query: nil, status: nil, tags: nil, **) = super
 
@@ -93,8 +93,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

@@ -9,7 +9,7 @@ module Unit
       optional :data, String
 
       # @!parse
-      #   # @param data [String, nil]
+      #   # @param data [String]
       #   #
       #   def initialize(data: nil, **) = super
 

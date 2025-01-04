@@ -14,7 +14,7 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRetrieveParams] Attributes to send in this request.
       #
-      #   @option params [Boolean, nil] :include_none_authorized
+      #   @option params [Boolean] :include_none_authorized
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
@@ -35,11 +35,11 @@ module Unit
       #
       # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationListParams] Attributes to send in this request.
       #
-      #   @option params [Unit::Models::AuthorizationListParams::Filter, nil] :filter
+      #   @option params [Unit::Models::AuthorizationListParams::Filter] :filter
       #
-      #   @option params [Unit::Models::AuthorizationListParams::Page, nil] :page Parameters for paginated list requests
+      #   @option params [Unit::Models::AuthorizationListParams::Page] :page Parameters for paginated list requests
       #
-      #   @option params [String, nil] :sort
+      #   @option params [String] :sort
       #
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #

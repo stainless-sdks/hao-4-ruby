@@ -10,7 +10,7 @@ module Unit
         optional :data, -> { Unit::Models::Users::APITokenCreateParams::Data }
 
         # @!parse
-        #   # @param data [Unit::Models::Users::APITokenCreateParams::Data, nil]
+        #   # @param data [Unit::Models::Users::APITokenCreateParams::Data]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -48,7 +48,7 @@ module Unit
 
             # @!attribute resources
             #
-            #   @return [Array<Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource>]
+            #   @return [Array<Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource>, nil]
             optional :resources,
                      Unit::ArrayOf[-> {
                        Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource
@@ -68,8 +68,8 @@ module Unit
             #   # @param description [String]
             #   # @param expiration [String]
             #   # @param resources [Array<Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource>, nil]
-            #   # @param scope [String, nil]
-            #   # @param source_ip [String, nil]
+            #   # @param scope [String]
+            #   # @param source_ip [String]
             #   #
             #   def initialize(description:, expiration:, resources: nil, scope: nil, source_ip: nil, **) = super
 
@@ -90,8 +90,8 @@ module Unit
                        }
 
               # @!parse
-              #   # @param ids [Array<String>, nil]
-              #   # @param type [String, nil]
+              #   # @param ids [Array<String>]
+              #   # @param type [String]
               #   #
               #   def initialize(ids: nil, type: nil, **) = super
 

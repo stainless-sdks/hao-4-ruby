@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::EventListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::EventListParams::Filter, nil]
+      #   # @param filter [Unit::Models::EventListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::EventListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::EventListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -40,9 +40,9 @@ module Unit
         optional :until_, String, api_name: :until
 
         # @!parse
-        #   # @param since [String, nil]
-        #   # @param type [Array<String>, nil]
-        #   # @param until_ [String, nil]
+        #   # @param since [String]
+        #   # @param type [Array<String>]
+        #   # @param until_ [String]
         #   #
         #   def initialize(since: nil, type: nil, until_: nil, **) = super
 
@@ -63,8 +63,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

@@ -14,8 +14,8 @@ module Unit
       optional :type, enum: -> { Unit::Models::AuthorizationRequest::Type }
 
       # @!parse
-      #   # @param id [String, nil]
-      #   # @param type [String, nil]
+      #   # @param id [String]
+      #   # @param type [String]
       #   #
       #   def initialize(id: nil, type: nil, **) = super
 

@@ -9,7 +9,7 @@ module Unit
       optional :filter, -> { Unit::Models::AtmLocationListParams::Filter }
 
       # @!parse
-      #   # @param filter [Unit::Models::AtmLocationListParams::Filter, nil]
+      #   # @param filter [Unit::Models::AtmLocationListParams::Filter]
       #   #
       #   def initialize(filter: nil, **) = super
 
@@ -37,10 +37,10 @@ module Unit
         optional :search_radius, Integer, api_name: :searchRadius
 
         # @!parse
-        #   # @param address [Object, nil]
-        #   # @param coordinates [Object, nil]
-        #   # @param postal_code [String, nil]
-        #   # @param search_radius [Integer, nil]
+        #   # @param address [Object]
+        #   # @param coordinates [Object]
+        #   # @param postal_code [String]
+        #   # @param search_radius [Integer]
         #   #
         #   def initialize(address: nil, coordinates: nil, postal_code: nil, search_radius: nil, **) = super
 

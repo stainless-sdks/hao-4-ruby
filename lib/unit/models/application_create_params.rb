@@ -134,12 +134,12 @@ module Unit
 
             # @!attribute jwt_subject
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :jwt_subject, String, api_name: :jwtSubject
 
             # @!attribute nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
             # @!attribute occupation
@@ -152,7 +152,7 @@ module Unit
 
             # @!attribute passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
             # @!attribute power_of_attorney_agent
@@ -175,7 +175,7 @@ module Unit
 
             # @!attribute ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
             # @!attribute tags
@@ -189,20 +189,20 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::FullName]
             #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::Phone]
-            #   # @param annual_income [String, nil]
-            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint>, nil]
-            #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param industry [String, nil]
-            #   # @param ip [String, nil]
+            #   # @param annual_income [String]
+            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint>]
+            #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams]
+            #   # @param idempotency_key [String]
+            #   # @param industry [String]
+            #   # @param ip [String]
             #   # @param jwt_subject [String, nil]
             #   # @param nationality [String, nil]
-            #   # @param occupation [String, nil]
+            #   # @param occupation [String]
             #   # @param passport [String, nil]
-            #   # @param power_of_attorney_agent [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent, nil]
-            #   # @param source_of_income [String, nil]
+            #   # @param power_of_attorney_agent [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent]
+            #   # @param source_of_income [String]
             #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address:,
@@ -259,7 +259,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -397,8 +397,8 @@ module Unit
                        }
 
               # @!parse
-              #   # @param require_id_verification [Boolean, nil]
-              #   # @param use_selfie_verification [String, nil]
+              #   # @param require_id_verification [Boolean]
+              #   # @param use_selfie_verification [String]
               #   #
               #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -549,7 +549,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!attribute matricula_consular
@@ -578,12 +578,12 @@ module Unit
               #   # @param email [String]
               #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::FullName]
               #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::Phone]
-              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams, nil]
+              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams]
               #   # @param jwt_subject [String, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param ssn [String, nil]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param passport [String]
+              #   # @param ssn [String]
               #   #
               #   def initialize(
               #     address:,
@@ -632,7 +632,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -704,8 +704,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -862,7 +862,7 @@ module Unit
 
             # @!attribute dba
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :dba, String
 
             # @!attribute device_fingerprints
@@ -876,7 +876,7 @@ module Unit
 
             # @!attribute ein
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ein, String
 
             # @!attribute evaluation_params
@@ -908,17 +908,17 @@ module Unit
 
             # @!attribute jwt_subject
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :jwt_subject, String, api_name: :jwtSubject
 
             # @!attribute matricula_consular
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :matricula_consular, String, api_name: :matriculaConsular
 
             # @!attribute nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
             # @!attribute number_of_employees
@@ -940,7 +940,7 @@ module Unit
 
             # @!attribute passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
             # @!attribute power_of_attorney_agent
@@ -968,7 +968,7 @@ module Unit
 
             # @!attribute ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
             # @!attribute tags
@@ -987,28 +987,28 @@ module Unit
             #   # @param email [String]
             #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::FullName]
             #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::Phone]
-            #   # @param annual_income [String, nil]
-            #   # @param annual_revenue [String, nil]
-            #   # @param business_vertical [String, nil]
+            #   # @param annual_income [String]
+            #   # @param annual_revenue [String]
+            #   # @param business_vertical [String]
             #   # @param dba [String, nil]
-            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint>, nil]
+            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint>]
             #   # @param ein [String, nil]
-            #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param industry [String, nil]
-            #   # @param ip [String, nil]
+            #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams]
+            #   # @param idempotency_key [String]
+            #   # @param industry [String]
+            #   # @param ip [String]
             #   # @param jwt_subject [String, nil]
             #   # @param matricula_consular [String, nil]
             #   # @param nationality [String, nil]
-            #   # @param number_of_employees [String, nil]
-            #   # @param occupation [String, nil]
+            #   # @param number_of_employees [String]
+            #   # @param occupation [String]
             #   # @param passport [String, nil]
-            #   # @param power_of_attorney_agent [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent, nil]
-            #   # @param sole_proprietorship [Boolean, nil]
-            #   # @param source_of_income [String, nil]
+            #   # @param power_of_attorney_agent [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent]
+            #   # @param sole_proprietorship [Boolean]
+            #   # @param source_of_income [String]
             #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param website [String, nil]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param website [String]
             #   #
             #   def initialize(
             #     address:,
@@ -1073,7 +1073,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -1290,8 +1290,8 @@ module Unit
                        }
 
               # @!parse
-              #   # @param require_id_verification [Boolean, nil]
-              #   # @param use_selfie_verification [String, nil]
+              #   # @param require_id_verification [Boolean]
+              #   # @param use_selfie_verification [String]
               #   #
               #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -1465,7 +1465,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!attribute matricula_consular
@@ -1494,12 +1494,12 @@ module Unit
               #   # @param email [String]
               #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::FullName]
               #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::Phone]
-              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams, nil]
+              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams]
               #   # @param jwt_subject [String, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param ssn [String, nil]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param passport [String]
+              #   # @param ssn [String]
               #   #
               #   def initialize(
               #     address:,
@@ -1548,7 +1548,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -1620,8 +1620,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -1888,22 +1888,22 @@ module Unit
             #   # @param officer [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer]
             #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Phone]
             #   # @param state_of_incorporation [String]
-            #   # @param annual_revenue [String, nil]
-            #   # @param business_vertical [String, nil]
-            #   # @param cash_flow [String, nil]
-            #   # @param countries_of_operation [Array<String>, nil]
-            #   # @param date_of_incorporation [String, nil]
-            #   # @param dba [String, nil]
-            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint>, nil]
-            #   # @param idempotency_key [String, nil]
-            #   # @param industry [String, nil]
-            #   # @param ip [String, nil]
-            #   # @param number_of_employees [String, nil]
-            #   # @param purpose [String, nil]
-            #   # @param stock_symbol [String, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
-            #   # @param website [String, nil]
-            #   # @param year_of_incorporation [String, nil]
+            #   # @param annual_revenue [String]
+            #   # @param business_vertical [String]
+            #   # @param cash_flow [String]
+            #   # @param countries_of_operation [Array<String>]
+            #   # @param date_of_incorporation [String]
+            #   # @param dba [String]
+            #   # @param device_fingerprints [Array<Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint>]
+            #   # @param idempotency_key [String]
+            #   # @param industry [String]
+            #   # @param ip [String]
+            #   # @param number_of_employees [String]
+            #   # @param purpose [String]
+            #   # @param stock_symbol [String]
+            #   # @param tags [Hash{Symbol => String}]
+            #   # @param website [String]
+            #   # @param year_of_incorporation [String]
             #   #
             #   def initialize(
             #     address:,
@@ -1966,7 +1966,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -2080,15 +2080,15 @@ module Unit
               #   # @param email [String]
               #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::FullName]
               #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::Phone]
-              #   # @param annual_income [String, nil]
-              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param occupation [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param percentage [Integer, nil]
-              #   # @param source_of_income [String, nil]
-              #   # @param ssn [String, nil]
+              #   # @param annual_income [String]
+              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param occupation [String]
+              #   # @param passport [String]
+              #   # @param percentage [Integer]
+              #   # @param source_of_income [String]
+              #   # @param ssn [String]
               #   #
               #   def initialize(
               #     address:,
@@ -2140,7 +2140,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -2241,8 +2241,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 
@@ -2368,7 +2368,7 @@ module Unit
 
               # @!attribute jwt_subject
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :jwt_subject, String, api_name: :jwtSubject
 
               # @!parse
@@ -2553,14 +2553,14 @@ module Unit
               #   # @param full_name [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::FullName]
               #   # @param occupation [String]
               #   # @param phone [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Phone]
-              #   # @param annual_income [String, nil]
-              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams, nil]
-              #   # @param matricula_consular [String, nil]
-              #   # @param nationality [String, nil]
-              #   # @param passport [String, nil]
-              #   # @param source_of_income [String, nil]
-              #   # @param ssn [String, nil]
-              #   # @param title [String, nil]
+              #   # @param annual_income [String]
+              #   # @param evaluation_params [Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams]
+              #   # @param matricula_consular [String]
+              #   # @param nationality [String]
+              #   # @param passport [String]
+              #   # @param source_of_income [String]
+              #   # @param ssn [String]
+              #   # @param title [String]
               #   #
               #   def initialize(
               #     address:,
@@ -2612,7 +2612,7 @@ module Unit
 
                 # @!attribute street2
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :street2, String
 
                 # @!parse
@@ -2759,8 +2759,8 @@ module Unit
                          }
 
                 # @!parse
-                #   # @param require_id_verification [Boolean, nil]
-                #   # @param use_selfie_verification [String, nil]
+                #   # @param require_id_verification [Boolean]
+                #   # @param use_selfie_verification [String]
                 #   #
                 #   def initialize(require_id_verification: nil, use_selfie_verification: nil, **) = super
 

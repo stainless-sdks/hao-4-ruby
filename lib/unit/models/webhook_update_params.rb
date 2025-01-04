@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::WebhookUpdateParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::WebhookUpdateParams::Data, nil]
+      #   # @param data [Unit::Models::WebhookUpdateParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, String
 
         # @!parse
-        #   # @param attributes [Unit::Models::WebhookUpdateParams::Data::Attributes, nil]
-        #   # @param type [String, nil]
+        #   # @param attributes [Unit::Models::WebhookUpdateParams::Data::Attributes]
+        #   # @param type [String]
         #   #
         #   def initialize(attributes: nil, type: nil, **) = super
 
@@ -41,7 +41,7 @@ module Unit
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(tags: nil, **) = super
 

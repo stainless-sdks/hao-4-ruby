@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::AccountEndOfDayListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::AccountEndOfDayListParams::Filter, nil]
+      #   # @param filter [Unit::Models::AccountEndOfDayListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::AccountEndOfDayListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AccountEndOfDayListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -45,10 +45,10 @@ module Unit
         optional :until_, Date, api_name: :until
 
         # @!parse
-        #   # @param account_id [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param since [String, nil]
-        #   # @param until_ [String, nil]
+        #   # @param account_id [String]
+        #   # @param customer_id [String]
+        #   # @param since [String]
+        #   # @param until_ [String]
         #   #
         #   def initialize(account_id: nil, customer_id: nil, since: nil, until_: nil, **) = super
 
@@ -69,8 +69,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

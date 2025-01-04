@@ -71,7 +71,7 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute design
@@ -87,7 +87,7 @@ module Unit
 
             # @!attribute shipping_address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress
@@ -101,10 +101,10 @@ module Unit
 
             # @!parse
             #   # @param default_funding_account_id [String, nil]
-            #   # @param design [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits, nil]
+            #   # @param design [String]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits]
             #   # @param shipping_address [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(default_funding_account_id: nil, design: nil, limits: nil, shipping_address: nil, tags: nil, **) = super
 
@@ -132,10 +132,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -170,7 +170,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -228,7 +228,7 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute limits
@@ -244,8 +244,8 @@ module Unit
 
             # @!parse
             #   # @param default_funding_account_id [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(default_funding_account_id: nil, limits: nil, tags: nil, **) = super
 
@@ -273,10 +273,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -330,7 +330,7 @@ module Unit
 
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute design
@@ -361,7 +361,7 @@ module Unit
 
             # @!attribute shipping_address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::ShippingAddress
@@ -374,14 +374,14 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address, nil]
+            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address]
             #   # @param default_funding_account_id [String, nil]
-            #   # @param design [String, nil]
-            #   # @param email [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits, nil]
-            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone, nil]
+            #   # @param design [String]
+            #   # @param email [String]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits]
+            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone]
             #   # @param shipping_address [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::ShippingAddress, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address: nil,
@@ -427,7 +427,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -465,10 +465,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -523,7 +523,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -587,7 +587,7 @@ module Unit
 
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute email
@@ -613,12 +613,12 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address, nil]
+            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address]
             #   # @param default_funding_account_id [String, nil]
-            #   # @param email [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits, nil]
-            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param email [String]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits]
+            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(address: nil, default_funding_account_id: nil, email: nil, limits: nil, phone: nil, tags: nil, **) = super
 
@@ -652,7 +652,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -690,10 +690,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -767,7 +767,7 @@ module Unit
 
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute design
@@ -796,7 +796,7 @@ module Unit
 
             # @!attribute shipping_address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::ShippingAddress
@@ -809,14 +809,14 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address, nil]
+            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address]
             #   # @param default_funding_account_id [String, nil]
-            #   # @param design [String, nil]
-            #   # @param email [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits, nil]
-            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone, nil]
+            #   # @param design [String]
+            #   # @param email [String]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits]
+            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone]
             #   # @param shipping_address [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::ShippingAddress, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(
             #     address: nil,
@@ -862,7 +862,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -900,10 +900,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 
@@ -958,7 +958,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -1022,7 +1022,7 @@ module Unit
 
             # @!attribute default_funding_account_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
 
             # @!attribute email
@@ -1048,12 +1048,12 @@ module Unit
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address, nil]
+            #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address]
             #   # @param default_funding_account_id [String, nil]
-            #   # @param email [String, nil]
-            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits, nil]
-            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param email [String]
+            #   # @param limits [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits]
+            #   # @param phone [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone]
+            #   # @param tags [Hash{Symbol => String}]
             #   #
             #   def initialize(address: nil, default_funding_account_id: nil, email: nil, limits: nil, phone: nil, tags: nil, **) = super
 
@@ -1087,7 +1087,7 @@ module Unit
 
               # @!attribute street2
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :street2, String
 
               # @!parse
@@ -1125,10 +1125,10 @@ module Unit
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
 
               # @!parse
-              #   # @param daily_purchase [Integer, nil]
-              #   # @param daily_withdrawal [Integer, nil]
-              #   # @param monthly_purchase [Integer, nil]
-              #   # @param monthly_withdrawal [Integer, nil]
+              #   # @param daily_purchase [Integer]
+              #   # @param daily_withdrawal [Integer]
+              #   # @param monthly_purchase [Integer]
+              #   # @param monthly_withdrawal [Integer]
               #   #
               #   def initialize(daily_purchase: nil, daily_withdrawal: nil, monthly_purchase: nil, monthly_withdrawal: nil, **) = super
 

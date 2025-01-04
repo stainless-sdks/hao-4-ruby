@@ -64,11 +64,11 @@ module Unit
           optional :verify_name, Unit::BooleanModel, api_name: :verifyName
 
           # @!parse
-          #   # @param name [String, nil]
-          #   # @param permissions [String, nil]
-          #   # @param plaid_processor_token [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
-          #   # @param verify_name [Boolean, nil]
+          #   # @param name [String]
+          #   # @param permissions [String]
+          #   # @param plaid_processor_token [String]
+          #   # @param tags [Hash{Symbol => String}]
+          #   # @param verify_name [Boolean]
           #   #
           #   def initialize(name: nil, permissions: nil, plaid_processor_token: nil, tags: nil, verify_name: nil, **) = super
 

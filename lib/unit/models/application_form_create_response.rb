@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::ApplicationForm }
 
       # @!parse
-      #   # @param data [Unit::Models::ApplicationForm, nil]
+      #   # @param data [Unit::Models::ApplicationForm]
       #   #
       #   def initialize(data: nil, **) = super
 

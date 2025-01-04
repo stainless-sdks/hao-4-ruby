@@ -5,7 +5,7 @@ module Unit
     class RecurringRepaymentEnableParams < Unit::BaseModel
       # @!attribute body
       #
-      #   @return [Object]
+      #   @return [Object, nil]
       required :body, Unit::Unknown
 
       # @!attribute include
@@ -15,7 +15,7 @@ module Unit
 
       # @!parse
       #   # @param body [Object, nil]
-      #   # @param include [String, nil]
+      #   # @param include [String]
       #   #
       #   def initialize(body:, include: nil, **) = super
 

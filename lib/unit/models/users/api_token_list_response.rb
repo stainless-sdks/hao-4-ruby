@@ -10,7 +10,7 @@ module Unit
         optional :data, Unit::ArrayOf[-> { Unit::Models::Users::APITokenListResponse::Data }]
 
         # @!parse
-        #   # @param data [Array<Unit::Models::Users::APITokenListResponse::Data>, nil]
+        #   # @param data [Array<Unit::Models::Users::APITokenListResponse::Data>]
         #   #
         #   def initialize(data: nil, **) = super
 
@@ -33,9 +33,9 @@ module Unit
           optional :type, enum: -> { Unit::Models::Users::APITokenListResponse::Data::Type }
 
           # @!parse
-          #   # @param id [String, nil]
-          #   # @param attributes [Unit::Models::Users::APITokenListResponse::Data::Attributes, nil]
-          #   # @param type [String, nil]
+          #   # @param id [String]
+          #   # @param attributes [Unit::Models::Users::APITokenListResponse::Data::Attributes]
+          #   # @param type [String]
           #   #
           #   def initialize(id: nil, attributes: nil, type: nil, **) = super
 
@@ -69,10 +69,10 @@ module Unit
 
             # @!parse
             #   # @param created_at [String]
-            #   # @param token [String, nil]
-            #   # @param description [String, nil]
-            #   # @param expiration [String, nil]
-            #   # @param source_ip [String, nil]
+            #   # @param token [String]
+            #   # @param description [String]
+            #   # @param expiration [String]
+            #   # @param source_ip [String]
             #   #
             #   def initialize(created_at:, token: nil, description: nil, expiration: nil, source_ip: nil, **) = super
 

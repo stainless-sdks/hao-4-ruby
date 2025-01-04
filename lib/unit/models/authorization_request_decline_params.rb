@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::AuthorizationRequestDeclineParams::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::AuthorizationRequestDeclineParams::Data, nil]
+      #   # @param data [Unit::Models::AuthorizationRequestDeclineParams::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -44,7 +44,7 @@ module Unit
                    }
 
           # @!parse
-          #   # @param reason [String, nil]
+          #   # @param reason [String]
           #   #
           #   def initialize(reason: nil, **) = super
 

@@ -15,9 +15,9 @@ module Unit
       optional :page, -> { Unit::Models::StoreLocationListParams::Page }
 
       # @!parse
-      #   # @param filter [Unit::Models::StoreLocationListParams::Filter, nil]
+      #   # @param filter [Unit::Models::StoreLocationListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::StoreLocationListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::StoreLocationListParams::Page] Parameters for paginated list requests
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -43,8 +43,8 @@ module Unit
 
         # @!parse
         #   # @param service_type [String]
-        #   # @param coordinates [Unit::Models::StoreLocationListParams::Filter::Coordinates, nil]
-        #   # @param postal_code [String, nil]
+        #   # @param coordinates [Unit::Models::StoreLocationListParams::Filter::Coordinates]
+        #   # @param postal_code [String]
         #   #
         #   def initialize(service_type:, coordinates: nil, postal_code: nil, **) = super
 
@@ -102,8 +102,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

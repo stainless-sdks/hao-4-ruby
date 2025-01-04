@@ -9,7 +9,7 @@ module Unit
       optional :data, Unit::ArrayOf[-> { Unit::Models::CounterpartyListResponse::Data }]
 
       # @!parse
-      #   # @param data [Array<Unit::Models::CounterpartyListResponse::Data>, nil]
+      #   # @param data [Array<Unit::Models::CounterpartyListResponse::Data>]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -37,10 +37,10 @@ module Unit
         optional :type, enum: -> { Unit::Models::CounterpartyListResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param attributes [Unit::Models::CounterpartyListResponse::Data::Attributes, nil]
-        #   # @param relationships [Unit::Models::CounterpartyListResponse::Data::Relationships, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param attributes [Unit::Models::CounterpartyListResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::CounterpartyListResponse::Data::Relationships]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, attributes: nil, relationships: nil, type: nil, **) = super
 
@@ -105,8 +105,8 @@ module Unit
           #   # @param permissions [String]
           #   # @param routing_number [String]
           #   # @param type [String]
-          #   # @param bank [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param bank [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(
           #     account_number:,

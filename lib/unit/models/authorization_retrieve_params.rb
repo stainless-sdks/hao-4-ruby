@@ -9,7 +9,7 @@ module Unit
       optional :include_none_authorized, Unit::BooleanModel, api_name: :includeNoneAuthorized
 
       # @!parse
-      #   # @param include_none_authorized [Boolean, nil]
+      #   # @param include_none_authorized [Boolean]
       #   #
       #   def initialize(include_none_authorized: nil, **) = super
 

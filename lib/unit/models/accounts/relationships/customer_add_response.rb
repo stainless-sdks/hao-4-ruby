@@ -11,7 +11,7 @@ module Unit
           optional :data, -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data }
 
           # @!parse
-          #   # @param data [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data, nil]
+          #   # @param data [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data]
           #   #
           #   def initialize(data: nil, **) = super
 
@@ -168,17 +168,17 @@ module Unit
               #   # @param routing_number [String]
               #   # @param status [String]
               #   # @param tags [Hash{Symbol => String}]
-              #   # @param account_number [String, nil]
-              #   # @param close_reason [String, nil]
-              #   # @param close_reason_text [String, nil]
-              #   # @param daca_status [String, nil]
-              #   # @param fraud_reason [String, nil]
-              #   # @param freeze_reason [String, nil]
-              #   # @param is_overdrawn_within_limit [Boolean, nil]
-              #   # @param masked_account_number [String, nil]
-              #   # @param overdraft_limit [Integer, nil]
-              #   # @param secondary_account_number [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber, nil]
-              #   # @param updated_at [String, nil]
+              #   # @param account_number [String]
+              #   # @param close_reason [String]
+              #   # @param close_reason_text [String]
+              #   # @param daca_status [String]
+              #   # @param fraud_reason [String]
+              #   # @param freeze_reason [String]
+              #   # @param is_overdrawn_within_limit [Boolean]
+              #   # @param masked_account_number [String]
+              #   # @param overdraft_limit [Integer]
+              #   # @param secondary_account_number [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber]
+              #   # @param updated_at [String]
               #   #
               #   def initialize(
               #     available:,
@@ -336,7 +336,7 @@ module Unit
                        -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer }
 
               # @!parse
-              #   # @param customer [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer, nil]
+              #   # @param customer [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer]
               #   #
               #   def initialize(customer: nil, **) = super
 

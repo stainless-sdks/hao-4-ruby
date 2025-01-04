@@ -58,8 +58,8 @@ module Unit
 
           # @!parse
           #   # @param description [String]
-          #   # @param idempotency_key [String, nil]
-          #   # @param tags [Hash{Symbol => String}, nil]
+          #   # @param idempotency_key [String]
+          #   # @param tags [Hash{Symbol => String}]
           #   #
           #   def initialize(description:, idempotency_key: nil, tags: nil, **) = super
 
@@ -78,8 +78,8 @@ module Unit
           optional :transaction, -> { Unit::Models::FeeReverseParams::Data::Relationships::Transaction }
 
           # @!parse
-          #   # @param account [Unit::Models::FeeReverseParams::Data::Relationships::Account, nil]
-          #   # @param transaction [Unit::Models::FeeReverseParams::Data::Relationships::Transaction, nil]
+          #   # @param account [Unit::Models::FeeReverseParams::Data::Relationships::Account]
+          #   # @param transaction [Unit::Models::FeeReverseParams::Data::Relationships::Transaction]
           #   #
           #   def initialize(account: nil, transaction: nil, **) = super
 

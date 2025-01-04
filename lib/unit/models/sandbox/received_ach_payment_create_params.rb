@@ -82,9 +82,9 @@ module Unit
             #   # @param amount [Integer]
             #   # @param company_name [String]
             #   # @param settlement_date [String]
-            #   # @param direction [String, nil]
-            #   # @param receiving_entity_name [String, nil]
-            #   # @param sec_code [String, nil]
+            #   # @param direction [String]
+            #   # @param receiving_entity_name [String]
+            #   # @param sec_code [String]
             #   #
             #   def initialize(amount:, company_name:, settlement_date:, direction: nil, receiving_entity_name: nil, sec_code: nil, **) = super
 

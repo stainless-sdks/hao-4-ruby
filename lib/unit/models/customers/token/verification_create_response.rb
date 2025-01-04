@@ -11,7 +11,7 @@ module Unit
           optional :data, -> { Unit::Models::Customers::Token::VerificationCreateResponse::Data }
 
           # @!parse
-          #   # @param data [Unit::Models::Customers::Token::VerificationCreateResponse::Data, nil]
+          #   # @param data [Unit::Models::Customers::Token::VerificationCreateResponse::Data]
           #   #
           #   def initialize(data: nil, **) = super
 
@@ -49,7 +49,7 @@ module Unit
               optional :verification_token, String, api_name: :verificationToken
 
               # @!parse
-              #   # @param verification_token [String, nil]
+              #   # @param verification_token [String]
               #   #
               #   def initialize(verification_token: nil, **) = super
 

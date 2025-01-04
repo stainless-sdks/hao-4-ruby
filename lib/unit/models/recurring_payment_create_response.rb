@@ -9,7 +9,7 @@ module Unit
       optional :data, -> { Unit::Models::RecurringPaymentCreateResponse::Data }
 
       # @!parse
-      #   # @param data [Unit::Models::RecurringPaymentCreateResponse::Data, nil]
+      #   # @param data [Unit::Models::RecurringPaymentCreateResponse::Data]
       #   #
       #   def initialize(data: nil, **) = super
 
@@ -27,8 +27,8 @@ module Unit
         optional :type, enum: -> { Unit::Models::RecurringPaymentCreateResponse::Data::Type }
 
         # @!parse
-        #   # @param id [String, nil]
-        #   # @param type [String, nil]
+        #   # @param id [String]
+        #   # @param type [String]
         #   #
         #   def initialize(id: nil, type: nil, **) = super
 

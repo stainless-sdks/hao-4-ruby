@@ -20,11 +20,11 @@ module Unit
       optional :sort, String
 
       # @!parse
-      #   # @param filter [Unit::Models::CounterpartyListParams::Filter, nil]
+      #   # @param filter [Unit::Models::CounterpartyListParams::Filter]
       #   #
-      #   # @param page [Unit::Models::CounterpartyListParams::Page, nil] Parameters for paginated list requests
+      #   # @param page [Unit::Models::CounterpartyListParams::Page] Parameters for paginated list requests
       #   #
-      #   # @param sort [String, nil]
+      #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super
 
@@ -58,11 +58,11 @@ module Unit
         optional :tags, Unit::HashOf[String]
 
         # @!parse
-        #   # @param account_number [String, nil]
-        #   # @param customer_id [String, nil]
-        #   # @param permissions [Array<String>, nil]
-        #   # @param routing_number [String, nil]
-        #   # @param tags [Hash{Symbol => String}, nil]
+        #   # @param account_number [String]
+        #   # @param customer_id [String]
+        #   # @param permissions [Array<String>]
+        #   # @param routing_number [String]
+        #   # @param tags [Hash{Symbol => String}]
         #   #
         #   def initialize(account_number: nil, customer_id: nil, permissions: nil, routing_number: nil, tags: nil, **) = super
 
@@ -103,8 +103,8 @@ module Unit
         # @!parse
         #   # Parameters for paginated list requests
         #   #
-        #   # @param limit [Integer, nil]
-        #   # @param offset [Integer, nil]
+        #   # @param limit [Integer]
+        #   # @param offset [Integer]
         #   #
         #   def initialize(limit: nil, offset: nil, **) = super
 

@@ -86,7 +86,7 @@ module Unit
             # @!parse
             #   # @param amount [Float]
             #   # @param description [String]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, transaction_summary_override: nil, **) = super
 
@@ -360,7 +360,7 @@ module Unit
             # @!parse
             #   # @param amount [Float]
             #   # @param description [String]
-            #   # @param transaction_summary_override [String, nil]
+            #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, transaction_summary_override: nil, **) = super
 
@@ -575,9 +575,9 @@ module Unit
             # @!parse
             #   # @param amount [Float]
             #   # @param description [String]
-            #   # @param addenda [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
+            #   # @param addenda [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
             #   #
             #   def initialize(amount:, description:, addenda: nil, same_day: nil, sec_code: nil, **) = super
 
@@ -855,9 +855,9 @@ module Unit
             # @!parse
             #   # @param amount [Float]
             #   # @param description [String]
-            #   # @param addenda [String, nil]
-            #   # @param same_day [Boolean, nil]
-            #   # @param sec_code [String, nil]
+            #   # @param addenda [String]
+            #   # @param same_day [Boolean]
+            #   # @param sec_code [String]
             #   #
             #   def initialize(amount:, description:, addenda: nil, same_day: nil, sec_code: nil, **) = super
 
