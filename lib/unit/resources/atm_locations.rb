@@ -4,6 +4,7 @@ module Unit
   module Resources
     class AtmLocations
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Array<Unit::Models::AtmLocationListResponseItem>]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::AtmLocationListParams.dump(params)
         req = {

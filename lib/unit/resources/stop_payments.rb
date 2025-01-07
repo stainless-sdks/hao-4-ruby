@@ -4,6 +4,7 @@ module Unit
   module Resources
     class StopPayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -19,6 +20,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
+      #
       def create(stop_payment_id, params = {}, opts = {})
         parsed = Unit::Models::StopPaymentCreateParams.dump(params)
         req = {
@@ -37,6 +39,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
+      #
       def retrieve(stop_payment_id, opts = {})
         req = {
           method: :get,
@@ -59,6 +62,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPaymentList]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::StopPaymentListParams.dump(params)
         req = {
@@ -77,6 +81,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
+      #
       def disable(stop_payment_id, opts = {})
         req = {
           method: :post,

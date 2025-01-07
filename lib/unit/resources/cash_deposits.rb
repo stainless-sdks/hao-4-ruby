@@ -7,6 +7,7 @@ module Unit
       attr_reader :barcodes
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @barcodes = Unit::Resources::CashDeposits::Barcodes.new(client: client)

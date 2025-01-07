@@ -5,6 +5,7 @@ module Unit
     class Sandbox
       class AtmDeposits
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
         end
@@ -18,6 +19,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Sandbox::AtmDepositCreateResponse]
+        #
         def create(params = {}, opts = {})
           parsed = Unit::Models::Sandbox::AtmDepositCreateParams.dump(params)
           req = {

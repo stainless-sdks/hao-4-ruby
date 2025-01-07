@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Returns
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -19,6 +20,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReturnReturnResponse]
+      #
       def return_(transaction_id, params = {}, opts = {})
         parsed = Unit::Models::ReturnReturnParams.dump(params)
         req = {

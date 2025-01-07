@@ -4,6 +4,7 @@ module Unit
   module Resources
     class TaxForms
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -15,6 +16,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::TaxFormRetrieveResponse]
+      #
       def retrieve(tax_form_id, opts = {})
         req = {
           method: :get,
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::TaxFormListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::TaxFormListParams.dump(params)
         req = {
@@ -55,6 +58,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Object]
+      #
       def pdf(tax_form_id, opts = {})
         req = {
           method: :get,

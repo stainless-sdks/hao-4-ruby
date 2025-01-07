@@ -4,6 +4,7 @@ module Unit
   module Resources
     class RecurringPayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringPaymentCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::RecurringPaymentCreateParams.dump(params)
         req = {
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringPaymentRetrieveResponse]
+      #
       def retrieve(payment_id, opts = {})
         req = {
           method: :get,
@@ -59,6 +62,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringPaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::RecurringPaymentListParams.dump(params)
         req = {
@@ -82,6 +86,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringPaymentDisableResponse]
+      #
       def disable(payment_id, params = {}, opts = {})
         parsed = Unit::Models::RecurringPaymentDisableParams.dump(params)
         req = {
@@ -108,6 +113,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringPaymentEnableResponse]
+      #
       def enable(payment_id, params = {}, opts = {})
         parsed = Unit::Models::RecurringPaymentEnableParams.dump(params)
         req = {

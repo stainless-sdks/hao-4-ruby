@@ -8,6 +8,7 @@ module Unit
         attr_reader :pin
 
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
           @pin = Unit::Resources::Cards::SecureData::Pin.new(client: client)

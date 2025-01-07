@@ -6,6 +6,7 @@ module Unit
       class Token
         class Verification
           # @param client [Unit::Client]
+          #
           def initialize(client:)
             @client = client
           end
@@ -21,6 +22,7 @@ module Unit
           # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
           #
           # @return [Unit::Models::Customers::Token::VerificationCreateResponse]
+          #
           def create(customer_id, params = {}, opts = {})
             parsed = Unit::Models::Customers::Token::VerificationCreateParams.dump(params)
             req = {

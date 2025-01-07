@@ -13,6 +13,7 @@ module Unit
       attr_reader :pdf
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @bank_pdf = Unit::Resources::Statements::BankPdf.new(client: client)
@@ -33,6 +34,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StatementListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::StatementListParams.dump(params)
         req = {

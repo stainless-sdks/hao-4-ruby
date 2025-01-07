@@ -4,6 +4,7 @@ module Unit
   module Resources
     class ApplicationForms
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::ApplicationFormCreateParams.dump(params)
         req = {
@@ -40,6 +42,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormRetrieveResponse]
+      #
       def retrieve(application_form_id, params = {}, opts = {})
         parsed = Unit::Models::ApplicationFormRetrieveParams.dump(params)
         req = {
@@ -65,6 +68,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::ApplicationFormListParams.dump(params)
         req = {

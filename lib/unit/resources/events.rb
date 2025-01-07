@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Events
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -15,6 +16,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::EventRetrieveResponse]
+      #
       def retrieve(event_id, opts = {})
         req = {
           method: :get,
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::EventListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::EventListParams.dump(params)
         req = {
@@ -55,6 +58,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::EventFireResponse]
+      #
       def fire(event_id, opts = {})
         req = {
           method: :post,

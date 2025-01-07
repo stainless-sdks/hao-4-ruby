@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Transactions
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -23,6 +24,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::TransactionListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::TransactionListParams.dump(params)
         req = {

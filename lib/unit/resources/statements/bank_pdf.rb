@@ -5,6 +5,7 @@ module Unit
     class Statements
       class BankPdf
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
         end
@@ -16,6 +17,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Object]
+        #
         def retrieve(account_id, opts = {})
           req = {
             method: :get,

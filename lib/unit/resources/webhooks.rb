@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Webhooks
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::WebhookCreateParams.dump(params)
         req = {
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookRetrieveResponse]
+      #
       def retrieve(webhook_id, opts = {})
         req = {
           method: :get,
@@ -57,6 +60,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookUpdateResponse]
+      #
       def update(webhook_id, params = {}, opts = {})
         parsed = Unit::Models::WebhookUpdateParams.dump(params)
         req = {
@@ -82,6 +86,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::WebhookListParams.dump(params)
         req = {
@@ -101,6 +106,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookDisableResponse]
+      #
       def disable(webhook_id, opts = {})
         req = {
           method: :post,
@@ -118,6 +124,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookEnableResponse]
+      #
       def enable(webhook_id, opts = {})
         req = {
           method: :post,

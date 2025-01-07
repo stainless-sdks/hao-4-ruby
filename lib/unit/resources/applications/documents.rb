@@ -8,6 +8,7 @@ module Unit
         attr_reader :back
 
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
           @back = Unit::Resources::Applications::Documents::Back.new(client: client)
@@ -20,6 +21,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentCreateResponse]
+        #
         def create(application_id, opts = {})
           req = {
             method: :post,
@@ -37,6 +39,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentListResponse]
+        #
         def list(application_id, opts = {})
           req = {
             method: :get,
@@ -58,6 +61,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Object]
+        #
         def download(document_id, params = {}, opts = {})
           parsed = Unit::Models::Applications::DocumentDownloadParams.dump(params)
           application_id = parsed.fetch(:application_id) do
@@ -83,6 +87,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Object]
+        #
         def download_back(document_id, params = {}, opts = {})
           parsed = Unit::Models::Applications::DocumentDownloadBackParams.dump(params)
           application_id = parsed.fetch(:application_id) do
@@ -112,6 +117,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentMultipartResponse]
+        #
         def multipart(document_id, params = {}, opts = {})
           parsed = Unit::Models::Applications::DocumentMultipartParams.dump(params)
           application_id = parsed.fetch(:application_id) do
@@ -143,6 +149,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentVerifyResponse]
+        #
         def verify(document_id, params = {}, opts = {})
           parsed = Unit::Models::Applications::DocumentVerifyParams.dump(params)
           application_id = parsed.fetch(:application_id) do

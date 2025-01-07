@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Repayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::RepaymentCreateParams.dump(params)
         req = {
@@ -43,6 +45,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentRetrieveResponse]
+      #
       def retrieve(repayment_id, params = {}, opts = {})
         parsed = Unit::Models::RepaymentRetrieveParams.dump(params)
         req = {
@@ -66,6 +69,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::RepaymentListParams.dump(params)
         req = {

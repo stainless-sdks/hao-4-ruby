@@ -4,6 +4,7 @@ module Unit
   module Resources
     class CheckDeposits
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::CheckDepositCreateParams.dump(params)
         req = {
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositRetrieveResponse]
+      #
       def retrieve(check_deposit_id, opts = {})
         req = {
           method: :get,
@@ -57,6 +60,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositUpdateResponse]
+      #
       def update(check_deposit_id, params = {}, opts = {})
         parsed = Unit::Models::CheckDepositUpdateParams.dump(params)
         req = {
@@ -84,6 +88,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::CheckDepositListParams.dump(params)
         req = {
@@ -103,6 +108,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositBackResponse]
+      #
       def back(check_deposit_id, opts = {})
         req = {
           method: :get,
@@ -124,6 +130,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositConfirmResponse]
+      #
       def confirm(check_deposit_id, params = {}, opts = {})
         parsed = Unit::Models::CheckDepositConfirmParams.dump(params)
         req = {
@@ -146,6 +153,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckDepositFrontResponse]
+      #
       def front(check_deposit_id, opts = {})
         req = {
           method: :get,

@@ -7,6 +7,7 @@ module Unit
       attr_reader :documents
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @documents = Unit::Resources::Applications::Documents.new(client: client)
@@ -21,6 +22,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::ApplicationCreateParams.dump(params)
         req = {
@@ -44,6 +46,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationRetrieveResponse]
+      #
       def retrieve(application_id, params = {}, opts = {})
         parsed = Unit::Models::ApplicationRetrieveParams.dump(params)
         req = {
@@ -67,6 +70,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationUpdateResponse]
+      #
       def update(application_id, params = {}, opts = {})
         parsed = Unit::Models::ApplicationUpdateParams.dump(params)
         req = {
@@ -95,6 +99,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::ApplicationListParams.dump(params)
         req = {
@@ -118,6 +123,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationCancelResponse]
+      #
       def cancel(application_id, params = {}, opts = {})
         parsed = Unit::Models::ApplicationCancelParams.dump(params)
         req = {

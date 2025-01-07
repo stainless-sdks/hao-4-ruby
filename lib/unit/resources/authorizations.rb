@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Authorizations
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -19,6 +20,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationRetrieveResponse]
+      #
       def retrieve(authorization_id, params = {}, opts = {})
         parsed = Unit::Models::AuthorizationRetrieveParams.dump(params)
         req = {
@@ -44,6 +46,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::AuthorizationListParams.dump(params)
         req = {
