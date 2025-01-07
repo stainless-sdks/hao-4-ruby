@@ -4,6 +4,7 @@ module Unit
   module Resources
     class ReceivedPayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -19,6 +20,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentRetrieveResponse]
+      #
       def retrieve(payment_id, params = {}, opts = {})
         parsed = Unit::Models::ReceivedPaymentRetrieveParams.dump(params)
         req = {
@@ -42,6 +44,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentUpdateResponse]
+      #
       def update(payment_id, params = {}, opts = {})
         parsed = Unit::Models::ReceivedPaymentUpdateParams.dump(params)
         req = {
@@ -69,6 +72,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::ReceivedPaymentListParams.dump(params)
         req = {
@@ -88,6 +92,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentAdvanceResponse]
+      #
       def advance(payment_id, opts = {})
         req = {
           method: :post,
@@ -105,6 +110,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentReprocessResponse]
+      #
       def reprocess(payment_id, opts = {})
         req = {
           method: :post,

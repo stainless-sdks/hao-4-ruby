@@ -8,6 +8,7 @@ module Unit
         attr_reader :verification
 
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
           @verification = Unit::Resources::Customers::Token::Verification.new(client: client)
@@ -24,6 +25,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Customers::TokenCreateResponse]
+        #
         def create(customer_id, params = {}, opts = {})
           parsed = Unit::Models::Customers::TokenCreateParams.dump(params)
           req = {

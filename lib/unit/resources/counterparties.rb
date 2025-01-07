@@ -7,6 +7,7 @@ module Unit
       attr_reader :balance
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @balance = Unit::Resources::Counterparties::Balance.new(client: client)
@@ -21,6 +22,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::CounterpartyCreateParams.dump(params)
         req = {
@@ -40,6 +42,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyRetrieveResponse]
+      #
       def retrieve(counterparty_id, opts = {})
         req = {
           method: :get,
@@ -61,6 +64,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyUpdateResponse]
+      #
       def update(counterparty_id, params = {}, opts = {})
         parsed = Unit::Models::CounterpartyUpdateParams.dump(params)
         req = {
@@ -86,6 +90,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::CounterpartyListParams.dump(params)
         req = {
@@ -105,6 +110,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [nil]
+      #
       def delete(counterparty_id, opts = {})
         req = {
           method: :delete,

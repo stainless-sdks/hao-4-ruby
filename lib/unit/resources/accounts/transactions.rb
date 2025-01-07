@@ -5,6 +5,7 @@ module Unit
     class Accounts
       class Transactions
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
         end
@@ -20,6 +21,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Accounts::TransactionRetrieveResponse]
+        #
         def retrieve(transaction_id, params = {}, opts = {})
           parsed = Unit::Models::Accounts::TransactionRetrieveParams.dump(params)
           account_id = parsed.fetch(:account_id) do
@@ -47,6 +49,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Accounts::TransactionUpdateResponse]
+        #
         def update(transaction_id, params = {}, opts = {})
           parsed = Unit::Models::Accounts::TransactionUpdateParams.dump(params)
           account_id = parsed.fetch(:account_id) do

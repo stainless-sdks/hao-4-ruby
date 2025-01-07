@@ -16,6 +16,7 @@ module Unit
       attr_reader :received_payments
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @atm_deposits = Unit::Resources::Sandbox::AtmDeposits.new(client: client)

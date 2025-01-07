@@ -19,6 +19,7 @@ module Unit
       attr_reader :transactions
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @deposit_products = Unit::Resources::Accounts::DepositProducts.new(client: client)
@@ -37,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::AccountCreateParams.dump(params)
         req = {
@@ -63,6 +65,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountRetrieveResponse]
+      #
       def retrieve(account_id, params = {}, opts = {})
         parsed = Unit::Models::AccountRetrieveParams.dump(params)
         req = {
@@ -86,6 +89,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountUpdateResponse]
+      #
       def update(account_id, params = {}, opts = {})
         parsed = Unit::Models::AccountUpdateParams.dump(params)
         req = {
@@ -111,6 +115,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::AccountListParams.dump(params)
         req = {
@@ -130,6 +135,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountActivateDacaResponse]
+      #
       def activate_daca(account_id, opts = {})
         req = {
           method: :post,
@@ -151,6 +157,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountCloseResponse]
+      #
       def close(account_id, params = {}, opts = {})
         parsed = Unit::Models::AccountCloseParams.dump(params)
         req = {
@@ -173,6 +180,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountDeactivateDacaResponse]
+      #
       def deactivate_daca(account_id, opts = {})
         req = {
           method: :post,
@@ -190,6 +198,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountEnterDacaResponse]
+      #
       def enter_daca(account_id, opts = {})
         req = {
           method: :post,
@@ -211,6 +220,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountFreezeResponse]
+      #
       def freeze_(account_id, params = {}, opts = {})
         parsed = Unit::Models::AccountFreezeParams.dump(params)
         req = {
@@ -233,6 +243,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountReopenResponse]
+      #
       def reopen(account_id, opts = {})
         req = {
           method: :post,
@@ -250,6 +261,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountUnfreezeResponse]
+      #
       def unfreeze(account_id, opts = {})
         req = {
           method: :post,

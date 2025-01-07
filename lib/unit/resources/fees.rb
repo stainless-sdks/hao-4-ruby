@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Fees
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::FeeCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::FeeCreateParams.dump(params)
         req = {
@@ -38,6 +40,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::FeeReverseResponse]
+      #
       def reverse(params = {}, opts = {})
         parsed = Unit::Models::FeeReverseParams.dump(params)
         req = {

@@ -10,6 +10,7 @@ module Unit
       attr_reader :token
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @authorized_users = Unit::Resources::Customers::AuthorizedUsers.new(client: client)
@@ -23,6 +24,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerRetrieveResponse]
+      #
       def retrieve(customer_id, opts = {})
         req = {
           method: :get,
@@ -44,6 +46,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerUpdateResponse]
+      #
       def update(customer_id, params = {}, opts = {})
         parsed = Unit::Models::CustomerUpdateParams.dump(params)
         req = {
@@ -69,6 +72,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::CustomerListParams.dump(params)
         req = {
@@ -92,6 +96,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerArchiveResponse]
+      #
       def archive(customer_id, params = {}, opts = {})
         parsed = Unit::Models::CustomerArchiveParams.dump(params)
         req = {

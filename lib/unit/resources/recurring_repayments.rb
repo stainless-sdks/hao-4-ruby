@@ -4,6 +4,7 @@ module Unit
   module Resources
     class RecurringRepayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::RecurringRepaymentCreateParams.dump(params)
         req = {
@@ -43,6 +45,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentRetrieveResponse]
+      #
       def retrieve(recurring_repayment_id, params = {}, opts = {})
         parsed = Unit::Models::RecurringRepaymentRetrieveParams.dump(params)
         req = {
@@ -68,6 +71,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::RecurringRepaymentListParams.dump(params)
         req = {
@@ -93,6 +97,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentDisableResponse]
+      #
       def disable(recurring_repayment_id, params = {}, opts = {})
         parsed = Unit::Models::RecurringRepaymentDisableParams.dump(params)
         req = {
@@ -122,6 +127,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentEnableResponse]
+      #
       def enable(recurring_repayment_id, params = {}, opts = {})
         parsed = Unit::Models::RecurringRepaymentEnableParams.dump(params)
         req = {

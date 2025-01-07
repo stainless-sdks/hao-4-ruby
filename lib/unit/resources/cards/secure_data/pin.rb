@@ -9,6 +9,7 @@ module Unit
           attr_reader :status
 
           # @param client [Unit::Client]
+          #
           def initialize(client:)
             @client = client
             @status = Unit::Resources::Cards::SecureData::Pin::Status.new(client: client)

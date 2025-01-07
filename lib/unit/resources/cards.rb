@@ -10,6 +10,7 @@ module Unit
       attr_reader :secure_data
 
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
         @limits = Unit::Resources::Cards::Limits.new(client: client)
@@ -25,6 +26,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::CardCreateParams.dump(params)
         req = {
@@ -51,6 +53,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardRetrieveResponse]
+      #
       def retrieve(card_id, params = {}, opts = {})
         parsed = Unit::Models::CardRetrieveParams.dump(params)
         req = {
@@ -74,6 +77,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardUpdateResponse]
+      #
       def update(card_id, params = {}, opts = {})
         parsed = Unit::Models::CardUpdateParams.dump(params)
         req = {
@@ -101,6 +105,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::CardListParams.dump(params)
         req = {
@@ -120,6 +125,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardCloseResponse]
+      #
       def close(card_id, opts = {})
         req = {
           method: :post,
@@ -137,6 +143,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardFreezeResponse]
+      #
       def freeze_(card_id, opts = {})
         req = {
           method: :post,
@@ -158,6 +165,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardReplaceResponse]
+      #
       def replace(card_id, params = {}, opts = {})
         parsed = Unit::Models::CardReplaceParams.dump(params)
         req = {
@@ -180,6 +188,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardReportLostResponse]
+      #
       def report_lost(card_id, opts = {})
         req = {
           method: :post,
@@ -197,6 +206,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardReportStolenResponse]
+      #
       def report_stolen(card_id, opts = {})
         req = {
           method: :post,
@@ -214,6 +224,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CardUnfreezeResponse]
+      #
       def unfreeze(card_id, opts = {})
         req = {
           method: :post,

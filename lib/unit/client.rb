@@ -119,6 +119,9 @@ module Unit
     attr_reader :webhooks
 
     # @private
+    #
+    # @return [Hash{String => String}]
+    #
     private def auth_headers
       {"Authorization" => "Bearer #{@bearer_token}"}
     end
@@ -130,6 +133,13 @@ module Unit
     # @param bearer_token [String, nil] Bearer token used for authentication Defaults to `ENV["BEARER_TOKEN"]`
     #
     # @param max_retries [Integer] Max number of retries to attempt after a failed retryable request.
+    #
+    # @param timeout [Float]
+    #
+    # @param initial_retry_delay [Float]
+    #
+    # @param max_retry_delay [Float]
+    #
     def initialize(
       base_url: nil,
       bearer_token: ENV["BEARER_TOKEN"],

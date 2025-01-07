@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Payments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::PaymentCreateParams.dump(params)
         req = {
@@ -43,6 +45,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentRetrieveResponse]
+      #
       def retrieve(payment_id, params = {}, opts = {})
         parsed = Unit::Models::PaymentRetrieveParams.dump(params)
         req = {
@@ -66,6 +69,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentUpdateResponse]
+      #
       def update(payment_id, params = {}, opts = {})
         parsed = Unit::Models::PaymentUpdateParams.dump(params)
         req = {
@@ -93,6 +97,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::PaymentListParams.dump(params)
         req = {
@@ -116,6 +121,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentCancelResponse]
+      #
       def cancel(payment_id, params = {}, opts = {})
         parsed = Unit::Models::PaymentCancelParams.dump(params)
         req = {

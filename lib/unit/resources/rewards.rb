@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Rewards
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RewardCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::RewardCreateParams.dump(params)
         req = {
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RewardRetrieveResponse]
+      #
       def retrieve(reward_id, opts = {})
         req = {
           method: :get,
@@ -61,6 +64,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RewardListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::RewardListParams.dump(params)
         req = {

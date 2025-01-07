@@ -4,6 +4,7 @@ module Unit
   module Resources
     class CheckPayments
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -17,6 +18,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentCreateResponse]
+      #
       def create(params = {}, opts = {})
         parsed = Unit::Models::CheckPaymentCreateParams.dump(params)
         req = {
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentRetrieveResponse]
+      #
       def retrieve(check_payment_id, opts = {})
         req = {
           method: :get,
@@ -61,6 +64,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentListResponse]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::CheckPaymentListParams.dump(params)
         req = {
@@ -84,6 +88,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentApproveResponse]
+      #
       def approve(check_payment_id, params = {}, opts = {})
         parsed = Unit::Models::CheckPaymentApproveParams.dump(params)
         req = {
@@ -106,6 +111,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Object]
+      #
       def back(check_payment_id, opts = {})
         req = {
           method: :get,
@@ -123,6 +129,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentCancelResponse]
+      #
       def cancel(check_payment_id, opts = {})
         req = {
           method: :post,
@@ -140,6 +147,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Object]
+      #
       def front(check_payment_id, opts = {})
         req = {
           method: :get,
@@ -161,6 +169,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CheckPaymentReturnResponse]
+      #
       def return_(check_payment_id, params = {}, opts = {})
         parsed = Unit::Models::CheckPaymentReturnParams.dump(params)
         req = {

@@ -8,6 +8,7 @@ module Unit
         attr_reader :image
 
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
           @image = Unit::Resources::CashDeposits::Barcodes::Image.new(client: client)
@@ -22,6 +23,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::CashDeposits::BarcodeCreateResponse]
+        #
         def create(params = {}, opts = {})
           parsed = Unit::Models::CashDeposits::BarcodeCreateParams.dump(params)
           req = {

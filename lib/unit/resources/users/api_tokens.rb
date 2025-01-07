@@ -5,6 +5,7 @@ module Unit
     class Users
       class APITokens
         # @param client [Unit::Client]
+        #
         def initialize(client:)
           @client = client
         end
@@ -20,6 +21,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenCreateResponse]
+        #
         def create(user_id, params = {}, opts = {})
           parsed = Unit::Models::Users::APITokenCreateParams.dump(params)
           req = {
@@ -39,6 +41,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenListResponse]
+        #
         def list(user_id, opts = {})
           req = {
             method: :get,
@@ -60,6 +63,7 @@ module Unit
         # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenDeleteResponse]
+        #
         def delete(token_id, params = {}, opts = {})
           parsed = Unit::Models::Users::APITokenDeleteParams.dump(params)
           user_id = parsed.fetch(:user_id) do

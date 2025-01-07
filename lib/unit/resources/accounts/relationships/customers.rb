@@ -6,6 +6,7 @@ module Unit
       class Relationships
         class Customers
           # @param client [Unit::Client]
+          #
           def initialize(client:)
             @client = client
           end
@@ -21,6 +22,7 @@ module Unit
           # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
           #
           # @return [Unit::Models::Accounts::Relationships::CustomerAddResponse]
+          #
           def add(account_id, params = {}, opts = {})
             parsed = Unit::Models::Accounts::Relationships::CustomerAddParams.dump(params)
             req = {
@@ -47,6 +49,7 @@ module Unit
           # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
           #
           # @return [Unit::Models::Accounts::Relationships::CustomerRemoveResponse]
+          #
           def remove(account_id, params = {}, opts = {})
             parsed = Unit::Models::Accounts::Relationships::CustomerRemoveParams.dump(params)
             req = {

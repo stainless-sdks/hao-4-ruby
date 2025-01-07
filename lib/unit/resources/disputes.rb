@@ -4,6 +4,7 @@ module Unit
   module Resources
     class Disputes
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -15,6 +16,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::DisputeRetrieveResponse]
+      #
       def retrieve(dispute_id, opts = {})
         req = {
           method: :get,
@@ -36,6 +38,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Array<Unit::Models::DisputeListResponseItem>]
+      #
       def list(params = {}, opts = {})
         parsed = Unit::Models::DisputeListParams.dump(params)
         req = {

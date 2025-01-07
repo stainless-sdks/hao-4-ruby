@@ -7,6 +7,7 @@ module Unit
         class Pin
           class Status
             # @param client [Unit::Client]
+            #
             def initialize(client:)
               @client = client
             end
@@ -18,6 +19,7 @@ module Unit
             # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
             #
             # @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse]
+            #
             def retrieve(card_id, opts = {})
               req = {
                 method: :get,

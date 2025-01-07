@@ -4,6 +4,7 @@ module Unit
   module Resources
     class BeneficialOwners
       # @param client [Unit::Client]
+      #
       def initialize(client:)
         @client = client
       end
@@ -19,6 +20,7 @@ module Unit
       # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::BeneficialOwnerUpdateResponse]
+      #
       def update(beneficial_owner_id, params = {}, opts = {})
         parsed = Unit::Models::BeneficialOwnerUpdateParams.dump(params)
         req = {
