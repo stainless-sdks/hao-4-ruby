@@ -29,7 +29,7 @@ module Unit
 
       # Get Events List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::EventListParams] Attributes to send in this request.
+      # @param params [Unit::Models::EventListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::EventListParams::Filter] :filter
       #

@@ -11,7 +11,7 @@ module Unit
 
       # Create a Check Deposit via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckDepositCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckDepositCreateParams::Data] :data
       #
@@ -53,7 +53,7 @@ module Unit
       #
       # @param check_deposit_id [String] ID of the check deposit to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckDepositUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckDepositUpdateParams::Data] :data
       #
@@ -75,7 +75,7 @@ module Unit
 
       # Get List Check Deposits from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositListParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckDepositListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckDepositListParams::Filter] :filter
       #
@@ -123,7 +123,7 @@ module Unit
       #
       # @param check_deposit_id [String] ID of the check deposit to confirm
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckDepositConfirmParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckDepositConfirmParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckDepositConfirmParams::Data] :data
       #

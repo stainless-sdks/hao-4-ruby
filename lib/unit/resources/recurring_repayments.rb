@@ -11,7 +11,7 @@ module Unit
 
       # Create a Recurring Repayment via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment] :data
       #
@@ -38,7 +38,7 @@ module Unit
       #
       # @param recurring_repayment_id [String] ID of the recurring repayment to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
@@ -60,7 +60,7 @@ module Unit
 
       # Get List Recurring Repayments from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringRepaymentListParams::Filter] :filter
       #
@@ -88,7 +88,7 @@ module Unit
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to disable
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentDisableParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentDisableParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body Body param:
       #
@@ -118,7 +118,7 @@ module Unit
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to enable
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringRepaymentEnableParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentEnableParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body Body param:
       #

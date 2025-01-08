@@ -11,7 +11,7 @@ module Unit
 
       # Get List Transactions from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::TransactionListParams] Attributes to send in this request.
+      # @param params [Unit::Models::TransactionListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::TransactionListParams::Filter] :filter
       #

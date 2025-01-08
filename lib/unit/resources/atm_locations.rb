@@ -11,7 +11,7 @@ module Unit
 
       # Get List ATM Locations from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AtmLocationListParams] Attributes to send in this request.
+      # @param params [Unit::Models::AtmLocationListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AtmLocationListParams::Filter] :filter
       #

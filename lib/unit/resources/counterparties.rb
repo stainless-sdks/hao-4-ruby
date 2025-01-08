@@ -15,7 +15,7 @@ module Unit
 
       # Create a counterparty via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CounterpartyCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty] :data
       #
@@ -57,7 +57,7 @@ module Unit
       #
       # @param counterparty_id [String] ID of the counterparty to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CounterpartyUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyUpdateParams::Data] :data
       #
@@ -79,7 +79,7 @@ module Unit
 
       # Get Counterparties List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CounterpartyListParams] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyListParams::Filter] :filter
       #

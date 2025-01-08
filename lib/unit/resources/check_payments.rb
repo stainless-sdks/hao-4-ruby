@@ -11,7 +11,7 @@ module Unit
 
       # Create Check Payment via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckPaymentCreateParams::Data] :data
       #
@@ -51,7 +51,7 @@ module Unit
 
       # Get List Check Payments from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckPaymentListParams::Filter] :filter
       #
@@ -81,7 +81,7 @@ module Unit
       #
       # @param check_payment_id [String] ID of the check payment to approve
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentApproveParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckPaymentApproveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckPaymentApproveParams::Data] :data
       #
@@ -162,7 +162,7 @@ module Unit
       #
       # @param check_payment_id [String] ID of the check payment to return
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CheckPaymentReturnParams] Attributes to send in this request.
+      # @param params [Unit::Models::CheckPaymentReturnParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CheckPaymentReturnParams::Data] :data
       #

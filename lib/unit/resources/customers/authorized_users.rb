@@ -14,7 +14,7 @@ module Unit
         #
         # @param customer_id [String] ID of the customer to add authorized users to
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Customers::AuthorizedUserCreateParams] Attributes to send in this request.
+        # @param params [Unit::Models::Customers::AuthorizedUserCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Customers::AuthorizedUserCreateParams::Data] :data
         #
@@ -41,7 +41,7 @@ module Unit
         #
         # @param customer_id [String] ID of the customer to remove authorized users from
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Customers::AuthorizedUserDeleteParams] Attributes to send in this request.
+        # @param params [Unit::Models::Customers::AuthorizedUserDeleteParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Customers::AuthorizedUserDeleteParams::Data] :data
         #

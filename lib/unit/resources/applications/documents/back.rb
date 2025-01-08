@@ -15,7 +15,7 @@ module Unit
           #
           # @param document_id [String] Path param: ID of the document to upload a file for
           #
-          # @param params [Hash{Symbol => Object}, Unit::Models::Applications::Documents::BackUploadParams] Attributes to send in this request.
+          # @param params [Unit::Models::Applications::Documents::BackUploadParams, Hash{Symbol => Object}] Attributes to send in this request.
           #
           #   @option params [String] :application_id Path param: ID of the application to upload a file to
           #

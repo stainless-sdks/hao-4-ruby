@@ -14,7 +14,7 @@ module Unit
         #
         # @param user_id [String] ID of the user to create token for
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Users::APITokenCreateParams] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Users::APITokenCreateParams::Data] :data
         #
@@ -56,7 +56,7 @@ module Unit
         #
         # @param token_id [String] ID of the token to revoke
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Users::APITokenDeleteParams] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenDeleteParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :user_id ID of the user to revoke token
         #

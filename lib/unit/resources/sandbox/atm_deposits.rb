@@ -12,7 +12,7 @@ module Unit
 
         # Create Atm Deposit Simulation via API
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Sandbox::AtmDepositCreateParams] Attributes to send in this request.
+        # @param params [Unit::Models::Sandbox::AtmDepositCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Sandbox::AtmDepositCreateParams::Data] :data
         #

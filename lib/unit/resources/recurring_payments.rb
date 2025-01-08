@@ -11,7 +11,7 @@ module Unit
 
       # Create a Recurring Payment via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment] :data
       #
@@ -51,7 +51,7 @@ module Unit
 
       # Get Recurring Payments List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringPaymentListParams::Filter] :filter
       #
@@ -79,7 +79,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to disable
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentDisableParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringPaymentDisableParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body
       #
@@ -106,7 +106,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to enable
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RecurringPaymentEnableParams] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringPaymentEnableParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body
       #

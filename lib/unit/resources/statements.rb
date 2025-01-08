@@ -23,7 +23,7 @@ module Unit
 
       # Get List Statements from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::StatementListParams] Attributes to send in this request.
+      # @param params [Unit::Models::StatementListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StatementListParams::Filter] :filter
       #

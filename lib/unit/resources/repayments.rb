@@ -11,7 +11,7 @@ module Unit
 
       # Create a Repayment via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RepaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment, Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment, Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment, Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment] :data
       #
@@ -38,7 +38,7 @@ module Unit
       #
       # @param repayment_id [String] ID of the repayment to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RepaymentRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
@@ -60,7 +60,7 @@ module Unit
 
       # Get List Repayments from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RepaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RepaymentListParams::Filter] :filter
       #

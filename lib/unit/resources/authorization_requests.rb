@@ -29,7 +29,7 @@ module Unit
 
       # Get List Authorization Requests from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestListParams] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestListParams::Filter] :filter
       #
@@ -55,7 +55,7 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization request to approve
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestApproveParams] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestApproveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestApproveParams::Data] :data
       #
@@ -82,7 +82,7 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization request to decline
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRequestDeclineParams] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestDeclineParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestDeclineParams::Data] :data
       #

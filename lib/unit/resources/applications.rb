@@ -15,7 +15,7 @@ module Unit
 
       # Create an Application via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication] :data
       #
@@ -39,7 +39,7 @@ module Unit
       #
       # @param application_id [String] ID of the application to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
@@ -63,7 +63,7 @@ module Unit
       #
       # @param application_id [String] ID of the application to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer] :data
       #
@@ -88,7 +88,7 @@ module Unit
 
       # Get List Applications from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationListParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationListParams::Filter] :filter
       #
@@ -116,7 +116,7 @@ module Unit
       #
       # @param application_id [String] ID of the application to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationCancelParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationCancelParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationCancelParams::Data] :data
       #

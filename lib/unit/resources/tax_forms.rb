@@ -29,7 +29,7 @@ module Unit
 
       # Get Tax Forms List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::TaxFormListParams] Attributes to send in this request.
+      # @param params [Unit::Models::TaxFormListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::TaxFormListParams::Filter] :filter
       #

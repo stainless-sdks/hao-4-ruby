@@ -11,7 +11,7 @@ module Unit
 
       # Get Account Balance History List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountEndOfDayListParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountEndOfDayListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountEndOfDayListParams::Filter] :filter
       #

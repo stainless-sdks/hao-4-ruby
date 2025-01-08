@@ -11,7 +11,7 @@ module Unit
 
       # Create a Payment via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::PaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment] :data
       #
@@ -38,7 +38,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::PaymentRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
@@ -62,7 +62,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::PaymentUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment, Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment, Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment] :data
       #
@@ -84,7 +84,7 @@ module Unit
 
       # Get List Payments from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::PaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentListParams::Filter] :filter
       #
@@ -114,7 +114,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to cancel
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::PaymentCancelParams] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentCancelParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body
       #

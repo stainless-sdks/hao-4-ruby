@@ -29,7 +29,7 @@ module Unit
 
       # Get List Disputes from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::DisputeListParams] Attributes to send in this request.
+      # @param params [Unit::Models::DisputeListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::DisputeListParams::Filter] :filter
       #

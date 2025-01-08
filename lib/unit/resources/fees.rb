@@ -11,7 +11,7 @@ module Unit
 
       # Create a Fee via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::FeeCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::FeeCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::FeeCreateParams::Data] :data
       #
@@ -33,7 +33,7 @@ module Unit
 
       # Reverse a Fee via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::FeeReverseParams] Attributes to send in this request.
+      # @param params [Unit::Models::FeeReverseParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::FeeReverseParams::Data] :data
       #

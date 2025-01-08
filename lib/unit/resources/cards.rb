@@ -19,7 +19,7 @@ module Unit
 
       # Create a Card via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CardCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CardCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest] :data
       #
@@ -46,7 +46,7 @@ module Unit
       #
       # @param card_id [String] ID of the card to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CardRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::CardRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
@@ -70,7 +70,7 @@ module Unit
       #
       # @param card_id [String] ID of the card to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CardUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CardUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard, Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard, Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard, Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard, Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard, Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard] :data
       #
@@ -92,7 +92,7 @@ module Unit
 
       # Get List of Cards from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CardListParams] Attributes to send in this request.
+      # @param params [Unit::Models::CardListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CardListParams::Filter] :filter
       #
@@ -158,7 +158,7 @@ module Unit
       #
       # @param card_id [String] ID of the card to replace
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CardReplaceParams] Attributes to send in this request.
+      # @param params [Unit::Models::CardReplaceParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CardReplaceParams::Data] :data
       #
