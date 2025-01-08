@@ -15,11 +15,11 @@ class Unit::Test::Resources::ApplicationsTest < Minitest::Test
       data: {
         "attributes" => {
           "address" => {
-            "city" => "x",
+            "city" => "city",
             "country" => "country",
-            "postalCode" => "postalCode",
+            "postalCode" => "21029-1360",
             "state" => "state",
-            "street" => "x"
+            "street" => "street"
           },
           "dateOfBirth" => "2019-12-27",
           "email" => "dev@stainlessapi.com",

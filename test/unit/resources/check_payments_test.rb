@@ -17,11 +17,11 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
           "amount" => 1,
           "counterparty" => {
             "address" => {
-              "city" => "x",
+              "city" => "city",
               "country" => "country",
-              "postalCode" => "postalCode",
+              "postalCode" => "21029-1360",
               "state" => "state",
-              "street" => "x"
+              "street" => "street"
             },
             "name" => "name"
           },
@@ -29,8 +29,8 @@ class Unit::Test::Resources::CheckPaymentsTest < Minitest::Test
           "idempotencyKey" => "x"
         },
         "relationships" => {
-          "account" => {"data" => {"id" => "id", "type" => "account"}},
-          "customer" => {"data" => {"id" => "id", "type" => "customer"}}
+          "account" => {"data" => {"id" => "469", "type" => "account"}},
+          "customer" => {"data" => {"id" => "469", "type" => "customer"}}
         },
         "type" => "checkPayment"
       }

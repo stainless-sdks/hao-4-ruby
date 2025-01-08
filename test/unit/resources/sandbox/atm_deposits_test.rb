@@ -14,7 +14,7 @@ class Unit::Test::Resources::Sandbox::AtmDepositsTest < Minitest::Test
     response = @unit.sandbox.atm_deposits.create(
       data: {
         "attributes" => {"amount" => 0, "atmName" => "atmName", "last4Digits" => "xxxx"},
-        "relationships" => {"account" => {"data" => {"id" => "id", "type" => "account"}}},
+        "relationships" => {"account" => {"data" => {"id" => "469", "type" => "account"}}},
         "type" => "atmTransaction"
       }
     )

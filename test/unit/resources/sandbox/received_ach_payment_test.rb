@@ -18,7 +18,7 @@ class Unit::Test::Resources::Sandbox::ReceivedACHPaymentTest < Minitest::Test
           "companyName" => "companyName",
           "settlementDate" => "2019-12-27"
         },
-        "relationships" => {"account" => {"data" => {"id" => "id", "type" => "account"}}},
+        "relationships" => {"account" => {"data" => {"id" => "469", "type" => "account"}}},
         "type" => "achReceivedPayment"
       }
     )

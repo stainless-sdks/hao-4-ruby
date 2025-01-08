@@ -18,7 +18,7 @@ class Unit::Test::Resources::BeneficialOwnersTest < Minitest::Test
         "relationships" => {
           "application" => {
             "data" => {
-              "id" => "id",
+              "id" => "469",
               "type" => "businessApplication"
             }
           }

@@ -15,9 +15,9 @@ class Unit::Test::Resources::RepaymentsTest < Minitest::Test
       data: {
         "attributes" => {"amount" => 0, "description" => "description"},
         "relationships" => {
-          "account" => {"data" => {"id" => "id", "type" => "account"}},
-          "counterpartyAccount" => {"data" => {"id" => "id", "type" => "account"}},
-          "creditAccount" => {"data" => {"id" => "id", "type" => "creditAccount"}}
+          "account" => {"data" => {"id" => "469", "type" => "account"}},
+          "counterpartyAccount" => {"data" => {"id" => "469", "type" => "account"}},
+          "creditAccount" => {"data" => {"id" => "469", "type" => "creditAccount"}}
         },
         "type" => "bookRepayment"
       }

@@ -19,7 +19,7 @@ class Unit::Test::Resources::Sandbox::ReceivedPaymentsTest < Minitest::Test
           "completionDate" => "2019-12-27",
           "description" => "description"
         },
-        "relationships" => {"account" => {"data" => {"id" => "id", "type" => "account"}}},
+        "relationships" => {"account" => {"data" => {"id" => "469", "type" => "account"}}},
         "type" => "achReceivedPayment"
       }
     )

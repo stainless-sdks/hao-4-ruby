@@ -14,7 +14,7 @@ class Unit::Test::Resources::FeesTest < Minitest::Test
     response = @unit.fees.create(
       data: {
         "attributes" => {"amount" => 1, "description" => "description"},
-        "relationships" => {"account" => {"data" => {"id" => "id", "type" => "account"}}},
+        "relationships" => {"account" => {"data" => {"id" => "469", "type" => "account"}}},
         "type" => "fee"
       }
     )
