@@ -13,7 +13,7 @@ module Unit
       #
       # @param beneficial_owner_id [String] ID of the beneficial owner to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::BeneficialOwnerUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::BeneficialOwnerUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::BeneficialOwnerUpdateParams::Data] :data
       #

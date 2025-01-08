@@ -31,7 +31,7 @@ module Unit
 
       # Create Account via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountCreateParams::Data::CreateCreditAccount, Unit::Models::AccountCreateParams::Data::CreateDepositAccount, Unit::Models::AccountCreateParams::Data::CreateWalletAccount] :data
       #
@@ -58,7 +58,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
@@ -82,7 +82,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount, Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount] :data
       #
@@ -104,7 +104,7 @@ module Unit
 
       # Get List Accounts from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountListParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountListParams::Filter] :filter
       #
@@ -150,7 +150,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to close
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountCloseParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountCloseParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountCloseParams::Data] :data
       #
@@ -213,7 +213,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to freeze
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AccountFreezeParams] Attributes to send in this request.
+      # @param params [Unit::Models::AccountFreezeParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountFreezeParams::Data] :data
       #

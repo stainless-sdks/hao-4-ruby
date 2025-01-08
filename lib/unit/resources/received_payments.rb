@@ -13,7 +13,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ReceivedPaymentRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
@@ -37,7 +37,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ReceivedPaymentUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ReceivedPaymentUpdateParams::Data] :data
       #
@@ -59,7 +59,7 @@ module Unit
 
       # Get Received Payments from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ReceivedPaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ReceivedPaymentListParams::Filter] :filter
       #

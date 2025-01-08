@@ -11,7 +11,7 @@ module Unit
 
       # Create a Webhook via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::WebhookCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookCreateParams::Data] :data
       #
@@ -53,7 +53,7 @@ module Unit
       #
       # @param webhook_id [String] ID of the Webhook to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::WebhookUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookUpdateParams::Data] :data
       #
@@ -75,7 +75,7 @@ module Unit
 
       # Get List Webhooks from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::WebhookListParams] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookListParams::Filter] :filter
       #

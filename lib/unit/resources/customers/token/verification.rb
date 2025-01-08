@@ -15,7 +15,7 @@ module Unit
           #
           # @param customer_id [String] ID of the customer to create token for
           #
-          # @param params [Hash{Symbol => Object}, Unit::Models::Customers::Token::VerificationCreateParams] Attributes to send in this request.
+          # @param params [Unit::Models::Customers::Token::VerificationCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
           #
           #   @option params [Unit::Models::Customers::Token::VerificationCreateParams::Data] :data
           #

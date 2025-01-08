@@ -14,7 +14,7 @@ module Unit
         #
         # @param transaction_id [String] ID of the transaction
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Accounts::TransactionRetrieveParams] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :account_id ID of the account to get transaction from
         #
@@ -40,7 +40,7 @@ module Unit
         #
         # @param transaction_id [String] Path param: ID of the transaction to update
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Accounts::TransactionUpdateParams] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :account_id Path param: ID of the account to update transaction from
         #

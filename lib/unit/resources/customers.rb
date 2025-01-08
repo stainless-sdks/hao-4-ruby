@@ -39,7 +39,7 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to update
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CustomerUpdateParams] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer] :data
       #
@@ -61,7 +61,7 @@ module Unit
 
       # Get Customers List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CustomerListParams] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerListParams::Filter] :filter
       #
@@ -89,7 +89,7 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to archive
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::CustomerArchiveParams] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerArchiveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerArchiveParams::Data] :data
       #

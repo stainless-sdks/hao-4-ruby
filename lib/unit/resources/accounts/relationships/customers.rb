@@ -15,7 +15,7 @@ module Unit
           #
           # @param account_id [String] ID of the account to add owners to
           #
-          # @param params [Hash{Symbol => Object}, Unit::Models::Accounts::Relationships::CustomerAddParams] Attributes to send in this request.
+          # @param params [Unit::Models::Accounts::Relationships::CustomerAddParams, Hash{Symbol => Object}] Attributes to send in this request.
           #
           #   @option params [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>] :data
           #
@@ -42,7 +42,7 @@ module Unit
           #
           # @param account_id [String] ID of the account to add owners to
           #
-          # @param params [Hash{Symbol => Object}, Unit::Models::Accounts::Relationships::CustomerRemoveParams] Attributes to send in this request.
+          # @param params [Unit::Models::Accounts::Relationships::CustomerRemoveParams, Hash{Symbol => Object}] Attributes to send in this request.
           #
           #   @option params [Array<Unit::Models::Accounts::Relationships::CustomerRemoveParams::Data>] :data
           #

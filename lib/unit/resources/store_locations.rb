@@ -11,7 +11,7 @@ module Unit
 
       # Get Cash Deposit Store Locations List By Coordinates from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::StoreLocationListParams] Attributes to send in this request.
+      # @param params [Unit::Models::StoreLocationListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StoreLocationListParams::Filter] :filter
       #

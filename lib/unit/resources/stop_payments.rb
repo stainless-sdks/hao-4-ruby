@@ -13,7 +13,7 @@ module Unit
       #
       # @param stop_payment_id [String] ID of the stop payment
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::StopPaymentCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::StopPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StopPaymentCreateParams::Data] :data
       #
@@ -51,7 +51,7 @@ module Unit
 
       # Get a list of stop payments
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::StopPaymentListParams] Attributes to send in this request.
+      # @param params [Unit::Models::StopPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StopPaymentListParams::Filter] :filter
       #

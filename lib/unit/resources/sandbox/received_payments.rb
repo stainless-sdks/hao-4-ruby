@@ -12,7 +12,7 @@ module Unit
 
         # Create ACH Received Payment Transaction Simulation via API
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Sandbox::ReceivedPaymentCreateParams] Attributes to send in this request.
+        # @param params [Unit::Models::Sandbox::ReceivedPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data] :data
         #

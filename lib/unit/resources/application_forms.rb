@@ -11,7 +11,7 @@ module Unit
 
       # Create an Application Form via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationFormCreateParams::Data] :data
       #
@@ -35,7 +35,7 @@ module Unit
       #
       # @param application_form_id [String] ID of the application form to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
@@ -57,7 +57,7 @@ module Unit
 
       # Get List Application Forms from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::ApplicationFormListParams] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationFormListParams::Filter] :filter
       #

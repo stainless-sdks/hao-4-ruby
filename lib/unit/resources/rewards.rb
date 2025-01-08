@@ -11,7 +11,7 @@ module Unit
 
       # Create a Reward via API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RewardCreateParams] Attributes to send in this request.
+      # @param params [Unit::Models::RewardCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RewardCreateParams::Data] :data
       #
@@ -51,7 +51,7 @@ module Unit
 
       # Get Rewards List from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::RewardListParams] Attributes to send in this request.
+      # @param params [Unit::Models::RewardListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RewardListParams::Filter] :filter
       #

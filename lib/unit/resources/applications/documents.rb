@@ -54,7 +54,7 @@ module Unit
         #
         # @param document_id [String] ID of the document to download
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Applications::DocumentDownloadParams] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentDownloadParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id ID of the application
         #
@@ -80,7 +80,7 @@ module Unit
         #
         # @param document_id [String] ID of the document to download
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Applications::DocumentDownloadBackParams] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentDownloadBackParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id ID of the application
         #
@@ -106,7 +106,7 @@ module Unit
         #
         # @param document_id [String] Path param: ID of the document to upload a file for
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Applications::DocumentMultipartParams] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentMultipartParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id Path param: ID of the application to upload a file to
         #
@@ -140,7 +140,7 @@ module Unit
         #
         # @param document_id [String] Path param: ID of the document to verify
         #
-        # @param params [Hash{Symbol => Object}, Unit::Models::Applications::DocumentVerifyParams] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentVerifyParams, Hash{Symbol => Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id Path param: ID of the application to verify a file for
         #

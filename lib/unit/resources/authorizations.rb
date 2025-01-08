@@ -13,7 +13,7 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization to get
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationRetrieveParams] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Boolean] :include_none_authorized
       #
@@ -35,7 +35,7 @@ module Unit
 
       # Get List Authorizations from API
       #
-      # @param params [Hash{Symbol => Object}, Unit::Models::AuthorizationListParams] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationListParams, Hash{Symbol => Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationListParams::Filter] :filter
       #
