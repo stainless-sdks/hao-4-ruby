@@ -15,7 +15,7 @@ class Unit::Test::Resources::ReturnsTest < Minitest::Test
       "transactionId",
       data: {
         "attributes" => {"reason" => "InsufficientFunds"},
-        "relationships" => {"account" => {"data" => {"id" => "id", "type" => "account"}}},
+        "relationships" => {"account" => {"data" => {"id" => "469", "type" => "account"}}},
         "type" => "atmTransaction"
       }
     )

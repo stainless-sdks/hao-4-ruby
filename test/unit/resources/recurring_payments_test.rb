@@ -19,8 +19,8 @@ class Unit::Test::Resources::RecurringPaymentsTest < Minitest::Test
           "schedule" => {"interval" => "Weekly", "nextScheduledAction" => "2019-12-27"}
         },
         "relationships" => {
-          "account" => {"data" => {"id" => "id", "type" => "account"}},
-          "counterparty" => {"data" => {"id" => "id", "type" => "counterparty"}}
+          "account" => {"data" => {"id" => "469", "type" => "account"}},
+          "counterparty" => {"data" => {"id" => "469", "type" => "counterparty"}}
         },
         "type" => "recurringCreditAchPayment"
       }

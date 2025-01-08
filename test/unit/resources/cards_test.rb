@@ -64,11 +64,11 @@ class Unit::Test::Resources::CardsTest < Minitest::Test
       data: {
         "attributes" => {
           "shippingAddress" => {
-            "city" => "x",
+            "city" => "city",
             "country" => "country",
-            "postalCode" => "postalCode",
+            "postalCode" => "21029-1360",
             "state" => "state",
-            "street" => "x"
+            "street" => "street"
           }
         },
         "type" => "replaceCard"
