@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CustomerArchiveParams::Data::Attributes,
-      #   type: Unit::Models::CustomerArchiveParams::Data::Type
+      #   type: enum: Unit::Models::CustomerArchiveParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -46,7 +46,7 @@ module Unit
         #
         # ```ruby
         # attributes => {
-        #   reason: Unit::Models::CustomerArchiveParams::Data::Attributes::Reason
+        #   reason: enum: Unit::Models::CustomerArchiveParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel

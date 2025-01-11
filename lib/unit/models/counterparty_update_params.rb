@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CounterpartyUpdateParams::Data::Attributes,
-      #   type: Unit::Models::CounterpartyUpdateParams::Data::Type
+      #   type: enum: Unit::Models::CounterpartyUpdateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -47,7 +47,7 @@ module Unit
         # ```ruby
         # attributes => {
         #   name: String,
-        #   permissions: Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions,
+        #   permissions: enum: Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions,
         #   plaid_processor_token: String,
         #   tags: -> { Unit::HashOf[String] === _1 },
         #   verify_name: Unit::BooleanModel

@@ -21,7 +21,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::ReturnReturnParams::Data::Attributes,
       #   relationships: Unit::Models::ReturnReturnParams::Data::Relationships,
-      #   type: Unit::Models::ReturnReturnParams::Data::Type
+      #   type: enum: Unit::Models::ReturnReturnParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -53,7 +53,7 @@ module Unit
         #
         # ```ruby
         # attributes => {
-        #   reason: Unit::Models::ReturnReturnParams::Data::Attributes::Reason
+        #   reason: enum: Unit::Models::ReturnReturnParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel
@@ -179,7 +179,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::ReturnReturnParams::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::ReturnReturnParams::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

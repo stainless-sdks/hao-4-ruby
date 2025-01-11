@@ -14,7 +14,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::Application>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::Application }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::Application] }
 
       # @!attribute meta
       #

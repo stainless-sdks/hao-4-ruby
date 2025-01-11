@@ -21,7 +21,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::CheckDepositCreateParams::Data::Attributes,
       #   relationships: Unit::Models::CheckDepositCreateParams::Data::Relationships,
-      #   type: Unit::Models::CheckDepositCreateParams::Data::Type
+      #   type: enum: Unit::Models::CheckDepositCreateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -143,7 +143,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckDepositCreateParams::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::CheckDepositCreateParams::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

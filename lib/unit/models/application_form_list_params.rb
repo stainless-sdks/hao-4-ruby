@@ -36,7 +36,7 @@ module Unit
       # filter => {
       #   email: String,
       #   query: String,
-      #   status: -> { Unit::ArrayOf[Unit::Models::ApplicationFormListParams::Filter::Status] === _1 },
+      #   status: -> { Unit::ArrayOf[enum: Unit::Models::ApplicationFormListParams::Filter::Status] === _1 },
       #   tags: -> { Unit::HashOf[String] === _1 }
       # }
       # ```
@@ -54,7 +54,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::ApplicationFormListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::ApplicationFormListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::ApplicationFormListParams::Filter::Status] }
 
         # @!attribute tags
         #

@@ -7,7 +7,7 @@ module Unit
     # ```ruby
     # beneficial_owner => {
     #   address: Unit::Models::BeneficialOwner::Address,
-    #   annual_income: Unit::Models::BeneficialOwner::AnnualIncome,
+    #   annual_income: enum: Unit::Models::BeneficialOwner::AnnualIncome,
     #   date_of_birth: Date,
     #   email: String,
     #   evaluation_codes: -> { Unit::ArrayOf[String] === _1 },
@@ -24,10 +24,10 @@ module Unit
       #
       #   @return [Symbol, Unit::Models::BeneficialOwner::AnnualIncome]
       optional :annual_income,
-               api_name: :annualIncome,
                enum: -> {
                  Unit::Models::BeneficialOwner::AnnualIncome
-               }
+               },
+               api_name: :annualIncome
 
       # @!attribute date_of_birth
       #
@@ -113,8 +113,8 @@ module Unit
       #
       #   @return [Symbol, Unit::Models::BeneficialOwner::SourceOfIncome]
       optional :source_of_income,
-               api_name: :sourceOfIncome,
-               enum: -> { Unit::Models::BeneficialOwner::SourceOfIncome }
+               enum: -> { Unit::Models::BeneficialOwner::SourceOfIncome },
+               api_name: :sourceOfIncome
 
       # @!attribute ssn
       #

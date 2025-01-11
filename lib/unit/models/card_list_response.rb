@@ -14,12 +14,12 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::Card>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::Card }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::Card] }
 
       # @!attribute included
       #
       #   @return [Array<Array<Unit::Models::CardListResponse::Included>>]
-      optional :included, Unit::ArrayOf[Unit::ArrayOf[-> { Unit::Models::CardListResponse::Included }]]
+      optional :included, -> { Unit::ArrayOf[Unit::ArrayOf[Unit::Models::CardListResponse::Included]] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::Card>]

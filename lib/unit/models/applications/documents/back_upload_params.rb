@@ -19,8 +19,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::Applications::Documents::BackUploadParams::FileType]
           required :file_type,
-                   api_name: :fileType,
-                   enum: -> { Unit::Models::Applications::Documents::BackUploadParams::FileType }
+                   enum: -> { Unit::Models::Applications::Documents::BackUploadParams::FileType },
+                   api_name: :fileType
 
           # @!parse
           #   # @param application_id [String]

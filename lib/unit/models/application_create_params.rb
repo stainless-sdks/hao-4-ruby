@@ -39,7 +39,7 @@ module Unit
         # ```ruby
         # create_individual_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes,
-        #   type: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Type
+        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Type
         # }
         # ```
         class CreateIndividualApplication < Unit::BaseModel
@@ -111,18 +111,18 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::AnnualIncome]
             optional :annual_income,
-                     api_name: :annualIncome,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::AnnualIncome
-                     }
+                     },
+                     api_name: :annualIncome
 
             # @!attribute device_fingerprints
             #
             #   @return [Array<Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint>]
             optional :device_fingerprints,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint]
+                     },
                      api_name: :deviceFingerprints
 
             # @!attribute evaluation_params
@@ -188,10 +188,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::SourceOfIncome]
             optional :source_of_income,
-                     api_name: :sourceOfIncome,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::SourceOfIncome
-                     }
+                     },
+                     api_name: :sourceOfIncome
 
             # @!attribute ssn
             #
@@ -395,7 +395,7 @@ module Unit
             #
             # ```ruby
             # device_fingerprint => {
-            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```
@@ -441,7 +441,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -454,10 +454,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification]
               optional :use_selfie_verification,
-                       api_name: :useSelfieVerification,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification
-                       }
+                       },
+                       api_name: :useSelfieVerification
 
               # @!parse
               #   # @param require_id_verification [Boolean]
@@ -795,7 +795,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -808,10 +808,10 @@ module Unit
                 #
                 #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification]
                 optional :use_selfie_verification,
-                         api_name: :useSelfieVerification,
                          enum: -> {
                            Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
-                         }
+                         },
+                         api_name: :useSelfieVerification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -893,7 +893,7 @@ module Unit
         # ```ruby
         # create_sole_proprietor_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes,
-        #   type: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Type
+        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Type
         # }
         # ```
         class CreateSoleProprietorApplication < Unit::BaseModel
@@ -967,28 +967,28 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::AnnualIncome]
             optional :annual_income,
-                     api_name: :annualIncome,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::AnnualIncome
-                     }
+                     },
+                     api_name: :annualIncome
 
             # @!attribute annual_revenue
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::AnnualRevenue]
             optional :annual_revenue,
-                     api_name: :annualRevenue,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::AnnualRevenue
-                     }
+                     },
+                     api_name: :annualRevenue
 
             # @!attribute business_vertical
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::BusinessVertical]
             optional :business_vertical,
-                     api_name: :businessVertical,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::BusinessVertical
-                     }
+                     },
+                     api_name: :businessVertical
 
             # @!attribute dba
             #
@@ -999,9 +999,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint>]
             optional :device_fingerprints,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint]
+                     },
                      api_name: :deviceFingerprints
 
             # @!attribute ein
@@ -1055,10 +1055,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::NumberOfEmployees]
             optional :number_of_employees,
-                     api_name: :numberOfEmployees,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::NumberOfEmployees
-                     }
+                     },
+                     api_name: :numberOfEmployees
 
             # @!attribute occupation
             #
@@ -1091,10 +1091,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::SourceOfIncome]
             optional :source_of_income,
-                     api_name: :sourceOfIncome,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::SourceOfIncome
-                     }
+                     },
+                     api_name: :sourceOfIncome
 
             # @!attribute ssn
             #
@@ -1398,7 +1398,7 @@ module Unit
             #
             # ```ruby
             # device_fingerprint => {
-            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```
@@ -1444,7 +1444,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -1457,10 +1457,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification]
               optional :use_selfie_verification,
-                       api_name: :useSelfieVerification,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification
-                       }
+                       },
+                       api_name: :useSelfieVerification
 
               # @!parse
               #   # @param require_id_verification [Boolean]
@@ -1821,7 +1821,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -1834,10 +1834,10 @@ module Unit
                 #
                 #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification]
                 optional :use_selfie_verification,
-                         api_name: :useSelfieVerification,
                          enum: -> {
                            Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
-                         }
+                         },
+                         api_name: :useSelfieVerification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -1919,7 +1919,7 @@ module Unit
         # ```ruby
         # create_business_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes,
-        #   type: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Type
+        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Type
         # }
         # ```
         class CreateBusinessApplication < Unit::BaseModel
@@ -1953,7 +1953,7 @@ module Unit
           #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner] === _1 },
           #   contact: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Contact,
           #   ein: String,
-          #   entity_type: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType,
+          #   entity_type: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType,
           #   **_
           # }
           # ```
@@ -1968,9 +1968,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner>]
             required :beneficial_owners,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner]
+                     },
                      api_name: :beneficialOwners
 
             # @!attribute contact
@@ -1988,10 +1988,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType]
             required :entity_type,
-                     api_name: :entityType,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType
-                     }
+                     },
+                     api_name: :entityType
 
             # @!attribute name
             #
@@ -2019,28 +2019,28 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::AnnualRevenue]
             optional :annual_revenue,
-                     api_name: :annualRevenue,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::AnnualRevenue
-                     }
+                     },
+                     api_name: :annualRevenue
 
             # @!attribute business_vertical
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BusinessVertical]
             optional :business_vertical,
-                     api_name: :businessVertical,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BusinessVertical
-                     }
+                     },
+                     api_name: :businessVertical
 
             # @!attribute cash_flow
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::CashFlow]
             optional :cash_flow,
-                     api_name: :cashFlow,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::CashFlow
-                     }
+                     },
+                     api_name: :cashFlow
 
             # @!attribute countries_of_operation
             #
@@ -2061,9 +2061,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint>]
             optional :device_fingerprints,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint]
+                     },
                      api_name: :deviceFingerprints
 
             # @!attribute idempotency_key
@@ -2088,10 +2088,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::NumberOfEmployees]
             optional :number_of_employees,
-                     api_name: :numberOfEmployees,
                      enum: -> {
                        Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::NumberOfEmployees
-                     }
+                     },
+                     api_name: :numberOfEmployees
 
             # @!attribute purpose
             #
@@ -2281,10 +2281,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::AnnualIncome]
               optional :annual_income,
-                       api_name: :annualIncome,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::AnnualIncome
-                       }
+                       },
+                       api_name: :annualIncome
 
               # @!attribute evaluation_params
               #
@@ -2327,10 +2327,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::SourceOfIncome]
               optional :source_of_income,
-                       api_name: :sourceOfIncome,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::SourceOfIncome
-                       }
+                       },
+                       api_name: :sourceOfIncome
 
               # @!attribute ssn
               #
@@ -2520,7 +2520,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -2533,10 +2533,10 @@ module Unit
                 #
                 #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification]
                 optional :use_selfie_verification,
-                         api_name: :useSelfieVerification,
                          enum: -> {
                            Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification
-                         }
+                         },
+                         api_name: :useSelfieVerification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -2783,7 +2783,7 @@ module Unit
             #   date_of_birth: Date,
             #   email: String,
             #   full_name: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::FullName,
-            #   occupation: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Occupation,
+            #   occupation: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Occupation,
             #   **_
             # }
             # ```
@@ -2831,10 +2831,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::AnnualIncome]
               optional :annual_income,
-                       api_name: :annualIncome,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::AnnualIncome
-                       }
+                       },
+                       api_name: :annualIncome
 
               # @!attribute evaluation_params
               #
@@ -2864,10 +2864,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::SourceOfIncome]
               optional :source_of_income,
-                       api_name: :sourceOfIncome,
                        enum: -> {
                          Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::SourceOfIncome
-                       }
+                       },
+                       api_name: :sourceOfIncome
 
               # @!attribute ssn
               #
@@ -3111,7 +3111,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -3124,10 +3124,10 @@ module Unit
                 #
                 #   @return [Symbol, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification]
                 optional :use_selfie_verification,
-                         api_name: :useSelfieVerification,
                          enum: -> {
                            Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification
-                         }
+                         },
+                         api_name: :useSelfieVerification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -3353,7 +3353,7 @@ module Unit
             #
             # ```ruby
             # device_fingerprint => {
-            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```

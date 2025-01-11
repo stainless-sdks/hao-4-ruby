@@ -8,7 +8,7 @@ module Unit
     # authorization => {
     #   id: String,
     #   relationships: Unit::Models::Authorization::Relationships,
-    #   type: Unit::Models::Authorization::Type,
+    #   type: enum: Unit::Models::Authorization::Type,
     #   attributes: Unit::Models::Authorization::Attributes
     # }
     # ```
@@ -111,7 +111,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::Authorization::Relationships::Account::Data::Type
+          #   type: enum: Unit::Models::Authorization::Relationships::Account::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -219,9 +219,9 @@ module Unit
           #
           #   @return [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
           optional :data,
-                   Unit::ArrayOf[-> {
-                     Unit::Models::Authorization::Relationships::AuthorizationRequest::Data
-                   }]
+                   -> {
+                     Unit::ArrayOf[Unit::Models::Authorization::Relationships::AuthorizationRequest::Data]
+                   }
 
           # @!parse
           #   # @param data [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
@@ -284,7 +284,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::Authorization::Relationships::Customer::Data::Type
+          #   type: enum: Unit::Models::Authorization::Relationships::Customer::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

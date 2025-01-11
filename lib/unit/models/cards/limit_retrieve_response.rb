@@ -28,7 +28,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes,
-        #   type: Unit::Models::Cards::LimitRetrieveResponse::Data::Type
+        #   type: enum: Unit::Models::Cards::LimitRetrieveResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

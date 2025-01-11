@@ -114,10 +114,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason]
               optional :close_reason,
-                       api_name: :closeReason,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason
-                       }
+                       },
+                       api_name: :closeReason
 
               # @!attribute close_reason_text
               #
@@ -128,19 +128,19 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus]
               optional :daca_status,
-                       api_name: :dacaStatus,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus
-                       }
+                       },
+                       api_name: :dacaStatus
 
               # @!attribute fraud_reason
               #
               #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason]
               optional :fraud_reason,
-                       api_name: :fraudReason,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason
-                       }
+                       },
+                       api_name: :fraudReason
 
               # @!attribute freeze_reason
               #
@@ -402,7 +402,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data::Type
+                #   type: enum: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel

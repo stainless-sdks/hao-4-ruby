@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::PaymentRetrieveResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::PaymentRetrieveResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::PaymentRetrieveResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::PaymentRetrieveResponse::Data]
@@ -34,7 +34,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: Unit::Models::PaymentRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::PaymentRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

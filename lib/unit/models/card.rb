@@ -7,7 +7,7 @@ module Unit
     # ```ruby
     # card => {
     #   id: String,
-    #   type: Unit::Models::Card::Type
+    #   type: enum: Unit::Models::Card::Type
     # }
     # ```
     class Card < Unit::BaseModel

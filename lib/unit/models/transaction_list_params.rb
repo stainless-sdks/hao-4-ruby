@@ -45,7 +45,7 @@ module Unit
       #   account_type: String,
       #   card_id: String,
       #   customer_id: String,
-      #   direction: -> { Unit::ArrayOf[Unit::Models::TransactionListParams::Filter::Direction] === _1 },
+      #   direction: -> { Unit::ArrayOf[enum: Unit::Models::TransactionListParams::Filter::Direction] === _1 },
       #   **_
       # }
       # ```
@@ -74,9 +74,9 @@ module Unit
         #
         #   @return [Array<Symbol, Unit::Models::TransactionListParams::Filter::Direction>]
         optional :direction,
-                 Unit::ArrayOf[enum: -> {
-                   Unit::Models::TransactionListParams::Filter::Direction
-                 }]
+                 -> {
+                   Unit::ArrayOf[enum: Unit::Models::TransactionListParams::Filter::Direction]
+                 }
 
         # @!attribute exclude_fees
         #

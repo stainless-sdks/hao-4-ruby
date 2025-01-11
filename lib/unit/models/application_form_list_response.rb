@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::ApplicationForm>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::ApplicationForm }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::ApplicationForm] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::ApplicationForm>]

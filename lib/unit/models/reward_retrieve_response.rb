@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::RewardRetrieveResponse::Data::Attributes,
       #   relationships: Unit::Models::RewardRetrieveResponse::Data::Relationships,
-      #   type: Unit::Models::RewardRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::RewardRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -70,7 +70,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   description: String,
-        #   status: Unit::Models::RewardRetrieveResponse::Data::Attributes::Status,
+        #   status: enum: Unit::Models::RewardRetrieveResponse::Data::Attributes::Status,
         #   tags: -> { Unit::HashOf[String] === _1 }
         # }
         # ```
@@ -230,7 +230,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::RewardRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -357,7 +357,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardRetrieveResponse::Data::Relationships::ReceivingAccount::Data::Type
+            #   type: enum: Unit::Models::RewardRetrieveResponse::Data::Relationships::ReceivingAccount::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -531,7 +531,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: enum: Unit::Models::RewardRetrieveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes,
       #   relationships: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships,
-      #   type: Unit::Models::CheckPaymentRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -70,7 +70,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   originated: Unit::BooleanModel,
-        #   status: Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::Status,
+        #   status: enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::Status,
         #   updated_at: Time,
         #   **_
         # }
@@ -105,10 +105,10 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::AdditionalVerificationStatus]
           optional :additional_verification_status,
-                   api_name: :additionalVerificationStatus,
                    enum: -> {
                      Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::AdditionalVerificationStatus
-                   }
+                   },
+                   api_name: :additionalVerificationStatus
 
           # @!attribute check_number
           #
@@ -132,8 +132,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::DeliveryStatus]
           optional :delivery_status,
-                   api_name: :deliveryStatus,
-                   enum: -> { Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::DeliveryStatus }
+                   enum: -> { Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::DeliveryStatus },
+                   api_name: :deliveryStatus
 
           # @!attribute description
           #
@@ -169,9 +169,9 @@ module Unit
           #
           #   @return [Array<Symbol, Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::PendingReviewReason>]
           optional :pending_review_reasons,
-                   Unit::ArrayOf[enum: -> {
-                     Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::PendingReviewReason
-                   }],
+                   -> {
+                     Unit::ArrayOf[enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::PendingReviewReason]
+                   },
                    api_name: :pendingReviewReasons
 
           # @!attribute postal_code
@@ -193,8 +193,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::ReturnReason]
           optional :return_reason,
-                   api_name: :returnReason,
-                   enum: -> { Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::ReturnReason }
+                   enum: -> { Unit::Models::CheckPaymentRetrieveResponse::Data::Attributes::ReturnReason },
+                   api_name: :returnReason
 
           # @!attribute send_at
           #
@@ -557,7 +557,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -635,7 +635,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -694,9 +694,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customers::Data>]
             required :data,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customers::Data
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customers::Data]
+                     }
 
             # @!parse
             #   # @param data [Array<Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Customers::Data>]
@@ -762,7 +762,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: enum: Unit::Models::CheckPaymentRetrieveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

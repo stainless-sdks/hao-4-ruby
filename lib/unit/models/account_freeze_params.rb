@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AccountFreezeParams::Data::Attributes,
-      #   type: Unit::Models::AccountFreezeParams::Data::Type
+      #   type: enum: Unit::Models::AccountFreezeParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -46,7 +46,7 @@ module Unit
         #
         # ```ruby
         # attributes => {
-        #   reason: Unit::Models::AccountFreezeParams::Data::Attributes::Reason,
+        #   reason: enum: Unit::Models::AccountFreezeParams::Data::Attributes::Reason,
         #   reason_text: String
         # }
         # ```

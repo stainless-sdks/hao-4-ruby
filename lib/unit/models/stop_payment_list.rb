@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::StopPaymentList::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::StopPaymentList::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::StopPaymentList::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::StopPaymentList::Data>]
@@ -27,7 +27,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: Unit::Models::StopPaymentList::Data::Type
+      #   type: enum: Unit::Models::StopPaymentList::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

@@ -28,7 +28,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Attributes,
-        #   type: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Type
+        #   type: enum: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

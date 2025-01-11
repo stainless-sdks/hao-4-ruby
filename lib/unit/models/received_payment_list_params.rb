@@ -83,7 +83,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::ReceivedPaymentListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::ReceivedPaymentListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::ReceivedPaymentListParams::Filter::Status] }
 
         # @!attribute tags
         #

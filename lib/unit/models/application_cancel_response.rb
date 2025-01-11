@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::ApplicationCancelResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::ApplicationCancelResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::ApplicationCancelResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::Application]
@@ -35,7 +35,7 @@ module Unit
       # included => {
       #   id: String,
       #   attributes: Unit::Models::ApplicationCancelResponse::Included::Attributes,
-      #   type: Unit::Models::ApplicationCancelResponse::Included::Type
+      #   type: enum: Unit::Models::ApplicationCancelResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

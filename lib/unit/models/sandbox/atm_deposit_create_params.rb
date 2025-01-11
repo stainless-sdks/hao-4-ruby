@@ -22,7 +22,7 @@ module Unit
         # data => {
         #   attributes: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes,
         #   relationships: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships,
-        #   type: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Type
+        #   type: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -58,7 +58,7 @@ module Unit
           #   atm_name: String,
           #   last4_digits: String,
           #   atm_location: String,
-          #   card_network: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
+          #   card_network: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
           # }
           # ```
           class Attributes < Unit::BaseModel
@@ -86,8 +86,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork]
             optional :card_network,
-                     api_name: :cardNetwork,
-                     enum: -> { Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork }
+                     enum: -> {
+                       Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
+                     },
+                     api_name: :cardNetwork
 
             # @!attribute surcharge
             #
@@ -184,7 +186,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

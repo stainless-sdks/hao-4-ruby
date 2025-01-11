@@ -21,7 +21,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes,
-        #   type: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type
+        #   type: enum: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -55,9 +55,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>]
             optional :authorized_users,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser]
+                     },
                      api_name: :authorizedUsers
 
             # @!parse

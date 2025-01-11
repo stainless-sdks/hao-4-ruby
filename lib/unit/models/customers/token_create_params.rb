@@ -21,7 +21,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::TokenCreateParams::Data::Attributes,
-        #   type: Unit::Models::Customers::TokenCreateParams::Data::Type
+        #   type: enum: Unit::Models::Customers::TokenCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -70,9 +70,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource>]
             optional :resources,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource]
+                     }
 
             # @!attribute scope
             #
@@ -123,7 +123,7 @@ module Unit
             # ```ruby
             # resource => {
             #   ids: -> { Unit::ArrayOf[String] === _1 },
-            #   type: Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type
+            #   type: enum: Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type
             # }
             # ```
             class Resource < Unit::BaseModel

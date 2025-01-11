@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::AccountRetrieveResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::AccountRetrieveResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::AccountRetrieveResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::Account]
@@ -34,7 +34,7 @@ module Unit
       # ```ruby
       # included => {
       #   id: String,
-      #   type: Unit::Models::AccountRetrieveResponse::Included::Type
+      #   type: enum: Unit::Models::AccountRetrieveResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

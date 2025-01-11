@@ -27,7 +27,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: Unit::Models::RepaymentCreateResponse::Data::Type
+      #   type: enum: Unit::Models::RepaymentCreateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

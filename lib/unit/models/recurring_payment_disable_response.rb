@@ -27,7 +27,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: Unit::Models::RecurringPaymentDisableResponse::Data::Type
+      #   type: enum: Unit::Models::RecurringPaymentDisableResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

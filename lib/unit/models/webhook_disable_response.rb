@@ -28,7 +28,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::WebhookDisableResponse::Data::Attributes,
-      #   type: Unit::Models::WebhookDisableResponse::Data::Type
+      #   type: enum: Unit::Models::WebhookDisableResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -61,9 +61,9 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType,
+        #   content_type: enum: Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType,
         #   created_at: Time,
-        #   delivery_mode: Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode,
+        #   delivery_mode: enum: Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode,
         #   label: String,
         #   **_
         # }
@@ -78,8 +78,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType]
           optional :content_type,
-                   api_name: :contentType,
-                   enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType }
+                   enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType },
+                   api_name: :contentType
 
           # @!attribute created_at
           #
@@ -90,8 +90,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode]
           optional :delivery_mode,
-                   api_name: :deliveryMode,
-                   enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode }
+                   enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode },
+                   api_name: :deliveryMode
 
           # @!attribute label
           #

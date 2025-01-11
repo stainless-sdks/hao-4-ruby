@@ -15,12 +15,12 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::Accounts::Transaction>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::Accounts::Transaction }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::Accounts::Transaction] }
 
       # @!attribute included
       #
       #   @return [Array<Unit::Models::TransactionListResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::TransactionListResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::TransactionListResponse::Included] }
 
       # @!attribute meta
       #

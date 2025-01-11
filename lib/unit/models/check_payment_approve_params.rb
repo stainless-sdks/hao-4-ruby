@@ -19,7 +19,7 @@ module Unit
       #
       # ```ruby
       # data => {
-      #   type: Unit::Models::CheckPaymentApproveParams::Data::Type
+      #   type: enum: Unit::Models::CheckPaymentApproveParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

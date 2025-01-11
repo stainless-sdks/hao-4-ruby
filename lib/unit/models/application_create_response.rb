@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::ApplicationCreateResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::ApplicationCreateResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::ApplicationCreateResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::Application]
@@ -35,7 +35,7 @@ module Unit
       # included => {
       #   id: String,
       #   attributes: Unit::Models::ApplicationCreateResponse::Included::Attributes,
-      #   type: Unit::Models::ApplicationCreateResponse::Included::Type
+      #   type: enum: Unit::Models::ApplicationCreateResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

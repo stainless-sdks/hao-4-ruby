@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::CounterpartyListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::CounterpartyListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::CounterpartyListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::CounterpartyListResponse::Data>]
@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CounterpartyListResponse::Data::Attributes,
       #   relationships: Unit::Models::CounterpartyListResponse::Data::Relationships,
-      #   type: Unit::Models::CounterpartyListResponse::Data::Type
+      #   type: enum: Unit::Models::CounterpartyListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -68,10 +68,10 @@ module Unit
         # ```ruby
         # attributes => {
         #   account_number: String,
-        #   account_type: Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType,
+        #   account_type: enum: Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType,
         #   created_at: Time,
         #   name: String,
-        #   permissions: Unit::Models::CounterpartyListResponse::Data::Attributes::Permissions,
+        #   permissions: enum: Unit::Models::CounterpartyListResponse::Data::Attributes::Permissions,
         #   **_
         # }
         # ```
@@ -85,8 +85,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType]
           required :account_type,
-                   api_name: :accountType,
-                   enum: -> { Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType }
+                   enum: -> { Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType },
+                   api_name: :accountType
 
           # @!attribute created_at
           #
@@ -260,7 +260,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CounterpartyListResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::CounterpartyListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

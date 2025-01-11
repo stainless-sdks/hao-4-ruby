@@ -21,9 +21,9 @@ module Unit
         #
         #   @return [Array<Unit::Models::Accounts::TransactionRetrieveResponse::Included>]
         optional :included,
-                 Unit::ArrayOf[-> {
-                   Unit::Models::Accounts::TransactionRetrieveResponse::Included
-                 }]
+                 -> {
+                   Unit::ArrayOf[Unit::Models::Accounts::TransactionRetrieveResponse::Included]
+                 }
 
         # @!parse
         #   # @param data [Unit::Models::Accounts::Transaction]

@@ -14,7 +14,7 @@ module Unit
         # @!attribute data
         #
         #   @return [Array<Unit::Models::Users::APITokenListResponse::Data>]
-        optional :data, Unit::ArrayOf[-> { Unit::Models::Users::APITokenListResponse::Data }]
+        optional :data, -> { Unit::ArrayOf[Unit::Models::Users::APITokenListResponse::Data] }
 
         # @!parse
         #   # @param data [Array<Unit::Models::Users::APITokenListResponse::Data>]
@@ -29,7 +29,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Users::APITokenListResponse::Data::Attributes,
-        #   type: Unit::Models::Users::APITokenListResponse::Data::Type
+        #   type: enum: Unit::Models::Users::APITokenListResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

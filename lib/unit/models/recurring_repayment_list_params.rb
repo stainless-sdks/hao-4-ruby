@@ -37,7 +37,7 @@ module Unit
       #   credit_account_id: String,
       #   customer_id: String,
       #   from_start_time: Date,
-      #   status: -> { Unit::ArrayOf[Unit::Models::RecurringRepaymentListParams::Filter::Status] === _1 },
+      #   status: -> { Unit::ArrayOf[enum: Unit::Models::RecurringRepaymentListParams::Filter::Status] === _1 },
       #   to_start_time: Date
       # }
       # ```
@@ -61,9 +61,9 @@ module Unit
         #
         #   @return [Array<Symbol, Unit::Models::RecurringRepaymentListParams::Filter::Status>]
         optional :status,
-                 Unit::ArrayOf[enum: -> {
-                   Unit::Models::RecurringRepaymentListParams::Filter::Status
-                 }]
+                 -> {
+                   Unit::ArrayOf[enum: Unit::Models::RecurringRepaymentListParams::Filter::Status]
+                 }
 
         # @!attribute to_start_time
         #

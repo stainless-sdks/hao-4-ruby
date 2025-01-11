@@ -36,7 +36,7 @@ module Unit
       # filter => {
       #   customer_id: String,
       #   from_balance: Float,
-      #   status: -> { Unit::ArrayOf[Unit::Models::AccountListParams::Filter::Status] === _1 },
+      #   status: -> { Unit::ArrayOf[enum: Unit::Models::AccountListParams::Filter::Status] === _1 },
       #   tags: -> { Unit::HashOf[String] === _1 },
       #   to_balance: Float
       # }
@@ -55,7 +55,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::AccountListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::AccountListParams::Filter::Status] }
 
         # @!attribute tags
         #
@@ -70,7 +70,7 @@ module Unit
         # @!attribute type
         #
         #   @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Type>]
-        optional :type, Unit::ArrayOf[enum: -> { Unit::Models::AccountListParams::Filter::Type }]
+        optional :type, -> { Unit::ArrayOf[enum: Unit::Models::AccountListParams::Filter::Type] }
 
         # @!parse
         #   # @param customer_id [String]

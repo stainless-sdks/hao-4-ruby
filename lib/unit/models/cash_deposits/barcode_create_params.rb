@@ -22,7 +22,7 @@ module Unit
         # data => {
         #   attributes: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Attributes,
         #   relationships: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships,
-        #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Type
+        #   type: enum: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -132,7 +132,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -208,7 +208,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer::Data::Type
+              #   type: enum: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

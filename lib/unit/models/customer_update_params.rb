@@ -35,7 +35,7 @@ module Unit
         # ```ruby
         # update_individual_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes,
-        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
+        #   type: enum: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
         # }
         # ```
         class UpdateIndividualCustomer < Unit::BaseModel
@@ -84,9 +84,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>, nil]
             optional :authorized_users,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser]
+                     },
                      api_name: :authorizedUsers
 
             # @!attribute dba
@@ -335,7 +335,7 @@ module Unit
         # ```ruby
         # update_business_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes,
-        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type
+        #   type: enum: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type
         # }
         # ```
         class UpdateBusinessCustomer < Unit::BaseModel
@@ -383,9 +383,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>, nil]
             optional :authorized_users,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser
-                     }],
+                     -> {
+                       Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser]
+                     },
                      api_name: :authorizedUsers
 
             # @!attribute contact

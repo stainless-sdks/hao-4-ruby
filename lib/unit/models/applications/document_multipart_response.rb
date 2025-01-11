@@ -29,7 +29,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes,
-        #   type: Unit::Models::Applications::DocumentMultipartResponse::Data::Type
+        #   type: enum: Unit::Models::Applications::DocumentMultipartResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

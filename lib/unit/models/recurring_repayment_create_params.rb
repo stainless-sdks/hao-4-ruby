@@ -50,7 +50,7 @@ module Unit
         # create_recurring_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Type
+        #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Type
         # }
         # ```
         class CreateRecurringACHRepayment < Unit::BaseModel
@@ -204,7 +204,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -280,7 +280,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Counterparty::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Counterparty::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -347,7 +347,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::CreditAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::CreditAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -410,7 +410,7 @@ module Unit
         # create_recurring_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Type
+        #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Type
         # }
         # ```
         class CreateRecurringBookRepayment < Unit::BaseModel
@@ -554,7 +554,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -630,7 +630,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CounterpartyAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CounterpartyAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -700,7 +700,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CreditAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CreditAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -763,7 +763,7 @@ module Unit
         # create_recurring_capital_partner_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Type
+        #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Type
         # }
         # ```
         class CreateRecurringCapitalPartnerACHRepayment < Unit::BaseModel
@@ -917,7 +917,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -984,7 +984,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::CreditAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::CreditAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1051,7 +1051,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1123,7 +1123,7 @@ module Unit
         # create_recurring_capital_partner_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Type
+        #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Type
         # }
         # ```
         class CreateRecurringCapitalPartnerBookRepayment < Unit::BaseModel
@@ -1259,7 +1259,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CounterpartyAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CounterpartyAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1329,7 +1329,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CreditAccount::Data::Type
+              #   type: enum: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CreditAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

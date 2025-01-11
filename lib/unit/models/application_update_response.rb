@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::ApplicationUpdateResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::ApplicationUpdateResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::ApplicationUpdateResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::Application]

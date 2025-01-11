@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::EventListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::EventListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::EventListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::EventListResponse::Data>]

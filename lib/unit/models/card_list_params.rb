@@ -43,7 +43,7 @@ module Unit
       # filter => {
       #   account_id: String,
       #   customer_id: String,
-      #   status: -> { Unit::ArrayOf[Unit::Models::CardListParams::Filter::Status] === _1 },
+      #   status: -> { Unit::ArrayOf[enum: Unit::Models::CardListParams::Filter::Status] === _1 },
       #   tags: -> { Unit::HashOf[String] === _1 }
       # }
       # ```
@@ -61,7 +61,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::CardListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::CardListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::CardListParams::Filter::Status] }
 
         # @!attribute tags
         #

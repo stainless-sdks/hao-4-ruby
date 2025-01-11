@@ -30,8 +30,8 @@ module Unit
       #   account_id: String,
       #   credit_account_id: String,
       #   customer_id: String,
-      #   status: -> { Unit::ArrayOf[Unit::Models::RepaymentListParams::Filter::Status] === _1 },
-      #   type: -> { Unit::ArrayOf[Unit::Models::RepaymentListParams::Filter::Type] === _1 }
+      #   status: -> { Unit::ArrayOf[enum: Unit::Models::RepaymentListParams::Filter::Status] === _1 },
+      #   type: -> { Unit::ArrayOf[enum: Unit::Models::RepaymentListParams::Filter::Type] === _1 }
       # }
       # ```
       class Filter < Unit::BaseModel
@@ -53,12 +53,12 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::RepaymentListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::RepaymentListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::RepaymentListParams::Filter::Status] }
 
         # @!attribute type
         #
         #   @return [Array<Symbol, Unit::Models::RepaymentListParams::Filter::Type>]
-        optional :type, Unit::ArrayOf[enum: -> { Unit::Models::RepaymentListParams::Filter::Type }]
+        optional :type, -> { Unit::ArrayOf[enum: Unit::Models::RepaymentListParams::Filter::Type] }
 
         # @!parse
         #   # @param account_id [String]

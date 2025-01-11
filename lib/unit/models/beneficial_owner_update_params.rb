@@ -21,7 +21,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes,
       #   relationships: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships,
-      #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Type
+      #   type: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -53,9 +53,9 @@ module Unit
         #
         # ```ruby
         # attributes => {
-        #   annual_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
-        #   occupation: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation,
-        #   source_of_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome
+        #   annual_income: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
+        #   occupation: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation,
+        #   source_of_income: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome
         # }
         # ```
         class Attributes < Unit::BaseModel
@@ -63,8 +63,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome]
           optional :annual_income,
-                   api_name: :annualIncome,
-                   enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome }
+                   enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome },
+                   api_name: :annualIncome
 
           # @!attribute occupation
           #
@@ -78,8 +78,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome]
           optional :source_of_income,
-                   api_name: :sourceOfIncome,
-                   enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome }
+                   enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome },
+                   api_name: :sourceOfIncome
 
           # @!parse
           #   # @param annual_income [String]
@@ -246,7 +246,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data::Type
+            #   type: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
