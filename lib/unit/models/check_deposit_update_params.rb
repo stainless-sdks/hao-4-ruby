@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::CheckDepositUpdateParams::Data::Attributes,
+      #   type: Unit::Models::CheckDepositUpdateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   clearing_days_override: Integer,
+        #   tags: -> { Unit::HashOf[String] === _1 }
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute clearing_days_override
           #
@@ -57,7 +73,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :checkDeposit
         #   # ...
         # end

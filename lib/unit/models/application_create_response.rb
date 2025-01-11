@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # application_create_response => {
+    #   data: Unit::Models::Application,
+    #   included: -> { Unit::ArrayOf[Unit::Models::ApplicationCreateResponse::Included] === _1 }
+    # }
+    # ```
     class ApplicationCreateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Models::ApplicationCreateResponse::Included::Attributes,
+      #   type: Unit::Models::ApplicationCreateResponse::Included::Type
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   status: String,
+        #   address: Unit::Models::ApplicationCreateResponse::Included::Attributes::Address,
+        #   back_document_id: String,
+        #   back_document_store_id: String,
+        #   date_of_birth: Date,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute status
           #
@@ -197,6 +226,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # address => {
+          #   city: String,
+          #   country: String,
+          #   postal_code: String,
+          #   state: String,
+          #   street: String
+          # }
+          # ```
           class Address < Unit::BaseModel
             # @!attribute city
             #
@@ -245,7 +285,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :document
         #   # ...
         # end

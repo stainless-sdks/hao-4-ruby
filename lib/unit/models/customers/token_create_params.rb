@@ -16,6 +16,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Customers::TokenCreateParams::Data::Attributes,
+        #   type: Unit::Models::Customers::TokenCreateParams::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -35,6 +43,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   expires_in: Integer,
+          #   jwt_token: String,
+          #   resources: -> { Unit::ArrayOf[Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource] === _1 },
+          #   scope: String,
+          #   upgradable_scope: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute expires_in
             #
@@ -98,6 +118,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # resource => {
+            #   ids: -> { Unit::ArrayOf[String] === _1 },
+            #   type: Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type
+            # }
+            # ```
             class Resource < Unit::BaseModel
               # @!attribute ids
               #
@@ -123,7 +151,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :card
               #   # ...
               # in :account
@@ -142,7 +170,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :customerToken
           #   # ...
           # end

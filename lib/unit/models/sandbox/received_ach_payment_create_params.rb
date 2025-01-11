@@ -16,6 +16,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes,
+        #   relationships: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships,
+        #   type: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -44,6 +53,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   company_name: String,
+          #   settlement_date: Date,
+          #   direction: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction,
+          #   receiving_entity_name: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -93,7 +113,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case direction
             # in :Debit
             #   # ...
             # in :Credit
@@ -108,6 +128,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships::Account
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -122,6 +149,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -136,6 +170,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -161,7 +203,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -187,7 +229,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achReceivedPayment
           #   # ...
           # end

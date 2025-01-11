@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # payment_retrieve_response => {
+    #   data: Unit::Models::PaymentRetrieveResponse::Data,
+    #   included: -> { Unit::ArrayOf[Unit::Models::PaymentRetrieveResponse::Included] === _1 }
+    # }
+    # ```
     class PaymentRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::PaymentRetrieveResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -43,7 +59,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :achPayment
         #   # ...
         # in :bookPayment
@@ -61,6 +77,16 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown,
+      #   type: String
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #

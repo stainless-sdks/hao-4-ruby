@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # recurring_repayment_retrieve_response => {
+    #   data: Unit::Models::RecurringRepaymentRetrieveResponse::Data
+    # }
+    # ```
     class RecurringRepaymentRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::RecurringRepaymentRetrieveResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -37,7 +52,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :recurringAchRepayment
         #   # ...
         # in :recurringBookRepayment

@@ -16,6 +16,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Attributes,
+        #   relationships: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships,
+        #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -41,6 +50,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   store_id: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute store_id
             #
@@ -55,6 +71,14 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account,
+          #   customer: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -80,6 +104,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -96,6 +127,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -121,7 +160,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -143,6 +182,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -157,6 +203,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -182,7 +236,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -205,7 +259,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :cashDepositBarcode
           #   # ...
           # end

@@ -25,7 +25,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case union
+        # case data
         # in Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags
         #   # ...
         # in Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction
@@ -41,6 +41,14 @@ module Unit
 
           variant -> { Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction }
 
+          # @example
+          #
+          # ```ruby
+          # update_transaction_tags => {
+          #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Attributes,
+          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Type
+          # }
+          # ```
           class UpdateTransactionTags < Unit::BaseModel
             # @!attribute attributes
             #
@@ -64,6 +72,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   tags: -> { Unit::HashOf[String] === _1 }
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute tags
               #
@@ -81,7 +96,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :transaction
             #   # ...
             # end
@@ -93,6 +108,15 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # update_book_transaction => {
+          #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Attributes,
+          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Type,
+          #   relationships: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships
+          # }
+          # ```
           class UpdateBookTransaction < Unit::BaseModel
             # @!attribute attributes
             #
@@ -123,6 +147,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   summary: String,
+            #   tags: -> { Unit::HashOf[String] === _1 }
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute summary
               #
@@ -146,7 +178,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :bookTransaction
             #   # ...
             # end
@@ -157,6 +189,13 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # relationships => {
+            #   account: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account
+            # }
+            # ```
             class Relationships < Unit::BaseModel
               # @!attribute account
               #
@@ -171,6 +210,13 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # account => {
+              #   data: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account::Data
+              # }
+              # ```
               class Account < Unit::BaseModel
                 # @!attribute data
                 #
@@ -185,6 +231,14 @@ module Unit
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
+                # @example
+                #
+                # ```ruby
+                # data => {
+                #   id: String,
+                #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account::Data::Type
+                # }
+                # ```
                 class Data < Unit::BaseModel
                   # @!attribute id
                   #
@@ -210,7 +264,7 @@ module Unit
                   # @example
                   #
                   # ```ruby
-                  # case enum
+                  # case type
                   # in :account
                   #   # ...
                   # in :depositAccount
@@ -234,6 +288,15 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # update_chargeback_transaction => {
+          #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Attributes,
+          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Type,
+          #   relationships: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships
+          # }
+          # ```
           class UpdateChargebackTransaction < Unit::BaseModel
             # @!attribute attributes
             #
@@ -264,6 +327,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   summary: String,
+            #   tags: -> { Unit::HashOf[String] === _1 }
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute summary
               #
@@ -287,7 +358,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :chargebackTransaction
             #   # ...
             # end
@@ -298,6 +369,13 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # relationships => {
+            #   account: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account
+            # }
+            # ```
             class Relationships < Unit::BaseModel
               # @!attribute account
               #
@@ -312,6 +390,13 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # account => {
+              #   data: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account::Data
+              # }
+              # ```
               class Account < Unit::BaseModel
                 # @!attribute data
                 #
@@ -326,6 +411,14 @@ module Unit
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
+                # @example
+                #
+                # ```ruby
+                # data => {
+                #   id: String,
+                #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account::Data::Type
+                # }
+                # ```
                 class Data < Unit::BaseModel
                   # @!attribute id
                   #
@@ -351,7 +444,7 @@ module Unit
                   # @example
                   #
                   # ```ruby
-                  # case enum
+                  # case type
                   # in :account
                   #   # ...
                   # in :depositAccount

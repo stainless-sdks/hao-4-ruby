@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # authorization_request_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::AuthorizationRequest] === _1 }
+    # }
+    # ```
     class AuthorizationRequestListResponse < Unit::BaseModel
       # @!attribute data
       #

@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # event_retrieve_response => {
+    #   data: Unit::Models::EventRetrieveResponse::Data
+    # }
+    # ```
     class EventRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #

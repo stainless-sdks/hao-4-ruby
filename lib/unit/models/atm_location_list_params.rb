@@ -15,6 +15,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   address: Unit::Unknown,
+      #   coordinates: Unit::Unknown,
+      #   postal_code: String,
+      #   search_radius: Integer
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute address
         #

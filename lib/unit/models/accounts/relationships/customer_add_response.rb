@@ -4,6 +4,13 @@ module Unit
   module Models
     module Accounts
       module Relationships
+        # @example
+        #
+        # ```ruby
+        # customer_add_response => {
+        #   data: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data
+        # }
+        # ```
         class CustomerAddResponse < Unit::BaseModel
           # @!attribute data
           #
@@ -32,6 +39,18 @@ module Unit
             required :relationships,
                      -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships }
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   available: Integer,
+            #   balance: Integer,
+            #   created_at: Time,
+            #   currency: String,
+            #   deposit_product: String,
+            #   **_
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute available
               #
@@ -212,7 +231,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case status
               # in :Open
               #   # ...
               # in :Closed
@@ -232,7 +251,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case close_reason
               # in :ByCustomer
               #   # ...
               # in :Fraud
@@ -262,7 +281,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case daca_status
               # in :Activated
               #   # ...
               # in :Entered
@@ -279,7 +298,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case fraud_reason
               # in :ACHActivity
               #   # ...
               # in :CardActivity
@@ -307,6 +326,14 @@ module Unit
                 finalize!
               end
 
+              # @example
+              #
+              # ```ruby
+              # secondary_account_number => {
+              #   account_number: String,
+              #   routing_number: String
+              # }
+              # ```
               class SecondaryAccountNumber < Unit::BaseModel
                 # @!attribute account_number
                 #
@@ -328,6 +355,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # relationships => {
+            #   customer: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer
+            # }
+            # ```
             class Relationships < Unit::BaseModel
               # @!attribute customer
               #
@@ -342,6 +376,13 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # customer => {
+              #   data: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data
+              # }
+              # ```
               class Customer < Unit::BaseModel
                 # @!attribute data
                 #
@@ -356,6 +397,14 @@ module Unit
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
+                # @example
+                #
+                # ```ruby
+                # data => {
+                #   id: String,
+                #   type: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data::Type
+                # }
+                # ```
                 class Data < Unit::BaseModel
                   # @!attribute id
                   #
@@ -381,7 +430,7 @@ module Unit
                   # @example
                   #
                   # ```ruby
-                  # case enum
+                  # case type
                   # in :customer
                   #   # ...
                   # in :businessCustomer

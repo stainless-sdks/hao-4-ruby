@@ -5,6 +5,13 @@ module Unit
     module Cards
       module SecureData
         module Pin
+          # @example
+          #
+          # ```ruby
+          # status_retrieve_response => {
+          #   data: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data
+          # }
+          # ```
           class StatusRetrieveResponse < Unit::BaseModel
             # @!attribute data
             #
@@ -18,6 +25,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   attributes: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes,
+            #   type: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute attributes
               #
@@ -41,6 +56,13 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # attributes => {
+              #   status: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status
+              # }
+              # ```
               class Attributes < Unit::BaseModel
                 # @!attribute status
                 #
@@ -60,7 +82,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case status
                 # in :Set
                 #   # ...
                 # in :NotSet
@@ -78,7 +100,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :pinStatus
               #   # ...
               # end

@@ -30,6 +30,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   email: String,
+      #   query: String,
+      #   status: -> { Unit::ArrayOf[Unit::Models::CustomerListParams::Filter::Status] === _1 },
+      #   tags: -> { Unit::HashOf[String] === _1 }
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute email
         #
@@ -64,7 +74,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case status
         # in :Active
         #   # ...
         # in :Archived
@@ -79,6 +89,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

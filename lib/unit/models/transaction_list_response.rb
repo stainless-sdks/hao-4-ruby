@@ -2,6 +2,15 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # transaction_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::Accounts::Transaction] === _1 },
+    #   included: -> { Unit::ArrayOf[Unit::Models::TransactionListResponse::Included] === _1 },
+    #   meta: Unit::Models::TransactionListResponse::Meta
+    # }
+    # ```
     class TransactionListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -27,6 +36,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown,
+      #   type: String
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #
@@ -59,6 +78,13 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
       end
 
+      # @example
+      #
+      # ```ruby
+      # meta => {
+      #   pagination: Unit::Models::TransactionListResponse::Meta::Pagination
+      # }
+      # ```
       class Meta < Unit::BaseModel
         # @!attribute pagination
         #
@@ -72,6 +98,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # pagination => {
+        #   limit: Integer,
+        #   offset: Integer,
+        #   total: Integer
+        # }
+        # ```
         class Pagination < Unit::BaseModel
           # @!attribute limit
           #

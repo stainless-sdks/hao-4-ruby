@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # check_deposit_front_response => {
+    #   data: String
+    # }
+    # ```
     class CheckDepositFrontResponse < Unit::BaseModel
       # @!attribute data
       #

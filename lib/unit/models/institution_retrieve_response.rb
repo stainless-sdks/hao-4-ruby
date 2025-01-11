@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # institution_retrieve_response => {
+    #   data: Unit::Models::InstitutionRetrieveResponse::Data
+    # }
+    # ```
     class InstitutionRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::InstitutionRetrieveResponse::Data::Attributes,
+      #   type: Unit::Models::InstitutionRetrieveResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +49,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   is_ach_supported: Unit::BooleanModel,
+        #   is_wire_supported: Unit::BooleanModel,
+        #   name: String,
+        #   routing_number: String,
+        #   address: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute is_ach_supported
           #
@@ -75,7 +101,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :institution
         #   # ...
         # end

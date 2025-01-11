@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # statement_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data] === _1 }
+    # }
+    # ```
     class StatementListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::StatementListResponse::Data::Attributes,
+      #   relationships: Unit::Models::StatementListResponse::Data::Relationships,
+      #   type: Unit::Models::StatementListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   period: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute period
           #
@@ -60,6 +84,15 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::StatementListResponse::Data::Relationships::Account,
+        #   customer: Unit::Models::StatementListResponse::Data::Relationships::Customer,
+        #   customers: Unit::Models::StatementListResponse::Data::Relationships::Customers
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -85,6 +118,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::StatementListResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -98,6 +138,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::StatementListResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -123,7 +171,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -145,6 +193,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::StatementListResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -158,6 +213,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::StatementListResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -183,7 +246,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -202,6 +265,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customers => {
+          #   data: -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data::Relationships::Customers::Data] === _1 }
+          # }
+          # ```
           class Customers < Unit::BaseModel
             # @!attribute data
             #
@@ -218,6 +288,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -243,7 +321,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :statement
         #   # ...
         # in :accountStatementDTO

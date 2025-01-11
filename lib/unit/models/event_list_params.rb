@@ -23,6 +23,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   since: String,
+      #   type: -> { Unit::ArrayOf[String] === _1 },
+      #   until_: String
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute since
         #
@@ -49,6 +58,14 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

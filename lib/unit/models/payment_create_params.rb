@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::PaymentCreateParams::Data::CreateACHPayment
       #   # ...
       # in Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty
@@ -46,6 +46,15 @@ module Unit
 
         variant -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment }
 
+        # @example
+        #
+        # ```ruby
+        # create_ach_payment => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type
+        # }
+        # ```
         class CreateACHPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -74,6 +83,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   counterparty: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty,
+          #   description: String,
+          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Direction,
+          #   addenda: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -156,6 +177,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # counterparty => {
+            #   account_number: String,
+            #   account_type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty::AccountType,
+            #   name: String,
+            #   routing_number: String
+            # }
+            # ```
             class Counterparty < Unit::BaseModel
               # @!attribute account_number
               #
@@ -194,7 +225,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case account_type
               # in :Checking
               #   # ...
               # in :Savings
@@ -215,7 +246,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case direction
             # in :Debit
             #   # ...
             # in :Credit
@@ -232,7 +263,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case sec_code
             # in :WEB
             #   # ...
             # in :CCD
@@ -250,6 +281,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -264,6 +302,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -278,6 +323,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -303,7 +356,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -329,7 +382,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achPayment
           #   # ...
           # end
@@ -341,6 +394,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_ach_payment_counterparty => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type
+        # }
+        # ```
         class CreateACHPaymentCounterparty < Unit::BaseModel
           # @!attribute attributes
           #
@@ -371,6 +433,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   description: String,
+          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::Direction,
+          #   addenda: String,
+          #   idempotency_key: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -455,7 +529,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case direction
             # in :Debit
             #   # ...
             # in :Credit
@@ -472,7 +546,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case sec_code
             # in :WEB
             #   # ...
             # in :CCD
@@ -490,6 +564,14 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account,
+          #   counterparty: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -511,6 +593,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -525,6 +614,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -550,7 +647,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -572,6 +669,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # counterparty => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty::Data
+            # }
+            # ```
             class Counterparty < Unit::BaseModel
               # @!attribute data
               #
@@ -586,6 +690,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -611,7 +723,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :counterparty
                 #   # ...
                 # end
@@ -628,7 +740,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achPayment
           #   # ...
           # end
@@ -640,6 +752,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_ach_payment_plaid => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type
+        # }
+        # ```
         class CreateACHPaymentPlaid < Unit::BaseModel
           # @!attribute attributes
           #
@@ -669,6 +790,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   description: String,
+          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::Direction,
+          #   plaid_processor_token: String,
+          #   addenda: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -767,7 +900,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case direction
             # in :Debit
             #   # ...
             # in :Credit
@@ -784,7 +917,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case sec_code
             # in :WEB
             #   # ...
             # in :CCD
@@ -802,6 +935,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -816,6 +956,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -830,6 +977,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -855,7 +1010,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -881,7 +1036,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achPayment
           #   # ...
           # end
@@ -893,6 +1048,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_book_payment => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type
+        # }
+        # ```
         class CreateBookPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -921,6 +1085,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   description: String,
+          #   idempotency_key: String,
+          #   tags: -> { Unit::HashOf[String] === _1 },
+          #   transaction_summary_override: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -959,6 +1134,14 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account,
+          #   counterparty_account: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -983,6 +1166,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -997,6 +1187,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -1022,7 +1220,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -1044,6 +1242,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # counterparty_account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount::Data
+            # }
+            # ```
             class CounterpartyAccount < Unit::BaseModel
               # @!attribute data
               #
@@ -1058,6 +1263,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -1083,7 +1296,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -1103,7 +1316,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :bookPayment
           #   # ...
           # end
@@ -1115,6 +1328,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_wire_payment => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type
+        # }
+        # ```
         class CreateWirePayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -1143,6 +1365,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   counterparty: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Counterparty,
+          #   description: String,
+          #   direction: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction,
+          #   idempotency_key: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -1190,6 +1423,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # counterparty => {
+            #   account_number: String,
+            #   address: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Counterparty::Address,
+            #   name: String,
+            #   routing_number: String
+            # }
+            # ```
             class Counterparty < Unit::BaseModel
               # @!attribute account_number
               #
@@ -1222,6 +1465,17 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # address => {
+              #   city: String,
+              #   country: String,
+              #   postal_code: String,
+              #   state: String,
+              #   street: String
+              # }
+              # ```
               class Address < Unit::BaseModel
                 # @!attribute city
                 #
@@ -1270,7 +1524,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case direction
             # in :Credit
             #   # ...
             # end
@@ -1282,6 +1536,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -1296,6 +1557,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -1310,6 +1578,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -1335,7 +1611,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -1361,7 +1637,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :wirePayment
           #   # ...
           # end
@@ -1373,6 +1649,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_push_to_card_payment => {
+        #   attributes: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes,
+        #   relationships: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships,
+        #   type: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type
+        # }
+        # ```
         class CreatePushToCardPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -1402,6 +1687,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   amount: Integer,
+          #   configuration: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration,
+          #   description: String,
+          #   idempotency_key: String,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute amount
             #
@@ -1440,6 +1736,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # configuration => {
+            #   astra: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra
+            # }
+            # ```
             class Configuration < Unit::BaseModel
               # @!attribute astra
               #
@@ -1454,6 +1757,18 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # astra => {
+              #   account_number: String,
+              #   debit_fee_percent: Float,
+              #   destination_card_id: String,
+              #   institution_id: String,
+              #   reference_id: String,
+              #   **_
+              # }
+              # ```
               class Astra < Unit::BaseModel
                 # @!attribute account_number
                 #
@@ -1524,6 +1839,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -1538,6 +1860,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -1552,6 +1881,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -1577,7 +1914,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -1603,7 +1940,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :pushToCardPayment
           #   # ...
           # end

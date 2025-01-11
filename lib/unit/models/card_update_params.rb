@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard
       #   # ...
       # in Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard
@@ -46,6 +46,14 @@ module Unit
 
         variant -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard }
 
+        # @example
+        #
+        # ```ruby
+        # update_individual_debit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Type
+        # }
+        # ```
         class UpdateIndividualDebitCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -68,6 +76,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   default_funding_account_id: String,
+          #   design: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits,
+          #   shipping_address: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute default_funding_account_id
             #
@@ -110,6 +129,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -142,6 +171,17 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # shipping_address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class ShippingAddress < Unit::BaseModel
               # @!attribute city
               #
@@ -190,7 +230,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualDebitCard
           #   # ...
           # end
@@ -202,6 +242,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_individual_virtual_debit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Type
+        # }
+        # ```
         class UpdateIndividualVirtualDebitCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -225,6 +273,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   default_funding_account_id: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute default_funding_account_id
             #
@@ -251,6 +308,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -287,7 +354,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualVirtualDebitCard
           #   # ...
           # end
@@ -299,6 +366,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_debit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Type
+        # }
+        # ```
         class UpdateBusinessDebitCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -321,6 +396,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address,
+          #   default_funding_account_id: String,
+          #   design: String,
+          #   email: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -399,6 +486,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -443,6 +541,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -475,6 +583,14 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -495,6 +611,17 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # shipping_address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class ShippingAddress < Unit::BaseModel
               # @!attribute city
               #
@@ -543,7 +670,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessDebitCard
           #   # ...
           # end
@@ -555,6 +682,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_virtual_debit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Type
+        # }
+        # ```
         class UpdateBusinessVirtualDebitCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -578,6 +713,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address,
+          #   default_funding_account_id: String,
+          #   email: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits,
+          #   phone: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -624,6 +770,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -668,6 +825,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -700,6 +867,14 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -724,7 +899,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessVirtualDebitCard
           #   # ...
           # end
@@ -736,6 +911,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_credit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Type
+        # }
+        # ```
         class UpdateBusinessCreditCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -758,6 +941,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address,
+          #   default_funding_account_id: String,
+          #   design: String,
+          #   email: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -834,6 +1029,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -878,6 +1084,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -910,6 +1126,14 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -930,6 +1154,17 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # shipping_address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class ShippingAddress < Unit::BaseModel
               # @!attribute city
               #
@@ -978,7 +1213,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessCreditCard
           #   # ...
           # end
@@ -990,6 +1225,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_virtual_credit_card => {
+        #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes,
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Type
+        # }
+        # ```
         class UpdateBusinessVirtualCreditCard < Unit::BaseModel
           # @!attribute attributes
           #
@@ -1013,6 +1256,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address,
+          #   default_funding_account_id: String,
+          #   email: String,
+          #   limits: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits,
+          #   phone: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -1059,6 +1313,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -1103,6 +1368,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -1135,6 +1410,14 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -1159,7 +1442,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessVirtualCreditCard
           #   # ...
           # end

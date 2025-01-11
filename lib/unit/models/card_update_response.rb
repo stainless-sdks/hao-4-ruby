@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # card_update_response => {
+    #   data: Unit::Models::Card
+    # }
+    # ```
     class CardUpdateResponse < Unit::BaseModel
       # @!attribute data
       #

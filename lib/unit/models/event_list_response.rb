@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # event_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::EventListResponse::Data] === _1 }
+    # }
+    # ```
     class EventListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #

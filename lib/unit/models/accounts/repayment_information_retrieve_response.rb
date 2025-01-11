@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Accounts
+      # @example
+      #
+      # ```ruby
+      # repayment_information_retrieve_response => {
+      #   data: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data
+      # }
+      # ```
       class RepaymentInformationRetrieveResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Attributes,
+        #   type: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -39,6 +54,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   initiated_repayments: Integer,
+          #   next_repayment_due_date: Date,
+          #   remaining_amount_due: Integer,
+          #   remaining_amount_overdue: Integer,
+          #   statement_period_end: Date
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute initiated_repayments
             #
@@ -96,7 +122,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :creditAccountRepaymentInformation
           #   # ...
           # end

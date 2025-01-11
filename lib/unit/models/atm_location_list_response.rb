@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # atm_location_list_response_item => {
+    #   attributes: Unit::Models::AtmLocationListResponseItem::Attributes,
+    #   type: Unit::Models::AtmLocationListResponseItem::Type
+    # }
+    # ```
     class AtmLocationListResponseItem < Unit::BaseModel
       # @!attribute attributes
       #
@@ -21,6 +29,18 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # attributes => {
+      #   accept_deposits: Unit::BooleanModel,
+      #   address: Unit::Models::AtmLocationListResponseItem::Attributes::Address,
+      #   coordinates: Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates,
+      #   distance: Integer,
+      #   location_name: String,
+      #   **_
+      # }
+      # ```
       class Attributes < Unit::BaseModel
         # @!attribute accept_deposits
         #
@@ -81,6 +101,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # address => {
+        #   city: String,
+        #   country: String,
+        #   postal_code: String,
+        #   state: String,
+        #   street: String
+        # }
+        # ```
         class Address < Unit::BaseModel
           # @!attribute city
           #
@@ -125,6 +156,14 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # coordinates => {
+        #   latitude: Float,
+        #   longitude: Float
+        # }
+        # ```
         class Coordinates < Unit::BaseModel
           # @!attribute latitude
           #
@@ -149,7 +188,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :atmLocation
       #   # ...
       # end

@@ -30,6 +30,17 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   account_number: String,
+      #   customer_id: String,
+      #   permissions: -> { Unit::ArrayOf[Unit::Models::CounterpartyListParams::Filter::Permission] === _1 },
+      #   routing_number: String,
+      #   tags: -> { Unit::HashOf[String] === _1 }
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute account_number
         #
@@ -71,7 +82,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case permission
         # in :CreditOnly
         #   # ...
         # in :DebitOnly
@@ -89,6 +100,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

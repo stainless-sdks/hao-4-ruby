@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # beneficial_owner_update_response => {
+    #   data: Unit::Models::BeneficialOwnerUpdateResponse::Data
+    # }
+    # ```
     class BeneficialOwnerUpdateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::BeneficialOwner,
+      #   type: Unit::Models::BeneficialOwnerUpdateResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -43,7 +59,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :beneficialOwner
         #   # ...
         # end

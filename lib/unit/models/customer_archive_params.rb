@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::CustomerArchiveParams::Data::Attributes,
+      #   type: Unit::Models::CustomerArchiveParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   reason: Unit::Models::CustomerArchiveParams::Data::Attributes::Reason
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute reason
           #
@@ -50,7 +65,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case reason
           # in :Inactive
           #   # ...
           # in :FraudACHActivity
@@ -82,7 +97,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :archiveCustomer
         #   # ...
         # end

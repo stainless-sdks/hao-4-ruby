@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account_create_response => {
+    #   data: Unit::Models::Account
+    # }
+    # ```
     class AccountCreateResponse < Unit::BaseModel
       # @!attribute data
       #

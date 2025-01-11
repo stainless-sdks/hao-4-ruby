@@ -30,6 +30,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   from_id: Integer,
+      #   since: String,
+      #   to_id: Integer,
+      #   until_: String
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute from_id
         #
@@ -62,6 +72,14 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::ApplicationCancelParams::Data::Attributes,
+      #   type: Unit::Models::ApplicationCancelParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   reason: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute reason
           #
@@ -51,7 +66,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :applicationCancel
         #   # ...
         # end

@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::CardReplaceParams::Data::Attributes,
+      #   type: Unit::Models::CardReplaceParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   shipping_address: Unit::Models::CardReplaceParams::Data::Attributes::ShippingAddress
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute shipping_address
           #
@@ -49,6 +64,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # shipping_address => {
+          #   city: String,
+          #   country: String,
+          #   postal_code: String,
+          #   state: String,
+          #   street: String
+          # }
+          # ```
           class ShippingAddress < Unit::BaseModel
             # @!attribute city
             #
@@ -97,7 +123,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :replaceCard
         #   # ...
         # end

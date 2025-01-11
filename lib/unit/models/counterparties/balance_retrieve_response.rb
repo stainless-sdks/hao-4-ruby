@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Counterparties
+      # @example
+      #
+      # ```ruby
+      # balance_retrieve_response => {
+      #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data
+      # }
+      # ```
       class BalanceRetrieveResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,16 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   id: String,
+        #   relationships: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships,
+        #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Type,
+        #   attributes: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute id
           #
@@ -50,6 +67,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   counterparty: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty,
+          #   customer: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute counterparty
             #
@@ -71,6 +96,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # counterparty => {
+            #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty::Data
+            # }
+            # ```
             class Counterparty < Unit::BaseModel
               # @!attribute data
               #
@@ -85,6 +117,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -110,7 +150,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :counterparty
                 #   # ...
                 # end
@@ -123,6 +163,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -137,6 +184,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -162,7 +217,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -185,7 +240,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :counterpartyBalance
           #   # ...
           # end
@@ -196,6 +251,14 @@ module Unit
             finalize!
           end
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   balance: Float,
+          #   available: Float
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute balance
             #

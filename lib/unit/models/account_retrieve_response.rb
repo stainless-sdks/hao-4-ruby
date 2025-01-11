@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account_retrieve_response => {
+    #   data: Unit::Models::Account,
+    #   included: -> { Unit::ArrayOf[Unit::Models::AccountRetrieveResponse::Included] === _1 }
+    # }
+    # ```
     class AccountRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   type: Unit::Models::AccountRetrieveResponse::Included::Type
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #
@@ -43,7 +59,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :individualCustomer
         #   # ...
         # in :businessCustomer

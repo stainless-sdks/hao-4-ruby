@@ -3,6 +3,14 @@
 module Unit
   module Models
     module Accounts
+      # @example
+      #
+      # ```ruby
+      # transaction => {
+      #   id: String,
+      #   type: Unit::Models::Accounts::Transaction::Type
+      # }
+      # ```
       class Transaction < Unit::BaseModel
         # @!attribute id
         #
@@ -25,7 +33,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :originatedAchTransaction
         #   # ...
         # in :receivedAchTransaction

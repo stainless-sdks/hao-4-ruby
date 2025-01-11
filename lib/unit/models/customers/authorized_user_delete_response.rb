@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Customers
+      # @example
+      #
+      # ```ruby
+      # authorized_user_delete_response => {
+      #   data: Unit::Models::Customers::AuthorizedUserDeleteResponse::Data
+      # }
+      # ```
       class AuthorizedUserDeleteResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   id: String,
+        #   type: Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute id
           #
@@ -38,7 +53,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualCustomer
           #   # ...
           # in :businessCustomer

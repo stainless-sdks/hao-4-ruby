@@ -34,7 +34,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case file_type
           # in :"application/pdf"
           #   # ...
           # in :"image/png"

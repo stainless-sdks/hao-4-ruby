@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes,
+      #   relationships: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships,
+      #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +49,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   annual_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
+        #   occupation: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation,
+        #   source_of_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute annual_income
           #
@@ -75,7 +93,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case annual_income
           # in :UpTo10k
           #   # ...
           # in :Between10kAnd25k
@@ -104,7 +122,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case occupation
           # in :ArchitectOrEngineer
           #   # ...
           # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -150,7 +168,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case source_of_income
           # in :EmploymentOrPayrollIncome
           #   # ...
           # in :PartTimeOrContractorIncome
@@ -177,6 +195,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   application: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute application
           #
@@ -193,6 +218,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # application => {
+          #   data: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data
+          # }
+          # ```
           class Application < Unit::BaseModel
             # @!attribute data
             #
@@ -209,6 +241,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -234,7 +274,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :businessApplication
               #   # ...
               # in :individualApplication
@@ -257,7 +297,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :beneficialOwner
         #   # ...
         # end

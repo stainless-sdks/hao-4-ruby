@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # authorization_request_decline_response => {
+    #   data: Unit::Models::AuthorizationRequest
+    # }
+    # ```
     class AuthorizationRequestDeclineResponse < Unit::BaseModel
       # @!attribute data
       #

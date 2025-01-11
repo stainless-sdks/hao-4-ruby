@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # application_retrieve_response => {
+    #   data: Unit::Models::Application,
+    #   included: -> { Unit::ArrayOf[Unit::Models::ApplicationRetrieveResponse::Included] === _1 }
+    # }
+    # ```
     class ApplicationRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown,
+      #   type: String
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #

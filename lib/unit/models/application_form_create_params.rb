@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   type: Unit::Models::ApplicationFormCreateParams::Data::Type,
+      #   attributes: Unit::Models::ApplicationFormCreateParams::Data::Attributes,
+      #   relationships: Unit::Models::ApplicationFormCreateParams::Data::Relationships
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute type
         #
@@ -43,7 +52,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :applicationForm
         #   # ...
         # end
@@ -54,6 +63,18 @@ module Unit
           finalize!
         end
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   allowed_application_types: -> { Unit::ArrayOf[Unit::Models::ApplicationFormCreateParams::Data::Attributes::AllowedApplicationType] === _1 },
+        #   applicant_details: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails,
+        #   hide_application_progress_tracker: Unit::BooleanModel,
+        #   lang: Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang,
+        #   require_id_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute allowed_application_types
           #
@@ -129,7 +150,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case allowed_application_type
           # in :Individual
           #   # ...
           # in :Business
@@ -146,6 +167,18 @@ module Unit
             finalize!
           end
 
+          # @example
+          #
+          # ```ruby
+          # applicant_details => {
+          #   address: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address,
+          #   application_type: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType,
+          #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner] === _1 },
+          #   business_vertical: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical,
+          #   contact: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact,
+          #   **_
+          # }
+          # ```
           class ApplicantDetails < Unit::BaseModel
             # @!attribute address
             #
@@ -341,6 +374,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -388,7 +432,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case application_type
             # in :Individual
             #   # ...
             # in :Business
@@ -405,6 +449,18 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # beneficial_owner => {
+            #   address: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Address,
+            #   date_of_birth: Date,
+            #   email: String,
+            #   full_name: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::FullName,
+            #   phone: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Phone,
+            #   **_
+            # }
+            # ```
             class BeneficialOwner < Unit::BaseModel
               # @!attribute address
               #
@@ -535,6 +591,17 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # address => {
+              #   city: String,
+              #   country: String,
+              #   postal_code: String,
+              #   state: String,
+              #   street: String
+              # }
+              # ```
               class Address < Unit::BaseModel
                 # @!attribute city
                 #
@@ -579,6 +646,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -599,6 +674,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -622,7 +705,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case annual_income
               # in :UpTo10k
               #   # ...
               # in :Between10kAnd25k
@@ -648,6 +731,14 @@ module Unit
                 finalize!
               end
 
+              # @example
+              #
+              # ```ruby
+              # evaluation_params => {
+              #   require_id_verification: Unit::BooleanModel,
+              #   use_selfie_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
+              # }
+              # ```
               class EvaluationParams < Unit::BaseModel
                 # @!attribute require_id_verification
                 #
@@ -674,7 +765,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case use_selfie_verification
                 # in :Never
                 #   # ...
                 # in :ReplaceIdentification
@@ -695,7 +786,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case occupation
               # in :ArchitectOrEngineer
               #   # ...
               # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -741,7 +832,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case source_of_income
               # in :EmploymentOrPayrollIncome
               #   # ...
               # in :PartTimeOrContractorIncome
@@ -771,7 +862,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case business_vertical
             # in :AdultEntertainmentDatingOrEscortServices
             #   # ...
             # in :AgricultureForestryFishingOrHunting
@@ -821,6 +912,16 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # contact => {
+            #   email: String,
+            #   full_name: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact::FullName,
+            #   phone: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact::Phone,
+            #   jwt_subject: String
+            # }
+            # ```
             class Contact < Unit::BaseModel
               # @!attribute email
               #
@@ -857,6 +958,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -877,6 +986,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -901,7 +1018,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case entity_type
             # in :Corporation
             #   # ...
             # in :LLC
@@ -927,6 +1044,14 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # full_name => {
+            #   first: String,
+            #   last: String
+            # }
+            # ```
             class FullName < Unit::BaseModel
               # @!attribute first
               #
@@ -950,7 +1075,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case industry
             # in :Retail
             #   # ...
             # in :Wholesale
@@ -985,7 +1110,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case occupation
             # in :ArchitectOrEngineer
             #   # ...
             # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -1028,6 +1153,18 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # officer => {
+            #   address: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Address,
+            #   date_of_birth: Date,
+            #   email: String,
+            #   full_name: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::FullName,
+            #   occupation: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Occupation,
+            #   **_
+            # }
+            # ```
             class Officer < Unit::BaseModel
               # @!attribute address
               #
@@ -1161,6 +1298,17 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # address => {
+              #   city: String,
+              #   country: String,
+              #   postal_code: String,
+              #   state: String,
+              #   street: String
+              # }
+              # ```
               class Address < Unit::BaseModel
                 # @!attribute city
                 #
@@ -1205,6 +1353,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -1228,7 +1384,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case occupation
               # in :ArchitectOrEngineer
               #   # ...
               # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -1271,6 +1427,14 @@ module Unit
                 finalize!
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -1294,7 +1458,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case annual_income
               # in :UpTo10k
               #   # ...
               # in :Between10kAnd25k
@@ -1320,6 +1484,14 @@ module Unit
                 finalize!
               end
 
+              # @example
+              #
+              # ```ruby
+              # evaluation_params => {
+              #   require_id_verification: Unit::BooleanModel,
+              #   use_selfie_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
+              # }
+              # ```
               class EvaluationParams < Unit::BaseModel
                 # @!attribute require_id_verification
                 #
@@ -1346,7 +1518,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case use_selfie_verification
                 # in :Never
                 #   # ...
                 # in :ReplaceIdentification
@@ -1367,7 +1539,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case source_of_income
               # in :EmploymentOrPayrollIncome
               #   # ...
               # in :PartTimeOrContractorIncome
@@ -1396,7 +1568,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case title
               # in :President
               #   # ...
               # in :CEO
@@ -1431,6 +1603,14 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -1455,7 +1635,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case lang
           # in :en
           #   # ...
           # in :es
@@ -1469,6 +1649,15 @@ module Unit
             finalize!
           end
 
+          # @example
+          #
+          # ```ruby
+          # require_id_verification => {
+          #   beneficial_owners: Unit::BooleanModel,
+          #   individual: Unit::BooleanModel,
+          #   officer: Unit::BooleanModel
+          # }
+          # ```
           class RequireIDVerification < Unit::BaseModel
             # @!attribute beneficial_owners
             #
@@ -1495,6 +1684,18 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # settings_override => {
+          #   additional_disclosures: -> { Unit::ArrayOf[Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure] === _1 },
+          #   cardholder_terms_url: String,
+          #   cash_advanced_terms_url: String,
+          #   client_terms_url: String,
+          #   debit_card_disclosure_url: String,
+          #   **_
+          # }
+          # ```
           class SettingsOverride < Unit::BaseModel
             # @!attribute additional_disclosures
             #
@@ -1573,6 +1774,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # additional_disclosure => {
+            #   title: String,
+            #   url: String
+            # }
+            # ```
             class AdditionalDisclosure < Unit::BaseModel
               # @!attribute title
               #
@@ -1595,6 +1804,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   application: Unit::Models::ApplicationFormCreateParams::Data::Relationships::Application
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute application
           #
@@ -1611,6 +1827,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # application => {
+          #   data: Unit::Models::ApplicationFormCreateParams::Data::Relationships::Application::Data
+          # }
+          # ```
           class Application < Unit::BaseModel
             # @!attribute data
             #
@@ -1627,6 +1850,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::ApplicationFormCreateParams::Data::Relationships::Application::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -1652,7 +1883,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :businessApplication
               #   # ...
               # in :individualApplication

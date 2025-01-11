@@ -2,6 +2,16 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # authorization => {
+    #   id: String,
+    #   relationships: Unit::Models::Authorization::Relationships,
+    #   type: Unit::Models::Authorization::Type,
+    #   attributes: Unit::Models::Authorization::Attributes
+    # }
+    # ```
     class Authorization < Unit::BaseModel
       # @!attribute id
       #
@@ -33,6 +43,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # relationships => {
+      #   account: Unit::Models::Authorization::Relationships::Account,
+      #   card: Unit::Models::Authorization::Relationships::Card,
+      #   authorization_request: Unit::Models::Authorization::Relationships::AuthorizationRequest,
+      #   customer: Unit::Models::Authorization::Relationships::Customer
+      # }
+      # ```
       class Relationships < Unit::BaseModel
         # @!attribute account
         #
@@ -66,6 +86,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # account => {
+        #   data: Unit::Models::Authorization::Relationships::Account::Data
+        # }
+        # ```
         class Account < Unit::BaseModel
           # @!attribute data
           #
@@ -79,6 +106,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::Authorization::Relationships::Account::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -101,7 +136,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :account
             #   # ...
             # in :depositAccount
@@ -123,6 +158,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # card => {
+        #   data: Unit::Models::Authorization::Relationships::Card::Data
+        # }
+        # ```
         class Card < Unit::BaseModel
           # @!attribute data
           #
@@ -136,6 +178,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: String
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -157,6 +207,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # authorization_request => {
+        #   data: -> { Unit::ArrayOf[Unit::Models::Authorization::Relationships::AuthorizationRequest::Data] === _1 }
+        # }
+        # ```
         class AuthorizationRequest < Unit::BaseModel
           # @!attribute data
           #
@@ -173,6 +230,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: String
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -194,6 +259,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # customer => {
+        #   data: Unit::Models::Authorization::Relationships::Customer::Data
+        # }
+        # ```
         class Customer < Unit::BaseModel
           # @!attribute data
           #
@@ -207,6 +279,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::Authorization::Relationships::Customer::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -229,7 +309,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :customer
             #   # ...
             # in :businessCustomer
@@ -252,7 +332,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :authorization
       #   # ...
       # end
@@ -263,6 +343,18 @@ module Unit
         finalize!
       end
 
+      # @example
+      #
+      # ```ruby
+      # attributes => {
+      #   amount: Integer,
+      #   card_last4_digits: String,
+      #   created_at: Time,
+      #   merchant: Unit::Models::Authorization::Attributes::Merchant,
+      #   recurring: Unit::BooleanModel,
+      #   **_
+      # }
+      # ```
       class Attributes < Unit::BaseModel
         # @!attribute amount
         #
@@ -374,6 +466,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # merchant => {
+        #   category: String,
+        #   name: String,
+        #   type: Integer,
+        #   id: String,
+        #   location: String
+        # }
+        # ```
         class Merchant < Unit::BaseModel
           # @!attribute category
           #
@@ -412,6 +515,13 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # card_verification_data => {
+        #   verification_method: String
+        # }
+        # ```
         class CardVerificationData < Unit::BaseModel
           # @!attribute verification_method
           #

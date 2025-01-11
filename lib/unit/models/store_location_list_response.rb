@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # store_location_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::StoreLocationListResponse::Data] === _1 },
+    #   meta: Unit::Models::StoreLocationListResponse::Meta
+    # }
+    # ```
     class StoreLocationListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::StoreLocationListResponse::Data::Attributes,
+      #   type: Unit::Models::StoreLocationListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +56,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   address: Unit::Models::StoreLocationListResponse::Data::Attributes::Address,
+        #   coordinates: Unit::Models::StoreLocationListResponse::Data::Attributes::Coordinates,
+        #   distance: Float,
+        #   phone: String,
+        #   retailer_name: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute address
           #
@@ -83,6 +110,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # address => {
+          #   city: String,
+          #   country: String,
+          #   postal_code: String,
+          #   state: String,
+          #   street: String
+          # }
+          # ```
           class Address < Unit::BaseModel
             # @!attribute city
             #
@@ -127,6 +165,14 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # coordinates => {
+          #   latitude: Float,
+          #   longitude: Float
+          # }
+          # ```
           class Coordinates < Unit::BaseModel
             # @!attribute latitude
             #
@@ -151,7 +197,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :storeLocation
         #   # ...
         # end
@@ -163,6 +209,13 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # meta => {
+      #   pagination: Unit::Models::StoreLocationListResponse::Meta::Pagination
+      # }
+      # ```
       class Meta < Unit::BaseModel
         # @!attribute pagination
         #
@@ -176,6 +229,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # pagination => {
+        #   limit: Integer,
+        #   offset: Integer,
+        #   total: Integer
+        # }
+        # ```
         class Pagination < Unit::BaseModel
           # @!attribute limit
           #

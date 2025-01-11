@@ -30,6 +30,17 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   customer_id: String,
+      #   from_balance: Float,
+      #   status: -> { Unit::ArrayOf[Unit::Models::AccountListParams::Filter::Status] === _1 },
+      #   tags: -> { Unit::HashOf[String] === _1 },
+      #   to_balance: Float
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute customer_id
         #
@@ -76,7 +87,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case status
         # in :Open
         #   # ...
         # in :Frozen
@@ -96,7 +107,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :deposit
         #   # ...
         # in :credit
@@ -111,6 +122,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

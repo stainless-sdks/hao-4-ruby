@@ -2,6 +2,18 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # beneficial_owner => {
+    #   address: Unit::Models::BeneficialOwner::Address,
+    #   annual_income: Unit::Models::BeneficialOwner::AnnualIncome,
+    #   date_of_birth: Date,
+    #   email: String,
+    #   evaluation_codes: -> { Unit::ArrayOf[String] === _1 },
+    #   **_
+    # }
+    # ```
     class BeneficialOwner < Unit::BaseModel
       # @!attribute address
       #
@@ -166,6 +178,17 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # address => {
+      #   city: String,
+      #   country: String,
+      #   postal_code: String,
+      #   state: String,
+      #   street: String
+      # }
+      # ```
       class Address < Unit::BaseModel
         # @!attribute city
         #
@@ -213,7 +236,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case annual_income
       # in :UpTo10k
       #   # ...
       # in :Between10kAnd25k
@@ -239,6 +262,14 @@ module Unit
         finalize!
       end
 
+      # @example
+      #
+      # ```ruby
+      # full_name => {
+      #   first: String,
+      #   last: String
+      # }
+      # ```
       class FullName < Unit::BaseModel
         # @!attribute first
         #
@@ -262,7 +293,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case occupation
       # in :ArchitectOrEngineer
       #   # ...
       # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -305,6 +336,14 @@ module Unit
         finalize!
       end
 
+      # @example
+      #
+      # ```ruby
+      # phone => {
+      #   country_code: String,
+      #   number: String
+      # }
+      # ```
       class Phone < Unit::BaseModel
         # @!attribute country_code
         #
@@ -328,7 +367,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case source_of_income
       # in :EmploymentOrPayrollIncome
       #   # ...
       # in :PartTimeOrContractorIncome

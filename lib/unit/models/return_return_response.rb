@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # return_return_response => {
+    #   data: Unit::Models::ReturnReturnResponse::Data
+    # }
+    # ```
     class ReturnReturnResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -26,6 +33,18 @@ module Unit
         #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships]
         required :relationships, -> { Unit::Models::ReturnReturnResponse::Data::Relationships }
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   balance: Integer,
+        #   company_name: String,
+        #   created_at: Time,
+        #   direction: Unit::Models::ReturnReturnResponse::Data::Attributes::Direction,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -84,7 +103,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case direction
           # in :Credit
           #   # ...
           # in :Debit
@@ -99,6 +118,16 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::ReturnReturnResponse::Data::Relationships::Account,
+        #   returned: Unit::Models::ReturnReturnResponse::Data::Relationships::Returned,
+        #   customer: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer,
+        #   customers: Unit::Models::ReturnReturnResponse::Data::Relationships::Customers
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -130,6 +159,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -143,6 +179,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -168,7 +212,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -190,6 +234,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # returned => {
+          #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Returned::Data
+          # }
+          # ```
           class Returned < Unit::BaseModel
             # @!attribute data
             #
@@ -203,6 +254,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -224,6 +283,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -237,6 +303,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -262,7 +336,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -281,6 +355,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customers => {
+          #   data: -> { Unit::ArrayOf[Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data] === _1 }
+          # }
+          # ```
           class Customers < Unit::BaseModel
             # @!attribute data
             #
@@ -297,6 +378,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #

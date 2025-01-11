@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # authorization_request => {
+    #   id: String,
+    #   type: Unit::Models::AuthorizationRequest::Type
+    # }
+    # ```
     class AuthorizationRequest < Unit::BaseModel
       # @!attribute id
       #
@@ -24,7 +32,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :purchaseAuthorizationRequest
       #   # ...
       # in :cardTransactionAuthorizationRequest
