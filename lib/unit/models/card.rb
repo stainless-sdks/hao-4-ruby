@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # card => {
+    #   id: String,
+    #   type: Unit::Models::Card::Type
+    # }
+    # ```
     class Card < Unit::BaseModel
       # @!attribute id
       #
@@ -24,7 +32,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :businessDebitCard
       #   # ...
       # in :individualDebitCard

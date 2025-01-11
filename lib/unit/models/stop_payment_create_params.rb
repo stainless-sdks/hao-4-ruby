@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   expiration: Date,
+      #   tags: -> { Unit::HashOf[String] === _1 }
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute expiration
         #

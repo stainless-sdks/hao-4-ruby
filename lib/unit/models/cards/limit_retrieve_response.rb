@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Cards
+      # @example
+      #
+      # ```ruby
+      # limit_retrieve_response => {
+      #   data: Unit::Models::Cards::LimitRetrieveResponse::Data
+      # }
+      # ```
       class LimitRetrieveResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes,
+        #   type: Unit::Models::Cards::LimitRetrieveResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -35,6 +50,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   daily_totals: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::DailyTotals,
+          #   monthly_totals: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::MonthlyTotals,
+          #   limits: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute daily_totals
             #
@@ -64,6 +88,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # daily_totals => {
+            #   card_transactions: Integer,
+            #   deposits: Integer,
+            #   purchases: Integer,
+            #   withdrawals: Integer
+            # }
+            # ```
             class DailyTotals < Unit::BaseModel
               # @!attribute card_transactions
               #
@@ -96,6 +130,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # monthly_totals => {
+            #   card_transactions: Integer,
+            #   deposits: Integer,
+            #   purchases: Integer,
+            #   withdrawals: Integer
+            # }
+            # ```
             class MonthlyTotals < Unit::BaseModel
               # @!attribute card_transactions
               #
@@ -128,6 +172,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # limits => {
+            #   daily_purchase: Integer,
+            #   daily_withdrawal: Integer,
+            #   monthly_purchase: Integer,
+            #   monthly_withdrawal: Integer
+            # }
+            # ```
             class Limits < Unit::BaseModel
               # @!attribute daily_purchase
               #
@@ -164,7 +218,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :limits
           #   # ...
           # end

@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication
       #   # ...
       # in Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner
@@ -42,6 +42,14 @@ module Unit
 
         variant -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer }
 
+        # @example
+        #
+        # ```ruby
+        # update_business_application => {
+        #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes,
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Type
+        # }
+        # ```
         class UpdateBusinessApplication < Unit::BaseModel
           # @!attribute attributes
           #
@@ -65,6 +73,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   annual_revenue: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue,
+          #   business_vertical: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical,
+          #   cash_flow: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow,
+          #   countries_of_operation: -> { Unit::ArrayOf[String] === _1 },
+          #   number_of_employees: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute annual_revenue
             #
@@ -158,7 +178,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case annual_revenue
             # in :UpTo250k
             #   # ...
             # in :Between250kAnd500k
@@ -184,7 +204,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case business_vertical
             # in :AdultEntertainmentDatingOrEscortServices
             #   # ...
             # in :AgricultureForestryFishingOrHunting
@@ -237,7 +257,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case cash_flow
             # in :Unpredictable
             #   # ...
             # in :Predictable
@@ -254,7 +274,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case number_of_employees
             # in :UpTo10
             #   # ...
             # in :Between10And50
@@ -281,7 +301,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessApplication
           #   # ...
           # end
@@ -293,6 +313,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_application_beneficial_owner => {
+        #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes,
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Type
+        # }
+        # ```
         class UpdateBusinessApplicationBeneficialOwner < Unit::BaseModel
           # @!attribute attributes
           #
@@ -316,6 +344,16 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome,
+          #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation,
+          #   relationships: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships,
+          #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute annual_income
             #
@@ -362,7 +400,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case annual_income
             # in :UpTo10k
             #   # ...
             # in :Between10kAnd25k
@@ -391,7 +429,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case occupation
             # in :ArchitectOrEngineer
             #   # ...
             # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -434,6 +472,13 @@ module Unit
               finalize!
             end
 
+            # @example
+            #
+            # ```ruby
+            # relationships => {
+            #   application: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application
+            # }
+            # ```
             class Relationships < Unit::BaseModel
               # @!attribute application
               #
@@ -448,6 +493,13 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # application => {
+              #   data: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application::Data
+              # }
+              # ```
               class Application < Unit::BaseModel
                 # @!attribute data
                 #
@@ -462,6 +514,14 @@ module Unit
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
+                # @example
+                #
+                # ```ruby
+                # data => {
+                #   id: String,
+                #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application::Data::Type
+                # }
+                # ```
                 class Data < Unit::BaseModel
                   # @!attribute id
                   #
@@ -487,7 +547,7 @@ module Unit
                   # @example
                   #
                   # ```ruby
-                  # case enum
+                  # case type
                   # in :businessApplication
                   #   # ...
                   # in :individualApplication
@@ -510,7 +570,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case source_of_income
             # in :EmploymentOrPayrollIncome
             #   # ...
             # in :PartTimeOrContractorIncome
@@ -540,7 +600,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :beneficialOwner
           #   # ...
           # end
@@ -552,6 +612,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_sole_proprietor_application => {
+        #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes,
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Type
+        # }
+        # ```
         class UpdateSoleProprietorApplication < Unit::BaseModel
           # @!attribute attributes
           #
@@ -575,6 +643,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   annual_revenue: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue,
+          #   business_vertical: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical,
+          #   number_of_employees: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees,
+          #   tags: -> { Unit::HashOf[String] === _1 },
+          #   website: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute annual_revenue
             #
@@ -627,7 +706,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case annual_revenue
             # in :UpTo50k
             #   # ...
             # in :Between50kAnd100k
@@ -653,7 +732,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case business_vertical
             # in :AdultEntertainmentDatingOrEscortServices
             #   # ...
             # in :AgricultureForestryFishingOrHunting
@@ -706,7 +785,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case number_of_employees
             # in :One
             #   # ...
             # in :Between2And5
@@ -730,7 +809,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualApplication
           #   # ...
           # end
@@ -742,6 +821,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_individual_application => {
+        #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes,
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Type
+        # }
+        # ```
         class UpdateIndividualApplication < Unit::BaseModel
           # @!attribute attributes
           #
@@ -763,6 +850,16 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome,
+          #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation,
+          #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute annual_income
             #
@@ -808,7 +905,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case annual_income
             # in :UpTo10k
             #   # ...
             # in :Between10kAnd25k
@@ -837,7 +934,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case occupation
             # in :ArchitectOrEngineer
             #   # ...
             # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -883,7 +980,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case source_of_income
             # in :EmploymentOrPayrollIncome
             #   # ...
             # in :PartTimeOrContractorIncome
@@ -913,7 +1010,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualApplication
           #   # ...
           # end
@@ -925,6 +1022,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_officer => {
+        #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes,
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Type
+        # }
+        # ```
         class UpdateBusinessOfficer < Unit::BaseModel
           # @!attribute attributes
           #
@@ -948,6 +1053,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   officer: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute officer
             #
@@ -962,6 +1074,15 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # officer => {
+            #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome,
+            #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation,
+            #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome
+            # }
+            # ```
             class Officer < Unit::BaseModel
               # @!attribute annual_income
               #
@@ -1001,7 +1122,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case annual_income
               # in :UpTo10k
               #   # ...
               # in :Between10kAnd25k
@@ -1030,7 +1151,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case occupation
               # in :ArchitectOrEngineer
               #   # ...
               # in :BusinessAnalystAccountantOrFinancialAdvisor
@@ -1076,7 +1197,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case source_of_income
               # in :EmploymentOrPayrollIncome
               #   # ...
               # in :PartTimeOrContractorIncome
@@ -1107,7 +1228,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessApplication
           #   # ...
           # end

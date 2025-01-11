@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes,
+      #   type: Unit::Models::AuthorizationRequestDeclineParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   reason: Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute reason
           #
@@ -53,7 +68,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case reason
           # in :AccountClosed
           #   # ...
           # in :CardExceedsAmountLimit
@@ -85,7 +100,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :declineAuthorizationRequest
         #   # ...
         # end

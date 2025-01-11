@@ -16,6 +16,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Users::APITokenCreateParams::Data::Attributes,
+        #   type: Unit::Models::Users::APITokenCreateParams::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -35,6 +43,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   description: String,
+          #   expiration: Time,
+          #   resources: -> { Unit::ArrayOf[Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource] === _1 },
+          #   scope: String,
+          #   source_ip: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute description
             #
@@ -75,6 +94,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # resource => {
+            #   ids: -> { Unit::ArrayOf[String] === _1 },
+            #   type: Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource::Type
+            # }
+            # ```
             class Resource < Unit::BaseModel
               # @!attribute ids
               #
@@ -100,7 +127,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :card
               #   # ...
               # in :account
@@ -119,7 +146,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :apiToken
           #   # ...
           # end

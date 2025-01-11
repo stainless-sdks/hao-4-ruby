@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty
       #   # ...
       # in Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty
@@ -30,6 +30,15 @@ module Unit
 
         variant -> { Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty }
 
+        # @example
+        #
+        # ```ruby
+        # create_ach_counterparty => {
+        #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes,
+        #   relationships: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships,
+        #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Type
+        # }
+        # ```
         class CreateACHCounterparty < Unit::BaseModel
           # @!attribute attributes
           #
@@ -60,6 +69,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   account_number: String,
+          #   account_type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::AccountType,
+          #   name: String,
+          #   routing_number: String,
+          #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Type,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute account_number
             #
@@ -140,7 +161,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case account_type
             # in :Checking
             #   # ...
             # in :Savings
@@ -160,7 +181,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :Business
             #   # ...
             # in :Person
@@ -180,7 +201,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case permissions
             # in :CreditOnly
             #   # ...
             # in :DebitOnly
@@ -198,6 +219,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   customer: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute customer
             #
@@ -212,6 +240,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -226,6 +261,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -251,7 +294,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -274,7 +317,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achCounterparty
           #   # ...
           # end
@@ -286,6 +329,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_plaid_counterparty => {
+        #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes,
+        #   relationships: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships,
+        #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Type
+        # }
+        # ```
         class CreatePlaidCounterparty < Unit::BaseModel
           # @!attribute attributes
           #
@@ -316,6 +368,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   plaid_processor_token: String,
+          #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Type,
+          #   idempotency_key: String,
+          #   name: String,
+          #   permissions: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute plaid_processor_token
             #
@@ -385,7 +449,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :Business
             #   # ...
             # in :Person
@@ -405,7 +469,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case permissions
             # in :CreditOnly
             #   # ...
             # in :DebitOnly
@@ -423,6 +487,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   customer: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute customer
             #
@@ -437,6 +508,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -451,6 +529,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -476,7 +562,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -499,7 +585,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achCounterparty
           #   # ...
           # end

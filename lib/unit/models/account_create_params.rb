@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::AccountCreateParams::Data::CreateCreditAccount
       #   # ...
       # in Unit::Models::AccountCreateParams::Data::CreateDepositAccount
@@ -34,6 +34,15 @@ module Unit
 
         variant -> { Unit::Models::AccountCreateParams::Data::CreateWalletAccount }
 
+        # @example
+        #
+        # ```ruby
+        # create_credit_account => {
+        #   attributes: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes,
+        #   relationships: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships,
+        #   type: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type
+        # }
+        # ```
         class CreateCreditAccount < Unit::BaseModel
           # @!attribute attributes
           #
@@ -63,6 +72,16 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   credit_limit: Integer,
+          #   credit_terms: String,
+          #   idempotency_key: String,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute credit_limit
             #
@@ -95,6 +114,13 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   customer: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute customer
             #
@@ -109,6 +135,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -123,6 +156,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -148,7 +189,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -171,7 +212,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :creditAccount
           #   # ...
           # end
@@ -183,6 +224,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_deposit_account => {
+        #   attributes: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes,
+        #   relationships: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships,
+        #   type: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type
+        # }
+        # ```
         class CreateDepositAccount < Unit::BaseModel
           # @!attribute attributes
           #
@@ -212,6 +262,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   deposit_product: String,
+          #   idempotency_key: String,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute deposit_product
             #
@@ -238,6 +297,14 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   customer: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer,
+          #   customers: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute customer
             #
@@ -259,6 +326,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -273,6 +347,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -298,7 +380,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -317,6 +399,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # customers => {
+            #   data: -> { Unit::ArrayOf[Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers::Data] === _1 }
+            # }
+            # ```
             class Customers < Unit::BaseModel
               # @!attribute data
               #
@@ -333,6 +422,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: String
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -358,7 +455,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :depositAccount
           #   # ...
           # end
@@ -370,6 +467,15 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # create_wallet_account => {
+        #   attributes: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes,
+        #   relationships: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships,
+        #   type: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type
+        # }
+        # ```
         class CreateWalletAccount < Unit::BaseModel
           # @!attribute attributes
           #
@@ -399,6 +505,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   wallet_terms: String,
+          #   idempotency_key: String,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute wallet_terms
             #
@@ -425,6 +540,13 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   customer: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute customer
             #
@@ -439,6 +561,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -453,6 +582,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -478,7 +615,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -501,7 +638,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :walletAccount
           #   # ...
           # end

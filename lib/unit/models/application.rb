@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # application => {
+    #   id: String,
+    #   type: Unit::Models::Application::Type
+    # }
+    # ```
     class Application < Unit::BaseModel
       # @!attribute id
       #
@@ -24,7 +32,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :individualApplication
       #   # ...
       # in :businessApplication

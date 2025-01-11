@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # tax_form_retrieve_response => {
+    #   data: Unit::Models::TaxFormRetrieveResponse::Data
+    # }
+    # ```
     class TaxFormRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::TaxFormRetrieveResponse::Data::Attributes,
+      #   type: Unit::Models::TaxFormRetrieveResponse::Data::Type,
+      #   relationships: Unit::Models::TaxFormRetrieveResponse::Data::Relationships
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   form_type: String,
+        #   tax_year: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute form_type
           #
@@ -69,7 +94,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :taxForm
         #   # ...
         # end
@@ -80,6 +105,15 @@ module Unit
           finalize!
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account,
+        #   accounts: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts,
+        #   customer: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -105,6 +139,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -118,6 +159,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -143,7 +192,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -165,6 +214,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # accounts => {
+          #   data: -> { Unit::ArrayOf[Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data] === _1 }
+          # }
+          # ```
           class Accounts < Unit::BaseModel
             # @!attribute data
             #
@@ -181,6 +237,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -206,7 +270,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -228,6 +292,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -241,6 +312,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -266,7 +345,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer

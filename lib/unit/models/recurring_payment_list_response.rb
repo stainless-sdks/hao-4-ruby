@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # recurring_payment_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::RecurringPaymentListResponse::Data] === _1 },
+    #   meta: Unit::Models::RecurringPaymentListResponse::Meta
+    # }
+    # ```
     class RecurringPaymentListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::RecurringPaymentListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -43,7 +59,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :recurringCreditAchPayment
         #   # ...
         # in :recurringDebitAchPayment
@@ -61,6 +77,13 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # meta => {
+      #   pagination: Unit::Models::RecurringPaymentListResponse::Meta::Pagination
+      # }
+      # ```
       class Meta < Unit::BaseModel
         # @!attribute pagination
         #
@@ -74,6 +97,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # pagination => {
+        #   limit: Integer,
+        #   offset: Integer,
+        #   total: Integer
+        # }
+        # ```
         class Pagination < Unit::BaseModel
           # @!attribute limit
           #

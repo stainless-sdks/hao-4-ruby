@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # stop_payment_list => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::StopPaymentList::Data] === _1 }
+    # }
+    # ```
     class StopPaymentList < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::StopPaymentList::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -37,7 +52,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :checkStopPayment
         #   # ...
         # in :achStopPayment

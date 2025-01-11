@@ -37,6 +37,18 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   account_id: String,
+      #   can_be_reprocessed: Unit::BooleanModel,
+      #   customer_id: String,
+      #   from_amount: Integer,
+      #   include_completed: Unit::BooleanModel,
+      #   **_
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute account_id
         #
@@ -121,7 +133,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case status
         # in :Pending
         #   # ...
         # in :Advanced
@@ -148,6 +160,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

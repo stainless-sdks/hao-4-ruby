@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # card_report_stolen_response => {
+    #   data: Unit::Models::Card
+    # }
+    # ```
     class CardReportStolenResponse < Unit::BaseModel
       # @!attribute data
       #

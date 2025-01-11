@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # counterparty_create_response => {
+    #   data: Unit::Models::CounterpartyCreateResponse::Data
+    # }
+    # ```
     class CounterpartyCreateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::CounterpartyCreateResponse::Data::Attributes,
+      #   relationships: Unit::Models::CounterpartyCreateResponse::Data::Relationships,
+      #   type: Unit::Models::CounterpartyCreateResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   account_number: String,
+        #   account_type: Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType,
+        #   created_at: Time,
+        #   name: String,
+        #   permissions: Unit::Models::CounterpartyCreateResponse::Data::Attributes::Permissions,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute account_number
           #
@@ -126,7 +155,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case account_type
           # in :Checking
           #   # ...
           # in :Savings
@@ -146,7 +175,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case permissions
           # in :CreditOnly
           #   # ...
           # in :DebitOnly
@@ -166,7 +195,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :Business
           #   # ...
           # in :Person
@@ -184,6 +213,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   customer: Unit::Models::CounterpartyCreateResponse::Data::Relationships::Customer
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute customer
           #
@@ -197,6 +233,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::CounterpartyCreateResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -213,6 +256,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CounterpartyCreateResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -238,7 +289,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -261,7 +312,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :achCounterparty
         #   # ...
         # end

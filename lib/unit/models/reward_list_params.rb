@@ -37,6 +37,18 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   card_id: String,
+      #   customer_id: String,
+      #   receiving_account_id: String,
+      #   rewarded_transaction_id: String,
+      #   since: String,
+      #   **_
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute card_id
         #
@@ -112,6 +124,14 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

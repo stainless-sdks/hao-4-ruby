@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Customers
+      # @example
+      #
+      # ```ruby
+      # token_create_response => {
+      #   data: Unit::Models::Customers::TokenCreateResponse::Data
+      # }
+      # ```
       class TokenCreateResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Customers::TokenCreateResponse::Data::Attributes,
+        #   type: Unit::Models::Customers::TokenCreateResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -35,6 +50,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   token: String,
+          #   expires_in: Integer
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute token
             #
@@ -58,7 +81,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :customerBearerToken
           #   # ...
           # end

@@ -30,6 +30,18 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   account_id: String,
+      #   account_type: String,
+      #   card_id: String,
+      #   customer_id: String,
+      #   from_amount: Integer,
+      #   **_
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute account_id
         #
@@ -121,7 +133,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case status
         # in :Authorized
         #   # ...
         # in :Completed
@@ -142,6 +154,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

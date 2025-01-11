@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::AuthorizationRequestApproveParams::Data::Attributes,
+      #   type: Unit::Models::AuthorizationRequestApproveParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   funding_account: String,
+        #   tags: -> { Unit::HashOf[String] === _1 }
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -63,7 +80,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :approveAuthorizationRequest
         #   # ...
         # end

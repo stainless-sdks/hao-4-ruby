@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Applications
+      # @example
+      #
+      # ```ruby
+      # document_multipart_response => {
+      #   data: Unit::Models::Applications::DocumentMultipartResponse::Data
+      # }
+      # ```
       class DocumentMultipartResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   id: String,
+        #   attributes: Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes,
+        #   type: Unit::Models::Applications::DocumentMultipartResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute id
           #
@@ -41,6 +57,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   status: String,
+          #   address: Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes::Address,
+          #   back_document_id: String,
+          #   back_document_store_id: String,
+          #   date_of_birth: Date,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute status
             #
@@ -195,6 +223,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -243,7 +282,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :document
           #   # ...
           # end

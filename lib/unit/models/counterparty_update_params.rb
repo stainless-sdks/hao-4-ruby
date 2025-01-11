@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::CounterpartyUpdateParams::Data::Attributes,
+      #   type: Unit::Models::CounterpartyUpdateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   name: String,
+        #   permissions: Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions,
+        #   plaid_processor_token: String,
+        #   tags: -> { Unit::HashOf[String] === _1 },
+        #   verify_name: Unit::BooleanModel
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute name
           #
@@ -77,7 +96,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case permissions
           # in :CreditOnly
           #   # ...
           # in :DebitOnly
@@ -98,7 +117,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :counterparty
         #   # ...
         # end

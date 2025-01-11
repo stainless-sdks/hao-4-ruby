@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account_deactivate_daca_response => {
+    #   data: Unit::Models::Account
+    # }
+    # ```
     class AccountDeactivateDacaResponse < Unit::BaseModel
       # @!attribute data
       #

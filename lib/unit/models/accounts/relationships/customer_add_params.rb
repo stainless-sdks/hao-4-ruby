@@ -17,6 +17,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -39,7 +47,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :customer
             #   # ...
             # end

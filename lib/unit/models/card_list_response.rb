@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # card_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::Card] === _1 },
+    #   included: -> { Unit::ArrayOf[Unit::ArrayOf[Unit::Models::CardListResponse::Included]] === _1 }
+    # }
+    # ```
     class CardListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -21,6 +29,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown,
+      #   type: String
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #

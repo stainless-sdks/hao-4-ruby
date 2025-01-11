@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # application_form_create_response => {
+    #   data: Unit::Models::ApplicationForm
+    # }
+    # ```
     class ApplicationFormCreateResponse < Unit::BaseModel
       # @!attribute data
       #

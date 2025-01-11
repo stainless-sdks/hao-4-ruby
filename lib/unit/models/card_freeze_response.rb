@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # card_freeze_response => {
+    #   data: Unit::Models::Card
+    # }
+    # ```
     class CardFreezeResponse < Unit::BaseModel
       # @!attribute data
       #

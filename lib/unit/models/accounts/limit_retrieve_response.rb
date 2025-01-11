@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Accounts
+      # @example
+      #
+      # ```ruby
+      # limit_retrieve_response => {
+      #   data: Unit::Models::Accounts::LimitRetrieveResponse::Data
+      # }
+      # ```
       class LimitRetrieveResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   type: Unit::Models::Accounts::LimitRetrieveResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute type
           #
@@ -32,7 +46,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :limits
           #   # ...
           # in :creditLimits

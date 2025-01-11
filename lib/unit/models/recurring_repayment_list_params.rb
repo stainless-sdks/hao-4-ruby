@@ -30,6 +30,17 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   credit_account_id: String,
+      #   customer_id: String,
+      #   from_start_time: Date,
+      #   status: -> { Unit::ArrayOf[Unit::Models::RecurringRepaymentListParams::Filter::Status] === _1 },
+      #   to_start_time: Date
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute credit_account_id
         #
@@ -73,7 +84,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case status
         # in :Active
         #   # ...
         # in :Disabled
@@ -88,6 +99,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #
@@ -113,7 +132,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case sort
       # in :createdAt
       #   # ...
       # in :"-createdAt"

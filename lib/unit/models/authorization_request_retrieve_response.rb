@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # authorization_request_retrieve_response => {
+    #   data: Unit::Models::AuthorizationRequest
+    # }
+    # ```
     class AuthorizationRequestRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #

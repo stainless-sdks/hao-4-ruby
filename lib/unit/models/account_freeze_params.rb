@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::AccountFreezeParams::Data::Attributes,
+      #   type: Unit::Models::AccountFreezeParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   reason: Unit::Models::AccountFreezeParams::Data::Attributes::Reason,
+        #   reason_text: String
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute reason
           #
@@ -56,7 +72,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case reason
           # in :Fraud
           #   # ...
           # in :Other
@@ -74,7 +90,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :creditAccountFreeze
         #   # ...
         # in :accountFreeze

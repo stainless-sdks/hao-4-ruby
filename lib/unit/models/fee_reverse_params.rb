@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::FeeReverseParams::Data::Attributes,
+      #   relationships: Unit::Models::FeeReverseParams::Data::Relationships,
+      #   type: Unit::Models::FeeReverseParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +49,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   description: String,
+        #   idempotency_key: String,
+        #   tags: -> { Unit::HashOf[String] === _1 }
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute description
           #
@@ -66,6 +84,14 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::FeeReverseParams::Data::Relationships::Account,
+        #   transaction: Unit::Models::FeeReverseParams::Data::Relationships::Transaction
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -85,6 +111,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::FeeReverseParams::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -98,6 +131,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::FeeReverseParams::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -123,7 +164,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -145,6 +186,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # transaction => {
+          #   data: Unit::Models::FeeReverseParams::Data::Relationships::Transaction::Data
+          # }
+          # ```
           class Transaction < Unit::BaseModel
             # @!attribute data
             #
@@ -158,6 +206,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::FeeReverseParams::Data::Relationships::Transaction::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -183,7 +239,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :transaction
               #   # ...
               # end
@@ -200,7 +256,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :feeReversal
         #   # ...
         # end

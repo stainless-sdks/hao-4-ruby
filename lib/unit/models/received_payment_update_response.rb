@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # received_payment_update_response => {
+    #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data
+    # }
+    # ```
     class ReceivedPaymentUpdateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::ReceivedPaymentUpdateResponse::Data::Attributes,
+      #   relationships: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships,
+      #   type: Unit::Models::ReceivedPaymentUpdateResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   company_name: String,
+        #   completion_date: String,
+        #   counterparty_routing_number: String,
+        #   created_at: Time,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -182,7 +211,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case direction
           # in :Debit
           #   # ...
           # in :Credit
@@ -199,7 +228,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case status
           # in :Pending
           #   # ...
           # in :Advanced
@@ -226,6 +255,17 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Account,
+        #   customer: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Customer,
+        #   payment_advance_transaction: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::PaymentAdvanceTransaction,
+        #   receive_payment_transaction: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::ReceivePaymentTransaction,
+        #   repay_payment_advance_transaction: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::RepayPaymentAdvanceTransaction
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -287,6 +327,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -303,6 +350,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -328,7 +383,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -350,6 +405,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -366,6 +428,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -391,7 +461,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -410,6 +480,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # payment_advance_transaction => {
+          #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::PaymentAdvanceTransaction::Data
+          # }
+          # ```
           class PaymentAdvanceTransaction < Unit::BaseModel
             # @!attribute data
             #
@@ -424,6 +501,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -445,6 +530,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # receive_payment_transaction => {
+          #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::ReceivePaymentTransaction::Data
+          # }
+          # ```
           class ReceivePaymentTransaction < Unit::BaseModel
             # @!attribute data
             #
@@ -459,6 +551,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -480,6 +580,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # repay_payment_advance_transaction => {
+          #   data: Unit::Models::ReceivedPaymentUpdateResponse::Data::Relationships::RepayPaymentAdvanceTransaction::Data
+          # }
+          # ```
           class RepayPaymentAdvanceTransaction < Unit::BaseModel
             # @!attribute data
             #
@@ -494,6 +601,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -519,7 +634,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :achReceivedPayment
         #   # ...
         # end

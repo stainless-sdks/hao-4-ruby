@@ -17,6 +17,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   attributes: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes,
+          #   type: Unit::Models::Customers::Token::VerificationCreateParams::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute attributes
             #
@@ -39,6 +47,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   channel: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Channel,
+            #   app_hash: String,
+            #   language: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language,
+            #   phone: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute channel
               #
@@ -82,7 +100,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case channel
               # in :sms
               #   # ...
               # in :call
@@ -99,7 +117,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case language
               # in :en
               #   # ...
               # in :af
@@ -160,6 +178,14 @@ module Unit
                 finalize!
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -184,7 +210,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :customerTokenVerification
             #   # ...
             # end

@@ -16,6 +16,14 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes,
+        #   type: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -35,6 +43,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   authorized_users: -> { Unit::ArrayOf[Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute authorized_users
             #
@@ -52,6 +67,16 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # authorized_user => {
+            #   email: String,
+            #   full_name: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser::FullName,
+            #   phone: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser::Phone,
+            #   jwt_subject: String
+            # }
+            # ```
             class AuthorizedUser < Unit::BaseModel
               # @!attribute email
               #
@@ -88,6 +113,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -108,6 +141,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -133,7 +174,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :addAuthorizedUsers
           #   # ...
           # end

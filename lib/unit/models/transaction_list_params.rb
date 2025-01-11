@@ -37,6 +37,18 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   account_id: String,
+      #   account_type: String,
+      #   card_id: String,
+      #   customer_id: String,
+      #   direction: -> { Unit::ArrayOf[Unit::Models::TransactionListParams::Filter::Direction] === _1 },
+      #   **_
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute account_id
         #
@@ -145,7 +157,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case direction
         # in :Debit
         #   # ...
         # in :Credit
@@ -160,6 +172,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

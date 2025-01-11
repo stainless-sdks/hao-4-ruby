@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::FeeCreateParams::Data::Attributes,
+      #   relationships: Unit::Models::FeeCreateParams::Data::Relationships,
+      #   type: Unit::Models::FeeCreateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +49,16 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   description: String,
+        #   idempotency_key: String,
+        #   tags: -> { Unit::HashOf[String] === _1 }
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -72,6 +91,13 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::FeeCreateParams::Data::Relationships::Account
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -85,6 +111,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::FeeCreateParams::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -98,6 +131,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::FeeCreateParams::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -123,7 +164,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -149,7 +190,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :fee
         #   # ...
         # end

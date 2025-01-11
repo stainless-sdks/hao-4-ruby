@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # webhook_enable_response => {
+    #   data: Unit::Models::WebhookEnableResponse::Data
+    # }
+    # ```
     class WebhookEnableResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::WebhookEnableResponse::Data::Attributes,
+      #   type: Unit::Models::WebhookEnableResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -40,6 +56,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   token: String,
+        #   content_type: Unit::Models::WebhookEnableResponse::Data::Attributes::ContentType,
+        #   created_at: Time,
+        #   delivery_mode: Unit::Models::WebhookEnableResponse::Data::Attributes::DeliveryMode,
+        #   label: String,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute token
           #
@@ -114,7 +142,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case content_type
           # in :Json
           #   # ...
           # in :JsonAPI
@@ -131,7 +159,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case delivery_mode
           # in :AtMostOnce
           #   # ...
           # in :AtLeastOnce
@@ -149,7 +177,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :webhook
         #   # ...
         # end

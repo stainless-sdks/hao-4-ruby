@@ -23,6 +23,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # filter => {
+      #   service_type: Unit::Models::StoreLocationListParams::Filter::ServiceType,
+      #   coordinates: Unit::Models::StoreLocationListParams::Filter::Coordinates,
+      #   postal_code: String
+      # }
+      # ```
       class Filter < Unit::BaseModel
         # @!attribute service_type
         #
@@ -53,7 +62,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case service_type
         # in :Swipe
         #   # ...
         # in :Barcode
@@ -67,6 +76,14 @@ module Unit
           finalize!
         end
 
+        # @example
+        #
+        # ```ruby
+        # coordinates => {
+        #   latitude: Float,
+        #   longitude: Float
+        # }
+        # ```
         class Coordinates < Unit::BaseModel
           # @!attribute latitude
           #
@@ -88,6 +105,14 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # page => {
+      #   limit: Integer,
+      #   offset: Integer
+      # }
+      # ```
       class Page < Unit::BaseModel
         # @!attribute limit
         #

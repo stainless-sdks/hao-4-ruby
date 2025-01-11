@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment
       #   # ...
       # in Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment
@@ -34,6 +34,14 @@ module Unit
 
         variant -> { Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment }
 
+        # @example
+        #
+        # ```ruby
+        # update_ach_payment => {
+        #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Attributes,
+        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Type
+        # }
+        # ```
         class UpdateACHPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -53,6 +61,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   clearing_days_override: Integer,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute clearing_days_override
             #
@@ -76,7 +92,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achPayment
           #   # ...
           # end
@@ -88,6 +104,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_book_payment => {
+        #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Attributes,
+        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Type
+        # }
+        # ```
         class UpdateBookPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -107,6 +131,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute tags
             #
@@ -124,7 +155,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :bookPayment
           #   # ...
           # end
@@ -136,6 +167,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_ach_received_payment => {
+        #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Attributes,
+        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Type
+        # }
+        # ```
         class UpdateACHReceivedPayment < Unit::BaseModel
           # @!attribute attributes
           #
@@ -158,6 +197,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute tags
             #
@@ -175,7 +221,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :achReceivedPayment
           #   # ...
           # end

@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # check_deposit_retrieve_response => {
+    #   data: Unit::Models::CheckDepositRetrieveResponse::Data
+    # }
+    # ```
     class CheckDepositRetrieveResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes,
+      #   relationships: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships,
+      #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   created_at: Time,
+        #   description: String,
+        #   status: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::Status,
+        #   check_number: String,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -165,7 +194,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case status
           # in :AwaitingImages
           #   # ...
           # in :AwaitingFrontImage
@@ -196,6 +225,15 @@ module Unit
             finalize!
           end
 
+          # @example
+          #
+          # ```ruby
+          # counterparty => {
+          #   account_number: String,
+          #   name: String,
+          #   routing_number: String
+          # }
+          # ```
           class Counterparty < Unit::BaseModel
             # @!attribute account_number
             #
@@ -222,6 +260,15 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # status_history => {
+          #   status: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory::Status,
+          #   updated_at: String,
+          #   updated_by: String
+          # }
+          # ```
           class StatusHistory < Unit::BaseModel
             # @!attribute status
             #
@@ -248,6 +295,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # status => {
+            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory::Status::Type
+            # }
+            # ```
             class Status < Unit::BaseModel
               # @!attribute type
               #
@@ -267,7 +321,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :AwaitingImages
               #   # ...
               # in :AwaitingFrontImage
@@ -301,6 +355,16 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Account,
+        #   customer: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Customer,
+        #   org: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Org,
+        #   transaction: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Transaction
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -335,6 +399,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -351,6 +422,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -376,7 +455,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -398,6 +477,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -414,6 +500,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -439,7 +533,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -458,6 +552,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # org => {
+          #   data: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Org::Data
+          # }
+          # ```
           class Org < Unit::BaseModel
             # @!attribute data
             #
@@ -471,6 +572,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -492,6 +601,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # transaction => {
+          #   data: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Transaction::Data
+          # }
+          # ```
           class Transaction < Unit::BaseModel
             # @!attribute data
             #
@@ -508,6 +624,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -533,7 +657,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :transaction
               #   # ...
               # end
@@ -550,7 +674,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :checkDeposit
         #   # ...
         # end

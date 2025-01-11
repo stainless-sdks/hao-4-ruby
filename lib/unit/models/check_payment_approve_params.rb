@@ -15,6 +15,13 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   type: Unit::Models::CheckPaymentApproveParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute type
         #
@@ -31,7 +38,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :additionalVerification
         #   # ...
         # end

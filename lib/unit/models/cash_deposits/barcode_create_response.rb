@@ -3,6 +3,13 @@
 module Unit
   module Models
     module CashDeposits
+      # @example
+      #
+      # ```ruby
+      # barcode_create_response => {
+      #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data
+      # }
+      # ```
       class BarcodeCreateResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   attributes: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Attributes,
+        #   relationships: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships,
+        #   type: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute attributes
           #
@@ -44,6 +60,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   barcode_number: String,
+          #   expiration: Time,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute barcode_number
             #
@@ -70,6 +95,14 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
           end
 
+          # @example
+          #
+          # ```ruby
+          # relationships => {
+          #   account: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Account,
+          #   customer: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Customer
+          # }
+          # ```
           class Relationships < Unit::BaseModel
             # @!attribute account
             #
@@ -93,6 +126,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # account => {
+            #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Account::Data
+            # }
+            # ```
             class Account < Unit::BaseModel
               # @!attribute data
               #
@@ -107,6 +147,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Account::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -132,7 +180,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :account
                 #   # ...
                 # in :depositAccount
@@ -154,6 +202,13 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # customer => {
+            #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Customer::Data
+            # }
+            # ```
             class Customer < Unit::BaseModel
               # @!attribute data
               #
@@ -168,6 +223,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # data => {
+              #   id: String,
+              #   type: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Customer::Data::Type
+              # }
+              # ```
               class Data < Unit::BaseModel
                 # @!attribute id
                 #
@@ -193,7 +256,7 @@ module Unit
                 # @example
                 #
                 # ```ruby
-                # case enum
+                # case type
                 # in :customer
                 #   # ...
                 # in :businessCustomer
@@ -216,7 +279,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :cashDepositBarcode
           #   # ...
           # end

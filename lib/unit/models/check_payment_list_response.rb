@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # check_payment_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::CheckPaymentListResponse::Data] === _1 }
+    # }
+    # ```
     class CheckPaymentListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::CheckPaymentListResponse::Data::Attributes,
+      #   relationships: Unit::Models::CheckPaymentListResponse::Data::Relationships,
+      #   type: Unit::Models::CheckPaymentListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   created_at: Time,
+        #   originated: Unit::BooleanModel,
+        #   status: Unit::Models::CheckPaymentListResponse::Data::Attributes::Status,
+        #   updated_at: Time,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -243,7 +272,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case status
           # in :MarkedForReturn
           #   # ...
           # in :Returned
@@ -266,7 +295,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case additional_verification_status
           # in :Required
           #   # ...
           # in :NotRequired
@@ -283,6 +312,15 @@ module Unit
             finalize!
           end
 
+          # @example
+          #
+          # ```ruby
+          # counterparty => {
+          #   address: Unit::Models::CheckPaymentListResponse::Data::Attributes::Counterparty::Address,
+          #   counterparty_moved: Unit::BooleanModel,
+          #   name: String
+          # }
+          # ```
           class Counterparty < Unit::BaseModel
             # @!attribute address
             #
@@ -311,6 +349,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -359,7 +408,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case delivery_status
           # in :Mailed
           #   # ...
           # in :InLocalArea
@@ -385,7 +434,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case pending_review_reason
           # in :NameMissMatch
           #   # ...
           # in :SoftLimit
@@ -402,7 +451,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case return_reason
           # in :InsufficientFunds
           #   # ...
           # in :AccountClosed
@@ -435,6 +484,16 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::CheckPaymentListResponse::Data::Relationships::Account,
+        #   customer: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer,
+        #   customers: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customers,
+        #   transaction: Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -469,6 +528,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::CheckPaymentListResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -482,6 +548,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -507,7 +581,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -529,6 +603,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -542,6 +623,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -567,7 +656,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -586,6 +675,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customers => {
+          #   data: -> { Unit::ArrayOf[Unit::Models::CheckPaymentListResponse::Data::Relationships::Customers::Data] === _1 }
+          # }
+          # ```
           class Customers < Unit::BaseModel
             # @!attribute data
             #
@@ -602,6 +698,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -623,6 +727,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # transaction => {
+          #   data: Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction::Data
+          # }
+          # ```
           class Transaction < Unit::BaseModel
             # @!attribute data
             #
@@ -639,6 +750,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -664,7 +783,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :transaction
               #   # ...
               # end
@@ -681,7 +800,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :checkPayment
         #   # ...
         # end

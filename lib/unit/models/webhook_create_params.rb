@@ -15,6 +15,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::WebhookCreateParams::Data::Attributes,
+      #   type: String
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -34,6 +42,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   token: String,
+        #   content_type: Unit::Models::WebhookCreateParams::Data::Attributes::ContentType,
+        #   delivery_mode: String,
+        #   label: String,
+        #   url: String,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute token
           #
@@ -90,7 +110,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case content_type
           # in :Json
           #   # ...
           # in :JsonAPI
@@ -107,7 +127,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case subscription_type
           # in :All
           #   # ...
           # in :OnlyAuthorizationRequest

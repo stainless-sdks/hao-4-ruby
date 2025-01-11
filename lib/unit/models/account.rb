@@ -2,6 +2,14 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account => {
+    #   id: String,
+    #   type: Unit::Models::Account::Type
+    # }
+    # ```
     class Account < Unit::BaseModel
       # @!attribute id
       #
@@ -24,7 +32,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :depositAccount
       #   # ...
       # in :creditAccount

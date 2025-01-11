@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account_end_of_day_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::AccountEndOfDayListResponse::Data] === _1 }
+    # }
+    # ```
     class AccountEndOfDayListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,16 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   attributes: Unit::Models::AccountEndOfDayListResponse::Data::Attributes,
+      #   relationships: Unit::Models::AccountEndOfDayListResponse::Data::Relationships,
+      #   type: Unit::Models::AccountEndOfDayListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -46,6 +63,17 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   available: Integer,
+        #   balance: Integer,
+        #   date: Date,
+        #   hold: Integer,
+        #   overdraft_limit: Integer
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute available
           #
@@ -84,6 +112,14 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Account,
+        #   customer: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Customer
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -103,6 +139,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -119,6 +162,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -144,7 +195,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -166,6 +217,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -182,6 +240,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -207,7 +273,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -230,7 +296,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :accountEndOfDay
         #   # ...
         # end

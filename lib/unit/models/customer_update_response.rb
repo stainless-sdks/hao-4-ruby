@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # customer_update_response => {
+    #   data: Unit::Models::CustomerUpdateResponse::Data
+    # }
+    # ```
     class CustomerUpdateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::CustomerUpdateResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -37,7 +52,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :individualCustomer
         #   # ...
         # in :businessCustomer

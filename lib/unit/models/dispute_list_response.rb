@@ -2,6 +2,16 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # dispute_list_response_item => {
+    #   id: String,
+    #   relationships: Unit::Models::DisputeListResponseItem::Relationships,
+    #   type: Unit::Models::DisputeListResponseItem::Type,
+    #   attributes: Unit::Models::DisputeListResponseItem::Attributes
+    # }
+    # ```
     class DisputeListResponseItem < Unit::BaseModel
       # @!attribute id
       #
@@ -33,6 +43,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # relationships => {
+      #   account: Unit::Models::DisputeListResponseItem::Relationships::Account,
+      #   customer: Unit::Models::DisputeListResponseItem::Relationships::Customer,
+      #   transaction: Unit::Models::DisputeListResponseItem::Relationships::Transaction
+      # }
+      # ```
       class Relationships < Unit::BaseModel
         # @!attribute account
         #
@@ -58,6 +77,13 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # account => {
+        #   data: Unit::Models::DisputeListResponseItem::Relationships::Account::Data
+        # }
+        # ```
         class Account < Unit::BaseModel
           # @!attribute data
           #
@@ -71,6 +97,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Account::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -96,7 +130,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :account
             #   # ...
             # in :depositAccount
@@ -118,6 +152,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # customer => {
+        #   data: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data
+        # }
+        # ```
         class Customer < Unit::BaseModel
           # @!attribute data
           #
@@ -131,6 +172,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -156,7 +205,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :customer
             #   # ...
             # in :businessCustomer
@@ -175,6 +224,13 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # transaction => {
+        #   data: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data
+        # }
+        # ```
         class Transaction < Unit::BaseModel
           # @!attribute data
           #
@@ -188,6 +244,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   id: String,
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute id
             #
@@ -213,7 +277,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :transaction
             #   # ...
             # end
@@ -230,7 +294,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case enum
+      # case type
       # in :dispute
       #   # ...
       # end
@@ -241,6 +305,18 @@ module Unit
         finalize!
       end
 
+      # @example
+      #
+      # ```ruby
+      # attributes => {
+      #   amount: Integer,
+      #   created_at: Time,
+      #   description: String,
+      #   external_id: String,
+      #   source: Unit::Models::DisputeListResponseItem::Attributes::Source,
+      #   **_
+      # }
+      # ```
       class Attributes < Unit::BaseModel
         # @!attribute amount
         #
@@ -320,7 +396,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case source
         # in :DebitCard
         #   # ...
         # in :ACH
@@ -334,6 +410,14 @@ module Unit
           finalize!
         end
 
+        # @example
+        #
+        # ```ruby
+        # status_history => {
+        #   type: String,
+        #   updated_at: Time
+        # }
+        # ```
         class StatusHistory < Unit::BaseModel
           # @!attribute type
           #

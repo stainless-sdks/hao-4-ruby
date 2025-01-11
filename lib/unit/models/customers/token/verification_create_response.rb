@@ -4,6 +4,13 @@ module Unit
   module Models
     module Customers
       module Token
+        # @example
+        #
+        # ```ruby
+        # verification_create_response => {
+        #   data: Unit::Models::Customers::Token::VerificationCreateResponse::Data
+        # }
+        # ```
         class VerificationCreateResponse < Unit::BaseModel
           # @!attribute data
           #
@@ -17,6 +24,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # data => {
+          #   attributes: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Attributes,
+          #   type: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Type
+          # }
+          # ```
           class Data < Unit::BaseModel
             # @!attribute attributes
             #
@@ -42,6 +57,13 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # attributes => {
+            #   verification_token: String
+            # }
+            # ```
             class Attributes < Unit::BaseModel
               # @!attribute verification_token
               #
@@ -59,7 +81,7 @@ module Unit
             # @example
             #
             # ```ruby
-            # case enum
+            # case type
             # in :customerTokenVerification
             #   # ...
             # end

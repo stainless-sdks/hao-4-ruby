@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::RewardCreateParams::Data::Attributes,
+      #   relationships: Unit::Models::RewardCreateParams::Data::Relationships,
+      #   type: Unit::Models::RewardCreateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +49,16 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   description: String,
+        #   idempotency_key: String,
+        #   tags: -> { Unit::HashOf[String] === _1 }
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -72,6 +91,15 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   receiving_account: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount,
+        #   funding_account: Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount,
+        #   rewarded_transaction: Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute receiving_account
           #
@@ -103,6 +131,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # receiving_account => {
+          #   data: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount::Data
+          # }
+          # ```
           class ReceivingAccount < Unit::BaseModel
             # @!attribute data
             #
@@ -119,6 +154,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -144,7 +187,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -163,6 +206,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # funding_account => {
+          #   data: Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount::Data
+          # }
+          # ```
           class FundingAccount < Unit::BaseModel
             # @!attribute data
             #
@@ -176,6 +226,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -197,6 +255,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # rewarded_transaction => {
+          #   data: Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction::Data
+          # }
+          # ```
           class RewardedTransaction < Unit::BaseModel
             # @!attribute data
             #
@@ -213,6 +278,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: String
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -238,7 +311,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :reward
         #   # ...
         # end

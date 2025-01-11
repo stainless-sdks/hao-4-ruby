@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount
       #   # ...
       # in Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount
@@ -30,6 +30,14 @@ module Unit
 
         variant -> { Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount }
 
+        # @example
+        #
+        # ```ruby
+        # update_deposit_account => {
+        #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Attributes,
+        #   type: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Type
+        # }
+        # ```
         class UpdateDepositAccount < Unit::BaseModel
           # @!attribute attributes
           #
@@ -52,6 +60,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   deposit_product: String,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute deposit_product
             #
@@ -75,7 +91,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :depositAccount
           #   # ...
           # end
@@ -87,6 +103,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_credit_account => {
+        #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Attributes,
+        #   type: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Type
+        # }
+        # ```
         class UpdateCreditAccount < Unit::BaseModel
           # @!attribute attributes
           #
@@ -109,6 +133,14 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   credit_limit: Integer,
+          #   tags: -> { Unit::HashOf[String] === _1 }
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute credit_limit
             #
@@ -132,7 +164,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :creditAccount
           #   # ...
           # end

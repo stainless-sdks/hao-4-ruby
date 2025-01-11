@@ -15,6 +15,15 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   attributes: Unit::Models::CheckPaymentCreateParams::Data::Attributes,
+      #   relationships: Unit::Models::CheckPaymentCreateParams::Data::Relationships,
+      #   type: Unit::Models::CheckPaymentCreateParams::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute attributes
         #
@@ -40,6 +49,18 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # attributes => {
+        #   amount: Integer,
+        #   counterparty: Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty,
+        #   description: String,
+        #   idempotency_key: String,
+        #   memo: String,
+        #   **_
+        # }
+        # ```
         class Attributes < Unit::BaseModel
           # @!attribute amount
           #
@@ -92,6 +113,15 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # counterparty => {
+          #   address: Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty::Address,
+          #   name: String,
+          #   counterparty_moved: Unit::BooleanModel
+          # }
+          # ```
           class Counterparty < Unit::BaseModel
             # @!attribute address
             #
@@ -120,6 +150,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -166,6 +207,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # relationships => {
+        #   account: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account,
+        #   customer: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer
+        # }
+        # ```
         class Relationships < Unit::BaseModel
           # @!attribute account
           #
@@ -185,6 +234,13 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # account => {
+          #   data: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account::Data
+          # }
+          # ```
           class Account < Unit::BaseModel
             # @!attribute data
             #
@@ -198,6 +254,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -223,7 +287,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :account
               #   # ...
               # in :depositAccount
@@ -245,6 +309,13 @@ module Unit
             end
           end
 
+          # @example
+          #
+          # ```ruby
+          # customer => {
+          #   data: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer::Data
+          # }
+          # ```
           class Customer < Unit::BaseModel
             # @!attribute data
             #
@@ -258,6 +329,14 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # data => {
+            #   id: String,
+            #   type: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer::Data::Type
+            # }
+            # ```
             class Data < Unit::BaseModel
               # @!attribute id
               #
@@ -283,7 +362,7 @@ module Unit
               # @example
               #
               # ```ruby
-              # case enum
+              # case type
               # in :customer
               #   # ...
               # in :businessCustomer
@@ -306,7 +385,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :checkPayment
         #   # ...
         # end

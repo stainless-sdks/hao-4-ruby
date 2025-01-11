@@ -18,7 +18,7 @@ module Unit
       # @example
       #
       # ```ruby
-      # case union
+      # case data
       # in Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer
       #   # ...
       # in Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer
@@ -30,6 +30,14 @@ module Unit
 
         variant -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer }
 
+        # @example
+        #
+        # ```ruby
+        # update_individual_customer => {
+        #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes,
+        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
+        # }
+        # ```
         class UpdateIndividualCustomer < Unit::BaseModel
           # @!attribute attributes
           #
@@ -53,6 +61,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address,
+          #   authorized_users: -> { Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser] === _1 },
+          #   dba: String,
+          #   email: String,
+          #   jwt_subject: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -108,6 +128,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -152,6 +183,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # authorized_user => {
+            #   email: String,
+            #   full_name: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser::FullName,
+            #   phone: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser::Phone,
+            #   jwt_subject: String
+            # }
+            # ```
             class AuthorizedUser < Unit::BaseModel
               # @!attribute email
               #
@@ -188,6 +229,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -208,6 +257,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -229,6 +286,14 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -253,7 +318,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :individualCustomer
           #   # ...
           # end
@@ -265,6 +330,14 @@ module Unit
           end
         end
 
+        # @example
+        #
+        # ```ruby
+        # update_business_customer => {
+        #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes,
+        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type
+        # }
+        # ```
         class UpdateBusinessCustomer < Unit::BaseModel
           # @!attribute attributes
           #
@@ -287,6 +360,18 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   address: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address,
+          #   authorized_users: -> { Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser] === _1 },
+          #   contact: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact,
+          #   dba: String,
+          #   ein: String,
+          #   **_
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute address
             #
@@ -343,6 +428,17 @@ module Unit
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
+            # @example
+            #
+            # ```ruby
+            # address => {
+            #   city: String,
+            #   country: String,
+            #   postal_code: String,
+            #   state: String,
+            #   street: String
+            # }
+            # ```
             class Address < Unit::BaseModel
               # @!attribute city
               #
@@ -387,6 +483,16 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
             end
 
+            # @example
+            #
+            # ```ruby
+            # authorized_user => {
+            #   email: String,
+            #   full_name: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser::FullName,
+            #   phone: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser::Phone,
+            #   jwt_subject: String
+            # }
+            # ```
             class AuthorizedUser < Unit::BaseModel
               # @!attribute email
               #
@@ -423,6 +529,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -443,6 +557,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -464,6 +586,16 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # contact => {
+            #   email: String,
+            #   full_name: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact::FullName,
+            #   phone: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact::Phone,
+            #   jwt_subject: String
+            # }
+            # ```
             class Contact < Unit::BaseModel
               # @!attribute email
               #
@@ -500,6 +632,14 @@ module Unit
 
               # def initialize: (Hash | Unit::BaseModel) -> void
 
+              # @example
+              #
+              # ```ruby
+              # full_name => {
+              #   first: String,
+              #   last: String
+              # }
+              # ```
               class FullName < Unit::BaseModel
                 # @!attribute first
                 #
@@ -520,6 +660,14 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
               end
 
+              # @example
+              #
+              # ```ruby
+              # phone => {
+              #   country_code: String,
+              #   number: String
+              # }
+              # ```
               class Phone < Unit::BaseModel
                 # @!attribute country_code
                 #
@@ -541,6 +689,14 @@ module Unit
               end
             end
 
+            # @example
+            #
+            # ```ruby
+            # phone => {
+            #   country_code: String,
+            #   number: String
+            # }
+            # ```
             class Phone < Unit::BaseModel
               # @!attribute country_code
               #
@@ -565,7 +721,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :businessCustomer
           #   # ...
           # end

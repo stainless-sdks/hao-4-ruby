@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # repayment_create_response => {
+    #   data: Unit::Models::RepaymentCreateResponse::Data
+    # }
+    # ```
     class RepaymentCreateResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -15,6 +22,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::RepaymentCreateResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -37,7 +52,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :achRepayment
         #   # ...
         # in :bookRepayment

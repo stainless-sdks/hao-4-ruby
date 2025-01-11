@@ -3,6 +3,14 @@
 module Unit
   module Models
     module Accounts
+      # @example
+      #
+      # ```ruby
+      # transaction_retrieve_response => {
+      #   data: Unit::Models::Accounts::Transaction,
+      #   included: -> { Unit::ArrayOf[Unit::Models::Accounts::TransactionRetrieveResponse::Included] === _1 }
+      # }
+      # ```
       class TransactionRetrieveResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -25,6 +33,16 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # included => {
+        #   id: String,
+        #   attributes: Unit::Unknown,
+        #   relationships: Unit::Unknown,
+        #   type: String
+        # }
+        # ```
         class Included < Unit::BaseModel
           # @!attribute id
           #

@@ -3,6 +3,13 @@
 module Unit
   module Models
     module Users
+      # @example
+      #
+      # ```ruby
+      # api_token_create_response => {
+      #   data: Unit::Models::Users::APITokenCreateResponse::Data
+      # }
+      # ```
       class APITokenCreateResponse < Unit::BaseModel
         # @!attribute data
         #
@@ -16,6 +23,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # data => {
+        #   id: String,
+        #   attributes: Unit::Models::Users::APITokenCreateResponse::Data::Attributes,
+        #   type: Unit::Models::Users::APITokenCreateResponse::Data::Type
+        # }
+        # ```
         class Data < Unit::BaseModel
           # @!attribute id
           #
@@ -41,6 +57,17 @@ module Unit
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
+          # @example
+          #
+          # ```ruby
+          # attributes => {
+          #   created_at: Time,
+          #   token: String,
+          #   description: String,
+          #   expiration: Time,
+          #   source_ip: String
+          # }
+          # ```
           class Attributes < Unit::BaseModel
             # @!attribute created_at
             #
@@ -82,7 +109,7 @@ module Unit
           # @example
           #
           # ```ruby
-          # case enum
+          # case type
           # in :apiToken
           #   # ...
           # end

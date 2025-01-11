@@ -2,6 +2,15 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # payment_list_response => {
+    #   data: -> { Unit::ArrayOf[Unit::Models::PaymentListResponse::Data] === _1 },
+    #   included: -> { Unit::ArrayOf[Unit::Models::PaymentListResponse::Included] === _1 },
+    #   meta: Unit::Models::PaymentListResponse::Meta
+    # }
+    # ```
     class PaymentListResponse < Unit::BaseModel
       # @!attribute data
       #
@@ -27,6 +36,14 @@ module Unit
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
+      # @example
+      #
+      # ```ruby
+      # data => {
+      #   id: String,
+      #   type: Unit::Models::PaymentListResponse::Data::Type
+      # }
+      # ```
       class Data < Unit::BaseModel
         # @!attribute id
         #
@@ -49,7 +66,7 @@ module Unit
         # @example
         #
         # ```ruby
-        # case enum
+        # case type
         # in :achPayment
         #   # ...
         # in :bookPayment
@@ -67,6 +84,16 @@ module Unit
         end
       end
 
+      # @example
+      #
+      # ```ruby
+      # included => {
+      #   id: String,
+      #   attributes: Unit::Unknown,
+      #   relationships: Unit::Unknown,
+      #   type: String
+      # }
+      # ```
       class Included < Unit::BaseModel
         # @!attribute id
         #
@@ -99,6 +126,13 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
       end
 
+      # @example
+      #
+      # ```ruby
+      # meta => {
+      #   pagination: Unit::Models::PaymentListResponse::Meta::Pagination
+      # }
+      # ```
       class Meta < Unit::BaseModel
         # @!attribute pagination
         #
@@ -112,6 +146,15 @@ module Unit
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
+        # @example
+        #
+        # ```ruby
+        # pagination => {
+        #   limit: Integer,
+        #   offset: Integer,
+        #   total: Integer
+        # }
+        # ```
         class Pagination < Unit::BaseModel
           # @!attribute limit
           #

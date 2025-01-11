@@ -2,6 +2,13 @@
 
 module Unit
   module Models
+    # @example
+    #
+    # ```ruby
+    # account_freeze_response => {
+    #   data: Unit::Models::Account
+    # }
+    # ```
     class AccountFreezeResponse < Unit::BaseModel
       # @!attribute data
       #
