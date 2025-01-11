@@ -81,7 +81,7 @@ module Unit
         # @!attribute type
         #
         #   @return [Array<Symbol, Unit::Models::RecurringPaymentListParams::Filter::Type>]
-        optional :type, Unit::ArrayOf[enum: -> { Unit::Models::RecurringPaymentListParams::Filter::Type }]
+        optional :type, -> { Unit::ArrayOf[enum: Unit::Models::RecurringPaymentListParams::Filter::Type] }
 
         # @!parse
         #   # @param account_id [String]

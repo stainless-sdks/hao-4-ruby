@@ -35,7 +35,7 @@ module Unit
         # ```ruby
         # update_deposit_account => {
         #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Attributes,
-        #   type: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Type
+        #   type: enum: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Type
         # }
         # ```
         class UpdateDepositAccount < Unit::BaseModel
@@ -108,7 +108,7 @@ module Unit
         # ```ruby
         # update_credit_account => {
         #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Attributes,
-        #   type: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Type
+        #   type: enum: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Type
         # }
         # ```
         class UpdateCreditAccount < Unit::BaseModel

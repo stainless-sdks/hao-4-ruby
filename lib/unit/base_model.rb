@@ -559,8 +559,12 @@ module Unit
         case [enum, union, item_type]
         in [Proc, nil, nil]
           enum
+        in [Class | Unit::Converter, nil, nil]
+          -> { enum }
         in [nil, Proc, nil]
           union
+        in [nil, Class | Unit::Converter, nil]
+          -> { union }
         in [nil, nil, Proc]
           item_type
         in [nil, nil, Class | Unit::Converter]
@@ -688,8 +692,12 @@ module Unit
         case [enum, union, item_type]
         in [Proc, nil, nil]
           enum
+        in [Class | Unit::Converter, nil, nil]
+          -> { enum }
         in [nil, Proc, nil]
           union
+        in [nil, Class | Unit::Converter, nil]
+          -> { union }
         in [nil, nil, Proc]
           item_type
         in [nil, nil, Class | Unit::Converter]

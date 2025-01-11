@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CheckDepositUpdateParams::Data::Attributes,
-      #   type: Unit::Models::CheckDepositUpdateParams::Data::Type
+      #   type: enum: Unit::Models::CheckDepositUpdateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

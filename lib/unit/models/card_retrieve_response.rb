@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Array<Unit::Models::CardRetrieveResponse::Included>>]
-      optional :included, Unit::ArrayOf[Unit::ArrayOf[-> { Unit::Models::CardRetrieveResponse::Included }]]
+      optional :included, -> { Unit::ArrayOf[Unit::ArrayOf[Unit::Models::CardRetrieveResponse::Included]] }
 
       # @!parse
       #   # @param data [Unit::Models::Card]

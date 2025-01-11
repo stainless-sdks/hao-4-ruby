@@ -8,7 +8,7 @@ module Unit
     # dispute_list_response_item => {
     #   id: String,
     #   relationships: Unit::Models::DisputeListResponseItem::Relationships,
-    #   type: Unit::Models::DisputeListResponseItem::Type,
+    #   type: enum: Unit::Models::DisputeListResponseItem::Type,
     #   attributes: Unit::Models::DisputeListResponseItem::Attributes
     # }
     # ```
@@ -102,7 +102,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::DisputeListResponseItem::Relationships::Account::Data::Type
+          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Account::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -177,7 +177,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data::Type
+          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -249,7 +249,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data::Type
+          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -313,7 +313,7 @@ module Unit
       #   created_at: Time,
       #   description: String,
       #   external_id: String,
-      #   source: Unit::Models::DisputeListResponseItem::Attributes::Source,
+      #   source: enum: Unit::Models::DisputeListResponseItem::Attributes::Source,
       #   **_
       # }
       # ```
@@ -362,7 +362,7 @@ module Unit
         #
         #   @return [Array<Unit::Models::DisputeListResponseItem::Attributes::StatusHistory>]
         optional :status_history,
-                 Unit::ArrayOf[-> { Unit::Models::DisputeListResponseItem::Attributes::StatusHistory }],
+                 -> { Unit::ArrayOf[Unit::Models::DisputeListResponseItem::Attributes::StatusHistory] },
                  api_name: :statusHistory
 
         # @!parse

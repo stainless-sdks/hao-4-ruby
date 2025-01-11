@@ -44,8 +44,8 @@ module Unit
       #   account_id: String,
       #   counterparty_account_id: String,
       #   customer_id: String,
-      #   direction: -> { Unit::ArrayOf[Unit::Models::PaymentListParams::Filter::Direction] === _1 },
-      #   feature: -> { Unit::ArrayOf[Unit::Models::PaymentListParams::Filter::Feature] === _1 },
+      #   direction: -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Direction] === _1 },
+      #   feature: -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Feature] === _1 },
       #   **_
       # }
       # ```
@@ -68,12 +68,12 @@ module Unit
         # @!attribute direction
         #
         #   @return [Array<Symbol, Unit::Models::PaymentListParams::Filter::Direction>]
-        optional :direction, Unit::ArrayOf[enum: -> { Unit::Models::PaymentListParams::Filter::Direction }]
+        optional :direction, -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Direction] }
 
         # @!attribute feature
         #
         #   @return [Array<Symbol, Unit::Models::PaymentListParams::Filter::Feature>]
-        optional :feature, Unit::ArrayOf[enum: -> { Unit::Models::PaymentListParams::Filter::Feature }]
+        optional :feature, -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Feature] }
 
         # @!attribute from_amount
         #
@@ -93,7 +93,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::PaymentListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::PaymentListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Status] }
 
         # @!attribute tags
         #
@@ -108,7 +108,7 @@ module Unit
         # @!attribute type
         #
         #   @return [Array<Symbol, Unit::Models::PaymentListParams::Filter::Type>]
-        optional :type, Unit::ArrayOf[enum: -> { Unit::Models::PaymentListParams::Filter::Type }]
+        optional :type, -> { Unit::ArrayOf[enum: Unit::Models::PaymentListParams::Filter::Type] }
 
         # @!attribute until_
         #

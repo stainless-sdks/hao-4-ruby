@@ -39,7 +39,7 @@ module Unit
         # ```ruby
         # update_ach_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Attributes,
-        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Type
+        #   type: enum: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Type
         # }
         # ```
         class UpdateACHPayment < Unit::BaseModel
@@ -109,7 +109,7 @@ module Unit
         # ```ruby
         # update_book_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Attributes,
-        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Type
+        #   type: enum: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Type
         # }
         # ```
         class UpdateBookPayment < Unit::BaseModel
@@ -172,7 +172,7 @@ module Unit
         # ```ruby
         # update_ach_received_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Attributes,
-        #   type: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Type
+        #   type: enum: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Type
         # }
         # ```
         class UpdateACHReceivedPayment < Unit::BaseModel

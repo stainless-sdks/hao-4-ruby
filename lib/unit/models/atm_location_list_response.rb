@@ -7,7 +7,7 @@ module Unit
     # ```ruby
     # atm_location_list_response_item => {
     #   attributes: Unit::Models::AtmLocationListResponseItem::Attributes,
-    #   type: Unit::Models::AtmLocationListResponseItem::Type
+    #   type: enum: Unit::Models::AtmLocationListResponseItem::Type
     # }
     # ```
     class AtmLocationListResponseItem < Unit::BaseModel

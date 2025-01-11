@@ -29,7 +29,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Applications::DocumentVerifyResponse::Data::Attributes,
-        #   type: Unit::Models::Applications::DocumentVerifyResponse::Data::Type
+        #   type: enum: Unit::Models::Applications::DocumentVerifyResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

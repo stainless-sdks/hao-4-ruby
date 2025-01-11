@@ -8,7 +8,7 @@ module Unit
           # @!attribute data
           #
           #   @return [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>]
-          required :data, Unit::ArrayOf[-> { Unit::Models::Accounts::Relationships::CustomerAddParams::Data }]
+          required :data, -> { Unit::ArrayOf[Unit::Models::Accounts::Relationships::CustomerAddParams::Data] }
 
           # @!parse
           #   # @param data [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>]
@@ -22,7 +22,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type
+          #   type: enum: Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

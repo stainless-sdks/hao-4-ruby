@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AccountCloseParams::Data::Attributes,
-      #   type: Unit::Models::AccountCloseParams::Data::Type
+      #   type: enum: Unit::Models::AccountCloseParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -46,9 +46,9 @@ module Unit
         #
         # ```ruby
         # attributes => {
-        #   bank_reason: Unit::Models::AccountCloseParams::Data::Attributes::BankReason,
-        #   fraud_reason: Unit::Models::AccountCloseParams::Data::Attributes::FraudReason,
-        #   reason: Unit::Models::AccountCloseParams::Data::Attributes::Reason
+        #   bank_reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::BankReason,
+        #   fraud_reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::FraudReason,
+        #   reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel
@@ -56,15 +56,15 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::BankReason, nil]
           optional :bank_reason,
-                   api_name: :bankReason,
-                   enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::BankReason }
+                   enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::BankReason },
+                   api_name: :bankReason
 
           # @!attribute fraud_reason
           #
           #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::FraudReason, nil]
           optional :fraud_reason,
-                   api_name: :fraudReason,
-                   enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::FraudReason }
+                   enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::FraudReason },
+                   api_name: :fraudReason
 
           # @!attribute reason
           #

@@ -14,7 +14,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::RecurringPaymentListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::RecurringPaymentListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::RecurringPaymentListResponse::Data] }
 
       # @!attribute meta
       #
@@ -34,7 +34,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: Unit::Models::RecurringPaymentListResponse::Data::Type
+      #   type: enum: Unit::Models::RecurringPaymentListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

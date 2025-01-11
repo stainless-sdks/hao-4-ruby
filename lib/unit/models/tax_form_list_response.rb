@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::TaxFormListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::TaxFormListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::TaxFormListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::TaxFormListResponse::Data>]
@@ -28,7 +28,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::TaxFormListResponse::Data::Attributes,
-      #   type: Unit::Models::TaxFormListResponse::Data::Type,
+      #   type: enum: Unit::Models::TaxFormListResponse::Data::Type,
       #   relationships: Unit::Models::TaxFormListResponse::Data::Relationships
       # }
       # ```
@@ -164,7 +164,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -226,9 +226,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data>]
             required :data,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data]
+                     }
 
             # @!parse
             #   # @param data [Array<Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data>]
@@ -242,7 +242,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data::Type
+            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -317,7 +317,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -7,7 +7,7 @@ module Unit
     # ```ruby
     # application => {
     #   id: String,
-    #   type: Unit::Models::Application::Type
+    #   type: enum: Unit::Models::Application::Type
     # }
     # ```
     class Application < Unit::BaseModel

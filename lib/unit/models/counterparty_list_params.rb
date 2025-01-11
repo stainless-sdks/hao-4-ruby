@@ -36,7 +36,7 @@ module Unit
       # filter => {
       #   account_number: String,
       #   customer_id: String,
-      #   permissions: -> { Unit::ArrayOf[Unit::Models::CounterpartyListParams::Filter::Permission] === _1 },
+      #   permissions: -> { Unit::ArrayOf[enum: Unit::Models::CounterpartyListParams::Filter::Permission] === _1 },
       #   routing_number: String,
       #   tags: -> { Unit::HashOf[String] === _1 }
       # }
@@ -56,7 +56,7 @@ module Unit
         #
         #   @return [Array<Symbol, Unit::Models::CounterpartyListParams::Filter::Permission>]
         optional :permissions,
-                 Unit::ArrayOf[enum: -> { Unit::Models::CounterpartyListParams::Filter::Permission }]
+                 -> { Unit::ArrayOf[enum: Unit::Models::CounterpartyListParams::Filter::Permission] }
 
         # @!attribute routing_number
         #

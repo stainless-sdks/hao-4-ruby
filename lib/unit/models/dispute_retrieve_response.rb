@@ -28,7 +28,7 @@ module Unit
       # data => {
       #   id: String,
       #   relationships: Unit::Models::DisputeRetrieveResponse::Data::Relationships,
-      #   type: Unit::Models::DisputeRetrieveResponse::Data::Type,
+      #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Type,
       #   attributes: Unit::Models::DisputeRetrieveResponse::Data::Attributes
       # }
       # ```
@@ -125,7 +125,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -200,7 +200,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -275,7 +275,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -339,7 +339,7 @@ module Unit
         #   created_at: Time,
         #   description: String,
         #   external_id: String,
-        #   source: Unit::Models::DisputeRetrieveResponse::Data::Attributes::Source,
+        #   source: enum: Unit::Models::DisputeRetrieveResponse::Data::Attributes::Source,
         #   **_
         # }
         # ```
@@ -388,9 +388,9 @@ module Unit
           #
           #   @return [Array<Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory>]
           optional :status_history,
-                   Unit::ArrayOf[-> {
-                     Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory
-                   }],
+                   -> {
+                     Unit::ArrayOf[Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory]
+                   },
                    api_name: :statusHistory
 
           # @!parse

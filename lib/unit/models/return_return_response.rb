@@ -41,7 +41,7 @@ module Unit
         #   balance: Integer,
         #   company_name: String,
         #   created_at: Time,
-        #   direction: Unit::Models::ReturnReturnResponse::Data::Attributes::Direction,
+        #   direction: enum: Unit::Models::ReturnReturnResponse::Data::Attributes::Direction,
         #   **_
         # }
         # ```
@@ -184,7 +184,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -308,7 +308,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -367,9 +367,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data>]
             required :data,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data]
+                     }
 
             # @!parse
             #   # @param data [Array<Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data>]

@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CardReplaceParams::Data::Attributes,
-      #   type: Unit::Models::CardReplaceParams::Data::Type
+      #   type: enum: Unit::Models::CardReplaceParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

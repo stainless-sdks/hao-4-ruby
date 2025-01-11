@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::RewardListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::RewardListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::RewardListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::RewardListResponse::Data>]
@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::RewardListResponse::Data::Attributes,
       #   relationships: Unit::Models::RewardListResponse::Data::Relationships,
-      #   type: Unit::Models::RewardListResponse::Data::Type
+      #   type: enum: Unit::Models::RewardListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -70,7 +70,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   description: String,
-        #   status: Unit::Models::RewardListResponse::Data::Attributes::Status,
+        #   status: enum: Unit::Models::RewardListResponse::Data::Attributes::Status,
         #   tags: -> { Unit::HashOf[String] === _1 }
         # }
         # ```
@@ -230,7 +230,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardListResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::RewardListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -354,7 +354,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardListResponse::Data::Relationships::ReceivingAccount::Data::Type
+            #   type: enum: Unit::Models::RewardListResponse::Data::Relationships::ReceivingAccount::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -527,7 +527,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::RewardListResponse::Data::Relationships::Transaction::Data::Type
+            #   type: enum: Unit::Models::RewardListResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

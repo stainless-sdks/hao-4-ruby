@@ -14,7 +14,7 @@ module Unit
         # @!attribute data
         #
         #   @return [Array<Unit::Models::Applications::DocumentListResponse::Data>]
-        optional :data, Unit::ArrayOf[-> { Unit::Models::Applications::DocumentListResponse::Data }]
+        optional :data, -> { Unit::ArrayOf[Unit::Models::Applications::DocumentListResponse::Data] }
 
         # @!parse
         #   # @param data [Array<Unit::Models::Applications::DocumentListResponse::Data>]
@@ -29,7 +29,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Applications::DocumentListResponse::Data::Attributes,
-        #   type: Unit::Models::Applications::DocumentListResponse::Data::Type
+        #   type: enum: Unit::Models::Applications::DocumentListResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

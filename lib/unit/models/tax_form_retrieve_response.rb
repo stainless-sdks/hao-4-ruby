@@ -28,7 +28,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::TaxFormRetrieveResponse::Data::Attributes,
-      #   type: Unit::Models::TaxFormRetrieveResponse::Data::Type,
+      #   type: enum: Unit::Models::TaxFormRetrieveResponse::Data::Type,
       #   relationships: Unit::Models::TaxFormRetrieveResponse::Data::Relationships
       # }
       # ```
@@ -164,7 +164,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -226,9 +226,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data>]
             required :data,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data]
+                     }
 
             # @!parse
             #   # @param data [Array<Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data>]
@@ -242,7 +242,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data::Type
+            #   type: enum: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -317,7 +317,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

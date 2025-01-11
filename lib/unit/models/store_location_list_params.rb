@@ -27,7 +27,7 @@ module Unit
       #
       # ```ruby
       # filter => {
-      #   service_type: Unit::Models::StoreLocationListParams::Filter::ServiceType,
+      #   service_type: enum: Unit::Models::StoreLocationListParams::Filter::ServiceType,
       #   coordinates: Unit::Models::StoreLocationListParams::Filter::Coordinates,
       #   postal_code: String
       # }
@@ -37,8 +37,8 @@ module Unit
         #
         #   @return [Symbol, Unit::Models::StoreLocationListParams::Filter::ServiceType]
         required :service_type,
-                 api_name: :serviceType,
-                 enum: -> { Unit::Models::StoreLocationListParams::Filter::ServiceType }
+                 enum: -> { Unit::Models::StoreLocationListParams::Filter::ServiceType },
+                 api_name: :serviceType
 
         # @!attribute coordinates
         #

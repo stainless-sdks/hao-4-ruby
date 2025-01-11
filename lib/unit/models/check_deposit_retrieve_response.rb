@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes,
       #   relationships: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships,
-      #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -70,7 +70,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   description: String,
-        #   status: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::Status,
+        #   status: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::Status,
         #   check_number: String,
         #   **_
         # }
@@ -133,9 +133,9 @@ module Unit
           #
           #   @return [Array<Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory>]
           optional :status_history,
-                   Unit::ArrayOf[-> {
-                     Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory
-                   }],
+                   -> {
+                     Unit::ArrayOf[Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory]
+                   },
                    api_name: :statusHistory
 
           # @!attribute status_set_by
@@ -299,7 +299,7 @@ module Unit
             #
             # ```ruby
             # status => {
-            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory::Status::Type
+            #   type: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Attributes::StatusHistory::Status::Type
             # }
             # ```
             class Status < Unit::BaseModel
@@ -427,7 +427,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -505,7 +505,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -629,7 +629,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: enum: Unit::Models::CheckDepositRetrieveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

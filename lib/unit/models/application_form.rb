@@ -8,7 +8,7 @@ module Unit
     # application_form => {
     #   id: String,
     #   attributes: Unit::Models::ApplicationForm::Attributes,
-    #   type: Unit::Models::ApplicationForm::Type,
+    #   type: enum: Unit::Models::ApplicationForm::Type,
     #   relationships: Unit::Models::ApplicationForm::Relationships
     # }
     # ```
@@ -48,7 +48,7 @@ module Unit
       # ```ruby
       # attributes => {
       #   url: String,
-      #   allowed_application_types: -> { Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::AllowedApplicationType] === _1 },
+      #   allowed_application_types: -> { Unit::ArrayOf[enum: Unit::Models::ApplicationForm::Attributes::AllowedApplicationType] === _1 },
       #   applicant_details: Unit::Models::ApplicationForm::Attributes::ApplicantDetails,
       #   email: String,
       #   settings_override: Unit::Models::ApplicationForm::Attributes::SettingsOverride,
@@ -65,9 +65,9 @@ module Unit
         #
         #   @return [Array<Symbol, Unit::Models::ApplicationForm::Attributes::AllowedApplicationType>]
         optional :allowed_application_types,
-                 Unit::ArrayOf[enum: -> {
-                   Unit::Models::ApplicationForm::Attributes::AllowedApplicationType
-                 }],
+                 -> {
+                   Unit::ArrayOf[enum: Unit::Models::ApplicationForm::Attributes::AllowedApplicationType]
+                 },
                  api_name: :allowedApplicationTypes
 
         # @!attribute applicant_details
@@ -148,9 +148,9 @@ module Unit
         # ```ruby
         # applicant_details => {
         #   address: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Address,
-        #   application_type: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType,
+        #   application_type: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType,
         #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner] === _1 },
-        #   business_vertical: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical,
+        #   business_vertical: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical,
         #   contact: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Contact,
         #   **_
         # }
@@ -165,24 +165,24 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType]
           optional :application_type,
-                   api_name: :applicationType,
-                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType }
+                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType },
+                   api_name: :applicationType
 
           # @!attribute beneficial_owners
           #
           #   @return [Array<Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner>]
           optional :beneficial_owners,
-                   Unit::ArrayOf[-> {
-                     Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner
-                   }],
+                   -> {
+                     Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner]
+                   },
                    api_name: :beneficialOwners
 
           # @!attribute business_vertical
           #
           #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical]
           optional :business_vertical,
-                   api_name: :businessVertical,
-                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical }
+                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical },
+                   api_name: :businessVertical
 
           # @!attribute contact
           #
@@ -213,8 +213,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::EntityType]
           optional :entity_type,
-                   api_name: :entityType,
-                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::EntityType }
+                   enum: -> { Unit::Models::ApplicationForm::Attributes::ApplicantDetails::EntityType },
+                   api_name: :entityType
 
           # @!attribute full_name
           #
@@ -461,10 +461,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome]
             optional :annual_income,
-                     api_name: :annualIncome,
                      enum: -> {
                        Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome
-                     }
+                     },
+                     api_name: :annualIncome
 
             # @!attribute evaluation_params
             #
@@ -507,10 +507,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome]
             optional :source_of_income,
-                     api_name: :sourceOfIncome,
                      enum: -> {
                        Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome
-                     }
+                     },
+                     api_name: :sourceOfIncome
 
             # @!attribute ssn
             #
@@ -700,7 +700,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -713,10 +713,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification]
               optional :use_selfie_verification,
-                       api_name: :useSelfieVerification,
                        enum: -> {
                          Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
-                       }
+                       },
+                       api_name: :useSelfieVerification
 
               # @!parse
               #   # @param require_id_verification [Boolean]
@@ -1125,7 +1125,7 @@ module Unit
           #   date_of_birth: Date,
           #   email: String,
           #   full_name: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::FullName,
-          #   occupation: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::Occupation,
+          #   occupation: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::Occupation,
           #   **_
           # }
           # ```
@@ -1175,10 +1175,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::AnnualIncome]
             optional :annual_income,
-                     api_name: :annualIncome,
                      enum: -> {
                        Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::AnnualIncome
-                     }
+                     },
+                     api_name: :annualIncome
 
             # @!attribute evaluation_params
             #
@@ -1208,10 +1208,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::SourceOfIncome]
             optional :source_of_income,
-                     api_name: :sourceOfIncome,
                      enum: -> {
                        Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::SourceOfIncome
-                     }
+                     },
+                     api_name: :sourceOfIncome
 
             # @!attribute ssn
             #
@@ -1455,7 +1455,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -1468,10 +1468,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification]
               optional :use_selfie_verification,
-                       api_name: :useSelfieVerification,
                        enum: -> {
                          Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
-                       }
+                       },
+                       api_name: :useSelfieVerification
 
               # @!parse
               #   # @param require_id_verification [Boolean]
@@ -1615,9 +1615,9 @@ module Unit
           #
           #   @return [Array<Unit::Models::ApplicationForm::Attributes::SettingsOverride::AdditionalDisclosure>]
           optional :additional_disclosures,
-                   Unit::ArrayOf[-> {
-                     Unit::Models::ApplicationForm::Attributes::SettingsOverride::AdditionalDisclosure
-                   }],
+                   -> {
+                     Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::SettingsOverride::AdditionalDisclosure]
+                   },
                    api_name: :additionalDisclosures
 
           # @!attribute cardholder_terms_url
@@ -1814,7 +1814,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: Unit::Models::ApplicationForm::Relationships::Application::Data::Type
+          #   type: enum: Unit::Models::ApplicationForm::Relationships::Application::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

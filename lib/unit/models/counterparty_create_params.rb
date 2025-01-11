@@ -36,7 +36,7 @@ module Unit
         # create_ach_counterparty => {
         #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes,
         #   relationships: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships,
-        #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Type
+        #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Type
         # }
         # ```
         class CreateACHCounterparty < Unit::BaseModel
@@ -74,10 +74,10 @@ module Unit
           # ```ruby
           # attributes => {
           #   account_number: String,
-          #   account_type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::AccountType,
+          #   account_type: enum: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::AccountType,
           #   name: String,
           #   routing_number: String,
-          #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Type,
+          #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Type,
           #   **_
           # }
           # ```
@@ -91,10 +91,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::AccountType]
             required :account_type,
-                     api_name: :accountType,
                      enum: -> {
                        Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::AccountType
-                     }
+                     },
+                     api_name: :accountType
 
             # @!attribute name
             #
@@ -266,7 +266,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer::Data::Type
+              #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -335,7 +335,7 @@ module Unit
         # create_plaid_counterparty => {
         #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes,
         #   relationships: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships,
-        #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Type
+        #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Type
         # }
         # ```
         class CreatePlaidCounterparty < Unit::BaseModel
@@ -373,10 +373,10 @@ module Unit
           # ```ruby
           # attributes => {
           #   plaid_processor_token: String,
-          #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Type,
+          #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Type,
           #   idempotency_key: String,
           #   name: String,
-          #   permissions: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions,
+          #   permissions: enum: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions,
           #   **_
           # }
           # ```
@@ -534,7 +534,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer::Data::Type
+              #   type: enum: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

@@ -86,7 +86,7 @@ module Unit
         # @!attribute status
         #
         #   @return [Array<Symbol, Unit::Models::AuthorizationListParams::Filter::Status>]
-        optional :status, Unit::ArrayOf[enum: -> { Unit::Models::AuthorizationListParams::Filter::Status }]
+        optional :status, -> { Unit::ArrayOf[enum: Unit::Models::AuthorizationListParams::Filter::Status] }
 
         # @!attribute to_amount
         #

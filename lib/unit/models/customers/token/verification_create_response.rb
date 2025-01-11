@@ -29,7 +29,7 @@ module Unit
           # ```ruby
           # data => {
           #   attributes: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Attributes,
-          #   type: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Type
+          #   type: enum: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

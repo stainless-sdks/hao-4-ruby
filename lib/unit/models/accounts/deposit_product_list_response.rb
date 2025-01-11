@@ -14,7 +14,7 @@ module Unit
         # @!attribute data
         #
         #   @return [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]
-        optional :data, Unit::ArrayOf[-> { Unit::Models::Accounts::DepositProductListResponse::Data }]
+        optional :data, -> { Unit::ArrayOf[Unit::Models::Accounts::DepositProductListResponse::Data] }
 
         # @!parse
         #   # @param data [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]
@@ -28,7 +28,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Accounts::DepositProductListResponse::Data::Attributes,
-        #   type: Unit::Models::Accounts::DepositProductListResponse::Data::Type
+        #   type: enum: Unit::Models::Accounts::DepositProductListResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

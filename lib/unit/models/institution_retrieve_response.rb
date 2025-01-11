@@ -27,7 +27,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::InstitutionRetrieveResponse::Data::Attributes,
-      #   type: Unit::Models::InstitutionRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::InstitutionRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

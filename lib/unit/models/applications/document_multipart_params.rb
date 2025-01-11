@@ -18,8 +18,8 @@ module Unit
         #
         #   @return [Symbol, Unit::Models::Applications::DocumentMultipartParams::FileType]
         required :file_type,
-                 api_name: :fileType,
-                 enum: -> { Unit::Models::Applications::DocumentMultipartParams::FileType }
+                 enum: -> { Unit::Models::Applications::DocumentMultipartParams::FileType },
+                 api_name: :fileType
 
         # @!parse
         #   # @param application_id [String]

@@ -20,7 +20,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AuthorizationRequestApproveParams::Data::Attributes,
-      #   type: Unit::Models::AuthorizationRequestApproveParams::Data::Type
+      #   type: enum: Unit::Models::AuthorizationRequestApproveParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

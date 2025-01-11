@@ -52,7 +52,7 @@ module Unit
         # create_ach_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type
         # }
         # ```
         class CreateACHPayment < Unit::BaseModel
@@ -90,7 +90,7 @@ module Unit
           #   amount: Integer,
           #   counterparty: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty,
           #   description: String,
-          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Direction,
+          #   direction: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Direction,
           #   addenda: String,
           #   **_
           # }
@@ -139,10 +139,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode]
             optional :sec_code,
-                     api_name: :secCode,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode
-                     }
+                     },
+                     api_name: :secCode
 
             # @!attribute tags
             #
@@ -182,7 +182,7 @@ module Unit
             # ```ruby
             # counterparty => {
             #   account_number: String,
-            #   account_type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty::AccountType,
+            #   account_type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty::AccountType,
             #   name: String,
             #   routing_number: String
             # }
@@ -197,10 +197,10 @@ module Unit
               #
               #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty::AccountType]
               required :account_type,
-                       api_name: :accountType,
                        enum: -> {
                          Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Counterparty::AccountType
-                       }
+                       },
+                       api_name: :accountType
 
               # @!attribute name
               #
@@ -328,7 +328,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -400,7 +400,7 @@ module Unit
         # create_ach_payment_counterparty => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type
         # }
         # ```
         class CreateACHPaymentCounterparty < Unit::BaseModel
@@ -439,7 +439,7 @@ module Unit
           # attributes => {
           #   amount: Integer,
           #   description: String,
-          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::Direction,
+          #   direction: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::Direction,
           #   addenda: String,
           #   idempotency_key: String,
           #   **_
@@ -483,10 +483,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode]
             optional :sec_code,
-                     api_name: :secCode,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode
-                     }
+                     },
+                     api_name: :secCode
 
             # @!attribute tags
             #
@@ -619,7 +619,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -695,7 +695,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -758,7 +758,7 @@ module Unit
         # create_ach_payment_plaid => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type
         # }
         # ```
         class CreateACHPaymentPlaid < Unit::BaseModel
@@ -796,7 +796,7 @@ module Unit
           # attributes => {
           #   amount: Integer,
           #   description: String,
-          #   direction: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::Direction,
+          #   direction: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::Direction,
           #   plaid_processor_token: String,
           #   addenda: String,
           #   **_
@@ -850,10 +850,10 @@ module Unit
             #
             #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode]
             optional :sec_code,
-                     api_name: :secCode,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode
-                     }
+                     },
+                     api_name: :secCode
 
             # @!attribute tags
             #
@@ -982,7 +982,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1054,7 +1054,7 @@ module Unit
         # create_book_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type
         # }
         # ```
         class CreateBookPayment < Unit::BaseModel
@@ -1192,7 +1192,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1268,7 +1268,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1334,7 +1334,7 @@ module Unit
         # create_wire_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type
         # }
         # ```
         class CreateWirePayment < Unit::BaseModel
@@ -1372,7 +1372,7 @@ module Unit
           #   amount: Integer,
           #   counterparty: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Counterparty,
           #   description: String,
-          #   direction: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction,
+          #   direction: enum: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction,
           #   idempotency_key: String
           # }
           # ```
@@ -1583,7 +1583,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1655,7 +1655,7 @@ module Unit
         # create_push_to_card_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes,
         #   relationships: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships,
-        #   type: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type
+        #   type: enum: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type
         # }
         # ```
         class CreatePushToCardPayment < Unit::BaseModel
@@ -1886,7 +1886,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account::Data::Type
+              #   type: enum: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

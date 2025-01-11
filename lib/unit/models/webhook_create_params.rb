@@ -47,7 +47,7 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: Unit::Models::WebhookCreateParams::Data::Attributes::ContentType,
+        #   content_type: enum: Unit::Models::WebhookCreateParams::Data::Attributes::ContentType,
         #   delivery_mode: String,
         #   label: String,
         #   url: String,
@@ -64,8 +64,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookCreateParams::Data::Attributes::ContentType]
           required :content_type,
-                   api_name: :contentType,
-                   enum: -> { Unit::Models::WebhookCreateParams::Data::Attributes::ContentType }
+                   enum: -> { Unit::Models::WebhookCreateParams::Data::Attributes::ContentType },
+                   api_name: :contentType
 
           # @!attribute delivery_mode
           #
@@ -91,8 +91,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType]
           optional :subscription_type,
-                   api_name: :subscriptionType,
-                   enum: -> { Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType }
+                   enum: -> { Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType },
+                   api_name: :subscriptionType
 
           # @!parse
           #   # @param token [String]

@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::AuthorizationRequest>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::AuthorizationRequest }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::AuthorizationRequest] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::AuthorizationRequest>]

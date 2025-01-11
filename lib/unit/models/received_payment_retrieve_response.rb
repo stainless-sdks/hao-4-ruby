@@ -19,7 +19,7 @@ module Unit
       # @!attribute included
       #
       #   @return [Array<Unit::Models::ReceivedPaymentRetrieveResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::ReceivedPaymentRetrieveResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::ReceivedPaymentRetrieveResponse::Included] }
 
       # @!parse
       #   # @param data [Unit::Models::ReceivedPaymentRetrieveResponse::Data]
@@ -36,7 +36,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Attributes,
       #   relationships: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships,
-      #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Type
+      #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -366,7 +366,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -444,7 +444,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

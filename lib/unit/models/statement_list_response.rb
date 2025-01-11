@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::StatementListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::StatementListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::StatementListResponse::Data>]
@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::StatementListResponse::Data::Attributes,
       #   relationships: Unit::Models::StatementListResponse::Data::Relationships,
-      #   type: Unit::Models::StatementListResponse::Data::Type
+      #   type: enum: Unit::Models::StatementListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -143,7 +143,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::StatementListResponse::Data::Relationships::Account::Data::Type
+            #   type: enum: Unit::Models::StatementListResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -218,7 +218,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::StatementListResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::StatementListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -277,9 +277,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::StatementListResponse::Data::Relationships::Customers::Data>]
             required :data,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::StatementListResponse::Data::Relationships::Customers::Data
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::StatementListResponse::Data::Relationships::Customers::Data]
+                     }
 
             # @!parse
             #   # @param data [Array<Unit::Models::StatementListResponse::Data::Relationships::Customers::Data>]

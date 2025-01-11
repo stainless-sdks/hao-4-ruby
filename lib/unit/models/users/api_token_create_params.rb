@@ -21,7 +21,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Users::APITokenCreateParams::Data::Attributes,
-        #   type: Unit::Models::Users::APITokenCreateParams::Data::Type
+        #   type: enum: Unit::Models::Users::APITokenCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -69,9 +69,9 @@ module Unit
             #
             #   @return [Array<Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource>, nil]
             optional :resources,
-                     Unit::ArrayOf[-> {
-                       Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource
-                     }]
+                     -> {
+                       Unit::ArrayOf[Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource]
+                     }
 
             # @!attribute scope
             #
@@ -99,7 +99,7 @@ module Unit
             # ```ruby
             # resource => {
             #   ids: -> { Unit::ArrayOf[String] === _1 },
-            #   type: Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource::Type
+            #   type: enum: Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource::Type
             # }
             # ```
             class Resource < Unit::BaseModel

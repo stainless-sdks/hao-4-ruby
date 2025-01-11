@@ -29,7 +29,7 @@ module Unit
         # data => {
         #   id: String,
         #   relationships: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships,
-        #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Type,
+        #   type: enum: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Type,
         #   attributes: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes
         # }
         # ```
@@ -122,7 +122,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty::Data::Type
+              #   type: enum: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -189,7 +189,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer::Data::Type
+              #   type: enum: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

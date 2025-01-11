@@ -13,7 +13,7 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::WebhookListResponse::Data>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::WebhookListResponse::Data }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::WebhookListResponse::Data] }
 
       # @!parse
       #   # @param data [Array<Unit::Models::WebhookListResponse::Data>]
@@ -28,7 +28,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::WebhookListResponse::Data::Attributes,
-      #   type: Unit::Models::WebhookListResponse::Data::Type
+      #   type: enum: Unit::Models::WebhookListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -61,9 +61,9 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: Unit::Models::WebhookListResponse::Data::Attributes::ContentType,
+        #   content_type: enum: Unit::Models::WebhookListResponse::Data::Attributes::ContentType,
         #   created_at: Time,
-        #   delivery_mode: Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode,
+        #   delivery_mode: enum: Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode,
         #   label: String,
         #   **_
         # }
@@ -78,8 +78,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookListResponse::Data::Attributes::ContentType]
           optional :content_type,
-                   api_name: :contentType,
-                   enum: -> { Unit::Models::WebhookListResponse::Data::Attributes::ContentType }
+                   enum: -> { Unit::Models::WebhookListResponse::Data::Attributes::ContentType },
+                   api_name: :contentType
 
           # @!attribute created_at
           #
@@ -90,8 +90,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode]
           optional :delivery_mode,
-                   api_name: :deliveryMode,
-                   enum: -> { Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode }
+                   enum: -> { Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode },
+                   api_name: :deliveryMode
 
           # @!attribute label
           #

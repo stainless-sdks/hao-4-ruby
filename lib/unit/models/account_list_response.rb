@@ -15,12 +15,12 @@ module Unit
       # @!attribute data
       #
       #   @return [Array<Unit::Models::Account>]
-      optional :data, Unit::ArrayOf[-> { Unit::Models::Account }]
+      optional :data, -> { Unit::ArrayOf[Unit::Models::Account] }
 
       # @!attribute included
       #
       #   @return [Array<Unit::Models::AccountListResponse::Included>]
-      optional :included, Unit::ArrayOf[-> { Unit::Models::AccountListResponse::Included }]
+      optional :included, -> { Unit::ArrayOf[Unit::Models::AccountListResponse::Included] }
 
       # @!attribute meta
       #
@@ -41,7 +41,7 @@ module Unit
       # ```ruby
       # included => {
       #   id: String,
-      #   type: Unit::Models::AccountListResponse::Included::Type
+      #   type: enum: Unit::Models::AccountListResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

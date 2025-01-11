@@ -29,7 +29,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CounterpartyCreateResponse::Data::Attributes,
       #   relationships: Unit::Models::CounterpartyCreateResponse::Data::Relationships,
-      #   type: Unit::Models::CounterpartyCreateResponse::Data::Type
+      #   type: enum: Unit::Models::CounterpartyCreateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -68,10 +68,10 @@ module Unit
         # ```ruby
         # attributes => {
         #   account_number: String,
-        #   account_type: Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType,
+        #   account_type: enum: Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType,
         #   created_at: Time,
         #   name: String,
-        #   permissions: Unit::Models::CounterpartyCreateResponse::Data::Attributes::Permissions,
+        #   permissions: enum: Unit::Models::CounterpartyCreateResponse::Data::Attributes::Permissions,
         #   **_
         # }
         # ```
@@ -85,8 +85,8 @@ module Unit
           #
           #   @return [Symbol, Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType]
           required :account_type,
-                   api_name: :accountType,
-                   enum: -> { Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType }
+                   enum: -> { Unit::Models::CounterpartyCreateResponse::Data::Attributes::AccountType },
+                   api_name: :accountType
 
           # @!attribute created_at
           #
@@ -261,7 +261,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: Unit::Models::CounterpartyCreateResponse::Data::Relationships::Customer::Data::Type
+            #   type: enum: Unit::Models::CounterpartyCreateResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

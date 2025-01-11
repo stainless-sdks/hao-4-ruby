@@ -46,7 +46,7 @@ module Unit
           # ```ruby
           # update_transaction_tags => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Attributes,
-          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Type
+          #   type: enum: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Type
           # }
           # ```
           class UpdateTransactionTags < Unit::BaseModel
@@ -113,7 +113,7 @@ module Unit
           # ```ruby
           # update_book_transaction => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Attributes,
-          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Type,
+          #   type: enum: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Type,
           #   relationships: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships
           # }
           # ```
@@ -236,7 +236,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account::Data::Type
+                #   type: enum: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel
@@ -293,7 +293,7 @@ module Unit
           # ```ruby
           # update_chargeback_transaction => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Attributes,
-          #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Type,
+          #   type: enum: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Type,
           #   relationships: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships
           # }
           # ```
@@ -416,7 +416,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account::Data::Type
+                #   type: enum: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel
