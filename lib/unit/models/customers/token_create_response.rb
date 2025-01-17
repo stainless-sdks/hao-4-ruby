@@ -4,7 +4,6 @@ module Unit
   module Models
     module Customers
       # @example
-      #
       # ```ruby
       # token_create_response => {
       #   data: Unit::Models::Customers::TokenCreateResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::TokenCreateResponse::Data::Attributes,
@@ -51,7 +49,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   token: String,
@@ -79,7 +76,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :customerBearerToken

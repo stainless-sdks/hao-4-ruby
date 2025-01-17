@@ -4,7 +4,6 @@ module Unit
   module Models
     module Customers
       # @example
-      #
       # ```ruby
       # authorized_user_create_response => {
       #   data: Unit::Models::Customers::AuthorizedUserCreateResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   id: String,
@@ -51,7 +49,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualCustomer

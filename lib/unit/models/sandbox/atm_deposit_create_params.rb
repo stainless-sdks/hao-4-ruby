@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes,
@@ -51,7 +50,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -109,7 +107,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case card_network
             # in :Visa
@@ -136,7 +133,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account
@@ -159,7 +155,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account::Data
@@ -182,7 +177,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -212,7 +206,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -238,7 +231,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :atmTransaction

@@ -8,11 +8,11 @@ module Unit
 
       # Create an Application via API
       #
-      # @param params [Unit::Models::ApplicationCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication, Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication, Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationCreateResponse]
       #
@@ -32,11 +32,11 @@ module Unit
       #
       # @param application_id [String] ID of the application to get
       #
-      # @param params [Unit::Models::ApplicationRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationRetrieveResponse]
       #
@@ -56,11 +56,11 @@ module Unit
       #
       # @param application_id [String] ID of the application to update
       #
-      # @param params [Unit::Models::ApplicationUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationUpdateResponse]
       #
@@ -81,7 +81,7 @@ module Unit
 
       # Get List Applications from API
       #
-      # @param params [Unit::Models::ApplicationListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationListParams::Filter] :filter
       #
@@ -89,7 +89,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationListResponse]
       #
@@ -109,11 +109,11 @@ module Unit
       #
       # @param application_id [String] ID of the application to get
       #
-      # @param params [Unit::Models::ApplicationCancelParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationCancelParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationCancelParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationCancelResponse]
       #

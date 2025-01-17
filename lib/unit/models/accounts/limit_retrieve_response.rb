@@ -4,7 +4,6 @@ module Unit
   module Models
     module Accounts
       # @example
-      #
       # ```ruby
       # limit_retrieve_response => {
       #   data: Unit::Models::Accounts::LimitRetrieveResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   type: enum: Unit::Models::Accounts::LimitRetrieveResponse::Data::Type
@@ -44,7 +42,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case type
           # in :limits

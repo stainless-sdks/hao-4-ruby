@@ -4,7 +4,6 @@ module Unit
   module Models
     module Sandbox
       # @example
-      #
       # ```ruby
       # received_ach_payment_create_response => {
       #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   id: String,
@@ -69,7 +67,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -169,7 +166,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -189,7 +186,7 @@ module Unit
             #   # @param is_advanceable [Boolean]
             #   # @param receiving_entity_name [String]
             #   # @param return_reason [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     amount:,
@@ -217,7 +214,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case direction
             # in :Debit
@@ -234,7 +230,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case status
             # in :Pending
@@ -264,7 +259,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::Account,
@@ -335,7 +329,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::Account::Data
@@ -356,7 +349,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -386,7 +378,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -411,7 +402,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::Customer::Data
@@ -432,7 +422,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -462,7 +451,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -484,7 +472,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # payment_advance_transaction => {
             #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::PaymentAdvanceTransaction::Data
@@ -505,7 +492,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -534,7 +520,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # receive_payment_transaction => {
             #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::ReceivePaymentTransaction::Data
@@ -555,7 +540,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -584,7 +568,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # repay_payment_advance_transaction => {
             #   data: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse::Data::Relationships::RepayPaymentAdvanceTransaction::Data
@@ -605,7 +588,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -635,7 +617,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achReceivedPayment

@@ -5,7 +5,6 @@ module Unit
     module Applications
       module Documents
         # @example
-        #
         # ```ruby
         # back_upload_response => {
         #   data: Unit::Models::Applications::Documents::BackUploadResponse::Data
@@ -25,7 +24,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -62,7 +60,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   status: String,
@@ -226,7 +223,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -282,7 +278,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :document

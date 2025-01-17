@@ -24,7 +24,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   account_id: String,
@@ -72,7 +71,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case status
         # in :Pending
@@ -98,7 +96,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :AchRepayment
@@ -116,7 +113,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

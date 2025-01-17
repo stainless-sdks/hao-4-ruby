@@ -18,7 +18,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   attributes: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes,
@@ -48,7 +47,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   channel: enum: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Channel,
@@ -98,7 +96,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case channel
               # in :sms
@@ -115,7 +112,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case language
               # in :en
@@ -179,7 +175,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -208,7 +203,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :customerTokenVerification

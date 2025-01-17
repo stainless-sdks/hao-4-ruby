@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # card_report_lost_response => {
     #   data: Unit::Models::Card

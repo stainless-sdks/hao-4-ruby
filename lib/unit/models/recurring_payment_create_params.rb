@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in {type: "recurringDebitAchPayment", attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes, relationships: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships, type: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Type}
@@ -27,7 +26,6 @@ module Unit
       # ```
       #
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment
@@ -50,7 +48,6 @@ module Unit
         variant -> { Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment }
 
         # @example
-        #
         # ```ruby
         # create_recurring_credit_ach_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes,
@@ -89,7 +86,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -130,7 +126,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -139,14 +135,13 @@ module Unit
             #   # @param schedule [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule]
             #   # @param addenda [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(amount:, description:, schedule:, addenda: nil, idempotency_key: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case schedule
             # in {interval: "Weekly", interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule::Interval, next_scheduled_action: Date, day_of_month: Integer}
@@ -157,7 +152,6 @@ module Unit
             # ```
             #
             # @example
-            #
             # ```ruby
             # case schedule
             # in Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule
@@ -176,7 +170,6 @@ module Unit
                       -> { Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule }
 
               # @example
-              #
               # ```ruby
               # weekly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule::Interval,
@@ -243,7 +236,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Weekly
@@ -258,7 +250,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # monthly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::Interval,
@@ -329,7 +320,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Monthly
@@ -343,7 +333,6 @@ module Unit
                 end
 
                 # @example
-                #
                 # ```ruby
                 # case day_of_week
                 # in :Sunday
@@ -376,7 +365,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Relationships::Account,
@@ -405,7 +393,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Relationships::Account::Data
@@ -426,7 +413,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -456,7 +442,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -481,7 +466,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Relationships::Counterparty::Data
@@ -502,7 +486,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -532,7 +515,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -549,7 +531,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringCreditAchPayment
@@ -564,7 +545,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_recurring_debit_ach_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes,
@@ -603,7 +583,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -655,7 +634,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute verify_counterparty_balance
@@ -671,7 +650,7 @@ module Unit
             #   # @param clearing_days_override [Integer]
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
@@ -692,7 +671,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case schedule
             # in {interval: "Weekly", interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule::Interval, next_scheduled_action: Date, day_of_month: Integer}
@@ -703,7 +681,6 @@ module Unit
             # ```
             #
             # @example
-            #
             # ```ruby
             # case schedule
             # in Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule
@@ -722,7 +699,6 @@ module Unit
                       -> { Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule }
 
               # @example
-              #
               # ```ruby
               # weekly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule::Interval,
@@ -789,7 +765,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Weekly
@@ -804,7 +779,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # monthly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::Interval,
@@ -875,7 +849,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Monthly
@@ -889,7 +862,6 @@ module Unit
                 end
 
                 # @example
-                #
                 # ```ruby
                 # case day_of_week
                 # in :Sunday
@@ -922,7 +894,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships::Account,
@@ -951,7 +922,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships::Account::Data
@@ -972,7 +942,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1002,7 +971,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1027,7 +995,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships::Counterparty::Data
@@ -1048,7 +1015,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1078,7 +1044,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -1095,7 +1060,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringDebitAchPayment
@@ -1110,7 +1074,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_recurring_credit_book_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes,
@@ -1149,7 +1112,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -1185,7 +1147,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute transaction_summary_override
@@ -1198,7 +1160,7 @@ module Unit
             #   # @param description [String]
             #   # @param schedule [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, schedule:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
@@ -1206,7 +1168,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case schedule
             # in {interval: "Weekly", interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule::Interval, next_scheduled_action: Date, day_of_month: Integer}
@@ -1217,7 +1178,6 @@ module Unit
             # ```
             #
             # @example
-            #
             # ```ruby
             # case schedule
             # in Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule
@@ -1236,7 +1196,6 @@ module Unit
                       -> { Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule }
 
               # @example
-              #
               # ```ruby
               # weekly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule::Interval,
@@ -1303,7 +1262,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Weekly
@@ -1318,7 +1276,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # monthly_schedule => {
               #   interval: enum: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::Interval,
@@ -1389,7 +1346,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case interval
                 # in :Monthly
@@ -1403,7 +1359,6 @@ module Unit
                 end
 
                 # @example
-                #
                 # ```ruby
                 # case day_of_week
                 # in :Sunday
@@ -1436,7 +1391,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Relationships::Account,
@@ -1468,7 +1422,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Relationships::Account::Data
@@ -1489,7 +1442,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1519,7 +1471,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1544,7 +1495,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Relationships::CounterpartyAccount::Data
@@ -1565,7 +1515,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1595,7 +1544,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1615,7 +1563,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringCreditBookPayment

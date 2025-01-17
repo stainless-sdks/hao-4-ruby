@@ -31,7 +31,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   credit_account_id: String,
@@ -82,7 +81,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case status
         # in :Active
@@ -100,7 +98,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,
@@ -130,7 +127,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case sort
       # in :createdAt

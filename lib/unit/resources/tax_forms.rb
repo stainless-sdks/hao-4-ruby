@@ -7,7 +7,7 @@ module Unit
       #
       # @param tax_form_id [String] ID of the reward to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::TaxFormRetrieveResponse]
       #
@@ -23,13 +23,13 @@ module Unit
 
       # Get Tax Forms List from API
       #
-      # @param params [Unit::Models::TaxFormListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::TaxFormListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::TaxFormListParams::Filter] :filter
       #
       #   @option params [Unit::Models::TaxFormListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::TaxFormListResponse]
       #
@@ -49,7 +49,7 @@ module Unit
       #
       # @param tax_form_id [String] ID of the reward to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Object]
       #

@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # return_return_response => {
     #   data: Unit::Models::ReturnReturnResponse::Data
@@ -34,7 +33,6 @@ module Unit
         required :relationships, -> { Unit::Models::ReturnReturnResponse::Data::Relationships }
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -83,7 +81,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
@@ -94,14 +92,13 @@ module Unit
           #   # @param direction [String]
           #   # @param reason [String]
           #   # @param summary [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(amount:, balance:, company_name:, created_at:, direction:, reason:, summary:, tags: nil, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case direction
           # in :Credit
@@ -119,7 +116,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::ReturnReturnResponse::Data::Relationships::Account,
@@ -160,7 +156,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data
@@ -180,7 +175,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -210,7 +204,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -235,7 +228,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # returned => {
           #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Returned::Data
@@ -255,7 +247,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -284,7 +275,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data
@@ -304,7 +294,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -334,7 +323,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -356,7 +344,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customers => {
           #   data: -> { Unit::ArrayOf[Unit::Models::ReturnReturnResponse::Data::Relationships::Customers::Data] === _1 }
@@ -379,7 +366,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,

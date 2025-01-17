@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # payment_retrieve_response => {
     #   data: Unit::Models::PaymentRetrieveResponse::Data,
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -57,7 +55,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case type
         # in :achPayment
@@ -78,7 +75,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # included => {
       #   id: String,

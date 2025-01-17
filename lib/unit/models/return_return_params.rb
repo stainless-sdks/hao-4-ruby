@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::ReturnReturnParams::Data::Attributes,
@@ -50,7 +49,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   reason: enum: Unit::Models::ReturnReturnParams::Data::Attributes::Reason
@@ -70,7 +68,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case reason
           # in :InsufficientFunds
@@ -135,7 +132,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::ReturnReturnParams::Data::Relationships::Account
@@ -155,7 +151,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::ReturnReturnParams::Data::Relationships::Account::Data
@@ -175,7 +170,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -205,7 +199,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -231,7 +224,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :atmTransaction

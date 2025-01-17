@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # reward_create_response => {
     #   data: Unit::Models::RewardCreateResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -97,7 +94,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           required :tags, Unit::HashOf[String]
 
           # @!attribute reject_reason
@@ -110,7 +107,7 @@ module Unit
           #   # @param created_at [String]
           #   # @param description [String]
           #   # @param status [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   # @param reject_reason [String]
           #   #
           #   def initialize(amount:, created_at:, description:, status:, tags:, reject_reason: nil, **) = super
@@ -118,7 +115,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case status
           # in :Rejected
@@ -136,7 +132,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   customer: Unit::Models::RewardCreateResponse::Data::Relationships::Customer,
@@ -206,7 +201,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::Customer::Data
@@ -226,7 +220,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -256,7 +249,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -278,7 +270,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # funding_account => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::FundingAccount::Data
@@ -301,7 +292,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -330,7 +320,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # receiving_account => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::ReceivingAccount::Data
@@ -353,7 +342,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -383,7 +371,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -405,7 +392,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # card => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::Card::Data
@@ -425,7 +411,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -454,7 +439,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # rewarded_transaction => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::RewardedTransaction::Data
@@ -477,7 +461,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -506,7 +489,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # transaction => {
           #   data: Unit::Models::RewardCreateResponse::Data::Relationships::Transaction::Data
@@ -526,7 +508,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -556,7 +537,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :transaction
@@ -573,7 +553,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :reward

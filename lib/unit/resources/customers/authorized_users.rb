@@ -8,11 +8,11 @@ module Unit
         #
         # @param customer_id [String] ID of the customer to add authorized users to
         #
-        # @param params [Unit::Models::Customers::AuthorizedUserCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Customers::AuthorizedUserCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Customers::AuthorizedUserCreateParams::Data] :data
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Customers::AuthorizedUserCreateResponse]
         #
@@ -35,11 +35,11 @@ module Unit
         #
         # @param customer_id [String] ID of the customer to remove authorized users from
         #
-        # @param params [Unit::Models::Customers::AuthorizedUserDeleteParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Customers::AuthorizedUserDeleteParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Customers::AuthorizedUserDeleteParams::Data] :data
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Customers::AuthorizedUserDeleteResponse]
         #

@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # account_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::Account] === _1 },
@@ -37,7 +36,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # included => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case type
         # in :individualCustomer
@@ -82,7 +79,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # meta => {
       #   pagination: Unit::Models::AccountListResponse::Meta::Pagination
@@ -102,7 +98,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # pagination => {
         #   limit: Integer,

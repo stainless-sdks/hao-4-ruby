@@ -5,11 +5,11 @@ module Unit
     class RecurringRepayments
       # Create a Recurring Repayment via API
       #
-      # @param params [Unit::Models::RecurringRepaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentCreateResponse]
       #
@@ -32,11 +32,11 @@ module Unit
       #
       # @param recurring_repayment_id [String] ID of the recurring repayment to get
       #
-      # @param params [Unit::Models::RecurringRepaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentRetrieveResponse]
       #
@@ -54,7 +54,7 @@ module Unit
 
       # Get List Recurring Repayments from API
       #
-      # @param params [Unit::Models::RecurringRepaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RecurringRepaymentListParams::Filter] :filter
       #
@@ -62,7 +62,7 @@ module Unit
       #
       #   @option params [Symbol, Unit::Models::RecurringRepaymentListParams::Sort] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentListResponse]
       #
@@ -82,13 +82,13 @@ module Unit
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to disable
       #
-      # @param params [Unit::Models::RecurringRepaymentDisableParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentDisableParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body Body param:
       #
       #   @option params [String] :include Query param:
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentDisableResponse]
       #
@@ -112,13 +112,13 @@ module Unit
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to enable
       #
-      # @param params [Unit::Models::RecurringRepaymentEnableParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentEnableParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body Body param:
       #
       #   @option params [String] :include Query param:
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RecurringRepaymentEnableResponse]
       #

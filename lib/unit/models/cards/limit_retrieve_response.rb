@@ -4,7 +4,6 @@ module Unit
   module Models
     module Cards
       # @example
-      #
       # ```ruby
       # limit_retrieve_response => {
       #   data: Unit::Models::Cards::LimitRetrieveResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes,
@@ -51,7 +49,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   daily_totals: Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::DailyTotals,
@@ -89,7 +86,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # daily_totals => {
             #   card_transactions: Integer,
@@ -131,7 +127,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # monthly_totals => {
             #   card_transactions: Integer,
@@ -173,7 +168,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -216,7 +210,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :limits

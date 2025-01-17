@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment
@@ -39,7 +38,6 @@ module Unit
         variant -> { Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment }
 
         # @example
-        #
         # ```ruby
         # create_book_repayment => {
         #   attributes: Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment::Attributes,
@@ -77,7 +75,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Float,
@@ -112,7 +109,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment::Relationships::Account,
@@ -155,7 +151,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment::Relationships::Account::Data
@@ -176,7 +171,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -206,7 +200,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -231,7 +224,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment::Relationships::CounterpartyAccount::Data
@@ -252,7 +244,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -282,7 +273,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -301,7 +291,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment::Relationships::CreditAccount::Data
@@ -322,7 +311,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -352,7 +340,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -369,7 +356,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :bookRepayment
@@ -384,7 +370,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_capital_partner_book_repayment => {
         #   attributes: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment::Attributes,
@@ -423,7 +408,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Float,
@@ -458,7 +442,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   counterparty_account: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment::Relationships::CounterpartyAccount,
@@ -493,7 +476,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment::Relationships::CounterpartyAccount::Data
@@ -514,7 +496,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -544,7 +525,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -563,7 +543,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment::Relationships::CreditAccount::Data
@@ -584,7 +563,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -614,7 +592,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -631,7 +608,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :capitalPartnerBookRepayment
@@ -646,7 +622,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_ach_repayment => {
         #   attributes: Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment::Attributes,
@@ -684,7 +659,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Float,
@@ -733,7 +707,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment::Relationships::Account,
@@ -773,7 +746,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment::Relationships::Account::Data
@@ -794,7 +766,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -824,7 +795,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -849,7 +819,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment::Relationships::Counterparty::Data
@@ -870,7 +839,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -900,7 +868,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -916,7 +883,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment::Relationships::CreditAccount::Data
@@ -937,7 +903,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -967,7 +932,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -984,7 +948,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achRepayment
@@ -999,7 +962,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_capital_partner_ach_repayment => {
         #   attributes: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment::Attributes,
@@ -1038,7 +1000,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Float,
@@ -1087,7 +1048,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   counterparty: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment::Relationships::Counterparty,
@@ -1119,7 +1079,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment::Relationships::Counterparty::Data
@@ -1140,7 +1099,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1170,7 +1128,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -1186,7 +1143,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment::Relationships::CreditAccount::Data
@@ -1207,7 +1163,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1237,7 +1192,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -1254,7 +1208,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :capitalPartnerAchRepayment

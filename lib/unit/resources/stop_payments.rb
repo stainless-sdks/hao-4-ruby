@@ -7,11 +7,11 @@ module Unit
       #
       # @param stop_payment_id [String] ID of the stop payment
       #
-      # @param params [Unit::Models::StopPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::StopPaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StopPaymentCreateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
       #
@@ -30,7 +30,7 @@ module Unit
       #
       # @param stop_payment_id [String] ID of the stop payment
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
       #
@@ -45,7 +45,7 @@ module Unit
 
       # Get a list of stop payments
       #
-      # @param params [Unit::Models::StopPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::StopPaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::StopPaymentListParams::Filter] :filter
       #
@@ -53,7 +53,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPaymentList]
       #
@@ -72,7 +72,7 @@ module Unit
       #
       # @param stop_payment_id [String] ID of the stop payment
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::StopPayment]
       #

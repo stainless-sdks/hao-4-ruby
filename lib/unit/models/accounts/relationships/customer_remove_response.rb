@@ -5,7 +5,6 @@ module Unit
     module Accounts
       module Relationships
         # @example
-        #
         # ```ruby
         # customer_remove_response => {
         #   data: Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data
@@ -38,7 +37,6 @@ module Unit
                      -> { Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data::Relationships }
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   available: Integer,
@@ -100,7 +98,7 @@ module Unit
 
               # @!attribute tags
               #
-              #   @return [Hash{Symbol => String}]
+              #   @return [Hash{Symbol=>String}]
               required :tags, Unit::HashOf[String]
 
               # @!attribute account_number
@@ -184,7 +182,7 @@ module Unit
               #   # @param name [String]
               #   # @param routing_number [String]
               #   # @param status [String]
-              #   # @param tags [Hash{Symbol => String}]
+              #   # @param tags [Hash{Symbol=>String}]
               #   # @param account_number [String]
               #   # @param close_reason [String]
               #   # @param close_reason_text [String]
@@ -227,7 +225,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case status
               # in :Open
@@ -247,7 +244,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case close_reason
               # in :ByCustomer
@@ -277,7 +273,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case daca_status
               # in :Activated
@@ -294,7 +289,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case fraud_reason
               # in :ACHActivity
@@ -325,7 +319,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # secondary_account_number => {
               #   account_number: String,
@@ -354,7 +347,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # relationships => {
             #   customer: Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data::Relationships::Customer
@@ -375,7 +367,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # customer => {
               #   data: Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data::Relationships::Customer::Data
@@ -396,7 +387,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # data => {
                 #   id: String,
@@ -426,7 +416,6 @@ module Unit
                   # def initialize: (Hash | Unit::BaseModel) -> void
 
                   # @example
-                  #
                   # ```ruby
                   # case type
                   # in :customer

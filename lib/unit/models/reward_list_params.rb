@@ -38,7 +38,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   card_id: String,
@@ -82,7 +81,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!attribute transaction_id
@@ -102,7 +101,7 @@ module Unit
         #   # @param rewarded_transaction_id [String]
         #   # @param since [String]
         #   # @param status [String]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   # @param transaction_id [String]
         #   # @param until_ [String]
         #   #
@@ -125,7 +124,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

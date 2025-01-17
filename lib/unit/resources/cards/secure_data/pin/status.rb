@@ -10,7 +10,7 @@ module Unit
             #
             # @param card_id [String] ID of the card to get PIN status
             #
-            # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+            # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
             #
             # @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse]
             #

@@ -4,7 +4,6 @@ module Unit
   module Models
     module Counterparties
       # @example
-      #
       # ```ruby
       # balance_retrieve_response => {
       #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   id: String,
@@ -68,7 +66,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   counterparty: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty,
@@ -97,7 +94,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Counterparty::Data
@@ -118,7 +114,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -148,7 +143,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -164,7 +158,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Relationships::Customer::Data
@@ -185,7 +178,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -215,7 +207,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -238,7 +229,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :counterpartyBalance
@@ -252,7 +242,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   balance: Float,

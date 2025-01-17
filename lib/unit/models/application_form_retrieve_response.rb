@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # application_form_retrieve_response => {
     #   data: Unit::Models::ApplicationForm,

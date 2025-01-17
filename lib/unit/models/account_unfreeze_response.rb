@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # account_unfreeze_response => {
     #   data: Unit::Models::Account

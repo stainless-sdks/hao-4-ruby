@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # authorization_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::Authorization] === _1 }

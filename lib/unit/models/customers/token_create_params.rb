@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::TokenCreateParams::Data::Attributes,
@@ -44,7 +43,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   expires_in: Integer,
@@ -119,7 +117,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # resource => {
             #   ids: -> { Unit::ArrayOf[String] === _1 },
@@ -149,7 +146,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :card
@@ -168,7 +164,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :customerToken

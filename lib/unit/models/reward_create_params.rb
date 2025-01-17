@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::RewardCreateParams::Data::Attributes,
@@ -50,7 +49,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -77,14 +75,14 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
           #   # @param amount [Integer]
           #   # @param description [String]
           #   # @param idempotency_key [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(amount:, description:, idempotency_key: nil, tags: nil, **) = super
 
@@ -92,7 +90,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   receiving_account: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount,
@@ -132,7 +129,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # receiving_account => {
           #   data: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount::Data
@@ -155,7 +151,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -185,7 +180,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -207,7 +201,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # funding_account => {
           #   data: Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount::Data
@@ -227,7 +220,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -256,7 +248,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # rewarded_transaction => {
           #   data: Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction::Data
@@ -279,7 +270,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -309,7 +299,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :reward

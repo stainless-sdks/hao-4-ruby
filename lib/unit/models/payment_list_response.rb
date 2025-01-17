@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # payment_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::PaymentListResponse::Data] === _1 },
@@ -37,7 +36,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case type
         # in :achPayment
@@ -85,7 +82,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # included => {
       #   id: String,
@@ -127,7 +123,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # meta => {
       #   pagination: Unit::Models::PaymentListResponse::Meta::Pagination
@@ -147,7 +142,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # pagination => {
         #   limit: Integer,

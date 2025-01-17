@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CheckPaymentCreateParams::Data::Attributes,
@@ -50,7 +49,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -97,7 +95,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
@@ -107,14 +105,13 @@ module Unit
           #   # @param idempotency_key [String]
           #   # @param memo [String]
           #   # @param send_date [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(amount:, counterparty:, description:, idempotency_key:, memo: nil, send_date: nil, tags: nil, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # counterparty => {
           #   address: Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty::Address,
@@ -151,7 +148,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -208,7 +204,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account,
@@ -235,7 +230,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account::Data
@@ -255,7 +249,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -285,7 +278,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -310,7 +302,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer::Data
@@ -330,7 +321,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -360,7 +350,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -383,7 +372,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :checkPayment

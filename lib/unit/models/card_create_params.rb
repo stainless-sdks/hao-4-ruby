@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest
@@ -47,7 +46,6 @@ module Unit
         variant -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest }
 
         # @example
-        #
         # ```ruby
         # create_individual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes,
@@ -86,7 +84,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   active_for_online_use: Unit::BooleanModel,
@@ -161,7 +158,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -176,7 +173,7 @@ module Unit
             #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits]
             #   # @param print_only_business_name [Boolean]
             #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     active_for_online_use: nil,
@@ -199,7 +196,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # bin => {
             #   bin: String,
@@ -227,7 +223,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -269,7 +264,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # shipping_address => {
             #   city: String,
@@ -325,7 +319,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account,
@@ -365,7 +358,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account::Data
@@ -386,7 +378,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -416,7 +407,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -441,7 +431,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer::Data
@@ -462,7 +451,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -492,7 +480,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -514,7 +501,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount::Data
@@ -535,7 +521,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -565,7 +550,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualDebitCard
@@ -580,7 +564,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_business_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes,
@@ -619,7 +602,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Address,
@@ -724,7 +706,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -744,7 +726,7 @@ module Unit
             #   # @param print_only_business_name [Boolean]
             #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress]
             #   # @param ssn [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     address:,
@@ -772,7 +754,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -827,7 +808,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -855,7 +835,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -883,7 +862,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -925,7 +903,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # shipping_address => {
             #   city: String,
@@ -981,7 +958,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account,
@@ -1021,7 +997,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account::Data
@@ -1042,7 +1017,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1072,7 +1046,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1097,7 +1070,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer::Data
@@ -1118,7 +1090,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1148,7 +1119,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -1170,7 +1140,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount::Data
@@ -1191,7 +1160,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1221,7 +1189,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessDebitCard
@@ -1236,7 +1203,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_business_credit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes,
@@ -1275,7 +1241,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Address,
@@ -1380,7 +1345,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -1400,7 +1365,7 @@ module Unit
             #   # @param print_only_business_name [Boolean]
             #   # @param shipping_address [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress]
             #   # @param ssn [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     address:,
@@ -1428,7 +1393,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -1483,7 +1447,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -1511,7 +1474,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -1539,7 +1501,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -1581,7 +1542,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # shipping_address => {
             #   city: String,
@@ -1637,7 +1597,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account,
@@ -1677,7 +1636,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account::Data
@@ -1698,7 +1656,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1728,7 +1685,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1753,7 +1709,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer::Data
@@ -1774,7 +1729,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1804,7 +1758,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -1826,7 +1779,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount::Data
@@ -1847,7 +1799,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1877,7 +1828,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessCreditCard
@@ -1892,7 +1842,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_individual_virtual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes,
@@ -1931,7 +1880,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   bin: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin,
@@ -1971,7 +1919,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -1980,14 +1928,13 @@ module Unit
             #   # @param expiry_date [String]
             #   # @param idempotency_key [String]
             #   # @param limits [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(bin: nil, card_qualifier: nil, expiry_date: nil, idempotency_key: nil, limits: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # bin => {
             #   bin: String,
@@ -2015,7 +1962,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -2058,7 +2004,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account,
@@ -2098,7 +2043,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account::Data
@@ -2119,7 +2063,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2149,7 +2092,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -2174,7 +2116,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer::Data
@@ -2195,7 +2136,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2225,7 +2165,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -2247,7 +2186,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount::Data
@@ -2268,7 +2206,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2298,7 +2235,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualVirtualDebitCard
@@ -2313,7 +2249,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_business_virtual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes,
@@ -2352,7 +2287,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Address,
@@ -2428,7 +2362,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -2443,7 +2377,7 @@ module Unit
             #   # @param nationality [String]
             #   # @param passport [String]
             #   # @param ssn [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     address:,
@@ -2466,7 +2400,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -2521,7 +2454,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -2549,7 +2481,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -2577,7 +2508,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -2620,7 +2550,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account,
@@ -2660,7 +2589,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account::Data
@@ -2681,7 +2609,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2711,7 +2638,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -2736,7 +2662,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer::Data
@@ -2757,7 +2682,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2787,7 +2711,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -2809,7 +2732,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount::Data
@@ -2830,7 +2752,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -2860,7 +2781,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessVirtualDebitCard
@@ -2875,7 +2795,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_business_virtual_credit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes,
@@ -2914,7 +2833,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Address,
@@ -2990,7 +2908,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -3005,7 +2923,7 @@ module Unit
             #   # @param nationality [String]
             #   # @param passport [String]
             #   # @param ssn [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     address:,
@@ -3028,7 +2946,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -3083,7 +3000,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -3111,7 +3027,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -3139,7 +3054,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # limits => {
             #   daily_purchase: Integer,
@@ -3182,7 +3096,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account,
@@ -3222,7 +3135,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account::Data
@@ -3243,7 +3155,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -3273,7 +3184,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -3298,7 +3208,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer::Data
@@ -3319,7 +3228,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -3349,7 +3257,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -3371,7 +3278,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # default_funding_account => {
             #   data: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount::Data
@@ -3392,7 +3298,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -3422,7 +3327,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessVirtualCreditCard

@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # check_payment_cancel_response => {
     #   data: Unit::Models::CheckPaymentCancelResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -203,7 +200,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!attribute tracked_at
@@ -234,7 +231,7 @@ module Unit
           #   # @param return_cutoff_time [String]
           #   # @param return_reason [String]
           #   # @param send_at [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   # @param tracked_at [String]
           #   #
           #   def initialize(
@@ -270,7 +267,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case status
           # in :MarkedForReturn
@@ -293,7 +289,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case additional_verification_status
           # in :Required
@@ -313,7 +308,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # counterparty => {
           #   address: Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address,
@@ -348,7 +342,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -404,7 +397,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case delivery_status
           # in :Mailed
@@ -430,7 +422,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case pending_review_reason
           # in :NameMissMatch
@@ -447,7 +438,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case return_reason
           # in :InsufficientFunds
@@ -483,7 +473,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Account,
@@ -527,7 +516,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Account::Data
@@ -550,7 +538,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -580,7 +567,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -605,7 +591,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customer::Data
@@ -628,7 +613,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -658,7 +642,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -680,7 +663,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customers => {
           #   data: -> { Unit::ArrayOf[Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customers::Data] === _1 }
@@ -703,7 +685,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -732,7 +713,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # transaction => {
           #   data: Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Transaction::Data
@@ -755,7 +735,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -785,7 +764,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :transaction
@@ -802,7 +780,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :checkPayment

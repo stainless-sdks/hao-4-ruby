@@ -11,7 +11,7 @@ module Unit
         #
         # @param application_id [String] ID of the application to create a file for
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentCreateResponse]
         #
@@ -29,7 +29,7 @@ module Unit
         #
         # @param application_id [String] ID of the application to get documents for
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentListResponse]
         #
@@ -47,11 +47,11 @@ module Unit
         #
         # @param document_id [String] ID of the document to download
         #
-        # @param params [Unit::Models::Applications::DocumentDownloadParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentDownloadParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id ID of the application
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Object]
         #
@@ -73,11 +73,11 @@ module Unit
         #
         # @param document_id [String] ID of the document to download
         #
-        # @param params [Unit::Models::Applications::DocumentDownloadBackParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentDownloadBackParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id ID of the application
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Object]
         #
@@ -99,7 +99,7 @@ module Unit
         #
         # @param document_id [String] Path param: ID of the document to upload a file for
         #
-        # @param params [Unit::Models::Applications::DocumentMultipartParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentMultipartParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id Path param: ID of the application to upload a file to
         #
@@ -107,7 +107,7 @@ module Unit
         #
         #   @option params [Symbol, Unit::Models::Applications::DocumentMultipartParams::FileType] :file_type Body param:
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentMultipartResponse]
         #
@@ -133,13 +133,13 @@ module Unit
         #
         # @param document_id [String] Path param: ID of the document to verify
         #
-        # @param params [Unit::Models::Applications::DocumentVerifyParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Applications::DocumentVerifyParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :application_id Path param: ID of the application to verify a file for
         #
         #   @option params [String] :job_id Body param:
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Applications::DocumentVerifyResponse]
         #

@@ -5,11 +5,11 @@ module Unit
     class Repayments
       # Create a Repayment via API
       #
-      # @param params [Unit::Models::RepaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RepaymentCreateParams::Data::CreateBookRepayment, Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerBookRepayment, Unit::Models::RepaymentCreateParams::Data::CreateACHRepayment, Unit::Models::RepaymentCreateParams::Data::CreateCapitalPartnerACHRepayment] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentCreateResponse]
       #
@@ -32,11 +32,11 @@ module Unit
       #
       # @param repayment_id [String] ID of the repayment to get
       #
-      # @param params [Unit::Models::RepaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentRetrieveResponse]
       #
@@ -54,13 +54,13 @@ module Unit
 
       # Get List Repayments from API
       #
-      # @param params [Unit::Models::RepaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RepaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::RepaymentListParams::Filter] :filter
       #
       #   @option params [Unit::Models::RepaymentListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::RepaymentListResponse]
       #

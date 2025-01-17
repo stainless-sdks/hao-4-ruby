@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # authorization_request_approve_response => {
     #   data: Unit::Models::AuthorizationRequest

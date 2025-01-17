@@ -8,11 +8,11 @@ module Unit
         #
         # @param user_id [String] ID of the user to create token for
         #
-        # @param params [Unit::Models::Users::APITokenCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [Unit::Models::Users::APITokenCreateParams::Data] :data
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenCreateResponse]
         #
@@ -32,7 +32,7 @@ module Unit
         #
         # @param user_id [String] ID of the user to revoke token
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenListResponse]
         #
@@ -50,11 +50,11 @@ module Unit
         #
         # @param token_id [String] ID of the token to revoke
         #
-        # @param params [Unit::Models::Users::APITokenDeleteParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenDeleteParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :user_id ID of the user to revoke token
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Users::APITokenDeleteResponse]
         #

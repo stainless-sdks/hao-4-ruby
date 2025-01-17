@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # check_deposit_update_response => {
     #   data: Unit::Models::CheckDepositUpdateResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -145,7 +142,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!attribute vendor
@@ -166,7 +163,7 @@ module Unit
           #   # @param status_created_at [String]
           #   # @param status_history [Array<Unit::Models::CheckDepositUpdateResponse::Data::Attributes::StatusHistory>]
           #   # @param status_set_by [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   # @param vendor [String]
           #   #
           #   def initialize(
@@ -192,7 +189,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case status
           # in :AwaitingImages
@@ -226,7 +222,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # counterparty => {
           #   account_number: String,
@@ -261,7 +256,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # status_history => {
           #   status: Unit::Models::CheckDepositUpdateResponse::Data::Attributes::StatusHistory::Status,
@@ -298,7 +292,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # status => {
             #   type: enum: Unit::Models::CheckDepositUpdateResponse::Data::Attributes::StatusHistory::Status::Type
@@ -321,7 +314,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :AwaitingImages
@@ -358,7 +350,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::CheckDepositUpdateResponse::Data::Relationships::Account,
@@ -402,7 +393,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::CheckDepositUpdateResponse::Data::Relationships::Account::Data
@@ -425,7 +415,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -455,7 +444,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -480,7 +468,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::CheckDepositUpdateResponse::Data::Relationships::Customer::Data
@@ -503,7 +490,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -533,7 +519,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -555,7 +540,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # org => {
           #   data: Unit::Models::CheckDepositUpdateResponse::Data::Relationships::Org::Data
@@ -575,7 +559,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -604,7 +587,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # transaction => {
           #   data: Unit::Models::CheckDepositUpdateResponse::Data::Relationships::Transaction::Data
@@ -627,7 +609,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -657,7 +638,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :transaction
@@ -674,7 +654,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :checkDeposit

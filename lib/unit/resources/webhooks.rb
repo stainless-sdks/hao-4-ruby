@@ -5,11 +5,11 @@ module Unit
     class Webhooks
       # Create a Webhook via API
       #
-      # @param params [Unit::Models::WebhookCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookCreateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookCreateResponse]
       #
@@ -29,7 +29,7 @@ module Unit
       #
       # @param webhook_id [String] ID of the webhook to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookRetrieveResponse]
       #
@@ -47,11 +47,11 @@ module Unit
       #
       # @param webhook_id [String] ID of the Webhook to update
       #
-      # @param params [Unit::Models::WebhookUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookUpdateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookUpdateResponse]
       #
@@ -69,7 +69,7 @@ module Unit
 
       # Get List Webhooks from API
       #
-      # @param params [Unit::Models::WebhookListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::WebhookListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::WebhookListParams::Filter] :filter
       #
@@ -77,7 +77,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookListResponse]
       #
@@ -97,7 +97,7 @@ module Unit
       #
       # @param webhook_id [String] ID of the webhook to disable
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookDisableResponse]
       #
@@ -115,7 +115,7 @@ module Unit
       #
       # @param webhook_id [String] ID of the webhook to enable
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::WebhookEnableResponse]
       #

@@ -38,7 +38,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   account_id: String,
@@ -97,7 +96,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!attribute to_amount
@@ -125,7 +124,7 @@ module Unit
         #   # @param recurring_payment_id [Integer]
         #   # @param since [String]
         #   # @param status [Array<String>]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   # @param to_amount [Integer]
         #   # @param type [Array<String>]
         #   # @param until_ [String]
@@ -152,7 +151,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case direction
         # in :Debit
@@ -169,7 +167,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case feature
         # in :SameDay
@@ -186,7 +183,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case status
         # in :Rejected
@@ -216,7 +212,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :AchPayment
@@ -237,7 +232,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

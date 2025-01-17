@@ -5,7 +5,6 @@ module Unit
     module Customers
       module Token
         # @example
-        #
         # ```ruby
         # verification_create_response => {
         #   data: Unit::Models::Customers::Token::VerificationCreateResponse::Data
@@ -25,7 +24,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   attributes: Unit::Models::Customers::Token::VerificationCreateResponse::Data::Attributes,
@@ -58,7 +56,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   verification_token: String
@@ -79,7 +76,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :customerTokenVerification

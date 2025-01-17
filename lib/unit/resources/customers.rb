@@ -13,7 +13,7 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerRetrieveResponse]
       #
@@ -31,11 +31,11 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to update
       #
-      # @param params [Unit::Models::CustomerUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerUpdateResponse]
       #
@@ -53,7 +53,7 @@ module Unit
 
       # Get Customers List from API
       #
-      # @param params [Unit::Models::CustomerListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerListParams::Filter] :filter
       #
@@ -61,7 +61,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerListResponse]
       #
@@ -81,11 +81,11 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to archive
       #
-      # @param params [Unit::Models::CustomerArchiveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerArchiveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CustomerArchiveParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CustomerArchiveResponse]
       #

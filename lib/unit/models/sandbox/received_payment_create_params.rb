@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Attributes,
@@ -54,7 +53,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -103,7 +101,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Relationships::Account
@@ -126,7 +123,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Relationships::Account::Data
@@ -147,7 +143,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -177,7 +172,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -203,7 +197,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achReceivedPayment
