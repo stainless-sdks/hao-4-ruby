@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class CheckDeposits
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Check Deposit via API
       #
       # @param params [Unit::Models::CheckDepositCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -162,6 +156,12 @@ module Unit
           model: Unit::Models::CheckDepositFrontResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

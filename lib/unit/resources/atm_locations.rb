@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class AtmLocations
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get List ATM Locations from API
       #
       # @param params [Unit::Models::AtmLocationListParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -29,6 +23,12 @@ module Unit
           model: Unit::ArrayOf[Unit::Models::AtmLocationListResponseItem]
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Webhooks
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Webhook via API
       #
       # @param params [Unit::Models::WebhookCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -133,6 +127,12 @@ module Unit
           model: Unit::Models::WebhookEnableResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

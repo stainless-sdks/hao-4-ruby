@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Accounts
       class RepaymentInformation
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Retrieve the repayment information for a specific account via API
         #
         # @param account_id [String] ID of the account to get repayment information for
@@ -26,6 +20,12 @@ module Unit
             model: Unit::Models::Accounts::RepaymentInformationRetrieveResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

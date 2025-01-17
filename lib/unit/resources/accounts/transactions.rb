@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Accounts
       class Transactions
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Get a Transaction from API
         #
         # @param transaction_id [String] ID of the transaction
@@ -63,6 +57,12 @@ module Unit
             model: Unit::Models::Accounts::TransactionUpdateResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

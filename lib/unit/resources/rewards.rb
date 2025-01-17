@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Rewards
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Reward via API
       #
       # @param params [Unit::Models::RewardCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -75,6 +69,12 @@ module Unit
           model: Unit::Models::RewardListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

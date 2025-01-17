@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Customers
       class AuthorizedUsers
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Add Authorized Users via API
         #
         # @param customer_id [String] ID of the customer to add authorized users to
@@ -62,6 +56,12 @@ module Unit
             model: Unit::Models::Customers::AuthorizedUserDeleteResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

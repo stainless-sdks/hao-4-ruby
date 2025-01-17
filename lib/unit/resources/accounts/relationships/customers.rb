@@ -5,12 +5,6 @@ module Unit
     class Accounts
       class Relationships
         class Customers
-          # @param client [Unit::Client]
-          #
-          def initialize(client:)
-            @client = client
-          end
-
           # Add Owners to Account via API
           #
           # @param account_id [String] ID of the account to add owners to
@@ -63,6 +57,12 @@ module Unit
               model: Unit::Models::Accounts::Relationships::CustomerRemoveResponse
             }
             @client.request(req, opts)
+          end
+
+          # @param client [Unit::Client]
+          #
+          def initialize(client:)
+            @client = client
           end
         end
       end

@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Returns
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Return Received ACH Transaction via API
       #
       # @param transaction_id [String] ID of the transaction to return
@@ -34,6 +28,12 @@ module Unit
           model: Unit::Models::ReturnReturnResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

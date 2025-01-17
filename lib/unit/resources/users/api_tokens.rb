@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Users
       class APITokens
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Create an Org API Token via API
         #
         # @param user_id [String] ID of the user to create token for
@@ -76,6 +70,12 @@ module Unit
             model: Unit::Models::Users::APITokenDeleteResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

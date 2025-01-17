@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Authorizations
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get a Authorization from API
       #
       # @param authorization_id [String] ID of the authorization to get
@@ -57,6 +51,12 @@ module Unit
           model: Unit::Models::AuthorizationListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

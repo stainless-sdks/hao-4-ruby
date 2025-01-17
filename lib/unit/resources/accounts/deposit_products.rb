@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Accounts
       class DepositProducts
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Retrieve the list of available deposit products compatible to the account.
         #
         # @param account_id [String] ID of the account to get deposit products for
@@ -26,6 +20,12 @@ module Unit
             model: Unit::Models::Accounts::DepositProductListResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

@@ -12,15 +12,6 @@ module Unit
       # @return [Unit::Resources::Statements::Pdf]
       attr_reader :pdf
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @bank_pdf = Unit::Resources::Statements::BankPdf.new(client: client)
-        @html = Unit::Resources::Statements::HTML.new(client: client)
-        @pdf = Unit::Resources::Statements::Pdf.new(client: client)
-      end
-
       # Get List Statements from API
       #
       # @param params [Unit::Models::StatementListParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -45,6 +36,15 @@ module Unit
           model: Unit::Models::StatementListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @bank_pdf = Unit::Resources::Statements::BankPdf.new(client: client)
+        @html = Unit::Resources::Statements::HTML.new(client: client)
+        @pdf = Unit::Resources::Statements::Pdf.new(client: client)
       end
     end
   end

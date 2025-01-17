@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Fees
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Fee via API
       #
       # @param params [Unit::Models::FeeCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -51,6 +45,12 @@ module Unit
           model: Unit::Models::FeeReverseResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

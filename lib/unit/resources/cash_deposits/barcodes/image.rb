@@ -5,12 +5,6 @@ module Unit
     class CashDeposits
       class Barcodes
         class Image
-          # @param client [Unit::Client]
-          #
-          def initialize(client:)
-            @client = client
-          end
-
           # Get Barcode Image By Barcode Number from API
           #
           # @param barcode_number [String]
@@ -27,6 +21,12 @@ module Unit
               model: Unit::Unknown
             }
             @client.request(req, opts)
+          end
+
+          # @param client [Unit::Client]
+          #
+          def initialize(client:)
+            @client = client
           end
         end
       end

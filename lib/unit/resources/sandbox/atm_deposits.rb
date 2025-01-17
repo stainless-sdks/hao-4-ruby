@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Sandbox
       class AtmDeposits
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Create Atm Deposit Simulation via API
         #
         # @param params [Unit::Models::Sandbox::AtmDepositCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -30,6 +24,12 @@ module Unit
             model: Unit::Models::Sandbox::AtmDepositCreateResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

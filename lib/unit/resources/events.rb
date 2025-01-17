@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Events
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get an Event from API
       #
       # @param event_id [String] ID of the event to get
@@ -67,6 +61,12 @@ module Unit
           model: Unit::Models::EventFireResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

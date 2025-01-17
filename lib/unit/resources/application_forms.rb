@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class ApplicationForms
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create an Application Form via API
       #
       # @param params [Unit::Models::ApplicationFormCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -79,6 +73,12 @@ module Unit
           model: Unit::Models::ApplicationFormListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

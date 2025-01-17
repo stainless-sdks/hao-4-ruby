@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class ReceivedPayments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get a Received Payment from API
       #
       # @param payment_id [String] ID of the payment to get
@@ -119,6 +113,12 @@ module Unit
           model: Unit::Models::ReceivedPaymentReprocessResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

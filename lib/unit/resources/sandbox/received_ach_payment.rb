@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Sandbox
       class ReceivedACHPayment
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Create Incoming ACH Payment Simulation via API
         #
         # @param params [Unit::Models::Sandbox::ReceivedACHPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -30,6 +24,12 @@ module Unit
             model: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

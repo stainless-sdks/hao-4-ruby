@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class AccountEndOfDay
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get Account Balance History List from API
       #
       # @param params [Unit::Models::AccountEndOfDayListParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -31,6 +25,12 @@ module Unit
           model: Unit::Models::AccountEndOfDayListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

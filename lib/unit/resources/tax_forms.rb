@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class TaxForms
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get a Tax Form from API
       #
       # @param tax_form_id [String] ID of the reward to get
@@ -67,6 +61,12 @@ module Unit
           model: Unit::Unknown
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end
