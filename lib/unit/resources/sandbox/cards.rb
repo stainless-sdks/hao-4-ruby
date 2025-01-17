@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Sandbox
       class Cards
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Activate Card Simulation via API
         #
         # @param card_id [String] ID of the card to activate
@@ -25,6 +19,12 @@ module Unit
             model: NilClass
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

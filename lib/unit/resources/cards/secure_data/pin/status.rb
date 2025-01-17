@@ -6,12 +6,6 @@ module Unit
       class SecureData
         class Pin
           class Status
-            # @param client [Unit::Client]
-            #
-            def initialize(client:)
-              @client = client
-            end
-
             # Get Card PIN Status via API
             #
             # @param card_id [String] ID of the card to get PIN status
@@ -28,6 +22,12 @@ module Unit
                 model: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse
               }
               @client.request(req, opts)
+            end
+
+            # @param client [Unit::Client]
+            #
+            def initialize(client:)
+              @client = client
             end
           end
         end

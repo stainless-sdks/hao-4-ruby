@@ -9,14 +9,6 @@ module Unit
       # @return [Unit::Resources::Customers::Token]
       attr_reader :token
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @authorized_users = Unit::Resources::Customers::AuthorizedUsers.new(client: client)
-        @token = Unit::Resources::Customers::Token.new(client: client)
-      end
-
       # Get a Customer from API
       #
       # @param customer_id [String] ID of the customer to get
@@ -110,6 +102,14 @@ module Unit
           model: Unit::Models::CustomerArchiveResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @authorized_users = Unit::Resources::Customers::AuthorizedUsers.new(client: client)
+        @token = Unit::Resources::Customers::Token.new(client: client)
       end
     end
   end

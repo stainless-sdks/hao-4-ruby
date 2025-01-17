@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Institutions
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get an Institution from API
       #
       # @param routing_number [String] routingNumber of the institution to get
@@ -25,6 +19,12 @@ module Unit
           model: Unit::Models::InstitutionRetrieveResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

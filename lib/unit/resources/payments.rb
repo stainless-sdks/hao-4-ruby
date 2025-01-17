@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Payments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Payment via API
       #
       # @param params [Unit::Models::PaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -135,6 +129,12 @@ module Unit
           model: Unit::Models::PaymentCancelResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

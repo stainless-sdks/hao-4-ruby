@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class CheckPayments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create Check Payment via API
       #
       # @param params [Unit::Models::CheckPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -183,6 +177,12 @@ module Unit
           model: Unit::Models::CheckPaymentReturnResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

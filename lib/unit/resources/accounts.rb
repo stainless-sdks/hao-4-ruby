@@ -18,17 +18,6 @@ module Unit
       # @return [Unit::Resources::Accounts::Transactions]
       attr_reader :transactions
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @deposit_products = Unit::Resources::Accounts::DepositProducts.new(client: client)
-        @limits = Unit::Resources::Accounts::Limits.new(client: client)
-        @relationships = Unit::Resources::Accounts::Relationships.new(client: client)
-        @repayment_information = Unit::Resources::Accounts::RepaymentInformation.new(client: client)
-        @transactions = Unit::Resources::Accounts::Transactions.new(client: client)
-      end
-
       # Create Account via API
       #
       # @param params [Unit::Models::AccountCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -270,6 +259,17 @@ module Unit
           model: Unit::Models::AccountUnfreezeResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @deposit_products = Unit::Resources::Accounts::DepositProducts.new(client: client)
+        @limits = Unit::Resources::Accounts::Limits.new(client: client)
+        @relationships = Unit::Resources::Accounts::Relationships.new(client: client)
+        @repayment_information = Unit::Resources::Accounts::RepaymentInformation.new(client: client)
+        @transactions = Unit::Resources::Accounts::Transactions.new(client: client)
       end
     end
   end

@@ -7,13 +7,6 @@ module Unit
         # @return [Unit::Resources::CashDeposits::Barcodes::Image]
         attr_reader :image
 
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-          @image = Unit::Resources::CashDeposits::Barcodes::Image.new(client: client)
-        end
-
         # Generate Cash Deposit Barcode via API
         #
         # @param params [Unit::Models::CashDeposits::BarcodeCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -34,6 +27,13 @@ module Unit
             model: Unit::Models::CashDeposits::BarcodeCreateResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
+          @image = Unit::Resources::CashDeposits::Barcodes::Image.new(client: client)
         end
       end
     end

@@ -7,13 +7,6 @@ module Unit
         # @return [Unit::Resources::Applications::Documents::Back]
         attr_reader :back
 
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-          @back = Unit::Resources::Applications::Documents::Back.new(client: client)
-        end
-
         # Create an application document via API
         #
         # @param application_id [String] ID of the application to create a file for
@@ -163,6 +156,13 @@ module Unit
             model: Unit::Models::Applications::DocumentVerifyResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
+          @back = Unit::Resources::Applications::Documents::Back.new(client: client)
         end
       end
     end

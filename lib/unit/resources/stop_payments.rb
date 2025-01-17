@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class StopPayments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Update a stop payment
       #
       # @param stop_payment_id [String] ID of the stop payment
@@ -89,6 +83,12 @@ module Unit
           model: Unit::Models::StopPayment
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Statements
       class Pdf
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Get a PDF Statement from API
         #
         # @param statement_id [String] ID of the statement to get
@@ -26,6 +20,12 @@ module Unit
             model: Unit::Unknown
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

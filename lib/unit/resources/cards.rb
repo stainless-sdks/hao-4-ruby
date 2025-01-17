@@ -9,14 +9,6 @@ module Unit
       # @return [Unit::Resources::Cards::SecureData]
       attr_reader :secure_data
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @limits = Unit::Resources::Cards::Limits.new(client: client)
-        @secure_data = Unit::Resources::Cards::SecureData.new(client: client)
-      end
-
       # Create a Card via API
       #
       # @param params [Unit::Models::CardCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -233,6 +225,14 @@ module Unit
           model: Unit::Models::CardUnfreezeResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @limits = Unit::Resources::Cards::Limits.new(client: client)
+        @secure_data = Unit::Resources::Cards::SecureData.new(client: client)
       end
     end
   end

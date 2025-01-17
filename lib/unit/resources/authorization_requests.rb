@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class AuthorizationRequests
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get a Authorization Request from API
       #
       # @param authorization_id [String] ID of the authorization request to get
@@ -103,6 +97,12 @@ module Unit
           model: Unit::Models::AuthorizationRequestDeclineResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

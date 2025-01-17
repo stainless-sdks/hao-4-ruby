@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class RecurringPayments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Recurring Payment via API
       #
       # @param params [Unit::Models::RecurringPaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -127,6 +121,12 @@ module Unit
           model: Unit::Models::RecurringPaymentEnableResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

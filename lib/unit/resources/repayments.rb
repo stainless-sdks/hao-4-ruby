@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Repayments
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Create a Repayment via API
       #
       # @param params [Unit::Models::RepaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -80,6 +74,12 @@ module Unit
           model: Unit::Models::RepaymentListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

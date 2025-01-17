@@ -6,13 +6,6 @@ module Unit
       # @return [Unit::Resources::Counterparties::Balance]
       attr_reader :balance
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @balance = Unit::Resources::Counterparties::Balance.new(client: client)
-      end
-
       # Create a counterparty via API
       #
       # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -118,6 +111,13 @@ module Unit
           model: NilClass
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @balance = Unit::Resources::Counterparties::Balance.new(client: client)
       end
     end
   end

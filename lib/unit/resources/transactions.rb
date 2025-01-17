@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Transactions
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get List Transactions from API
       #
       # @param params [Unit::Models::TransactionListParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -35,6 +29,12 @@ module Unit
           model: Unit::Models::TransactionListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

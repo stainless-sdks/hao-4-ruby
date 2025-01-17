@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class Disputes
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get a Dispute from API
       #
       # @param dispute_id [String] ID of the dispute to get
@@ -49,6 +43,12 @@ module Unit
           model: Unit::ArrayOf[Unit::Models::DisputeListResponseItem]
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

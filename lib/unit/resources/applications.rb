@@ -6,13 +6,6 @@ module Unit
       # @return [Unit::Resources::Applications::Documents]
       attr_reader :documents
 
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-        @documents = Unit::Resources::Applications::Documents.new(client: client)
-      end
-
       # Create an Application via API
       #
       # @param params [Unit::Models::ApplicationCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -134,6 +127,13 @@ module Unit
           model: Unit::Models::ApplicationCancelResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
+        @documents = Unit::Resources::Applications::Documents.new(client: client)
       end
     end
   end

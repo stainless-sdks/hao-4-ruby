@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class BeneficialOwners
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Update a Business Beneficial Owner
       #
       # @param beneficial_owner_id [String] ID of the beneficial owner to update
@@ -34,6 +28,12 @@ module Unit
           model: Unit::Models::BeneficialOwnerUpdateResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

@@ -3,12 +3,6 @@
 module Unit
   module Resources
     class StoreLocations
-      # @param client [Unit::Client]
-      #
-      def initialize(client:)
-        @client = client
-      end
-
       # Get Cash Deposit Store Locations List By Coordinates from API
       #
       # @param params [Unit::Models::StoreLocationListParams, Hash{Symbol => Object}] Attributes to send in this request.
@@ -31,6 +25,12 @@ module Unit
           model: Unit::Models::StoreLocationListResponse
         }
         @client.request(req, opts)
+      end
+
+      # @param client [Unit::Client]
+      #
+      def initialize(client:)
+        @client = client
       end
     end
   end

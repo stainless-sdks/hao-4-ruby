@@ -7,13 +7,6 @@ module Unit
         # @return [Unit::Resources::Customers::Token::Verification]
         attr_reader :verification
 
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-          @verification = Unit::Resources::Customers::Token::Verification.new(client: client)
-        end
-
         # Create a Customer Token via API
         #
         # @param customer_id [String] ID of the customer to create token for
@@ -39,6 +32,13 @@ module Unit
             model: Unit::Models::Customers::TokenCreateResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
+          @verification = Unit::Resources::Customers::Token::Verification.new(client: client)
         end
       end
     end

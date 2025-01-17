@@ -5,12 +5,6 @@ module Unit
     class Customers
       class Token
         class Verification
-          # @param client [Unit::Client]
-          #
-          def initialize(client:)
-            @client = client
-          end
-
           # Create a Customer Token Verification via API
           #
           # @param customer_id [String] ID of the customer to create token for
@@ -36,6 +30,12 @@ module Unit
               model: Unit::Models::Customers::Token::VerificationCreateResponse
             }
             @client.request(req, opts)
+          end
+
+          # @param client [Unit::Client]
+          #
+          def initialize(client:)
+            @client = client
           end
         end
       end

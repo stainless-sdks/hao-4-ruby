@@ -4,12 +4,6 @@ module Unit
   module Resources
     class Counterparties
       class Balance
-        # @param client [Unit::Client]
-        #
-        def initialize(client:)
-          @client = client
-        end
-
         # Get Recurring Payment from API
         #
         # @param counterparty_id [String] ID of the counterparty to get
@@ -26,6 +20,12 @@ module Unit
             model: Unit::Models::Counterparties::BalanceRetrieveResponse
           }
           @client.request(req, opts)
+        end
+
+        # @param client [Unit::Client]
+        #
+        def initialize(client:)
+          @client = client
         end
       end
     end

@@ -5,12 +5,6 @@ module Unit
     class Applications
       class Documents
         class Back
-          # @param client [Unit::Client]
-          #
-          def initialize(client:)
-            @client = client
-          end
-
           # Upload an application file via API - Back Side. Supports PDF, PNG and JPG files
           #
           # @param document_id [String] Path param: ID of the document to upload a file for
@@ -43,6 +37,12 @@ module Unit
               model: Unit::Models::Applications::Documents::BackUploadResponse
             }
             @client.request(req, opts)
+          end
+
+          # @param client [Unit::Client]
+          #
+          def initialize(client:)
+            @client = client
           end
         end
       end
