@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # application_form => {
     #   id: String,
@@ -44,7 +43,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # attributes => {
       #   url: String,
@@ -96,7 +94,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!parse
@@ -106,7 +104,7 @@ module Unit
         #   # @param email [String]
         #   # @param settings_override [Unit::Models::ApplicationForm::Attributes::SettingsOverride]
         #   # @param stage [String]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   #
         #   def initialize(
         #     url:,
@@ -124,7 +122,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case allowed_application_type
         # in :Individual
@@ -144,7 +141,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # applicant_details => {
         #   address: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Address,
@@ -339,7 +335,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # address => {
           #   city: String,
@@ -394,7 +389,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case application_type
           # in :Individual
@@ -414,7 +408,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # beneficial_owner => {
           #   address: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::Address,
@@ -556,7 +549,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -611,7 +603,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -639,7 +630,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -667,7 +657,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_income
             # in :UpTo10k
@@ -696,7 +685,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
@@ -727,7 +715,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case use_selfie_verification
               # in :Never
@@ -748,7 +735,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case occupation
             # in :ArchitectOrEngineer
@@ -794,7 +780,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case source_of_income
             # in :EmploymentOrPayrollIncome
@@ -824,7 +809,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case business_vertical
           # in :AdultEntertainmentDatingOrEscortServices
@@ -877,7 +861,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # contact => {
           #   email: String,
@@ -923,7 +906,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -951,7 +933,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -980,7 +961,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case entity_type
           # in :Corporation
@@ -1009,7 +989,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # full_name => {
           #   first: String,
@@ -1037,7 +1016,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case industry
           # in :Retail
@@ -1072,7 +1050,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case occupation
           # in :ArchitectOrEngineer
@@ -1118,7 +1095,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # officer => {
           #   address: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::Address,
@@ -1265,7 +1241,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -1320,7 +1295,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -1348,7 +1322,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case occupation
             # in :ArchitectOrEngineer
@@ -1394,7 +1367,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -1422,7 +1394,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_income
             # in :UpTo10k
@@ -1451,7 +1422,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
@@ -1482,7 +1452,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case use_selfie_verification
               # in :Never
@@ -1503,7 +1472,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case source_of_income
             # in :EmploymentOrPayrollIncome
@@ -1532,7 +1500,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case title
             # in :President
@@ -1570,7 +1537,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # phone => {
           #   country_code: String,
@@ -1599,7 +1565,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # settings_override => {
         #   additional_disclosures: -> { Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::SettingsOverride::AdditionalDisclosure] === _1 },
@@ -1689,7 +1654,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # additional_disclosure => {
           #   title: String,
@@ -1718,7 +1682,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case stage
         # in :ChooseBusinessOrIndividual
@@ -1756,7 +1719,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case type
       # in :applicationForm
@@ -1770,7 +1732,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # relationships => {
       #   application: Unit::Models::ApplicationForm::Relationships::Application
@@ -1790,7 +1751,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # application => {
         #   data: Unit::Models::ApplicationForm::Relationships::Application::Data
@@ -1810,7 +1770,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -1837,7 +1796,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :businessApplication

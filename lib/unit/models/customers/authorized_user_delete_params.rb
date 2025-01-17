@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes,
@@ -44,7 +43,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   authorized_users_emails: -> { Unit::ArrayOf[String] === _1 }
@@ -65,7 +63,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :removeAuthorizedUsers

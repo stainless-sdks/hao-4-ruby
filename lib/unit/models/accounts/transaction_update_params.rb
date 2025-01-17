@@ -23,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case data
         # in Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags
@@ -42,7 +41,6 @@ module Unit
           variant -> { Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction }
 
           # @example
-          #
           # ```ruby
           # update_transaction_tags => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags::Attributes,
@@ -73,7 +71,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   tags: -> { Unit::HashOf[String] === _1 }
@@ -82,11 +79,11 @@ module Unit
             class Attributes < Unit::BaseModel
               # @!attribute tags
               #
-              #   @return [Hash{Symbol => String}]
+              #   @return [Hash{Symbol=>String}]
               required :tags, Unit::HashOf[String]
 
               # @!parse
-              #   # @param tags [Hash{Symbol => String}]
+              #   # @param tags [Hash{Symbol=>String}]
               #   #
               #   def initialize(tags:, **) = super
 
@@ -94,7 +91,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :transaction
@@ -109,7 +105,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # update_book_transaction => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Attributes,
@@ -148,7 +143,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   summary: String,
@@ -163,12 +157,12 @@ module Unit
 
               # @!attribute tags
               #
-              #   @return [Hash{Symbol => String}]
+              #   @return [Hash{Symbol=>String}]
               optional :tags, Unit::HashOf[String]
 
               # @!parse
               #   # @param summary [String]
-              #   # @param tags [Hash{Symbol => String}]
+              #   # @param tags [Hash{Symbol=>String}]
               #   #
               #   def initialize(summary: nil, tags: nil, **) = super
 
@@ -176,7 +170,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :bookTransaction
@@ -190,7 +183,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # relationships => {
             #   account: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account
@@ -211,7 +203,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # account => {
               #   data: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships::Account::Data
@@ -232,7 +223,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # data => {
                 #   id: String,
@@ -262,7 +252,6 @@ module Unit
                   # def initialize: (Hash | Unit::BaseModel) -> void
 
                   # @example
-                  #
                   # ```ruby
                   # case type
                   # in :account
@@ -289,7 +278,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # update_chargeback_transaction => {
           #   attributes: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Attributes,
@@ -328,7 +316,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # attributes => {
             #   summary: String,
@@ -343,12 +330,12 @@ module Unit
 
               # @!attribute tags
               #
-              #   @return [Hash{Symbol => String}]
+              #   @return [Hash{Symbol=>String}]
               optional :tags, Unit::HashOf[String]
 
               # @!parse
               #   # @param summary [String]
-              #   # @param tags [Hash{Symbol => String}]
+              #   # @param tags [Hash{Symbol=>String}]
               #   #
               #   def initialize(summary: nil, tags: nil, **) = super
 
@@ -356,7 +343,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :chargebackTransaction
@@ -370,7 +356,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # relationships => {
             #   account: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account
@@ -391,7 +376,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # account => {
               #   data: Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships::Account::Data
@@ -412,7 +396,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # data => {
                 #   id: String,
@@ -442,7 +425,6 @@ module Unit
                   # def initialize: (Hash | Unit::BaseModel) -> void
 
                   # @example
-                  #
                   # ```ruby
                   # case type
                   # in :account

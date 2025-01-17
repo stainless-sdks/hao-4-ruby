@@ -7,11 +7,11 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to get
       #
-      # @param params [Unit::Models::ReceivedPaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentRetrieveResponse]
       #
@@ -31,11 +31,11 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to update
       #
-      # @param params [Unit::Models::ReceivedPaymentUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ReceivedPaymentUpdateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentUpdateResponse]
       #
@@ -53,7 +53,7 @@ module Unit
 
       # Get Received Payments from API
       #
-      # @param params [Unit::Models::ReceivedPaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ReceivedPaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ReceivedPaymentListParams::Filter] :filter
       #
@@ -63,7 +63,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentListResponse]
       #
@@ -83,7 +83,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to advance
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentAdvanceResponse]
       #
@@ -101,7 +101,7 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to advance
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReceivedPaymentReprocessResponse]
       #

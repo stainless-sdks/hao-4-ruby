@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # authorization => {
     #   id: String,
@@ -44,7 +43,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # relationships => {
       #   account: Unit::Models::Authorization::Relationships::Account,
@@ -87,7 +85,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # account => {
         #   data: Unit::Models::Authorization::Relationships::Account::Data
@@ -107,7 +104,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -134,7 +130,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :account
@@ -159,7 +154,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # card => {
         #   data: Unit::Models::Authorization::Relationships::Card::Data
@@ -179,7 +173,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -208,7 +201,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # authorization_request => {
         #   data: -> { Unit::ArrayOf[Unit::Models::Authorization::Relationships::AuthorizationRequest::Data] === _1 }
@@ -231,7 +223,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -260,7 +251,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # customer => {
         #   data: Unit::Models::Authorization::Relationships::Customer::Data
@@ -280,7 +270,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -307,7 +296,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :customer
@@ -330,7 +318,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case type
       # in :authorization
@@ -344,7 +331,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # attributes => {
       #   amount: Integer,
@@ -425,7 +411,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!parse
@@ -442,7 +428,7 @@ module Unit
         #   # @param digital_wallet [String]
         #   # @param payment_method [String]
         #   # @param summary [String]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   #
         #   def initialize(
         #     amount:,
@@ -467,7 +453,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # merchant => {
         #   category: String,
@@ -516,7 +501,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # card_verification_data => {
         #   verification_method: String

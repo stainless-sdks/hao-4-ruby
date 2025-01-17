@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # atm_location_list_response_item => {
     #   attributes: Unit::Models::AtmLocationListResponseItem::Attributes,
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # attributes => {
       #   accept_deposits: Unit::BooleanModel,
@@ -102,7 +100,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # address => {
         #   city: String,
@@ -157,7 +154,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # coordinates => {
         #   latitude: Float,
@@ -186,7 +182,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case type
       # in :atmLocation

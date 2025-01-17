@@ -31,7 +31,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   customer_id: String,
@@ -59,7 +58,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!attribute to_balance
@@ -76,7 +75,7 @@ module Unit
         #   # @param customer_id [String]
         #   # @param from_balance [Float]
         #   # @param status [Array<String>]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   # @param to_balance [Float]
         #   # @param type [Array<String>]
         #   #
@@ -85,7 +84,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case status
         # in :Open
@@ -105,7 +103,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :deposit
@@ -123,7 +120,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

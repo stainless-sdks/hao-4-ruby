@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # application_retrieve_response => {
     #   data: Unit::Models::Application,
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # included => {
       #   id: String,

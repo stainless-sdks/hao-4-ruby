@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # application_form_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::ApplicationForm] === _1 }

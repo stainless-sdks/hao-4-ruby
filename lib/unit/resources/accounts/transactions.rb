@@ -8,11 +8,11 @@ module Unit
         #
         # @param transaction_id [String] ID of the transaction
         #
-        # @param params [Unit::Models::Accounts::TransactionRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :account_id ID of the account to get transaction from
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Accounts::TransactionRetrieveResponse]
         #
@@ -34,13 +34,13 @@ module Unit
         #
         # @param transaction_id [String] Path param: ID of the transaction to update
         #
-        # @param params [Unit::Models::Accounts::TransactionUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
         #
         #   @option params [String] :account_id Path param: ID of the account to update transaction from
         #
         #   @option params [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction] :data Body param:
         #
-        # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
         #
         # @return [Unit::Models::Accounts::TransactionUpdateResponse]
         #

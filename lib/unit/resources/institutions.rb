@@ -7,7 +7,7 @@ module Unit
       #
       # @param routing_number [String] routingNumber of the institution to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::InstitutionRetrieveResponse]
       #

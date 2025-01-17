@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # event_retrieve_response => {
     #   data: Unit::Models::EventRetrieveResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,

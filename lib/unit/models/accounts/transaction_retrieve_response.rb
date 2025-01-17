@@ -4,7 +4,6 @@ module Unit
   module Models
     module Accounts
       # @example
-      #
       # ```ruby
       # transaction_retrieve_response => {
       #   data: Unit::Models::Accounts::Transaction,
@@ -34,7 +33,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # included => {
         #   id: String,

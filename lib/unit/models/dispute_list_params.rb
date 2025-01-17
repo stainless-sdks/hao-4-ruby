@@ -24,7 +24,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   query: String
@@ -45,7 +44,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

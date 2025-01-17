@@ -5,11 +5,11 @@ module Unit
     class Payments
       # Create a Payment via API
       #
-      # @param params [Unit::Models::PaymentCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentCreateResponse]
       #
@@ -32,11 +32,11 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to get
       #
-      # @param params [Unit::Models::PaymentRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentRetrieveResponse]
       #
@@ -56,11 +56,11 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to update
       #
-      # @param params [Unit::Models::PaymentUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment, Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment, Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentUpdateResponse]
       #
@@ -78,7 +78,7 @@ module Unit
 
       # Get List Payments from API
       #
-      # @param params [Unit::Models::PaymentListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::PaymentListParams::Filter] :filter
       #
@@ -88,7 +88,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentListResponse]
       #
@@ -108,11 +108,11 @@ module Unit
       #
       # @param payment_id [String] ID of the payment to cancel
       #
-      # @param params [Unit::Models::PaymentCancelParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::PaymentCancelParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Object, nil] :body
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::PaymentCancelResponse]
       #

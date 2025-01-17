@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CheckPaymentReturnParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   reason: enum: Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason
@@ -63,7 +61,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case reason
           # in :InsufficientFunds
@@ -99,7 +96,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :checkPaymentReturn

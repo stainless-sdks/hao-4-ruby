@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AccountCloseParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   bank_reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::BankReason,
@@ -81,7 +79,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case bank_reason
           # in :ProhibitedBusiness
@@ -104,7 +101,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case fraud_reason
           # in :ACHActivity
@@ -135,7 +131,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case reason
           # in :ByCustomer
@@ -153,7 +148,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :creditAccountClose

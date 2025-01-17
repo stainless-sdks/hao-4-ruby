@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # card_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::Card] === _1 },
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # included => {
       #   id: String,

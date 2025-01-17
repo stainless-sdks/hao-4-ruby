@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # recurring_repayment_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::RecurringRepaymentListResponse::Data] === _1 },
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -57,7 +55,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case type
         # in :recurringAchRepayment
@@ -81,7 +78,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # meta => {
       #   pagination: Unit::Models::RecurringRepaymentListResponse::Meta::Pagination
@@ -101,7 +97,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # pagination => {
         #   limit: Integer,

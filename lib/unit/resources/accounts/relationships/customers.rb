@@ -9,11 +9,11 @@ module Unit
           #
           # @param account_id [String] ID of the account to add owners to
           #
-          # @param params [Unit::Models::Accounts::Relationships::CustomerAddParams, Hash{Symbol => Object}] Attributes to send in this request.
+          # @param params [Unit::Models::Accounts::Relationships::CustomerAddParams, Hash{Symbol=>Object}] Attributes to send in this request.
           #
           #   @option params [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>] :data
           #
-          # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+          # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
           #
           # @return [Unit::Models::Accounts::Relationships::CustomerAddResponse]
           #
@@ -36,11 +36,11 @@ module Unit
           #
           # @param account_id [String] ID of the account to add owners to
           #
-          # @param params [Unit::Models::Accounts::Relationships::CustomerRemoveParams, Hash{Symbol => Object}] Attributes to send in this request.
+          # @param params [Unit::Models::Accounts::Relationships::CustomerRemoveParams, Hash{Symbol=>Object}] Attributes to send in this request.
           #
           #   @option params [Array<Unit::Models::Accounts::Relationships::CustomerRemoveParams::Data>] :data
           #
-          # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+          # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
           #
           # @return [Unit::Models::Accounts::Relationships::CustomerRemoveResponse]
           #

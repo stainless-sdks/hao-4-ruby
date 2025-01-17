@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CounterpartyUpdateParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   name: String,
@@ -74,7 +72,7 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!attribute verify_name
@@ -86,7 +84,7 @@ module Unit
           #   # @param name [String]
           #   # @param permissions [String]
           #   # @param plaid_processor_token [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   # @param verify_name [Boolean]
           #   #
           #   def initialize(name: nil, permissions: nil, plaid_processor_token: nil, tags: nil, verify_name: nil, **) = super
@@ -94,7 +92,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case permissions
           # in :CreditOnly
@@ -115,7 +112,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :counterparty

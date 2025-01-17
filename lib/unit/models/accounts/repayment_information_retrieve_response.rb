@@ -4,7 +4,6 @@ module Unit
   module Models
     module Accounts
       # @example
-      #
       # ```ruby
       # repayment_information_retrieve_response => {
       #   data: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data::Attributes,
@@ -55,7 +53,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   initiated_repayments: Integer,
@@ -120,7 +117,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :creditAccountRepaymentInformation

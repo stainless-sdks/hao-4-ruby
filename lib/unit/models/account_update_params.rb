@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount
@@ -31,7 +30,6 @@ module Unit
         variant -> { Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount }
 
         # @example
-        #
         # ```ruby
         # update_deposit_account => {
         #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount::Attributes,
@@ -61,7 +59,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   deposit_product: String,
@@ -76,12 +73,12 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
             #   # @param deposit_product [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(deposit_product: nil, tags: nil, **) = super
 
@@ -89,7 +86,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :depositAccount
@@ -104,7 +100,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # update_credit_account => {
         #   attributes: Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount::Attributes,
@@ -134,7 +129,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   credit_limit: Integer,
@@ -149,12 +143,12 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
             #   # @param credit_limit [Integer]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(credit_limit: nil, tags: nil, **) = super
 
@@ -162,7 +156,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :creditAccount

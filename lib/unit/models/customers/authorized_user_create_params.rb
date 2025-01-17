@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes,
@@ -44,7 +43,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   authorized_users: -> { Unit::ArrayOf[Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser] === _1 }
@@ -68,7 +66,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # authorized_user => {
             #   email: String,
@@ -114,7 +111,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -142,7 +138,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -172,7 +167,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :addAuthorizedUsers

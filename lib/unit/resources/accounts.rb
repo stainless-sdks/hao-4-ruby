@@ -20,11 +20,11 @@ module Unit
 
       # Create Account via API
       #
-      # @param params [Unit::Models::AccountCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountCreateParams::Data::CreateCreditAccount, Unit::Models::AccountCreateParams::Data::CreateDepositAccount, Unit::Models::AccountCreateParams::Data::CreateWalletAccount] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountCreateResponse]
       #
@@ -47,11 +47,11 @@ module Unit
       #
       # @param account_id [String] ID of the account to get
       #
-      # @param params [Unit::Models::AccountRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :include
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountRetrieveResponse]
       #
@@ -71,11 +71,11 @@ module Unit
       #
       # @param account_id [String] ID of the account to update
       #
-      # @param params [Unit::Models::AccountUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount, Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountUpdateResponse]
       #
@@ -93,7 +93,7 @@ module Unit
 
       # Get List Accounts from API
       #
-      # @param params [Unit::Models::AccountListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountListParams::Filter] :filter
       #
@@ -101,7 +101,7 @@ module Unit
       #
       #   @option params [Unit::Models::AccountListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountListResponse]
       #
@@ -121,7 +121,7 @@ module Unit
       #
       # @param account_id [String] ID of the account
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountActivateDacaResponse]
       #
@@ -139,11 +139,11 @@ module Unit
       #
       # @param account_id [String] ID of the account to close
       #
-      # @param params [Unit::Models::AccountCloseParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountCloseParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountCloseParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountCloseResponse]
       #
@@ -166,7 +166,7 @@ module Unit
       #
       # @param account_id [String] ID of the account
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountDeactivateDacaResponse]
       #
@@ -184,7 +184,7 @@ module Unit
       #
       # @param account_id [String] ID of the account
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountEnterDacaResponse]
       #
@@ -202,11 +202,11 @@ module Unit
       #
       # @param account_id [String] ID of the account to freeze
       #
-      # @param params [Unit::Models::AccountFreezeParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountFreezeParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AccountFreezeParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountFreezeResponse]
       #
@@ -229,7 +229,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to close
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountReopenResponse]
       #
@@ -247,7 +247,7 @@ module Unit
       #
       # @param account_id [String] ID of the account to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AccountUnfreezeResponse]
       #

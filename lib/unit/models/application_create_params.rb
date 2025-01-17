@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication
@@ -35,7 +34,6 @@ module Unit
         variant -> { Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication }
 
         # @example
-        #
         # ```ruby
         # create_individual_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes,
@@ -64,7 +62,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::Address,
@@ -200,7 +197,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -222,7 +219,7 @@ module Unit
             #   # @param power_of_attorney_agent [Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent]
             #   # @param source_of_income [String]
             #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     address:,
@@ -252,7 +249,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -307,7 +303,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -335,7 +330,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -363,7 +357,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_income
             # in :UpTo10k
@@ -392,7 +385,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # device_fingerprint => {
             #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint::Provider,
@@ -422,7 +414,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case provider
               # in :iovation
@@ -437,7 +428,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
@@ -468,7 +458,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case use_selfie_verification
               # in :Never
@@ -489,7 +478,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case industry
             # in :Retail
@@ -524,7 +512,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case occupation
             # in :ArchitectOrEngineer
@@ -570,7 +557,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # power_of_attorney_agent => {
             #   address: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::Address,
@@ -680,7 +666,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -735,7 +720,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -763,7 +747,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -791,7 +774,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
@@ -822,7 +804,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case use_selfie_verification
                 # in :Never
@@ -844,7 +825,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case source_of_income
             # in :EmploymentOrPayrollIncome
@@ -874,7 +854,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualApplication
@@ -889,7 +868,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_sole_proprietor_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes,
@@ -920,7 +898,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::Address,
@@ -1103,7 +1080,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute website
@@ -1137,7 +1114,7 @@ module Unit
             #   # @param sole_proprietorship [Boolean]
             #   # @param source_of_income [String]
             #   # @param ssn [String, nil]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param website [String]
             #   #
             #   def initialize(
@@ -1176,7 +1153,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -1231,7 +1207,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # full_name => {
             #   first: String,
@@ -1259,7 +1234,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -1287,7 +1261,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_income
             # in :UpTo10k
@@ -1316,7 +1289,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_revenue
             # in :UpTo50k
@@ -1342,7 +1314,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case business_vertical
             # in :AdultEntertainmentDatingOrEscortServices
@@ -1395,7 +1366,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # device_fingerprint => {
             #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint::Provider,
@@ -1425,7 +1395,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case provider
               # in :iovation
@@ -1440,7 +1409,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
@@ -1471,7 +1439,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case use_selfie_verification
               # in :Never
@@ -1492,7 +1459,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case industry
             # in :Retail
@@ -1527,7 +1493,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case number_of_employees
             # in :One
@@ -1550,7 +1515,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case occupation
             # in :ArchitectOrEngineer
@@ -1596,7 +1560,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # power_of_attorney_agent => {
             #   address: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::Address,
@@ -1706,7 +1669,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -1761,7 +1723,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -1789,7 +1750,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -1817,7 +1777,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
@@ -1848,7 +1807,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case use_selfie_verification
                 # in :Never
@@ -1870,7 +1828,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case source_of_income
             # in :EmploymentOrPayrollIncome
@@ -1900,7 +1857,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualApplication
@@ -1915,7 +1871,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_business_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes,
@@ -1946,7 +1901,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Address,
@@ -2105,7 +2059,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute website
@@ -2141,7 +2095,7 @@ module Unit
             #   # @param number_of_employees [String]
             #   # @param purpose [String]
             #   # @param stock_symbol [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param website [String]
             #   # @param year_of_incorporation [String]
             #   #
@@ -2179,7 +2133,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -2234,7 +2187,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # beneficial_owner => {
             #   address: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::Address,
@@ -2376,7 +2328,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -2431,7 +2382,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -2459,7 +2409,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -2487,7 +2436,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case annual_income
               # in :UpTo10k
@@ -2516,7 +2464,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
@@ -2547,7 +2494,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case use_selfie_verification
                 # in :Never
@@ -2568,7 +2514,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case occupation
               # in :ArchitectOrEngineer
@@ -2614,7 +2559,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case source_of_income
               # in :EmploymentOrPayrollIncome
@@ -2644,7 +2588,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # contact => {
             #   email: String,
@@ -2690,7 +2633,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -2718,7 +2660,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -2747,7 +2688,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case entity_type
             # in :Corporation
@@ -2776,7 +2716,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # officer => {
             #   address: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Address,
@@ -2921,7 +2860,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -2976,7 +2914,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -3004,7 +2941,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case occupation
               # in :ArchitectOrEngineer
@@ -3050,7 +2986,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -3078,7 +3013,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case annual_income
               # in :UpTo10k
@@ -3107,7 +3041,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
@@ -3138,7 +3071,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case use_selfie_verification
                 # in :Never
@@ -3159,7 +3091,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case source_of_income
               # in :EmploymentOrPayrollIncome
@@ -3188,7 +3119,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case title
               # in :President
@@ -3226,7 +3156,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -3254,7 +3183,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case annual_revenue
             # in :UpTo250k
@@ -3280,7 +3208,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case business_vertical
             # in :AdultEntertainmentDatingOrEscortServices
@@ -3333,7 +3260,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case cash_flow
             # in :Unpredictable
@@ -3350,7 +3276,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # device_fingerprint => {
             #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint::Provider,
@@ -3380,7 +3305,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case provider
               # in :iovation
@@ -3395,7 +3319,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case industry
             # in :Retail
@@ -3430,7 +3353,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case number_of_employees
             # in :UpTo10
@@ -3457,7 +3379,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessApplication

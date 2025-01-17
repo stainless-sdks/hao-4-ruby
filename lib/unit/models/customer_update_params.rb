@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer
@@ -31,7 +30,6 @@ module Unit
         variant -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer }
 
         # @example
-        #
         # ```ruby
         # update_individual_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes,
@@ -62,7 +60,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address,
@@ -112,7 +109,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -122,14 +119,13 @@ module Unit
             #   # @param email [String, nil]
             #   # @param jwt_subject [String, nil]
             #   # @param phone [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone, nil]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(address: nil, authorized_users: nil, dba: nil, email: nil, jwt_subject: nil, phone: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -184,7 +180,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # authorized_user => {
             #   email: String,
@@ -230,7 +225,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -258,7 +252,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -287,7 +280,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -316,7 +308,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :individualCustomer
@@ -331,7 +322,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # update_business_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes,
@@ -361,7 +351,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   address: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address,
@@ -412,7 +401,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}, nil]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -422,14 +411,13 @@ module Unit
             #   # @param dba [String, nil]
             #   # @param ein [String]
             #   # @param phone [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone, nil]
-            #   # @param tags [Hash{Symbol => String}, nil]
+            #   # @param tags [Hash{Symbol=>String}, nil]
             #   #
             #   def initialize(address: nil, authorized_users: nil, contact: nil, dba: nil, ein: nil, phone: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -484,7 +472,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # authorized_user => {
             #   email: String,
@@ -530,7 +517,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -558,7 +544,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -587,7 +572,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # contact => {
             #   email: String,
@@ -633,7 +617,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # full_name => {
               #   first: String,
@@ -661,7 +644,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # phone => {
               #   country_code: String,
@@ -690,7 +672,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # phone => {
             #   country_code: String,
@@ -719,7 +700,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :businessCustomer

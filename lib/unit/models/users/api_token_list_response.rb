@@ -4,7 +4,6 @@ module Unit
   module Models
     module Users
       # @example
-      #
       # ```ruby
       # api_token_list_response => {
       #   data: -> { Unit::ArrayOf[Unit::Models::Users::APITokenListResponse::Data] === _1 }
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   id: String,
@@ -58,7 +56,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   created_at: Time,
@@ -107,7 +104,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :apiToken

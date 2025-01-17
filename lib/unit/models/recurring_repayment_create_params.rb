@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment
@@ -45,7 +44,6 @@ module Unit
         }
 
         # @example
-        #
         # ```ruby
         # create_recurring_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Attributes,
@@ -84,7 +82,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   description: String,
@@ -122,7 +119,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -131,7 +128,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
             #   # @param sec_code [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(description:, addenda: nil, idempotency_key: nil, same_day: nil, sec_code: nil, tags: nil, **) = super
 
@@ -139,7 +136,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Account,
@@ -179,7 +175,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Account::Data
@@ -200,7 +195,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -230,7 +224,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -255,7 +248,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::Counterparty::Data
@@ -276,7 +268,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -306,7 +297,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -322,7 +312,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships::CreditAccount::Data
@@ -343,7 +332,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -373,7 +361,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -390,7 +377,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringAchRepayment
@@ -405,7 +391,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_recurring_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Attributes,
@@ -444,7 +429,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   description: String,
@@ -466,7 +450,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute transaction_summary_override
@@ -477,7 +461,7 @@ module Unit
             # @!parse
             #   # @param description [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
@@ -486,7 +470,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::Account,
@@ -529,7 +512,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::Account::Data
@@ -550,7 +532,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -580,7 +561,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -605,7 +585,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CounterpartyAccount::Data
@@ -626,7 +605,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -656,7 +634,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -675,7 +652,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships::CreditAccount::Data
@@ -696,7 +672,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -726,7 +701,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -743,7 +717,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringBookRepayment
@@ -758,7 +731,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_recurring_capital_partner_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Attributes,
@@ -797,7 +769,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   description: String,
@@ -835,7 +806,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -844,7 +815,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
             #   # @param sec_code [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(description:, addenda: nil, idempotency_key: nil, same_day: nil, sec_code: nil, tags: nil, **) = super
 
@@ -852,7 +823,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   counterparty: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty,
@@ -892,7 +862,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty::Data
@@ -913,7 +882,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -943,7 +911,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -959,7 +926,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::CreditAccount::Data
@@ -980,7 +946,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1010,7 +975,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -1026,7 +990,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account::Data
@@ -1047,7 +1010,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1077,7 +1039,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1103,7 +1064,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringCapitalPartnerAchRepayment
@@ -1118,7 +1078,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_recurring_capital_partner_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Attributes,
@@ -1157,7 +1116,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   description: String,
@@ -1179,7 +1137,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute transaction_summary_override
@@ -1190,7 +1148,7 @@ module Unit
             # @!parse
             #   # @param description [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
@@ -1199,7 +1157,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   counterparty_account: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CounterpartyAccount,
@@ -1234,7 +1191,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CounterpartyAccount::Data
@@ -1255,7 +1211,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1285,7 +1240,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1304,7 +1258,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # credit_account => {
             #   data: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships::CreditAccount::Data
@@ -1325,7 +1278,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1355,7 +1307,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :creditAccount
@@ -1372,7 +1323,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :recurringCapitalPartnerBookRepayment

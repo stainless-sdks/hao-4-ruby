@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment
@@ -35,7 +34,6 @@ module Unit
         variant -> { Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment }
 
         # @example
-        #
         # ```ruby
         # update_ach_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHPayment::Attributes,
@@ -62,7 +60,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   clearing_days_override: Integer,
@@ -77,12 +74,12 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
             #   # @param clearing_days_override [Integer]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(clearing_days_override: nil, tags: nil, **) = super
 
@@ -90,7 +87,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achPayment
@@ -105,7 +101,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # update_book_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateBookPayment::Attributes,
@@ -132,7 +127,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   tags: -> { Unit::HashOf[String] === _1 }
@@ -141,11 +135,11 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(tags: nil, **) = super
 
@@ -153,7 +147,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :bookPayment
@@ -168,7 +161,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # update_ach_received_payment => {
         #   attributes: Unit::Models::PaymentUpdateParams::Data::UpdateACHReceivedPayment::Attributes,
@@ -198,7 +190,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   tags: -> { Unit::HashOf[String] === _1 }
@@ -207,11 +198,11 @@ module Unit
           class Attributes < Unit::BaseModel
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(tags: nil, **) = super
 
@@ -219,7 +210,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achReceivedPayment

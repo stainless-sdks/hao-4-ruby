@@ -6,7 +6,6 @@ module Unit
       module SecureData
         module Pin
           # @example
-          #
           # ```ruby
           # status_retrieve_response => {
           #   data: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data
@@ -26,7 +25,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   attributes: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes,
@@ -57,7 +55,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # attributes => {
               #   status: enum: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status
@@ -80,7 +77,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case status
                 # in :Set
@@ -98,7 +94,6 @@ module Unit
               end
 
               # @example
-              #
               # ```ruby
               # case type
               # in :pinStatus

@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::WebhookUpdateParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   tags: -> { Unit::HashOf[String] === _1 }
@@ -52,11 +50,11 @@ module Unit
         class Attributes < Unit::BaseModel
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(tags: nil, **) = super
 

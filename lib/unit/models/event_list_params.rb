@@ -24,7 +24,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   since: String,
@@ -59,7 +58,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

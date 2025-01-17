@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes,
@@ -50,7 +49,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   annual_income: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
@@ -91,7 +89,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case annual_income
           # in :UpTo10k
@@ -120,7 +117,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case occupation
           # in :ArchitectOrEngineer
@@ -166,7 +162,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case source_of_income
           # in :EmploymentOrPayrollIncome
@@ -196,7 +191,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   application: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application
@@ -219,7 +213,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # application => {
           #   data: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data
@@ -242,7 +235,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -272,7 +264,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :businessApplication
@@ -295,7 +286,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :beneficialOwner

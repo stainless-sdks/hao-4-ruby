@@ -4,7 +4,6 @@ module Unit
   module Models
     module Accounts
       # @example
-      #
       # ```ruby
       # deposit_product_list_response => {
       #   data: -> { Unit::ArrayOf[Unit::Models::Accounts::DepositProductListResponse::Data] === _1 }
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Accounts::DepositProductListResponse::Data::Attributes,
@@ -51,7 +49,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   name: String
@@ -72,7 +69,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :accountDepositProduct

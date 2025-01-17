@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty
@@ -31,7 +30,6 @@ module Unit
         variant -> { Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty }
 
         # @example
-        #
         # ```ruby
         # create_ach_counterparty => {
         #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes,
@@ -70,7 +68,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   account_number: String,
@@ -129,7 +126,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -140,7 +137,7 @@ module Unit
             #   # @param type [String]
             #   # @param idempotency_key [String]
             #   # @param permissions [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     account_number:,
@@ -159,7 +156,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case account_type
             # in :Checking
@@ -179,7 +175,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case type
             # in :Business
@@ -199,7 +194,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case permissions
             # in :CreditOnly
@@ -220,7 +214,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   customer: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer
@@ -241,7 +234,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Relationships::Customer::Data
@@ -262,7 +254,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -292,7 +283,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -315,7 +305,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achCounterparty
@@ -330,7 +319,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_plaid_counterparty => {
         #   attributes: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes,
@@ -369,7 +357,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   plaid_processor_token: String,
@@ -414,7 +401,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute verify_name
@@ -428,7 +415,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param name [String]
             #   # @param permissions [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param verify_name [Boolean]
             #   #
             #   def initialize(
@@ -447,7 +434,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :Business
@@ -467,7 +453,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case permissions
             # in :CreditOnly
@@ -488,7 +473,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   customer: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer
@@ -509,7 +493,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Relationships::Customer::Data
@@ -530,7 +513,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -560,7 +542,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -583,7 +564,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achCounterparty

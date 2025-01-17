@@ -7,11 +7,11 @@ module Unit
       #
       # @param transaction_id [String] ID of the transaction to return
       #
-      # @param params [Unit::Models::ReturnReturnParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ReturnReturnParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ReturnReturnParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ReturnReturnResponse]
       #

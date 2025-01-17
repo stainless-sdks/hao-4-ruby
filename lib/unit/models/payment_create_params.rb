@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # case data
       # in Unit::Models::PaymentCreateParams::Data::CreateACHPayment
@@ -47,7 +46,6 @@ module Unit
         variant -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment }
 
         # @example
-        #
         # ```ruby
         # create_ach_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes,
@@ -84,7 +82,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -146,7 +143,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -158,7 +155,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
             #   # @param sec_code [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(
             #     amount:,
@@ -178,7 +175,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   account_number: String,
@@ -223,7 +219,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case account_type
               # in :Checking
@@ -244,7 +239,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case direction
             # in :Debit
@@ -261,7 +255,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case sec_code
             # in :WEB
@@ -282,7 +275,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account
@@ -303,7 +295,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships::Account::Data
@@ -324,7 +315,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -354,7 +344,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -380,7 +369,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achPayment
@@ -395,7 +383,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_ach_payment_counterparty => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes,
@@ -434,7 +421,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -490,7 +476,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute verify_counterparty_balance
@@ -506,7 +492,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
             #   # @param sec_code [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
@@ -527,7 +513,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case direction
             # in :Debit
@@ -544,7 +529,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case sec_code
             # in :WEB
@@ -565,7 +549,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account,
@@ -594,7 +577,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Account::Data
@@ -615,7 +597,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -645,7 +626,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -670,7 +650,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships::Counterparty::Data
@@ -691,7 +670,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -721,7 +699,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :counterparty
@@ -738,7 +715,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achPayment
@@ -753,7 +729,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_ach_payment_plaid => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes,
@@ -791,7 +766,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -857,7 +831,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute verify_counterparty_balance
@@ -875,7 +849,7 @@ module Unit
             #   # @param idempotency_key [String]
             #   # @param same_day [Boolean]
             #   # @param sec_code [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param verify_counterparty_balance [Boolean]
             #   #
             #   def initialize(
@@ -898,7 +872,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case direction
             # in :Debit
@@ -915,7 +888,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case sec_code
             # in :WEB
@@ -936,7 +908,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account
@@ -957,7 +928,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships::Account::Data
@@ -978,7 +948,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1008,7 +977,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1034,7 +1002,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :achPayment
@@ -1049,7 +1016,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_book_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Attributes,
@@ -1086,7 +1052,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -1114,7 +1079,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!attribute transaction_summary_override
@@ -1126,7 +1091,7 @@ module Unit
             #   # @param amount [Integer]
             #   # @param description [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   # @param transaction_summary_override [String]
             #   #
             #   def initialize(amount:, description:, idempotency_key: nil, tags: nil, transaction_summary_override: nil, **) = super
@@ -1135,7 +1100,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account,
@@ -1167,7 +1131,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::Account::Data
@@ -1188,7 +1151,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1218,7 +1180,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1243,7 +1204,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # counterparty_account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships::CounterpartyAccount::Data
@@ -1264,7 +1224,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1294,7 +1253,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1314,7 +1272,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :bookPayment
@@ -1329,7 +1286,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_wire_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes,
@@ -1366,7 +1322,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -1408,7 +1363,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -1417,14 +1372,13 @@ module Unit
             #   # @param description [String]
             #   # @param direction [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(amount:, counterparty:, description:, direction: nil, idempotency_key: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # counterparty => {
             #   account_number: String,
@@ -1466,7 +1420,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # address => {
               #   city: String,
@@ -1522,7 +1475,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # case direction
             # in :Credit
@@ -1537,7 +1489,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account
@@ -1558,7 +1509,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships::Account::Data
@@ -1579,7 +1529,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1609,7 +1558,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1635,7 +1583,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :wirePayment
@@ -1650,7 +1597,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # create_push_to_card_payment => {
         #   attributes: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes,
@@ -1688,7 +1634,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   amount: Integer,
@@ -1722,7 +1667,7 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
@@ -1730,14 +1675,13 @@ module Unit
             #   # @param configuration [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration]
             #   # @param description [String]
             #   # @param idempotency_key [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(amount:, configuration:, description:, idempotency_key: nil, tags: nil, **) = super
 
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # configuration => {
             #   astra: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra
@@ -1758,7 +1702,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # astra => {
               #   account_number: String,
@@ -1840,7 +1783,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account
@@ -1861,7 +1803,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships::Account::Data
@@ -1882,7 +1823,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -1912,7 +1852,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -1938,7 +1877,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :pushToCardPayment

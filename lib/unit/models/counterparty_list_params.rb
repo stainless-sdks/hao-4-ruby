@@ -31,7 +31,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   account_number: String,
@@ -65,7 +64,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!parse
@@ -73,14 +72,13 @@ module Unit
         #   # @param customer_id [String]
         #   # @param permissions [Array<String>]
         #   # @param routing_number [String]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   #
         #   def initialize(account_number: nil, customer_id: nil, permissions: nil, routing_number: nil, tags: nil, **) = super
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case permission
         # in :CreditOnly
@@ -101,7 +99,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Attributes,
@@ -51,7 +50,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   store_id: String
@@ -72,7 +70,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account,
@@ -105,7 +102,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account::Data
@@ -128,7 +124,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -158,7 +153,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -183,7 +177,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer::Data
@@ -204,7 +197,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -234,7 +226,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -257,7 +248,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :cashDepositBarcode

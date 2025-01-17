@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # institution_retrieve_response => {
     #   data: Unit::Models::InstitutionRetrieveResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::InstitutionRetrieveResponse::Data::Attributes,
@@ -50,7 +48,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   is_ach_supported: Unit::BooleanModel,
@@ -99,7 +96,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :institution

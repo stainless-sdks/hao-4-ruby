@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::FeeReverseParams::Data::Attributes,
@@ -50,7 +49,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   description: String,
@@ -71,13 +69,13 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
           #   # @param description [String]
           #   # @param idempotency_key [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(description:, idempotency_key: nil, tags: nil, **) = super
 
@@ -85,7 +83,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::FeeReverseParams::Data::Relationships::Account,
@@ -112,7 +109,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::FeeReverseParams::Data::Relationships::Account::Data
@@ -132,7 +128,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -162,7 +157,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -187,7 +181,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # transaction => {
           #   data: Unit::Models::FeeReverseParams::Data::Relationships::Transaction::Data
@@ -207,7 +200,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -237,7 +229,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :transaction
@@ -254,7 +245,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :feeReversal

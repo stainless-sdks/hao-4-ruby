@@ -8,11 +8,11 @@ module Unit
 
       # Create a counterparty via API
       #
-      # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyCreateResponse]
       #
@@ -32,7 +32,7 @@ module Unit
       #
       # @param counterparty_id [String] ID of the counterparty to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyRetrieveResponse]
       #
@@ -50,11 +50,11 @@ module Unit
       #
       # @param counterparty_id [String] ID of the counterparty to update
       #
-      # @param params [Unit::Models::CounterpartyUpdateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyUpdateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyUpdateResponse]
       #
@@ -72,7 +72,7 @@ module Unit
 
       # Get Counterparties List from API
       #
-      # @param params [Unit::Models::CounterpartyListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::CounterpartyListParams::Filter] :filter
       #
@@ -80,7 +80,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::CounterpartyListResponse]
       #
@@ -100,7 +100,7 @@ module Unit
       #
       # @param counterparty_id [String] ID of the counterparty to delete
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [nil]
       #

@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AuthorizationRequestApproveParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   amount: Integer,
@@ -64,13 +62,13 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
           #   # @param amount [Integer]
           #   # @param funding_account [String]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(amount: nil, funding_account: nil, tags: nil, **) = super
 
@@ -78,7 +76,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :approveAuthorizationRequest

@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # store_location_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::StoreLocationListResponse::Data] === _1 },
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::StoreLocationListResponse::Data::Attributes,
@@ -57,7 +55,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   address: Unit::Models::StoreLocationListResponse::Data::Attributes::Address,
@@ -111,7 +108,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # address => {
           #   city: String,
@@ -166,7 +162,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # coordinates => {
           #   latitude: Float,
@@ -195,7 +190,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :storeLocation
@@ -210,7 +204,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # meta => {
       #   pagination: Unit::Models::StoreLocationListResponse::Meta::Pagination
@@ -230,7 +223,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # pagination => {
         #   limit: Integer,

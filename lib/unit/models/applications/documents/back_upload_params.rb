@@ -32,7 +32,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case file_type
           # in :"application/pdf"

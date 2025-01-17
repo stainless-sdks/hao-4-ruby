@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # dispute_list_response_item => {
     #   id: String,
@@ -44,7 +43,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # relationships => {
       #   account: Unit::Models::DisputeListResponseItem::Relationships::Account,
@@ -78,7 +76,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # account => {
         #   data: Unit::Models::DisputeListResponseItem::Relationships::Account::Data
@@ -98,7 +95,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -128,7 +124,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :account
@@ -153,7 +148,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # customer => {
         #   data: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data
@@ -173,7 +167,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -203,7 +196,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :customer
@@ -225,7 +217,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # transaction => {
         #   data: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data
@@ -245,7 +236,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # data => {
           #   id: String,
@@ -275,7 +265,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # case type
             # in :transaction
@@ -292,7 +281,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case type
       # in :dispute
@@ -306,7 +294,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # attributes => {
       #   amount: Integer,
@@ -394,7 +381,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case source
         # in :DebitCard
@@ -411,7 +397,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # status_history => {
         #   type: String,

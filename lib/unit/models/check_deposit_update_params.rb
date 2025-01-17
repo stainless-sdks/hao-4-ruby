@@ -16,7 +16,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CheckDepositUpdateParams::Data::Attributes,
@@ -43,7 +42,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   clearing_days_override: Integer,
@@ -58,12 +56,12 @@ module Unit
 
           # @!attribute tags
           #
-          #   @return [Hash{Symbol => String}]
+          #   @return [Hash{Symbol=>String}]
           optional :tags, Unit::HashOf[String]
 
           # @!parse
           #   # @param clearing_days_override [Integer]
-          #   # @param tags [Hash{Symbol => String}]
+          #   # @param tags [Hash{Symbol=>String}]
           #   #
           #   def initialize(clearing_days_override: nil, tags: nil, **) = super
 
@@ -71,7 +69,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :checkDeposit

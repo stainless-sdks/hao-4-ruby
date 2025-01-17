@@ -7,7 +7,7 @@ module Unit
       #
       # @param dispute_id [String] ID of the dispute to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::DisputeRetrieveResponse]
       #
@@ -23,13 +23,13 @@ module Unit
 
       # Get List Disputes from API
       #
-      # @param params [Unit::Models::DisputeListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::DisputeListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::DisputeListParams::Filter] :filter
       #
       #   @option params [Unit::Models::DisputeListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Array<Unit::Models::DisputeListResponseItem>]
       #

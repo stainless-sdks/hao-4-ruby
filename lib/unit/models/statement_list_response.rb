@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # statement_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data] === _1 }
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -64,7 +62,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   period: String
@@ -85,7 +82,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # relationships => {
         #   account: Unit::Models::StatementListResponse::Data::Relationships::Account,
@@ -119,7 +115,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # account => {
           #   data: Unit::Models::StatementListResponse::Data::Relationships::Account::Data
@@ -139,7 +134,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -169,7 +163,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :account
@@ -194,7 +187,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customer => {
           #   data: Unit::Models::StatementListResponse::Data::Relationships::Customer::Data
@@ -214,7 +206,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -244,7 +235,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :customer
@@ -266,7 +256,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # customers => {
           #   data: -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data::Relationships::Customers::Data] === _1 }
@@ -289,7 +278,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # data => {
             #   id: String,
@@ -319,7 +307,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :statement

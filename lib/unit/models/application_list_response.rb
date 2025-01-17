@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # application_list_response => {
     #   data: -> { Unit::ArrayOf[Unit::Models::Application] === _1 },
@@ -30,7 +29,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # meta => {
       #   pagination: Unit::Models::ApplicationListResponse::Meta::Pagination
@@ -50,7 +48,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # pagination => {
         #   limit: Integer,

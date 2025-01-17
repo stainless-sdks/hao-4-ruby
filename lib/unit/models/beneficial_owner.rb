@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # beneficial_owner => {
     #   address: Unit::Models::BeneficialOwner::Address,
@@ -179,7 +178,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # address => {
       #   city: String,
@@ -234,7 +232,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case annual_income
       # in :UpTo10k
@@ -263,7 +260,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # full_name => {
       #   first: String,
@@ -291,7 +287,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case occupation
       # in :ArchitectOrEngineer
@@ -337,7 +332,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # phone => {
       #   country_code: String,
@@ -365,7 +359,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # case source_of_income
       # in :EmploymentOrPayrollIncome

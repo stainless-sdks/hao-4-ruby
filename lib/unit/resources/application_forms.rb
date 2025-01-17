@@ -5,11 +5,11 @@ module Unit
     class ApplicationForms
       # Create an Application Form via API
       #
-      # @param params [Unit::Models::ApplicationFormCreateParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationFormCreateParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormCreateResponse]
       #
@@ -29,11 +29,11 @@ module Unit
       #
       # @param application_form_id [String] ID of the application form to get
       #
-      # @param params [Unit::Models::ApplicationFormRetrieveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [String] :included
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormRetrieveResponse]
       #
@@ -51,7 +51,7 @@ module Unit
 
       # Get List Application Forms from API
       #
-      # @param params [Unit::Models::ApplicationFormListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ApplicationFormListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::ApplicationFormListParams::Filter] :filter
       #
@@ -59,7 +59,7 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::ApplicationFormListResponse]
       #

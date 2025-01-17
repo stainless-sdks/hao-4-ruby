@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # account_reopen_response => {
     #   data: Unit::Models::Account

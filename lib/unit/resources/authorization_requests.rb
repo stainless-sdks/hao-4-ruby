@@ -7,7 +7,7 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization request to get
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationRequestRetrieveResponse]
       #
@@ -23,13 +23,13 @@ module Unit
 
       # Get List Authorization Requests from API
       #
-      # @param params [Unit::Models::AuthorizationRequestListParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestListParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestListParams::Filter] :filter
       #
       #   @option params [Unit::Models::AuthorizationRequestListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationRequestListResponse]
       #
@@ -49,11 +49,11 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization request to approve
       #
-      # @param params [Unit::Models::AuthorizationRequestApproveParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestApproveParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestApproveParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationRequestApproveResponse]
       #
@@ -76,11 +76,11 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization request to decline
       #
-      # @param params [Unit::Models::AuthorizationRequestDeclineParams, Hash{Symbol => Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRequestDeclineParams, Hash{Symbol=>Object}] Attributes to send in this request.
       #
       #   @option params [Unit::Models::AuthorizationRequestDeclineParams::Data] :data
       #
-      # @param opts [Hash{Symbol => Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
       #
       # @return [Unit::Models::AuthorizationRequestDeclineResponse]
       #

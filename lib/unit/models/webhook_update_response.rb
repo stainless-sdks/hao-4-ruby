@@ -3,7 +3,6 @@
 module Unit
   module Models
     # @example
-    #
     # ```ruby
     # webhook_update_response => {
     #   data: Unit::Models::WebhookUpdateResponse::Data
@@ -23,7 +22,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # data => {
       #   id: String,
@@ -57,7 +55,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # attributes => {
         #   token: String,
@@ -140,7 +137,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # case content_type
           # in :Json
@@ -157,7 +153,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case delivery_mode
           # in :AtMostOnce
@@ -175,7 +170,6 @@ module Unit
         end
 
         # @example
-        #
         # ```ruby
         # case type
         # in :webhook

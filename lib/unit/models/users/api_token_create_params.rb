@@ -17,7 +17,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Users::APITokenCreateParams::Data::Attributes,
@@ -44,7 +43,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   description: String,
@@ -95,7 +93,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # resource => {
             #   ids: -> { Unit::ArrayOf[String] === _1 },
@@ -125,7 +122,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # case type
               # in :card
@@ -144,7 +140,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :apiToken

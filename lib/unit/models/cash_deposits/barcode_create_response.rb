@@ -4,7 +4,6 @@ module Unit
   module Models
     module CashDeposits
       # @example
-      #
       # ```ruby
       # barcode_create_response => {
       #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   attributes: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Attributes,
@@ -61,7 +59,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   barcode_number: String,
@@ -82,13 +79,13 @@ module Unit
 
             # @!attribute tags
             #
-            #   @return [Hash{Symbol => String}]
+            #   @return [Hash{Symbol=>String}]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
             #   # @param barcode_number [String]
             #   # @param expiration [String]
-            #   # @param tags [Hash{Symbol => String}]
+            #   # @param tags [Hash{Symbol=>String}]
             #   #
             #   def initialize(barcode_number: nil, expiration: nil, tags: nil, **) = super
 
@@ -96,7 +93,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # relationships => {
           #   account: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Account,
@@ -127,7 +123,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # account => {
             #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Account::Data
@@ -148,7 +143,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -178,7 +172,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :account
@@ -203,7 +196,6 @@ module Unit
             end
 
             # @example
-            #
             # ```ruby
             # customer => {
             #   data: Unit::Models::CashDeposits::BarcodeCreateResponse::Data::Relationships::Customer::Data
@@ -224,7 +216,6 @@ module Unit
               # def initialize: (Hash | Unit::BaseModel) -> void
 
               # @example
-              #
               # ```ruby
               # data => {
               #   id: String,
@@ -254,7 +245,6 @@ module Unit
                 # def initialize: (Hash | Unit::BaseModel) -> void
 
                 # @example
-                #
                 # ```ruby
                 # case type
                 # in :customer
@@ -277,7 +267,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :cashDepositBarcode

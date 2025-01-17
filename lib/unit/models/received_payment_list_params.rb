@@ -38,7 +38,6 @@ module Unit
       # def initialize: (Hash | Unit::BaseModel) -> void
 
       # @example
-      #
       # ```ruby
       # filter => {
       #   account_id: String,
@@ -87,7 +86,7 @@ module Unit
 
         # @!attribute tags
         #
-        #   @return [Hash{Symbol => String}]
+        #   @return [Hash{Symbol=>String}]
         optional :tags, Unit::HashOf[String]
 
         # @!attribute to_amount
@@ -108,7 +107,7 @@ module Unit
         #   # @param include_completed [Boolean]
         #   # @param since [String]
         #   # @param status [Array<String>]
-        #   # @param tags [Hash{Symbol => String}]
+        #   # @param tags [Hash{Symbol=>String}]
         #   # @param to_amount [Integer]
         #   # @param until_ [String]
         #   #
@@ -131,7 +130,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # case status
         # in :Pending
@@ -161,7 +159,6 @@ module Unit
       end
 
       # @example
-      #
       # ```ruby
       # page => {
       #   limit: Integer,

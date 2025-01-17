@@ -4,7 +4,6 @@ module Unit
   module Models
     module Applications
       # @example
-      #
       # ```ruby
       # document_list_response => {
       #   data: -> { Unit::ArrayOf[Unit::Models::Applications::DocumentListResponse::Data] === _1 }
@@ -24,7 +23,6 @@ module Unit
         # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
-        #
         # ```ruby
         # data => {
         #   id: String,
@@ -58,7 +56,6 @@ module Unit
           # def initialize: (Hash | Unit::BaseModel) -> void
 
           # @example
-          #
           # ```ruby
           # attributes => {
           #   status: String,
@@ -224,7 +221,6 @@ module Unit
             # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
-            #
             # ```ruby
             # address => {
             #   city: String,
@@ -280,7 +276,6 @@ module Unit
           end
 
           # @example
-          #
           # ```ruby
           # case type
           # in :document

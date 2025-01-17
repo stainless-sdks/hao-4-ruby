@@ -4,7 +4,6 @@ module Unit
   module Models
     module Accounts
       # @example
-      #
       # ```ruby
       # transaction_update_response => {
       #   data: Unit::Models::Accounts::Transaction
