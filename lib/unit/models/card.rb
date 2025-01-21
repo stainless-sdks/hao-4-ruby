@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class Card < Unit::BaseModel
-      # @!attribute id
+      # @!attribute [r] id
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :id, String
 
-      # @!attribute type
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :id
+
+      # @!attribute [r] type
       #
-      #   @return [Symbol, Unit::Models::Card::Type]
+      #   @return [Symbol, Unit::Models::Card::Type, nil]
       optional :type, enum: -> { Unit::Models::Card::Type }
+
+      # @!parse
+      #   # @return [Symbol, Unit::Models::Card::Type]
+      #   attr_writer :type
 
       # @!parse
       #   # @param id [String]

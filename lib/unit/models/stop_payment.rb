@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class StopPayment < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::StopPayment::Data]
+      #   @return [Unit::Models::StopPayment::Data, nil]
       optional :data, -> { Unit::Models::StopPayment::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::StopPayment::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::StopPayment::Data]

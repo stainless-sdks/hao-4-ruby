@@ -3,21 +3,33 @@
 module Unit
   module Models
     class AccountListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::AccountListParams::Filter]
+      #   @return [Unit::Models::AccountListParams::Filter, nil]
       optional :filter, -> { Unit::Models::AccountListParams::Filter }
 
-      # @!attribute include
+      # @!parse
+      #   # @return [Unit::Models::AccountListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
 
-      # @!attribute page
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::AccountListParams::Page]
+      #   @return [Unit::Models::AccountListParams::Page, nil]
       optional :page, -> { Unit::Models::AccountListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::AccountListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::AccountListParams::Filter]
@@ -41,35 +53,59 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute customer_id
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute from_balance
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] from_balance
         #
-        #   @return [Float]
+        #   @return [Float, nil]
         optional :from_balance, Float, api_name: :fromBalance
 
-        # @!attribute status
+        # @!parse
+        #   # @return [Float]
+        #   attr_writer :from_balance
+
+        # @!attribute [r] status
         #
         #   @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Status>]
         optional :status, -> { Unit::ArrayOf[enum: Unit::Models::AccountListParams::Filter::Status] }
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Status>]
+        #   attr_writer :status
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
 
-        # @!attribute to_balance
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
+
+        # @!attribute [r] to_balance
         #
-        #   @return [Float]
+        #   @return [Float, nil]
         optional :to_balance, Float, api_name: :toBalance
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Float]
+        #   attr_writer :to_balance
+
+        # @!attribute [r] type
         #
         #   @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Type>]
         optional :type, -> { Unit::ArrayOf[enum: Unit::Models::AccountListParams::Filter::Type] }
+
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::AccountListParams::Filter::Type>]
+        #   attr_writer :type
 
         # @!parse
         #   # @param customer_id [String]
@@ -127,15 +163,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

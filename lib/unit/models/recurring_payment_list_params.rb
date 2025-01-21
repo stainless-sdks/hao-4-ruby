@@ -3,21 +3,33 @@
 module Unit
   module Models
     class RecurringPaymentListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::RecurringPaymentListParams::Filter]
+      #   @return [Unit::Models::RecurringPaymentListParams::Filter, nil]
       optional :filter, -> { Unit::Models::RecurringPaymentListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::RecurringPaymentListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::RecurringPaymentListParams::Page]
+      #   @return [Unit::Models::RecurringPaymentListParams::Page, nil]
       optional :page, -> { Unit::Models::RecurringPaymentListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::RecurringPaymentListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::RecurringPaymentListParams::Filter]
@@ -42,45 +54,77 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute from_end_time
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] from_end_time
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :from_end_time, String, api_name: :fromEndTime
 
-        # @!attribute from_start_time
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :from_end_time
+
+        # @!attribute [r] from_start_time
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :from_start_time, String, api_name: :fromStartTime
 
-        # @!attribute status
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :from_start_time
+
+        # @!attribute [r] status
         #
         #   @return [Array<String>]
         optional :status, Unit::ArrayOf[String]
 
-        # @!attribute to_end_time
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :status
+
+        # @!attribute [r] to_end_time
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :to_end_time, String, api_name: :toEndTime
 
-        # @!attribute to_start_time
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :to_end_time
+
+        # @!attribute [r] to_start_time
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :to_start_time, String, api_name: :toStartTime
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :to_start_time
+
+        # @!attribute [r] type
         #
         #   @return [Array<Symbol, Unit::Models::RecurringPaymentListParams::Filter::Type>]
         optional :type, -> { Unit::ArrayOf[enum: Unit::Models::RecurringPaymentListParams::Filter::Type] }
+
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::RecurringPaymentListParams::Filter::Type>]
+        #   attr_writer :type
 
         # @!parse
         #   # @param account_id [String]
@@ -136,15 +180,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class WebhookCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::WebhookCreateParams::Data]
+      #   @return [Unit::Models::WebhookCreateParams::Data, nil]
       optional :data, -> { Unit::Models::WebhookCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::WebhookCreateParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::WebhookCreateParams::Data]
@@ -23,15 +27,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::WebhookCreateParams::Data::Attributes]
+        #   @return [Unit::Models::WebhookCreateParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::WebhookCreateParams::Data::Attributes }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::WebhookCreateParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::WebhookCreateParams::Data::Attributes]
@@ -80,17 +92,25 @@ module Unit
           #   @return [String]
           required :url, String
 
-          # @!attribute include_resources
+          # @!attribute [r] include_resources
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :include_resources, Unit::BooleanModel, api_name: :includeResources
 
-          # @!attribute subscription_type
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :include_resources
+
+          # @!attribute [r] subscription_type
           #
-          #   @return [Symbol, Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType]
+          #   @return [Symbol, Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType, nil]
           optional :subscription_type,
                    enum: -> { Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType },
                    api_name: :subscriptionType
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::WebhookCreateParams::Data::Attributes::SubscriptionType]
+          #   attr_writer :subscription_type
 
           # @!parse
           #   # @param token [String]

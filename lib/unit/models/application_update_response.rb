@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class ApplicationUpdateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::Application]
+      #   @return [Unit::Models::Application, nil]
       optional :data, -> { Unit::Models::Application }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Unit::Models::Application]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::ApplicationUpdateResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::ApplicationUpdateResponse::Included] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::ApplicationUpdateResponse::Included>]
+      #   attr_writer :included
 
       # @!parse
       #   # @param data [Unit::Models::Application]
@@ -38,25 +46,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

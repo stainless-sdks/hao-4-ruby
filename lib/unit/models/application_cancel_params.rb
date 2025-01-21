@@ -3,10 +3,14 @@
 module Unit
   module Models
     class ApplicationCancelParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ApplicationCancelParams::Data]
+      #   @return [Unit::Models::ApplicationCancelParams::Data, nil]
       optional :data, -> { Unit::Models::ApplicationCancelParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::ApplicationCancelParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::ApplicationCancelParams::Data]
@@ -23,15 +27,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::ApplicationCancelParams::Data::Attributes]
+        #   @return [Unit::Models::ApplicationCancelParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::ApplicationCancelParams::Data::Attributes }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::ApplicationCancelParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::ApplicationCancelParams::Data::Type]
+        #   @return [Symbol, Unit::Models::ApplicationCancelParams::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::ApplicationCancelParams::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::ApplicationCancelParams::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::ApplicationCancelParams::Data::Attributes]
@@ -48,10 +60,14 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute reason
+          # @!attribute [r] reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reason, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :reason
 
           # @!parse
           #   # @param reason [String]

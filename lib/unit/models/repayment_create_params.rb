@@ -93,10 +93,14 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute transaction_summary_override
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param amount [Float]
@@ -426,10 +430,14 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute transaction_summary_override
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param amount [Float]
@@ -679,20 +687,32 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
 
             # @!parse
             #   # @param amount [Float]
@@ -1020,20 +1040,32 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
 
             # @!parse
             #   # @param amount [Float]

@@ -3,21 +3,33 @@
 module Unit
   module Models
     class RecurringRepaymentListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::RecurringRepaymentListParams::Filter]
+      #   @return [Unit::Models::RecurringRepaymentListParams::Filter, nil]
       optional :filter, -> { Unit::Models::RecurringRepaymentListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::RecurringRepaymentListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::RecurringRepaymentListParams::Page]
+      #   @return [Unit::Models::RecurringRepaymentListParams::Page, nil]
       optional :page, -> { Unit::Models::RecurringRepaymentListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::RecurringRepaymentListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [Symbol, Unit::Models::RecurringRepaymentListParams::Sort]
+      #   @return [Symbol, Unit::Models::RecurringRepaymentListParams::Sort, nil]
       optional :sort, enum: -> { Unit::Models::RecurringRepaymentListParams::Sort }
+
+      # @!parse
+      #   # @return [Symbol, Unit::Models::RecurringRepaymentListParams::Sort]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::RecurringRepaymentListParams::Filter]
@@ -41,22 +53,34 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute credit_account_id
+        # @!attribute [r] credit_account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :credit_account_id, String, api_name: :creditAccountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :credit_account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute from_start_time
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] from_start_time
         #
-        #   @return [Date]
+        #   @return [Date, nil]
         optional :from_start_time, Date, api_name: :fromStartTime
 
-        # @!attribute status
+        # @!parse
+        #   # @return [Date]
+        #   attr_writer :from_start_time
+
+        # @!attribute [r] status
         #
         #   @return [Array<Symbol, Unit::Models::RecurringRepaymentListParams::Filter::Status>]
         optional :status,
@@ -64,10 +88,18 @@ module Unit
                    Unit::ArrayOf[enum: Unit::Models::RecurringRepaymentListParams::Filter::Status]
                  }
 
-        # @!attribute to_start_time
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::RecurringRepaymentListParams::Filter::Status>]
+        #   attr_writer :status
+
+        # @!attribute [r] to_start_time
         #
-        #   @return [Date]
+        #   @return [Date, nil]
         optional :to_start_time, Date, api_name: :toStartTime
+
+        # @!parse
+        #   # @return [Date]
+        #   attr_writer :to_start_time
 
         # @!parse
         #   # @param credit_account_id [String]
@@ -105,15 +137,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

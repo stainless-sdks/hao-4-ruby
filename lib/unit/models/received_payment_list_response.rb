@@ -11,20 +11,32 @@ module Unit
     # }
     # ```
     class ReceivedPaymentListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::ReceivedPaymentListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::ReceivedPaymentListResponse::Data] }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Array<Unit::Models::ReceivedPaymentListResponse::Data>]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::ReceivedPaymentListResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::ReceivedPaymentListResponse::Included] }
 
-      # @!attribute meta
+      # @!parse
+      #   # @return [Array<Unit::Models::ReceivedPaymentListResponse::Included>]
+      #   attr_writer :included
+
+      # @!attribute [r] meta
       #
-      #   @return [Unit::Models::ReceivedPaymentListResponse::Meta]
+      #   @return [Unit::Models::ReceivedPaymentListResponse::Meta, nil]
       optional :meta, -> { Unit::Models::ReceivedPaymentListResponse::Meta }
+
+      # @!parse
+      #   # @return [Unit::Models::ReceivedPaymentListResponse::Meta]
+      #   attr_writer :meta
 
       # @!parse
       #   # @param data [Array<Unit::Models::ReceivedPaymentListResponse::Data>]
@@ -45,25 +57,41 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Attributes]
+        #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::ReceivedPaymentListResponse::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::ReceivedPaymentListResponse::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships]
+        #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::ReceivedPaymentListResponse::Data::Relationships }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::ReceivedPaymentListResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::ReceivedPaymentListResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::ReceivedPaymentListResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::ReceivedPaymentListResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -145,35 +173,59 @@ module Unit
           #   @return [Boolean]
           required :was_advanced, Unit::BooleanModel, api_name: :wasAdvanced
 
-          # @!attribute addenda
+          # @!attribute [r] addenda
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :addenda, String
 
-          # @!attribute is_advaceable
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :addenda
+
+          # @!attribute [r] is_advaceable
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :is_advaceable, Unit::BooleanModel, api_name: :isAdvaceable
 
-          # @!attribute is_advanceable
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :is_advaceable
+
+          # @!attribute [r] is_advanceable
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :is_advanceable, Unit::BooleanModel, api_name: :isAdvanceable
 
-          # @!attribute receiving_entity_name
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :is_advanceable
+
+          # @!attribute [r] receiving_entity_name
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :receiving_entity_name, String, api_name: :receivingEntityName
 
-          # @!attribute return_reason
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :receiving_entity_name
+
+          # @!attribute [r] return_reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :return_reason, String, api_name: :returnReason
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :return_reason
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]
@@ -285,32 +337,44 @@ module Unit
           #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::Customer]
           required :customer, -> { Unit::Models::ReceivedPaymentListResponse::Data::Relationships::Customer }
 
-          # @!attribute payment_advance_transaction
+          # @!attribute [r] payment_advance_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction]
+          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction, nil]
           optional :payment_advance_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction
                    },
                    api_name: :paymentAdvanceTransaction
 
-          # @!attribute receive_payment_transaction
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::PaymentAdvanceTransaction]
+          #   attr_writer :payment_advance_transaction
+
+          # @!attribute [r] receive_payment_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction]
+          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction, nil]
           optional :receive_payment_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction
                    },
                    api_name: :receivePaymentTransaction
 
-          # @!attribute repay_payment_advance_transaction
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::ReceivePaymentTransaction]
+          #   attr_writer :receive_payment_transaction
+
+          # @!attribute [r] repay_payment_advance_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
+          #   @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction, nil]
           optional :repay_payment_advance_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction
                    },
                    api_name: :repayPaymentAdvanceTransaction
+
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
+          #   attr_writer :repay_payment_advance_transaction
 
           # @!parse
           #   # @param account [Unit::Models::ReceivedPaymentListResponse::Data::Relationships::Account]
@@ -648,25 +712,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -686,10 +766,14 @@ module Unit
       # }
       # ```
       class Meta < Unit::BaseModel
-        # @!attribute pagination
+        # @!attribute [r] pagination
         #
-        #   @return [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination]
+        #   @return [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination, nil]
         optional :pagination, -> { Unit::Models::ReceivedPaymentListResponse::Meta::Pagination }
+
+        # @!parse
+        #   # @return [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination]
+        #   attr_writer :pagination
 
         # @!parse
         #   # @param pagination [Unit::Models::ReceivedPaymentListResponse::Meta::Pagination]
@@ -707,20 +791,32 @@ module Unit
         # }
         # ```
         class Pagination < Unit::BaseModel
-          # @!attribute limit
+          # @!attribute [r] limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :limit, Integer
 
-          # @!attribute offset
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :limit
+
+          # @!attribute [r] offset
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :offset, Integer
 
-          # @!attribute total
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :offset
+
+          # @!attribute [r] total
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :total, Integer
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :total
 
           # @!parse
           #   # @param limit [Integer]

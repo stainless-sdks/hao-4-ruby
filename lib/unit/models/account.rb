@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class Account < Unit::BaseModel
-      # @!attribute id
+      # @!attribute [r] id
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :id, String
 
-      # @!attribute type
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :id
+
+      # @!attribute [r] type
       #
-      #   @return [Symbol, Unit::Models::Account::Type]
+      #   @return [Symbol, Unit::Models::Account::Type, nil]
       optional :type, enum: -> { Unit::Models::Account::Type }
+
+      # @!parse
+      #   # @return [Symbol, Unit::Models::Account::Type]
+      #   attr_writer :type
 
       # @!parse
       #   # @param id [String]

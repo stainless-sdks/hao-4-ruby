@@ -77,21 +77,29 @@ module Unit
           # }
           # ```
           class Relationships < Unit::BaseModel
-            # @!attribute account
+            # @!attribute [r] account
             #
-            #   @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account]
+            #   @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account, nil]
             optional :account,
                      -> {
                        Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account
                      }
 
-            # @!attribute customer
+            # @!parse
+            #   # @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account]
+            #   attr_writer :account
+
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer]
+            #   @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer, nil]
             optional :customer,
                      -> {
                        Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer
                      }
+
+            # @!parse
+            #   # @return [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Customer]
+            #   attr_writer :customer
 
             # @!parse
             #   # @param account [Unit::Models::CashDeposits::BarcodeCreateParams::Data::Relationships::Account]

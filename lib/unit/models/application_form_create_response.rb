@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class ApplicationFormCreateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ApplicationForm]
+      #   @return [Unit::Models::ApplicationForm, nil]
       optional :data, -> { Unit::Models::ApplicationForm }
+
+      # @!parse
+      #   # @return [Unit::Models::ApplicationForm]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::ApplicationForm]

@@ -6,12 +6,16 @@ module Unit
       # @!attribute body
       #
       #   @return [Object, nil]
-      required :body, Unit::Unknown
+      required :body, Unit::Unknown, nil?: true
 
-      # @!attribute include
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
 
       # @!parse
       #   # @param body [Object, nil]

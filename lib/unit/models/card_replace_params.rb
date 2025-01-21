@@ -101,7 +101,7 @@ module Unit
             # @!attribute street2
             #
             #   @return [String, nil]
-            optional :street2, String
+            optional :street2, String, nil?: true
 
             # @!parse
             #   # @param city [String]

@@ -62,15 +62,23 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute idempotency_key
+          # @!attribute [r] idempotency_key
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :idempotency_key, String, api_name: :idempotencyKey
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :idempotency_key
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param description [String]
@@ -90,15 +98,23 @@ module Unit
         # }
         # ```
         class Relationships < Unit::BaseModel
-          # @!attribute account
+          # @!attribute [r] account
           #
-          #   @return [Unit::Models::FeeReverseParams::Data::Relationships::Account]
+          #   @return [Unit::Models::FeeReverseParams::Data::Relationships::Account, nil]
           optional :account, -> { Unit::Models::FeeReverseParams::Data::Relationships::Account }
 
-          # @!attribute transaction
+          # @!parse
+          #   # @return [Unit::Models::FeeReverseParams::Data::Relationships::Account]
+          #   attr_writer :account
+
+          # @!attribute [r] transaction
           #
-          #   @return [Unit::Models::FeeReverseParams::Data::Relationships::Transaction]
+          #   @return [Unit::Models::FeeReverseParams::Data::Relationships::Transaction, nil]
           optional :transaction, -> { Unit::Models::FeeReverseParams::Data::Relationships::Transaction }
+
+          # @!parse
+          #   # @return [Unit::Models::FeeReverseParams::Data::Relationships::Transaction]
+          #   attr_writer :transaction
 
           # @!parse
           #   # @param account [Unit::Models::FeeReverseParams::Data::Relationships::Account]

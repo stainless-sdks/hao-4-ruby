@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class ApplicationFormRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ApplicationForm]
+      #   @return [Unit::Models::ApplicationForm, nil]
       optional :data, -> { Unit::Models::ApplicationForm }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Unit::Models::ApplicationForm]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
-      #   @return [Unit::Models::Application]
+      #   @return [Unit::Models::Application, nil]
       optional :included, -> { Unit::Models::Application }
+
+      # @!parse
+      #   # @return [Unit::Models::Application]
+      #   attr_writer :included
 
       # @!parse
       #   # @param data [Unit::Models::ApplicationForm]

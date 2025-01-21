@@ -4,10 +4,14 @@ module Unit
   module Models
     module Customers
       class AuthorizedUserDeleteParams < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data]
+        #   @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data, nil]
         optional :data, -> { Unit::Models::Customers::AuthorizedUserDeleteParams::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteParams::Data]
@@ -24,15 +28,23 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes]
+          #   @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes, nil]
           optional :attributes, -> { Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type]
+          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes]
@@ -49,10 +61,14 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute authorized_users_emails
+            # @!attribute [r] authorized_users_emails
             #
             #   @return [Array<String>]
             optional :authorized_users_emails, Unit::ArrayOf[String], api_name: :authorizedUsersEmails
+
+            # @!parse
+            #   # @return [Array<String>]
+            #   attr_writer :authorized_users_emails
 
             # @!parse
             #   # @param authorized_users_emails [Array<String>]

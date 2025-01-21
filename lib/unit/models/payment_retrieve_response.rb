@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class PaymentRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::PaymentRetrieveResponse::Data]
+      #   @return [Unit::Models::PaymentRetrieveResponse::Data, nil]
       optional :data, -> { Unit::Models::PaymentRetrieveResponse::Data }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Unit::Models::PaymentRetrieveResponse::Data]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::PaymentRetrieveResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::PaymentRetrieveResponse::Included] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::PaymentRetrieveResponse::Included>]
+      #   attr_writer :included
 
       # @!parse
       #   # @param data [Unit::Models::PaymentRetrieveResponse::Data]
@@ -36,15 +44,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::PaymentRetrieveResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::PaymentRetrieveResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::PaymentRetrieveResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::PaymentRetrieveResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -84,25 +100,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

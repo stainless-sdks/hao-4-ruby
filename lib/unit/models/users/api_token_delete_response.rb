@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class APITokenDeleteResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Users::APITokenDeleteResponse::Data]
+        #   @return [Unit::Models::Users::APITokenDeleteResponse::Data, nil]
         optional :data, -> { Unit::Models::Users::APITokenDeleteResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Users::APITokenDeleteResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Users::APITokenDeleteResponse::Data]
@@ -31,20 +35,32 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute id
+          # @!attribute [r] id
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :id, String
 
-          # @!attribute attributes
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :id
+
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::Users::APITokenDeleteResponse::Data::Attributes]
+          #   @return [Unit::Models::Users::APITokenDeleteResponse::Data::Attributes, nil]
           optional :attributes, -> { Unit::Models::Users::APITokenDeleteResponse::Data::Attributes }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::Users::APITokenDeleteResponse::Data::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Users::APITokenDeleteResponse::Data::Type]
+          #   @return [Symbol, Unit::Models::Users::APITokenDeleteResponse::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Users::APITokenDeleteResponse::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Users::APITokenDeleteResponse::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param id [String]
@@ -71,25 +87,41 @@ module Unit
             #   @return [Time]
             required :created_at, Time, api_name: :createdAt
 
-            # @!attribute token
+            # @!attribute [r] token
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :token, String
 
-            # @!attribute description
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :token
+
+            # @!attribute [r] description
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :description, String
 
-            # @!attribute expiration
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :description
+
+            # @!attribute [r] expiration
             #
-            #   @return [Time]
+            #   @return [Time, nil]
             optional :expiration, Time
 
-            # @!attribute source_ip
+            # @!parse
+            #   # @return [Time]
+            #   attr_writer :expiration
+
+            # @!attribute [r] source_ip
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :source_ip, String, api_name: :sourceIp
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :source_ip
 
             # @!parse
             #   # @param created_at [String]

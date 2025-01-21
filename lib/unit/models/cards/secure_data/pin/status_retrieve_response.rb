@@ -12,10 +12,14 @@ module Unit
           # }
           # ```
           class StatusRetrieveResponse < Unit::BaseModel
-            # @!attribute data
+            # @!attribute [r] data
             #
-            #   @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data]
+            #   @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data, nil]
             optional :data, -> { Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data }
+
+            # @!parse
+            #   # @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data]
+            #   attr_writer :data
 
             # @!parse
             #   # @param data [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data]
@@ -32,19 +36,27 @@ module Unit
             # }
             # ```
             class Data < Unit::BaseModel
-              # @!attribute attributes
+              # @!attribute [r] attributes
               #
-              #   @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes]
+              #   @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes, nil]
               optional :attributes,
                        -> { Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes }
 
-              # @!attribute type
+              # @!parse
+              #   # @return [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes]
+              #   attr_writer :attributes
+
+              # @!attribute [r] type
               #
-              #   @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type]
+              #   @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type, nil]
               optional :type,
                        enum: -> {
                          Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type
                        }
+
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type]
+              #   attr_writer :type
 
               # @!parse
               #   # @param attributes [Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes]
@@ -61,13 +73,17 @@ module Unit
               # }
               # ```
               class Attributes < Unit::BaseModel
-                # @!attribute status
+                # @!attribute [r] status
                 #
-                #   @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status]
+                #   @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status, nil]
                 optional :status,
                          enum: -> {
                            Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status
                          }
+
+                # @!parse
+                #   # @return [Symbol, Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status]
+                #   attr_writer :status
 
                 # @!parse
                 #   # @param status [String]

@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class DepositProductListResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
         #   @return [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]
         optional :data, -> { Unit::ArrayOf[Unit::Models::Accounts::DepositProductListResponse::Data] }
+
+        # @!parse
+        #   # @return [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Array<Unit::Models::Accounts::DepositProductListResponse::Data>]

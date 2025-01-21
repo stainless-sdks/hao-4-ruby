@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CustomerUpdateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer]
+      #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer, nil]
       optional :data, union: -> { Unit::Models::CustomerUpdateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer]
@@ -37,19 +41,27 @@ module Unit
         # }
         # ```
         class UpdateIndividualCustomer < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes]
+          #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes, nil]
           optional :attributes,
                    -> { Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type]
+          #   @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type, nil]
           optional :type,
                    enum: -> {
                      Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
                    }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes]
@@ -75,46 +87,57 @@ module Unit
             #
             #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address, nil]
             optional :address,
-                     -> { Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address }
+                     -> {
+                       Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address
+                     },
+                     nil?: true
 
             # @!attribute authorized_users
             #
-            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>, nil]
+            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>]
             optional :authorized_users,
                      -> {
                        Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser]
                      },
-                     api_name: :authorizedUsers
+                     api_name: :authorizedUsers,
+                     nil?: true
 
             # @!attribute dba
             #
             #   @return [String, nil]
-            optional :dba, String
+            optional :dba, String, nil?: true
 
             # @!attribute email
             #
             #   @return [String, nil]
-            optional :email, String
+            optional :email, String, nil?: true
 
             # @!attribute jwt_subject
             #
             #   @return [String, nil]
-            optional :jwt_subject, String, api_name: :jwtSubject
+            optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
             # @!attribute phone
             #
             #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone, nil]
             optional :phone,
-                     -> { Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone }
+                     -> {
+                       Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Phone
+                     },
+                     nil?: true
 
-            # @!attribute tags
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
             # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!parse
             #   # @param address [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::Address, nil]
-            #   # @param authorized_users [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>, nil]
+            #   # @param authorized_users [Array<Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes::AuthorizedUser>]
             #   # @param dba [String, nil]
             #   # @param email [String, nil]
             #   # @param jwt_subject [String, nil]
@@ -164,7 +187,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -212,7 +235,7 @@ module Unit
               # @!attribute jwt_subject
               #
               #   @return [String, nil]
-              optional :jwt_subject, String, api_name: :jwtSubject
+              optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
               # @!parse
               #   # @param email [String]
@@ -329,18 +352,26 @@ module Unit
         # }
         # ```
         class UpdateBusinessCustomer < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes]
+          #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes, nil]
           optional :attributes,
                    -> {
                      Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes
                    }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type]
+          #   @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type, nil]
           optional :type, enum: -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes]
@@ -366,47 +397,61 @@ module Unit
             #
             #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address, nil]
             optional :address,
-                     -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address }
+                     -> {
+                       Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address
+                     },
+                     nil?: true
 
             # @!attribute authorized_users
             #
-            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>, nil]
+            #   @return [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>]
             optional :authorized_users,
                      -> {
                        Unit::ArrayOf[Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser]
                      },
-                     api_name: :authorizedUsers
+                     api_name: :authorizedUsers,
+                     nil?: true
 
             # @!attribute contact
             #
             #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact, nil]
             optional :contact,
-                     -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact }
+                     -> {
+                       Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact
+                     },
+                     nil?: true
 
             # @!attribute dba
             #
             #   @return [String, nil]
-            optional :dba, String
+            optional :dba, String, nil?: true
 
-            # @!attribute ein
+            # @!attribute [r] ein
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ein, String
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ein
 
             # @!attribute phone
             #
             #   @return [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone, nil]
             optional :phone,
-                     -> { Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone }
+                     -> {
+                       Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Phone
+                     },
+                     nil?: true
 
             # @!attribute tags
             #
             #   @return [Hash{Symbol=>String}, nil]
-            optional :tags, Unit::HashOf[String]
+            optional :tags, Unit::HashOf[String], nil?: true
 
             # @!parse
             #   # @param address [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Address, nil]
-            #   # @param authorized_users [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>, nil]
+            #   # @param authorized_users [Array<Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::AuthorizedUser>]
             #   # @param contact [Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes::Contact, nil]
             #   # @param dba [String, nil]
             #   # @param ein [String]
@@ -456,7 +501,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -504,7 +549,7 @@ module Unit
               # @!attribute jwt_subject
               #
               #   @return [String, nil]
-              optional :jwt_subject, String, api_name: :jwtSubject
+              optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
               # @!parse
               #   # @param email [String]
@@ -604,7 +649,7 @@ module Unit
               # @!attribute jwt_subject
               #
               #   @return [String, nil]
-              optional :jwt_subject, String, api_name: :jwtSubject
+              optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
               # @!parse
               #   # @param email [String]

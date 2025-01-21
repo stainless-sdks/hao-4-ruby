@@ -3,10 +3,14 @@
 module Unit
   module Models
     class ApplicationRetrieveParams < Unit::BaseModel
-      # @!attribute included
+      # @!attribute [r] included
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :included, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :included
 
       # @!parse
       #   # @param included [String]

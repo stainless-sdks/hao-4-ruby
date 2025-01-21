@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class AuthorizationRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::Authorization]
+      #   @return [Unit::Models::Authorization, nil]
       optional :data, -> { Unit::Models::Authorization }
+
+      # @!parse
+      #   # @return [Unit::Models::Authorization]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::Authorization]

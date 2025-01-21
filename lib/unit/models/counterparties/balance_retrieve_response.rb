@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class BalanceRetrieveResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data]
+        #   @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data, nil]
         optional :data, -> { Unit::Models::Counterparties::BalanceRetrieveResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Counterparties::BalanceRetrieveResponse::Data]
@@ -50,10 +54,14 @@ module Unit
           #   @return [Symbol, Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Type]
           required :type, enum: -> { Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Type }
 
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes]
+          #   @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes, nil]
           optional :attributes, -> { Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes }
+
+          # @!parse
+          #   # @return [Unit::Models::Counterparties::BalanceRetrieveResponse::Data::Attributes]
+          #   attr_writer :attributes
 
           # @!parse
           #   # @param id [String]
@@ -254,10 +262,14 @@ module Unit
             #   @return [Float]
             required :balance, Float
 
-            # @!attribute available
+            # @!attribute [r] available
             #
-            #   @return [Float]
+            #   @return [Float, nil]
             optional :available, Float
+
+            # @!parse
+            #   # @return [Float]
+            #   attr_writer :available
 
             # @!parse
             #   # @param balance [Float]

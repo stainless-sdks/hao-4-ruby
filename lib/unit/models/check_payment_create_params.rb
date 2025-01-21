@@ -83,20 +83,32 @@ module Unit
           #   @return [String]
           required :idempotency_key, String, api_name: :idempotencyKey
 
-          # @!attribute memo
+          # @!attribute [r] memo
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :memo, String
 
-          # @!attribute send_date
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :memo
+
+          # @!attribute [r] send_date
           #
-          #   @return [Date]
+          #   @return [Date, nil]
           optional :send_date, Date, api_name: :sendDate
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [Date]
+          #   attr_writer :send_date
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]
@@ -133,10 +145,14 @@ module Unit
             #   @return [String]
             required :name, String
 
-            # @!attribute counterparty_moved
+            # @!attribute [r] counterparty_moved
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :counterparty_moved, Unit::BooleanModel, api_name: :counterpartyMoved
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :counterparty_moved
 
             # @!parse
             #   # @param address [Unit::Models::CheckPaymentCreateParams::Data::Attributes::Counterparty::Address]
@@ -186,7 +202,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]

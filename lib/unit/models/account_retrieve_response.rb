@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class AccountRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::Account]
+      #   @return [Unit::Models::Account, nil]
       optional :data, -> { Unit::Models::Account }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Unit::Models::Account]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::AccountRetrieveResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::AccountRetrieveResponse::Included] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::AccountRetrieveResponse::Included>]
+      #   attr_writer :included
 
       # @!parse
       #   # @param data [Unit::Models::Account]
@@ -36,15 +44,23 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::AccountRetrieveResponse::Included::Type]
+        #   @return [Symbol, Unit::Models::AccountRetrieveResponse::Included::Type, nil]
         optional :type, enum: -> { Unit::Models::AccountRetrieveResponse::Included::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::AccountRetrieveResponse::Included::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

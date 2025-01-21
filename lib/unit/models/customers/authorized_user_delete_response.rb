@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class AuthorizedUserDeleteResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data]
+        #   @return [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data, nil]
         optional :data, -> { Unit::Models::Customers::AuthorizedUserDeleteResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Customers::AuthorizedUserDeleteResponse::Data]
@@ -30,15 +34,23 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute id
+          # @!attribute [r] id
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :id, String
 
-          # @!attribute type
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :id
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type]
+          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Customers::AuthorizedUserDeleteResponse::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param id [String]

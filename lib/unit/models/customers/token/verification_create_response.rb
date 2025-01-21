@@ -11,10 +11,14 @@ module Unit
         # }
         # ```
         class VerificationCreateResponse < Unit::BaseModel
-          # @!attribute data
+          # @!attribute [r] data
           #
-          #   @return [Unit::Models::Customers::Token::VerificationCreateResponse::Data]
+          #   @return [Unit::Models::Customers::Token::VerificationCreateResponse::Data, nil]
           optional :data, -> { Unit::Models::Customers::Token::VerificationCreateResponse::Data }
+
+          # @!parse
+          #   # @return [Unit::Models::Customers::Token::VerificationCreateResponse::Data]
+          #   attr_writer :data
 
           # @!parse
           #   # @param data [Unit::Models::Customers::Token::VerificationCreateResponse::Data]
@@ -62,10 +66,14 @@ module Unit
             # }
             # ```
             class Attributes < Unit::BaseModel
-              # @!attribute verification_token
+              # @!attribute [r] verification_token
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :verification_token, String, api_name: :verificationToken
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :verification_token
 
               # @!parse
               #   # @param verification_token [String]

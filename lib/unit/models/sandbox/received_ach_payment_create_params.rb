@@ -78,23 +78,35 @@ module Unit
             #   @return [Date]
             required :settlement_date, Date, api_name: :settlementDate
 
-            # @!attribute direction
+            # @!attribute [r] direction
             #
-            #   @return [Symbol, Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction]
+            #   @return [Symbol, Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction, nil]
             optional :direction,
                      enum: -> {
                        Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction
                      }
 
-            # @!attribute receiving_entity_name
+            # @!parse
+            #   # @return [Symbol, Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction]
+            #   attr_writer :direction
+
+            # @!attribute [r] receiving_entity_name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :receiving_entity_name, String, api_name: :receivingEntityName
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :receiving_entity_name
+
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
 
             # @!parse
             #   # @param amount [Integer]

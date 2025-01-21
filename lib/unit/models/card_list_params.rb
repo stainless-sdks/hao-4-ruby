@@ -3,26 +3,42 @@
 module Unit
   module Models
     class CardListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::CardListParams::Filter]
+      #   @return [Unit::Models::CardListParams::Filter, nil]
       optional :filter, -> { Unit::Models::CardListParams::Filter }
 
-      # @!attribute include
+      # @!parse
+      #   # @return [Unit::Models::CardListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
 
-      # @!attribute page
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::CardListParams::Page]
+      #   @return [Unit::Models::CardListParams::Page, nil]
       optional :page, -> { Unit::Models::CardListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::CardListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::CardListParams::Filter]
@@ -47,25 +63,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute status
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] status
         #
         #   @return [Array<Symbol, Unit::Models::CardListParams::Filter::Status>]
         optional :status, -> { Unit::ArrayOf[enum: Unit::Models::CardListParams::Filter::Status] }
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::CardListParams::Filter::Status>]
+        #   attr_writer :status
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
+
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
 
         # @!parse
         #   # @param account_id [String]
@@ -115,15 +147,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

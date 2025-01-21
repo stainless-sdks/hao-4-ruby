@@ -3,21 +3,33 @@
 module Unit
   module Models
     class ApplicationFormListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::ApplicationFormListParams::Filter]
+      #   @return [Unit::Models::ApplicationFormListParams::Filter, nil]
       optional :filter, -> { Unit::Models::ApplicationFormListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::ApplicationFormListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::ApplicationFormListParams::Page]
+      #   @return [Unit::Models::ApplicationFormListParams::Page, nil]
       optional :page, -> { Unit::Models::ApplicationFormListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::ApplicationFormListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::ApplicationFormListParams::Filter]
@@ -40,25 +52,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute email
+        # @!attribute [r] email
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :email, String
 
-        # @!attribute query
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :email
+
+        # @!attribute [r] query
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :query, String
 
-        # @!attribute status
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :query
+
+        # @!attribute [r] status
         #
         #   @return [Array<Symbol, Unit::Models::ApplicationFormListParams::Filter::Status>]
         optional :status, -> { Unit::ArrayOf[enum: Unit::Models::ApplicationFormListParams::Filter::Status] }
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::ApplicationFormListParams::Filter::Status>]
+        #   attr_writer :status
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
+
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
 
         # @!parse
         #   # @param email [String]
@@ -95,15 +123,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

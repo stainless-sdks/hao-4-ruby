@@ -3,10 +3,14 @@
 module Unit
   module Models
     class AuthorizationRequestApproveParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::AuthorizationRequestApproveParams::Data]
+      #   @return [Unit::Models::AuthorizationRequestApproveParams::Data, nil]
       optional :data, -> { Unit::Models::AuthorizationRequestApproveParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::AuthorizationRequestApproveParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::AuthorizationRequestApproveParams::Data]
@@ -50,20 +54,32 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute amount
+          # @!attribute [r] amount
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :amount, Integer
 
-          # @!attribute funding_account
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :amount
+
+          # @!attribute [r] funding_account
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :funding_account, String, api_name: :fundingAccount
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :funding_account
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]

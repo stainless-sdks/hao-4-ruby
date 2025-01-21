@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class ReturnReturnResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ReturnReturnResponse::Data]
+      #   @return [Unit::Models::ReturnReturnResponse::Data, nil]
       optional :data, -> { Unit::Models::ReturnReturnResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::ReturnReturnResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::ReturnReturnResponse::Data]
@@ -31,6 +35,14 @@ module Unit
         #
         #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships]
         required :relationships, -> { Unit::Models::ReturnReturnResponse::Data::Relationships }
+
+        # @!parse
+        #   # @param attributes [Unit::Models::ReturnReturnResponse::Data::Attributes]
+        #   # @param relationships [Unit::Models::ReturnReturnResponse::Data::Relationships]
+        #   #
+        #   def initialize(attributes:, relationships:, **) = super
+
+        # def initialize: (Hash | Unit::BaseModel) -> void
 
         # @example
         # ```ruby
@@ -79,10 +91,14 @@ module Unit
           #   @return [String]
           required :summary, String
 
-          # @!attribute tags
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]
@@ -135,15 +151,23 @@ module Unit
           #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Returned]
           required :returned, -> { Unit::Models::ReturnReturnResponse::Data::Relationships::Returned }
 
-          # @!attribute customer
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::ReturnReturnResponse::Data::Relationships::Customer }
 
-          # @!attribute customers
+          # @!parse
+          #   # @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
+
+          # @!attribute [r] customers
           #
-          #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customers]
+          #   @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customers, nil]
           optional :customers, -> { Unit::Models::ReturnReturnResponse::Data::Relationships::Customers }
+
+          # @!parse
+          #   # @return [Unit::Models::ReturnReturnResponse::Data::Relationships::Customers]
+          #   attr_writer :customers
 
           # @!parse
           #   # @param account [Unit::Models::ReturnReturnResponse::Data::Relationships::Account]
@@ -373,15 +397,23 @@ module Unit
             # }
             # ```
             class Data < Unit::BaseModel
-              # @!attribute id
+              # @!attribute [r] id
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :id, String
 
-              # @!attribute type
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :id
+
+              # @!attribute [r] type
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :type, String
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :type
 
               # @!parse
               #   # @param id [String]

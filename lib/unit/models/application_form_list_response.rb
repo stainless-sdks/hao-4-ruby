@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class ApplicationFormListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::ApplicationForm>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::ApplicationForm] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::ApplicationForm>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::ApplicationForm>]

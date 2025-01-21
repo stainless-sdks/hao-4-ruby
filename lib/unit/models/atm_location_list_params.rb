@@ -3,10 +3,14 @@
 module Unit
   module Models
     class AtmLocationListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::AtmLocationListParams::Filter]
+      #   @return [Unit::Models::AtmLocationListParams::Filter, nil]
       optional :filter, -> { Unit::Models::AtmLocationListParams::Filter }
+
+      # @!parse
+      #   # @return [Unit::Models::AtmLocationListParams::Filter]
+      #   attr_writer :filter
 
       # @!parse
       #   # @param filter [Unit::Models::AtmLocationListParams::Filter]
@@ -25,25 +29,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute address
+        # @!attribute [r] address
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :address, Unit::Unknown
 
-        # @!attribute coordinates
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :address
+
+        # @!attribute [r] coordinates
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :coordinates, Unit::Unknown
 
-        # @!attribute postal_code
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :coordinates
+
+        # @!attribute [r] postal_code
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :postal_code, String, api_name: :postalCode
 
-        # @!attribute search_radius
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :postal_code
+
+        # @!attribute [r] search_radius
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :search_radius, Integer, api_name: :searchRadius
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :search_radius
 
         # @!parse
         #   # @param address [Object]

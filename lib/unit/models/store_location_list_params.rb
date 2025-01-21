@@ -3,16 +3,24 @@
 module Unit
   module Models
     class StoreLocationListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::StoreLocationListParams::Filter]
+      #   @return [Unit::Models::StoreLocationListParams::Filter, nil]
       optional :filter, -> { Unit::Models::StoreLocationListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::StoreLocationListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::StoreLocationListParams::Page]
+      #   @return [Unit::Models::StoreLocationListParams::Page, nil]
       optional :page, -> { Unit::Models::StoreLocationListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::StoreLocationListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::StoreLocationListParams::Filter]
@@ -39,15 +47,23 @@ module Unit
                  enum: -> { Unit::Models::StoreLocationListParams::Filter::ServiceType },
                  api_name: :serviceType
 
-        # @!attribute coordinates
+        # @!attribute [r] coordinates
         #
-        #   @return [Unit::Models::StoreLocationListParams::Filter::Coordinates]
+        #   @return [Unit::Models::StoreLocationListParams::Filter::Coordinates, nil]
         optional :coordinates, -> { Unit::Models::StoreLocationListParams::Filter::Coordinates }
 
-        # @!attribute postal_code
+        # @!parse
+        #   # @return [Unit::Models::StoreLocationListParams::Filter::Coordinates]
+        #   attr_writer :coordinates
+
+        # @!attribute [r] postal_code
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :postal_code, String, api_name: :postalCode
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :postal_code
 
         # @!parse
         #   # @param service_type [String]
@@ -110,15 +126,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

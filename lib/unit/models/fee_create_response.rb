@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class FeeCreateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::FeeCreateResponse::Data]
+      #   @return [Unit::Models::FeeCreateResponse::Data, nil]
       optional :data, -> { Unit::Models::FeeCreateResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::FeeCreateResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::FeeCreateResponse::Data]
@@ -31,25 +35,41 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::FeeCreateResponse::Data::Attributes]
+        #   @return [Unit::Models::FeeCreateResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::FeeCreateResponse::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::FeeCreateResponse::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::FeeCreateResponse::Data::Relationships]
+        #   @return [Unit::Models::FeeCreateResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::FeeCreateResponse::Data::Relationships }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::FeeCreateResponse::Data::Relationships]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::FeeCreateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::FeeCreateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::FeeCreateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::FeeCreateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -80,10 +100,14 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute tags
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class RecurringRepaymentCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment]
+      #   @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment, nil]
       optional :data, union: -> { Unit::Models::RecurringRepaymentCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment]
@@ -97,30 +101,50 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param description [String]
@@ -443,20 +467,32 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute transaction_summary_override
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param description [String]
@@ -784,30 +820,50 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param description [String]
@@ -846,11 +902,15 @@ module Unit
                      },
                      api_name: :creditAccount
 
-            # @!attribute account
+            # @!attribute [r] account
             #
-            #   @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account]
+            #   @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account, nil]
             optional :account,
                      -> { Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account }
+
+            # @!parse
+            #   # @return [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Account]
+            #   attr_writer :account
 
             # @!parse
             #   # @param counterparty [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships::Counterparty]
@@ -1130,20 +1190,32 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute transaction_summary_override
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param description [String]

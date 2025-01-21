@@ -49,15 +49,23 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute clearing_days_override
+          # @!attribute [r] clearing_days_override
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :clearing_days_override, Integer, api_name: :clearingDaysOverride
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :clearing_days_override
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param clearing_days_override [Integer]

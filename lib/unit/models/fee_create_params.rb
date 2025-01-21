@@ -68,15 +68,23 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute idempotency_key
+          # @!attribute [r] idempotency_key
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :idempotency_key, String, api_name: :idempotencyKey
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :idempotency_key
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]

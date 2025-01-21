@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class RepaymentCreateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::RepaymentCreateResponse::Data]
+      #   @return [Unit::Models::RepaymentCreateResponse::Data, nil]
       optional :data, -> { Unit::Models::RepaymentCreateResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::RepaymentCreateResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::RepaymentCreateResponse::Data]
@@ -29,15 +33,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::RepaymentCreateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::RepaymentCreateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::RepaymentCreateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::RepaymentCreateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

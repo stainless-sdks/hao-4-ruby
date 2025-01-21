@@ -11,10 +11,14 @@ module Unit
         # }
         # ```
         class CustomerAddResponse < Unit::BaseModel
-          # @!attribute data
+          # @!attribute [r] data
           #
-          #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data]
+          #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data, nil]
           optional :data, -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data }
+
+          # @!parse
+          #   # @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data]
+          #   attr_writer :data
 
           # @!parse
           #   # @param data [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data]
@@ -37,6 +41,14 @@ module Unit
             #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships]
             required :relationships,
                      -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships }
+
+            # @!parse
+            #   # @param attributes [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes]
+            #   # @param relationships [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships]
+            #   #
+            #   def initialize(attributes:, relationships:, **) = super
+
+            # def initialize: (Hash | Unit::BaseModel) -> void
 
             # @example
             # ```ruby
@@ -103,76 +115,120 @@ module Unit
               #   @return [Hash{Symbol=>String}]
               required :tags, Unit::HashOf[String]
 
-              # @!attribute account_number
+              # @!attribute [r] account_number
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :account_number, String, api_name: :accountNumber
 
-              # @!attribute close_reason
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :account_number
+
+              # @!attribute [r] close_reason
               #
-              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason]
+              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason, nil]
               optional :close_reason,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason
                        },
                        api_name: :closeReason
 
-              # @!attribute close_reason_text
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::CloseReason]
+              #   attr_writer :close_reason
+
+              # @!attribute [r] close_reason_text
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :close_reason_text, String, api_name: :closeReasonText
 
-              # @!attribute daca_status
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :close_reason_text
+
+              # @!attribute [r] daca_status
               #
-              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus]
+              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus, nil]
               optional :daca_status,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus
                        },
                        api_name: :dacaStatus
 
-              # @!attribute fraud_reason
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::DacaStatus]
+              #   attr_writer :daca_status
+
+              # @!attribute [r] fraud_reason
               #
-              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason]
+              #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason, nil]
               optional :fraud_reason,
                        enum: -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason
                        },
                        api_name: :fraudReason
 
-              # @!attribute freeze_reason
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::FraudReason]
+              #   attr_writer :fraud_reason
+
+              # @!attribute [r] freeze_reason
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :freeze_reason, String, api_name: :freezeReason
 
-              # @!attribute is_overdrawn_within_limit
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :freeze_reason
+
+              # @!attribute [r] is_overdrawn_within_limit
               #
-              #   @return [Boolean]
+              #   @return [Boolean, nil]
               optional :is_overdrawn_within_limit, Unit::BooleanModel, api_name: :isOverdrawnWithinLimit
 
-              # @!attribute masked_account_number
+              # @!parse
+              #   # @return [Boolean]
+              #   attr_writer :is_overdrawn_within_limit
+
+              # @!attribute [r] masked_account_number
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :masked_account_number, String, api_name: :maskedAccountNumber
 
-              # @!attribute overdraft_limit
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :masked_account_number
+
+              # @!attribute [r] overdraft_limit
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :overdraft_limit, Integer, api_name: :overdraftLimit
 
-              # @!attribute secondary_account_number
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :overdraft_limit
+
+              # @!attribute [r] secondary_account_number
               #
-              #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber]
+              #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber, nil]
               optional :secondary_account_number,
                        -> {
                          Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber
                        },
                        api_name: :secondaryAccountNumber
 
-              # @!attribute updated_at
+              # @!parse
+              #   # @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Attributes::SecondaryAccountNumber]
+              #   attr_writer :secondary_account_number
+
+              # @!attribute [r] updated_at
               #
-              #   @return [Time]
+              #   @return [Time, nil]
               optional :updated_at, Time, api_name: :updatedAt
+
+              # @!parse
+              #   # @return [Time]
+              #   attr_writer :updated_at
 
               # @!parse
               #   # @param available [Integer]
@@ -355,11 +411,15 @@ module Unit
             # }
             # ```
             class Relationships < Unit::BaseModel
-              # @!attribute customer
+              # @!attribute [r] customer
               #
-              #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer]
+              #   @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer, nil]
               optional :customer,
                        -> { Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer }
+
+              # @!parse
+              #   # @return [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer]
+              #   attr_writer :customer
 
               # @!parse
               #   # @param customer [Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer]

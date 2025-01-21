@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class StopPaymentList < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::StopPaymentList::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::StopPaymentList::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::StopPaymentList::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::StopPaymentList::Data>]

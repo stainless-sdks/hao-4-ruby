@@ -3,16 +3,24 @@
 module Unit
   module Models
     class DisputeListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::DisputeListParams::Filter]
+      #   @return [Unit::Models::DisputeListParams::Filter, nil]
       optional :filter, -> { Unit::Models::DisputeListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::DisputeListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::DisputeListParams::Page]
+      #   @return [Unit::Models::DisputeListParams::Page, nil]
       optional :page, -> { Unit::Models::DisputeListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::DisputeListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::DisputeListParams::Filter]
@@ -30,10 +38,14 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute query
+        # @!attribute [r] query
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :query, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :query
 
         # @!parse
         #   # @param query [String]
@@ -51,15 +63,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

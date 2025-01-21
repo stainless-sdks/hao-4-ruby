@@ -71,10 +71,14 @@ module Unit
                      -> { Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::MonthlyTotals },
                      api_name: :monthlyTotals
 
-            # @!attribute limits
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits]
+            #   @return [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits, nil]
             optional :limits, -> { Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits }
+
+            # @!parse
+            #   # @return [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::Limits]
+            #   attr_writer :limits
 
             # @!parse
             #   # @param daily_totals [Unit::Models::Cards::LimitRetrieveResponse::Data::Attributes::DailyTotals]
@@ -177,25 +181,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]

@@ -5,10 +5,14 @@ module Unit
     module Customers
       module Token
         class VerificationCreateParams < Unit::BaseModel
-          # @!attribute data
+          # @!attribute [r] data
           #
-          #   @return [Unit::Models::Customers::Token::VerificationCreateParams::Data]
+          #   @return [Unit::Models::Customers::Token::VerificationCreateParams::Data, nil]
           optional :data, -> { Unit::Models::Customers::Token::VerificationCreateParams::Data }
+
+          # @!parse
+          #   # @return [Unit::Models::Customers::Token::VerificationCreateParams::Data]
+          #   attr_writer :data
 
           # @!parse
           #   # @param data [Unit::Models::Customers::Token::VerificationCreateParams::Data]
@@ -64,26 +68,38 @@ module Unit
                          Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Channel
                        }
 
-              # @!attribute app_hash
+              # @!attribute [r] app_hash
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :app_hash, String, api_name: :appHash
 
-              # @!attribute language
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :app_hash
+
+              # @!attribute [r] language
               #
-              #   @return [Symbol, Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language]
+              #   @return [Symbol, Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language, nil]
               optional :language,
                        enum: -> {
                          Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language
                        }
 
-              # @!attribute phone
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language]
+              #   attr_writer :language
+
+              # @!attribute [r] phone
               #
-              #   @return [Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone]
+              #   @return [Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone, nil]
               optional :phone,
                        -> {
                          Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone
                        }
+
+              # @!parse
+              #   # @return [Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone]
+              #   attr_writer :phone
 
               # @!parse
               #   # @param channel [String]

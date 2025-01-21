@@ -3,16 +3,24 @@
 module Unit
   module Models
     class TaxFormListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::TaxFormListParams::Filter]
+      #   @return [Unit::Models::TaxFormListParams::Filter, nil]
       optional :filter, -> { Unit::Models::TaxFormListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::TaxFormListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::TaxFormListParams::Page]
+      #   @return [Unit::Models::TaxFormListParams::Page, nil]
       optional :page, -> { Unit::Models::TaxFormListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::TaxFormListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::TaxFormListParams::Filter]
@@ -33,25 +41,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute tax_form_types
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] tax_form_types
         #
         #   @return [Array<String>]
         optional :tax_form_types, Unit::ArrayOf[String], api_name: :taxFormTypes
 
-        # @!attribute tax_year
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :tax_form_types
+
+        # @!attribute [r] tax_year
         #
         #   @return [Array<String>]
         optional :tax_year, Unit::ArrayOf[String], api_name: :taxYear
+
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :tax_year
 
         # @!parse
         #   # @param account_id [String]
@@ -72,15 +96,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

@@ -3,16 +3,24 @@
 module Unit
   module Models
     class AuthorizationRequestListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::AuthorizationRequestListParams::Filter]
+      #   @return [Unit::Models::AuthorizationRequestListParams::Filter, nil]
       optional :filter, -> { Unit::Models::AuthorizationRequestListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::AuthorizationRequestListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::AuthorizationRequestListParams::Page]
+      #   @return [Unit::Models::AuthorizationRequestListParams::Page, nil]
       optional :page, -> { Unit::Models::AuthorizationRequestListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::AuthorizationRequestListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::AuthorizationRequestListParams::Filter]
@@ -34,30 +42,50 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute from_amount
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] from_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :from_amount, Integer, api_name: :fromAmount
 
-        # @!attribute merchant_category_code
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :from_amount
+
+        # @!attribute [r] merchant_category_code
         #
         #   @return [Array<String>]
         optional :merchant_category_code, Unit::ArrayOf[String], api_name: :merchantCategoryCode
 
-        # @!attribute to_amount
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :merchant_category_code
+
+        # @!attribute [r] to_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :to_amount, Integer, api_name: :toAmount
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :to_amount
 
         # @!parse
         #   # @param account_id [String]
@@ -79,15 +107,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

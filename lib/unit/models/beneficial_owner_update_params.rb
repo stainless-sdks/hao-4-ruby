@@ -57,27 +57,39 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute annual_income
+          # @!attribute [r] annual_income
           #
-          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome]
+          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome, nil]
           optional :annual_income,
                    enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome },
                    api_name: :annualIncome
 
-          # @!attribute occupation
+          # @!parse
+          #   # @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome]
+          #   attr_writer :annual_income
+
+          # @!attribute [r] occupation
           #
-          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation]
+          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation, nil]
           optional :occupation,
                    enum: -> {
                      Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation
                    }
 
-          # @!attribute source_of_income
+          # @!parse
+          #   # @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation]
+          #   attr_writer :occupation
+
+          # @!attribute [r] source_of_income
           #
-          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome]
+          #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome, nil]
           optional :source_of_income,
                    enum: -> { Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome },
                    api_name: :sourceOfIncome
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome]
+          #   attr_writer :source_of_income
 
           # @!parse
           #   # @param annual_income [String]

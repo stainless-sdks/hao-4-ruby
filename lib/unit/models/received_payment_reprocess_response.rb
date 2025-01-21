@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class ReceivedPaymentReprocessResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data]
+      #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data, nil]
       optional :data, -> { Unit::Models::ReceivedPaymentReprocessResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::ReceivedPaymentReprocessResponse::Data]
@@ -31,25 +35,41 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Attributes]
+        #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::ReceivedPaymentReprocessResponse::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships]
+        #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::ReceivedPaymentReprocessResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::ReceivedPaymentReprocessResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::ReceivedPaymentReprocessResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::ReceivedPaymentReprocessResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -132,35 +152,59 @@ module Unit
           #   @return [Boolean]
           required :was_advanced, Unit::BooleanModel, api_name: :wasAdvanced
 
-          # @!attribute addenda
+          # @!attribute [r] addenda
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :addenda, String
 
-          # @!attribute is_advaceable
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :addenda
+
+          # @!attribute [r] is_advaceable
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :is_advaceable, Unit::BooleanModel, api_name: :isAdvaceable
 
-          # @!attribute is_advanceable
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :is_advaceable
+
+          # @!attribute [r] is_advanceable
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :is_advanceable, Unit::BooleanModel, api_name: :isAdvanceable
 
-          # @!attribute receiving_entity_name
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :is_advanceable
+
+          # @!attribute [r] receiving_entity_name
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :receiving_entity_name, String, api_name: :receivingEntityName
 
-          # @!attribute return_reason
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :receiving_entity_name
+
+          # @!attribute [r] return_reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :return_reason, String, api_name: :returnReason
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :return_reason
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]
@@ -278,32 +322,44 @@ module Unit
                      Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::Customer
                    }
 
-          # @!attribute payment_advance_transaction
+          # @!attribute [r] payment_advance_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::PaymentAdvanceTransaction]
+          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::PaymentAdvanceTransaction, nil]
           optional :payment_advance_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::PaymentAdvanceTransaction
                    },
                    api_name: :paymentAdvanceTransaction
 
-          # @!attribute receive_payment_transaction
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::PaymentAdvanceTransaction]
+          #   attr_writer :payment_advance_transaction
+
+          # @!attribute [r] receive_payment_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::ReceivePaymentTransaction]
+          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::ReceivePaymentTransaction, nil]
           optional :receive_payment_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::ReceivePaymentTransaction
                    },
                    api_name: :receivePaymentTransaction
 
-          # @!attribute repay_payment_advance_transaction
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::ReceivePaymentTransaction]
+          #   attr_writer :receive_payment_transaction
+
+          # @!attribute [r] repay_payment_advance_transaction
           #
-          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
+          #   @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::RepayPaymentAdvanceTransaction, nil]
           optional :repay_payment_advance_transaction,
                    -> {
                      Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::RepayPaymentAdvanceTransaction
                    },
                    api_name: :repayPaymentAdvanceTransaction
+
+          # @!parse
+          #   # @return [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::RepayPaymentAdvanceTransaction]
+          #   attr_writer :repay_payment_advance_transaction
 
           # @!parse
           #   # @param account [Unit::Models::ReceivedPaymentReprocessResponse::Data::Relationships::Account]

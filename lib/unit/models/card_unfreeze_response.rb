@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CardUnfreezeResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::Card]
+      #   @return [Unit::Models::Card, nil]
       optional :data, -> { Unit::Models::Card }
+
+      # @!parse
+      #   # @return [Unit::Models::Card]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::Card]

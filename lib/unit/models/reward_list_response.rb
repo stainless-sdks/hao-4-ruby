@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class RewardListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::RewardListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::RewardListResponse::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::RewardListResponse::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::RewardListResponse::Data>]
@@ -97,10 +101,14 @@ module Unit
           #   @return [Hash{Symbol=>String}]
           required :tags, Unit::HashOf[String]
 
-          # @!attribute reject_reason
+          # @!attribute [r] reject_reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reject_reason, String, api_name: :rejectReason
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :reject_reason
 
           # @!parse
           #   # @param amount [Integer]
@@ -161,22 +169,34 @@ module Unit
                    -> { Unit::Models::RewardListResponse::Data::Relationships::ReceivingAccount },
                    api_name: :receivingAccount
 
-          # @!attribute card
+          # @!attribute [r] card
           #
-          #   @return [Unit::Models::RewardListResponse::Data::Relationships::Card]
+          #   @return [Unit::Models::RewardListResponse::Data::Relationships::Card, nil]
           optional :card, -> { Unit::Models::RewardListResponse::Data::Relationships::Card }
 
-          # @!attribute rewarded_transaction
+          # @!parse
+          #   # @return [Unit::Models::RewardListResponse::Data::Relationships::Card]
+          #   attr_writer :card
+
+          # @!attribute [r] rewarded_transaction
           #
-          #   @return [Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction]
+          #   @return [Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction, nil]
           optional :rewarded_transaction,
                    -> { Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction },
                    api_name: :rewardedTransaction
 
-          # @!attribute transaction
+          # @!parse
+          #   # @return [Unit::Models::RewardListResponse::Data::Relationships::RewardedTransaction]
+          #   attr_writer :rewarded_transaction
+
+          # @!attribute [r] transaction
           #
-          #   @return [Unit::Models::RewardListResponse::Data::Relationships::Transaction]
+          #   @return [Unit::Models::RewardListResponse::Data::Relationships::Transaction, nil]
           optional :transaction, -> { Unit::Models::RewardListResponse::Data::Relationships::Transaction }
+
+          # @!parse
+          #   # @return [Unit::Models::RewardListResponse::Data::Relationships::Transaction]
+          #   attr_writer :transaction
 
           # @!parse
           #   # @param customer [Unit::Models::RewardListResponse::Data::Relationships::Customer]

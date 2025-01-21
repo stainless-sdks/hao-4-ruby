@@ -3,16 +3,24 @@
 module Unit
   module Models
     class AccountEndOfDayListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::AccountEndOfDayListParams::Filter]
+      #   @return [Unit::Models::AccountEndOfDayListParams::Filter, nil]
       optional :filter, -> { Unit::Models::AccountEndOfDayListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::AccountEndOfDayListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::AccountEndOfDayListParams::Page]
+      #   @return [Unit::Models::AccountEndOfDayListParams::Page, nil]
       optional :page, -> { Unit::Models::AccountEndOfDayListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::AccountEndOfDayListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::AccountEndOfDayListParams::Filter]
@@ -33,25 +41,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute since
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] since
         #
-        #   @return [Date]
+        #   @return [Date, nil]
         optional :since, Date
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [Date]
+        #   attr_writer :since
+
+        # @!attribute [r] until_
         #
-        #   @return [Date]
+        #   @return [Date, nil]
         optional :until_, Date, api_name: :until
+
+        # @!parse
+        #   # @return [Date]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param account_id [String]
@@ -72,15 +96,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

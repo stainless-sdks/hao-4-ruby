@@ -9,10 +9,14 @@ module Unit
         #   @return [String]
         required :application_id, String
 
-        # @!attribute job_id
+        # @!attribute [r] job_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :job_id, String, api_name: :jobId
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :job_id
 
         # @!parse
         #   # @param application_id [String]

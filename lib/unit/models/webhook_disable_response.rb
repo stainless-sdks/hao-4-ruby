@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class WebhookDisableResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::WebhookDisableResponse::Data]
+      #   @return [Unit::Models::WebhookDisableResponse::Data, nil]
       optional :data, -> { Unit::Models::WebhookDisableResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::WebhookDisableResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::WebhookDisableResponse::Data]
@@ -66,49 +70,81 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute token
+          # @!attribute [r] token
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :token, String
 
-          # @!attribute content_type
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :token
+
+          # @!attribute [r] content_type
           #
-          #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType]
+          #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType, nil]
           optional :content_type,
                    enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType },
                    api_name: :contentType
 
-          # @!attribute created_at
+          # @!parse
+          #   # @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType]
+          #   attr_writer :content_type
+
+          # @!attribute [r] created_at
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :created_at, Time, api_name: :createdAt
 
-          # @!attribute delivery_mode
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :created_at
+
+          # @!attribute [r] delivery_mode
           #
-          #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode]
+          #   @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode, nil]
           optional :delivery_mode,
                    enum: -> { Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode },
                    api_name: :deliveryMode
 
-          # @!attribute label
+          # @!parse
+          #   # @return [Symbol, Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode]
+          #   attr_writer :delivery_mode
+
+          # @!attribute [r] label
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :label, String
 
-          # @!attribute status
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :label
+
+          # @!attribute [r] status
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :status, String
 
-          # @!attribute subscription_type
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :status
+
+          # @!attribute [r] subscription_type
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :subscription_type, String, api_name: :subscriptionType
 
-          # @!attribute url
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :subscription_type
+
+          # @!attribute [r] url
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :url, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :url
 
           # @!parse
           #   # @param token [String]

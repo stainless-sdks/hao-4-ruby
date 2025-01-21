@@ -127,11 +127,15 @@ module Unit
                        Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Type
                      }
 
-            # @!attribute relationships
+            # @!attribute [r] relationships
             #
-            #   @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships]
+            #   @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships, nil]
             optional :relationships,
                      -> { Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships }
+
+            # @!parse
+            #   # @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Relationships]
+            #   attr_writer :relationships
 
             # @!parse
             #   # @param attributes [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction::Attributes]
@@ -150,15 +154,23 @@ module Unit
             # }
             # ```
             class Attributes < Unit::BaseModel
-              # @!attribute summary
+              # @!attribute [r] summary
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :summary, String
 
-              # @!attribute tags
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :summary
+
+              # @!attribute [r] tags
               #
-              #   @return [Hash{Symbol=>String}]
+              #   @return [Hash{Symbol=>String}, nil]
               optional :tags, Unit::HashOf[String]
+
+              # @!parse
+              #   # @return [Hash{Symbol=>String}]
+              #   attr_writer :tags
 
               # @!parse
               #   # @param summary [String]
@@ -300,11 +312,15 @@ module Unit
                        Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Type
                      }
 
-            # @!attribute relationships
+            # @!attribute [r] relationships
             #
-            #   @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships]
+            #   @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships, nil]
             optional :relationships,
                      -> { Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships }
+
+            # @!parse
+            #   # @return [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Relationships]
+            #   attr_writer :relationships
 
             # @!parse
             #   # @param attributes [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction::Attributes]
@@ -323,15 +339,23 @@ module Unit
             # }
             # ```
             class Attributes < Unit::BaseModel
-              # @!attribute summary
+              # @!attribute [r] summary
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :summary, String
 
-              # @!attribute tags
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :summary
+
+              # @!attribute [r] tags
               #
-              #   @return [Hash{Symbol=>String}]
+              #   @return [Hash{Symbol=>String}, nil]
               optional :tags, Unit::HashOf[String]
+
+              # @!parse
+              #   # @return [Hash{Symbol=>String}]
+              #   attr_writer :tags
 
               # @!parse
               #   # @param summary [String]

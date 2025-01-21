@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class DocumentMultipartResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Applications::DocumentMultipartResponse::Data]
+        #   @return [Unit::Models::Applications::DocumentMultipartResponse::Data, nil]
         optional :data, -> { Unit::Models::Applications::DocumentMultipartResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Applications::DocumentMultipartResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Applications::DocumentMultipartResponse::Data]
@@ -72,103 +76,179 @@ module Unit
             #   @return [String]
             required :status, String
 
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes::Address]
+            #   @return [Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes::Address, nil]
             optional :address,
                      -> {
                        Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes::Address
                      }
 
-            # @!attribute back_document_id
+            # @!parse
+            #   # @return [Unit::Models::Applications::DocumentMultipartResponse::Data::Attributes::Address]
+            #   attr_writer :address
+
+            # @!attribute [r] back_document_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :back_document_id, String, api_name: :backDocumentId
 
-            # @!attribute back_document_store_id
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :back_document_id
+
+            # @!attribute [r] back_document_store_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :back_document_store_id, String, api_name: :backDocumentStoreId
 
-            # @!attribute date_of_birth
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :back_document_store_id
+
+            # @!attribute [r] date_of_birth
             #
-            #   @return [Date]
+            #   @return [Date, nil]
             optional :date_of_birth, Date, api_name: :dateOfBirth
 
-            # @!attribute date_of_incorporation
+            # @!parse
+            #   # @return [Date]
+            #   attr_writer :date_of_birth
+
+            # @!attribute [r] date_of_incorporation
             #
-            #   @return [Date]
+            #   @return [Date, nil]
             optional :date_of_incorporation, Date, api_name: :dateOfIncorporation
 
-            # @!attribute description
+            # @!parse
+            #   # @return [Date]
+            #   attr_writer :date_of_incorporation
+
+            # @!attribute [r] description
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :description, String
 
-            # @!attribute document_type
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :description
+
+            # @!attribute [r] document_type
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :document_type, String, api_name: :documentType
 
-            # @!attribute ein
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :document_type
+
+            # @!attribute [r] ein
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ein, String
 
-            # @!attribute evaluation_id
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ein
+
+            # @!attribute [r] evaluation_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :evaluation_id, String, api_name: :evaluationId
 
-            # @!attribute front_document_id
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :evaluation_id
+
+            # @!attribute [r] front_document_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :front_document_id, String, api_name: :frontDocumentId
 
-            # @!attribute front_document_store_id
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :front_document_id
+
+            # @!attribute [r] front_document_store_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :front_document_store_id, String, api_name: :frontDocumentStoreId
 
-            # @!attribute matricula_consular
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :front_document_store_id
+
+            # @!attribute [r] matricula_consular
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :matricula_consular, String, api_name: :matriculaConsular
 
-            # @!attribute name
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :matricula_consular
+
+            # @!attribute [r] name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :name, String
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :name
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute reason
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] reason
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :reason, String
 
-            # @!attribute reason_code
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :reason
+
+            # @!attribute [r] reason_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :reason_code, String, api_name: :reasonCode
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :reason_code
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute state_of_incorporation
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] state_of_incorporation
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :state_of_incorporation, String, api_name: :stateOfIncorporation
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :state_of_incorporation
 
             # @!parse
             #   # @param status [String]
@@ -259,7 +339,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class RewardCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::RewardCreateParams::Data]
+      #   @return [Unit::Models::RewardCreateParams::Data, nil]
       optional :data, -> { Unit::Models::RewardCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::RewardCreateParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::RewardCreateParams::Data]
@@ -68,15 +72,23 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute idempotency_key
+          # @!attribute [r] idempotency_key
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :idempotency_key, String, api_name: :idempotencyKey
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :idempotency_key
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]
@@ -105,19 +117,27 @@ module Unit
                    -> { Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount },
                    api_name: :receivingAccount
 
-          # @!attribute funding_account
+          # @!attribute [r] funding_account
           #
-          #   @return [Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount]
+          #   @return [Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount, nil]
           optional :funding_account,
                    -> { Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount },
                    api_name: :fundingAccount
 
-          # @!attribute rewarded_transaction
+          # @!parse
+          #   # @return [Unit::Models::RewardCreateParams::Data::Relationships::FundingAccount]
+          #   attr_writer :funding_account
+
+          # @!attribute [r] rewarded_transaction
           #
-          #   @return [Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction]
+          #   @return [Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction, nil]
           optional :rewarded_transaction,
                    -> { Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction },
                    api_name: :rewardedTransaction
+
+          # @!parse
+          #   # @return [Unit::Models::RewardCreateParams::Data::Relationships::RewardedTransaction]
+          #   attr_writer :rewarded_transaction
 
           # @!parse
           #   # @param receiving_account [Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class AccountCloseParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::AccountCloseParams::Data]
+      #   @return [Unit::Models::AccountCloseParams::Data, nil]
       optional :data, -> { Unit::Models::AccountCloseParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::AccountCloseParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::AccountCloseParams::Data]
@@ -23,15 +27,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::AccountCloseParams::Data::Attributes]
+        #   @return [Unit::Models::AccountCloseParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::AccountCloseParams::Data::Attributes }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::AccountCloseParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Type]
+        #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::AccountCloseParams::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::AccountCloseParams::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::AccountCloseParams::Data::Attributes]
@@ -55,19 +67,25 @@ module Unit
           #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::BankReason, nil]
           optional :bank_reason,
                    enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::BankReason },
-                   api_name: :bankReason
+                   api_name: :bankReason,
+                   nil?: true
 
           # @!attribute fraud_reason
           #
           #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::FraudReason, nil]
           optional :fraud_reason,
                    enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::FraudReason },
-                   api_name: :fraudReason
+                   api_name: :fraudReason,
+                   nil?: true
 
-          # @!attribute reason
+          # @!attribute [r] reason
           #
-          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::Reason]
+          #   @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::Reason, nil]
           optional :reason, enum: -> { Unit::Models::AccountCloseParams::Data::Attributes::Reason }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::AccountCloseParams::Data::Attributes::Reason]
+          #   attr_writer :reason
 
           # @!parse
           #   # @param bank_reason [String, nil]

@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class StoreLocationListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::StoreLocationListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::StoreLocationListResponse::Data] }
 
-      # @!attribute meta
+      # @!parse
+      #   # @return [Array<Unit::Models::StoreLocationListResponse::Data>]
+      #   attr_writer :data
+
+      # @!attribute [r] meta
       #
-      #   @return [Unit::Models::StoreLocationListResponse::Meta]
+      #   @return [Unit::Models::StoreLocationListResponse::Meta, nil]
       optional :meta, -> { Unit::Models::StoreLocationListResponse::Meta }
+
+      # @!parse
+      #   # @return [Unit::Models::StoreLocationListResponse::Meta]
+      #   attr_writer :meta
 
       # @!parse
       #   # @param data [Array<Unit::Models::StoreLocationListResponse::Data>]
@@ -146,7 +154,7 @@ module Unit
             # @!attribute street2
             #
             #   @return [String, nil]
-            optional :street2, String
+            optional :street2, String, nil?: true
 
             # @!parse
             #   # @param city [String]
@@ -210,10 +218,14 @@ module Unit
       # }
       # ```
       class Meta < Unit::BaseModel
-        # @!attribute pagination
+        # @!attribute [r] pagination
         #
-        #   @return [Unit::Models::StoreLocationListResponse::Meta::Pagination]
+        #   @return [Unit::Models::StoreLocationListResponse::Meta::Pagination, nil]
         optional :pagination, -> { Unit::Models::StoreLocationListResponse::Meta::Pagination }
+
+        # @!parse
+        #   # @return [Unit::Models::StoreLocationListResponse::Meta::Pagination]
+        #   attr_writer :pagination
 
         # @!parse
         #   # @param pagination [Unit::Models::StoreLocationListResponse::Meta::Pagination]
@@ -231,20 +243,32 @@ module Unit
         # }
         # ```
         class Pagination < Unit::BaseModel
-          # @!attribute limit
+          # @!attribute [r] limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :limit, Integer
 
-          # @!attribute offset
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :limit
+
+          # @!attribute [r] offset
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :offset, Integer
 
-          # @!attribute total
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :offset
+
+          # @!attribute [r] total
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :total, Integer
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :total
 
           # @!parse
           #   # @param limit [Integer]

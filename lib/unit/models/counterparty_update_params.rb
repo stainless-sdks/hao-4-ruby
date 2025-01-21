@@ -52,33 +52,53 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute name
+          # @!attribute [r] name
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :name, String
 
-          # @!attribute permissions
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :name
+
+          # @!attribute [r] permissions
           #
-          #   @return [Symbol, Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions]
+          #   @return [Symbol, Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions, nil]
           optional :permissions,
                    enum: -> {
                      Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions
                    }
 
-          # @!attribute plaid_processor_token
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CounterpartyUpdateParams::Data::Attributes::Permissions]
+          #   attr_writer :permissions
+
+          # @!attribute [r] plaid_processor_token
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :plaid_processor_token, String, api_name: :plaidProcessorToken
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :plaid_processor_token
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
 
-          # @!attribute verify_name
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
+
+          # @!attribute [r] verify_name
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :verify_name, Unit::BooleanModel, api_name: :verifyName
+
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :verify_name
 
           # @!parse
           #   # @param name [String]

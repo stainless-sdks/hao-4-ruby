@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class Application < Unit::BaseModel
-      # @!attribute id
+      # @!attribute [r] id
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :id, String
 
-      # @!attribute type
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :id
+
+      # @!attribute [r] type
       #
-      #   @return [Symbol, Unit::Models::Application::Type]
+      #   @return [Symbol, Unit::Models::Application::Type, nil]
       optional :type, enum: -> { Unit::Models::Application::Type }
+
+      # @!parse
+      #   # @return [Symbol, Unit::Models::Application::Type]
+      #   attr_writer :type
 
       # @!parse
       #   # @param id [String]

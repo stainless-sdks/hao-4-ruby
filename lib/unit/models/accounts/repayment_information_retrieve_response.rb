@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class RepaymentInformationRetrieveResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data]
+        #   @return [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data, nil]
         optional :data, -> { Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Accounts::RepaymentInformationRetrieveResponse::Data]

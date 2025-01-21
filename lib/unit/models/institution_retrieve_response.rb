@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class InstitutionRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::InstitutionRetrieveResponse::Data]
+      #   @return [Unit::Models::InstitutionRetrieveResponse::Data, nil]
       optional :data, -> { Unit::Models::InstitutionRetrieveResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::InstitutionRetrieveResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::InstitutionRetrieveResponse::Data]
@@ -78,10 +82,14 @@ module Unit
           #   @return [String]
           required :routing_number, String, api_name: :routingNumber
 
-          # @!attribute address
+          # @!attribute [r] address
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :address, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :address
 
           # @!parse
           #   # @param is_ach_supported [Boolean]

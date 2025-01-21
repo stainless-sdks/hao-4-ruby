@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class StatementListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::StatementListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::StatementListResponse::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::StatementListResponse::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::StatementListResponse::Data>]
@@ -68,10 +72,14 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute period
+          # @!attribute [r] period
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :period, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :period
 
           # @!parse
           #   # @param period [String]
@@ -90,20 +98,32 @@ module Unit
         # }
         # ```
         class Relationships < Unit::BaseModel
-          # @!attribute account
+          # @!attribute [r] account
           #
-          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Account]
+          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Account, nil]
           optional :account, -> { Unit::Models::StatementListResponse::Data::Relationships::Account }
 
-          # @!attribute customer
+          # @!parse
+          #   # @return [Unit::Models::StatementListResponse::Data::Relationships::Account]
+          #   attr_writer :account
+
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::StatementListResponse::Data::Relationships::Customer }
 
-          # @!attribute customers
+          # @!parse
+          #   # @return [Unit::Models::StatementListResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
+
+          # @!attribute [r] customers
           #
-          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Customers]
+          #   @return [Unit::Models::StatementListResponse::Data::Relationships::Customers, nil]
           optional :customers, -> { Unit::Models::StatementListResponse::Data::Relationships::Customers }
+
+          # @!parse
+          #   # @return [Unit::Models::StatementListResponse::Data::Relationships::Customers]
+          #   attr_writer :customers
 
           # @!parse
           #   # @param account [Unit::Models::StatementListResponse::Data::Relationships::Account]
@@ -285,15 +305,23 @@ module Unit
             # }
             # ```
             class Data < Unit::BaseModel
-              # @!attribute id
+              # @!attribute [r] id
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :id, String
 
-              # @!attribute type
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :id
+
+              # @!attribute [r] type
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :type, String
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :type
 
               # @!parse
               #   # @param id [String]

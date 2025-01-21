@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class EventFireResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::EventFireResponse::Data]
+      #   @return [Unit::Models::EventFireResponse::Data, nil]
       optional :data, -> { Unit::Models::EventFireResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::EventFireResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::EventFireResponse::Data]
@@ -41,15 +45,23 @@ module Unit
         #   @return [String]
         required :type, String
 
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
+
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
 
         # @!parse
         #   # @param id [String]
