@@ -48,10 +48,14 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute tags
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param tags [Hash{Symbol=>String}]

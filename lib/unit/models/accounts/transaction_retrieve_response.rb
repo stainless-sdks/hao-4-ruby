@@ -11,18 +11,26 @@ module Unit
       # }
       # ```
       class TransactionRetrieveResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Accounts::Transaction]
+        #   @return [Unit::Models::Accounts::Transaction, nil]
         optional :data, -> { Unit::Models::Accounts::Transaction }
 
-        # @!attribute included
+        # @!parse
+        #   # @return [Unit::Models::Accounts::Transaction]
+        #   attr_writer :data
+
+        # @!attribute [r] included
         #
         #   @return [Array<Unit::Models::Accounts::TransactionRetrieveResponse::Included>]
         optional :included,
                  -> {
                    Unit::ArrayOf[Unit::Models::Accounts::TransactionRetrieveResponse::Included]
                  }
+
+        # @!parse
+        #   # @return [Array<Unit::Models::Accounts::TransactionRetrieveResponse::Included>]
+        #   attr_writer :included
 
         # @!parse
         #   # @param data [Unit::Models::Accounts::Transaction]
@@ -42,25 +50,41 @@ module Unit
         # }
         # ```
         class Included < Unit::BaseModel
-          # @!attribute id
+          # @!attribute [r] id
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :id, String
 
-          # @!attribute attributes
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :id
+
+          # @!attribute [r] attributes
           #
-          #   @return [Object]
+          #   @return [Object, nil]
           optional :attributes, Unit::Unknown
 
-          # @!attribute relationships
+          # @!parse
+          #   # @return [Object]
+          #   attr_writer :attributes
+
+          # @!attribute [r] relationships
           #
-          #   @return [Object]
+          #   @return [Object, nil]
           optional :relationships, Unit::Unknown
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Object]
+          #   attr_writer :relationships
+
+          # @!attribute [r] type
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :type, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :type
 
           # @!parse
           #   # @param id [String]

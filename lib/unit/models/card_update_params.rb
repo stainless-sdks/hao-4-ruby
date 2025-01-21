@@ -88,18 +88,26 @@ module Unit
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute design
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::Limits]
+            #   attr_writer :limits
 
             # @!attribute shipping_address
             #
@@ -108,12 +116,17 @@ module Unit
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes::ShippingAddress
                      },
-                     api_name: :shippingAddress
+                     api_name: :shippingAddress,
+                     nil?: true
 
-            # @!attribute tags
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param default_funding_account_id [String, nil]
@@ -136,25 +149,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -206,7 +235,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -278,18 +307,26 @@ module Unit
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute limits
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param default_funding_account_id [String, nil]
@@ -310,25 +347,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -397,42 +450,62 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address]
+            #   attr_writer :address
 
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute design
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute email
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :email
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits, nil]
             optional :limits,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits
                      }
 
-            # @!attribute phone
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] phone
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone, nil]
             optional :phone,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone
                      }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Phone]
+            #   attr_writer :phone
 
             # @!attribute shipping_address
             #
@@ -441,12 +514,17 @@ module Unit
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::ShippingAddress
                      },
-                     api_name: :shippingAddress
+                     api_name: :shippingAddress,
+                     nil?: true
 
-            # @!attribute tags
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes::Address]
@@ -513,7 +591,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -538,25 +616,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -635,7 +729,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -706,38 +800,58 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address]
+            #   attr_writer :address
 
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute email
+            # @!attribute [r] email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :email
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits }
 
-            # @!attribute phone
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] phone
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone, nil]
             optional :phone,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Phone]
+            #   attr_writer :phone
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes::Address]
@@ -790,7 +904,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -815,25 +929,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -929,40 +1059,60 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address]
+            #   attr_writer :address
 
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute design
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute email
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :email
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits }
 
-            # @!attribute phone
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] phone
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone, nil]
             optional :phone,
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone
                      }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Phone]
+            #   attr_writer :phone
 
             # @!attribute shipping_address
             #
@@ -971,12 +1121,17 @@ module Unit
                      -> {
                        Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::ShippingAddress
                      },
-                     api_name: :shippingAddress
+                     api_name: :shippingAddress,
+                     nil?: true
 
-            # @!attribute tags
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes::Address]
@@ -1043,7 +1198,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -1068,25 +1223,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -1165,7 +1336,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -1236,38 +1407,58 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address, nil]
             optional :address,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address }
+
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address]
+            #   attr_writer :address
 
             # @!attribute default_funding_account_id
             #
             #   @return [String, nil]
-            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId
+            optional :default_funding_account_id, String, api_name: :defaultFundingAccountId, nil?: true
 
-            # @!attribute email
+            # @!attribute [r] email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :email
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits }
 
-            # @!attribute phone
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] phone
             #
-            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone]
+            #   @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone, nil]
             optional :phone,
                      -> { Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Phone]
+            #   attr_writer :phone
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes::Address]
@@ -1320,7 +1511,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -1345,25 +1536,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]

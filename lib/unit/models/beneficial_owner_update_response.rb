@@ -30,20 +30,32 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::BeneficialOwner]
+        #   @return [Unit::Models::BeneficialOwner, nil]
         optional :attributes, -> { Unit::Models::BeneficialOwner }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::BeneficialOwner]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::BeneficialOwnerUpdateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::BeneficialOwnerUpdateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::BeneficialOwnerUpdateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

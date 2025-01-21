@@ -66,15 +66,23 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute deposit_product
+            # @!attribute [r] deposit_product
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :deposit_product, String, api_name: :depositProduct
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :deposit_product
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param deposit_product [String]
@@ -136,15 +144,23 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute credit_limit
+            # @!attribute [r] credit_limit
             #
-            #   @return [Integer]
+            #   @return [Integer, nil]
             optional :credit_limit, Integer, api_name: :creditLimit
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Integer]
+            #   attr_writer :credit_limit
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param credit_limit [Integer]

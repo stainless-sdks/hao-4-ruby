@@ -23,15 +23,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute expiration
+        # @!attribute [r] expiration
         #
-        #   @return [Date]
+        #   @return [Date, nil]
         optional :expiration, Date
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [Date]
+        #   attr_writer :expiration
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
+
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
 
         # @!parse
         #   # @param expiration [String]

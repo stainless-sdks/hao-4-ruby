@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class TokenCreateResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Customers::TokenCreateResponse::Data]
+        #   @return [Unit::Models::Customers::TokenCreateResponse::Data, nil]
         optional :data, -> { Unit::Models::Customers::TokenCreateResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Customers::TokenCreateResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Customers::TokenCreateResponse::Data]
@@ -56,15 +60,23 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute token
+            # @!attribute [r] token
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :token, String
 
-            # @!attribute expires_in
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :token
+
+            # @!attribute [r] expires_in
             #
-            #   @return [Integer]
+            #   @return [Integer, nil]
             optional :expires_in, Integer, api_name: :expiresIn
+
+            # @!parse
+            #   # @return [Integer]
+            #   attr_writer :expires_in
 
             # @!parse
             #   # @param token [String]

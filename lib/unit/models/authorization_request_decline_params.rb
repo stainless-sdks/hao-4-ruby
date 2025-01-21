@@ -3,10 +3,14 @@
 module Unit
   module Models
     class AuthorizationRequestDeclineParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::AuthorizationRequestDeclineParams::Data]
+      #   @return [Unit::Models::AuthorizationRequestDeclineParams::Data, nil]
       optional :data, -> { Unit::Models::AuthorizationRequestDeclineParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::AuthorizationRequestDeclineParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::AuthorizationRequestDeclineParams::Data]
@@ -48,13 +52,17 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute reason
+          # @!attribute [r] reason
           #
-          #   @return [Symbol, Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason]
+          #   @return [Symbol, Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason, nil]
           optional :reason,
                    enum: -> {
                      Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason
                    }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason]
+          #   attr_writer :reason
 
           # @!parse
           #   # @param reason [String]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CardCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest]
+      #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest, nil]
       optional :data, union: -> { Unit::Models::CardCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest, Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest, Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest]
@@ -95,71 +99,119 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute active_for_online_use
+            # @!attribute [r] active_for_online_use
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :active_for_online_use, Unit::BooleanModel, api_name: :activeForOnlineUse
 
-            # @!attribute additional_embossed_text
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :active_for_online_use
+
+            # @!attribute [r] additional_embossed_text
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :additional_embossed_text, String, api_name: :additionalEmbossedText
 
-            # @!attribute bin
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :additional_embossed_text
+
+            # @!attribute [r] bin
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin, nil]
             optional :bin,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin }
 
-            # @!attribute card_design_id
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Bin]
+            #   attr_writer :bin
+
+            # @!attribute [r] card_design_id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :card_design_id, String, api_name: :cardDesignId
 
-            # @!attribute card_qualifier
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :card_design_id
+
+            # @!attribute [r] card_qualifier
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :card_qualifier, String, api_name: :cardQualifier
 
-            # @!attribute design
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :card_qualifier
+
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute expiry_date
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits }
 
-            # @!attribute print_only_business_name
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] print_only_business_name
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :print_only_business_name, Unit::BooleanModel, api_name: :printOnlyBusinessName
 
-            # @!attribute shipping_address
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :print_only_business_name
+
+            # @!attribute [r] shipping_address
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress
                      },
                      api_name: :shippingAddress
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes::ShippingAddress]
+            #   attr_writer :shipping_address
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param active_for_online_use [Boolean]
@@ -232,25 +284,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -302,7 +370,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -333,20 +401,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account]
@@ -644,70 +720,118 @@ module Unit
             required :phone,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Phone }
 
-            # @!attribute active_for_online_use
+            # @!attribute [r] active_for_online_use
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :active_for_online_use, Unit::BooleanModel, api_name: :activeForOnlineUse
 
-            # @!attribute additional_embossed_text
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :active_for_online_use
+
+            # @!attribute [r] additional_embossed_text
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :additional_embossed_text, String, api_name: :additionalEmbossedText
 
-            # @!attribute design
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :additional_embossed_text
+
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute expiry_date
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits }
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute print_only_business_name
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] print_only_business_name
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :print_only_business_name, Unit::BooleanModel, api_name: :printOnlyBusinessName
 
-            # @!attribute shipping_address
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :print_only_business_name
+
+            # @!attribute [r] shipping_address
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress
                      },
                      api_name: :shippingAddress
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::ShippingAddress]
+            #   attr_writer :shipping_address
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes::Address]
@@ -792,7 +916,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -871,25 +995,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -941,7 +1081,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -972,20 +1112,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account]
@@ -1283,70 +1431,118 @@ module Unit
             required :phone,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Phone }
 
-            # @!attribute active_for_online_use
+            # @!attribute [r] active_for_online_use
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :active_for_online_use, Unit::BooleanModel, api_name: :activeForOnlineUse
 
-            # @!attribute additional_embossed_text
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :active_for_online_use
+
+            # @!attribute [r] additional_embossed_text
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :additional_embossed_text, String, api_name: :additionalEmbossedText
 
-            # @!attribute design
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :additional_embossed_text
+
+            # @!attribute [r] design
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :design, String
 
-            # @!attribute expiry_date
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :design
+
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits }
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute print_only_business_name
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] print_only_business_name
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :print_only_business_name, Unit::BooleanModel, api_name: :printOnlyBusinessName
 
-            # @!attribute shipping_address
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :print_only_business_name
+
+            # @!attribute [r] shipping_address
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress, nil]
             optional :shipping_address,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress
                      },
                      api_name: :shippingAddress
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::ShippingAddress]
+            #   attr_writer :shipping_address
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes::Address]
@@ -1431,7 +1627,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -1510,25 +1706,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -1580,7 +1792,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -1611,20 +1823,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account]
@@ -1890,37 +2110,61 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute bin
+            # @!attribute [r] bin
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin, nil]
             optional :bin,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin }
 
-            # @!attribute card_qualifier
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin]
+            #   attr_writer :bin
+
+            # @!attribute [r] card_qualifier
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :card_qualifier, String, api_name: :cardQualifier
 
-            # @!attribute expiry_date
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :card_qualifier
+
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param bin [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes::Bin]
@@ -1971,25 +2215,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -2018,20 +2278,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account]
@@ -2329,41 +2597,69 @@ module Unit
             required :phone,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Phone }
 
-            # @!attribute expiry_date
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits }
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes::Address]
@@ -2438,7 +2734,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -2517,25 +2813,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -2564,20 +2876,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account]
@@ -2875,41 +3195,69 @@ module Unit
             required :phone,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Phone }
 
-            # @!attribute expiry_date
+            # @!attribute [r] expiry_date
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :expiry_date, String, api_name: :expiryDate
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :expiry_date
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute limits
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] limits
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits, nil]
             optional :limits,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits }
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Limits]
+            #   attr_writer :limits
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param address [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes::Address]
@@ -2984,7 +3332,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -3063,25 +3411,41 @@ module Unit
             # }
             # ```
             class Limits < Unit::BaseModel
-              # @!attribute daily_purchase
+              # @!attribute [r] daily_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_purchase, Integer, api_name: :dailyPurchase
 
-              # @!attribute daily_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_purchase
+
+              # @!attribute [r] daily_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :daily_withdrawal, Integer, api_name: :dailyWithdrawal
 
-              # @!attribute monthly_purchase
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :daily_withdrawal
+
+              # @!attribute [r] monthly_purchase
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_purchase, Integer, api_name: :monthlyPurchase
 
-              # @!attribute monthly_withdrawal
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_purchase
+
+              # @!attribute [r] monthly_withdrawal
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :monthly_withdrawal, Integer, api_name: :monthlyWithdrawal
+
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :monthly_withdrawal
 
               # @!parse
               #   # @param daily_purchase [Integer]
@@ -3110,20 +3474,28 @@ module Unit
             required :account,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account }
 
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer }
 
-            # @!attribute default_funding_account
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] default_funding_account
             #
-            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount]
+            #   @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount, nil]
             optional :default_funding_account,
                      -> {
                        Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount
                      },
                      api_name: :defaultFundingAccount
+
+            # @!parse
+            #   # @return [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::DefaultFundingAccount]
+            #   attr_writer :default_funding_account
 
             # @!parse
             #   # @param account [Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account]

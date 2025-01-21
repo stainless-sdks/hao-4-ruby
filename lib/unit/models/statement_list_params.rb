@@ -3,21 +3,33 @@
 module Unit
   module Models
     class StatementListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::StatementListParams::Filter]
+      #   @return [Unit::Models::StatementListParams::Filter, nil]
       optional :filter, -> { Unit::Models::StatementListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::StatementListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::StatementListParams::Page]
+      #   @return [Unit::Models::StatementListParams::Page, nil]
       optional :page, -> { Unit::Models::StatementListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::StatementListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::StatementListParams::Filter]
@@ -39,20 +51,32 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute period
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] period
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :period, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :period
 
         # @!parse
         #   # @param account_id [String]
@@ -72,15 +96,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

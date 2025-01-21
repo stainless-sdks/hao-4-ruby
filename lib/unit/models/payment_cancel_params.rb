@@ -6,7 +6,7 @@ module Unit
       # @!attribute body
       #
       #   @return [Object, nil]
-      required :body, Unit::Unknown
+      required :body, Unit::Unknown, nil?: true
 
       # @!parse
       #   # @param body [Object, nil]

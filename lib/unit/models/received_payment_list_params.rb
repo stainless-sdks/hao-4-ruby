@@ -3,26 +3,42 @@
 module Unit
   module Models
     class ReceivedPaymentListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::ReceivedPaymentListParams::Filter]
+      #   @return [Unit::Models::ReceivedPaymentListParams::Filter, nil]
       optional :filter, -> { Unit::Models::ReceivedPaymentListParams::Filter }
 
-      # @!attribute include
+      # @!parse
+      #   # @return [Unit::Models::ReceivedPaymentListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
 
-      # @!attribute page
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::ReceivedPaymentListParams::Page]
+      #   @return [Unit::Models::ReceivedPaymentListParams::Page, nil]
       optional :page, -> { Unit::Models::ReceivedPaymentListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::ReceivedPaymentListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::ReceivedPaymentListParams::Filter]
@@ -49,55 +65,95 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute can_be_reprocessed
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] can_be_reprocessed
         #
-        #   @return [Boolean]
+        #   @return [Boolean, nil]
         optional :can_be_reprocessed, Unit::BooleanModel, api_name: :canBeReprocessed
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [Boolean]
+        #   attr_writer :can_be_reprocessed
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute from_amount
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] from_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :from_amount, Integer, api_name: :fromAmount
 
-        # @!attribute include_completed
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :from_amount
+
+        # @!attribute [r] include_completed
         #
-        #   @return [Boolean]
+        #   @return [Boolean, nil]
         optional :include_completed, Unit::BooleanModel, api_name: :includeCompleted
 
-        # @!attribute since
+        # @!parse
+        #   # @return [Boolean]
+        #   attr_writer :include_completed
+
+        # @!attribute [r] since
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :since, String
 
-        # @!attribute status
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :since
+
+        # @!attribute [r] status
         #
         #   @return [Array<Symbol, Unit::Models::ReceivedPaymentListParams::Filter::Status>]
         optional :status, -> { Unit::ArrayOf[enum: Unit::Models::ReceivedPaymentListParams::Filter::Status] }
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::ReceivedPaymentListParams::Filter::Status>]
+        #   attr_writer :status
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
 
-        # @!attribute to_amount
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
+
+        # @!attribute [r] to_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :to_amount, Integer, api_name: :toAmount
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :to_amount
+
+        # @!attribute [r] until_
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :until_, String, api_name: :until
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param account_id [String]
@@ -166,15 +222,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

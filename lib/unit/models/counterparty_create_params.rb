@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CounterpartyCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty]
+      #   @return [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty, nil]
       optional :data, union: -> { Unit::Models::CounterpartyCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty]
@@ -111,23 +115,35 @@ module Unit
                        Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Type
                      }
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute permissions
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] permissions
             #
-            #   @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Permissions]
+            #   @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Permissions, nil]
             optional :permissions,
                      enum: -> {
                        Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Permissions
                      }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty::Attributes::Permissions]
+            #   attr_writer :permissions
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param account_number [String]
@@ -381,33 +397,53 @@ module Unit
                        Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Type
                      }
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute name
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :name, String
 
-            # @!attribute permissions
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :name
+
+            # @!attribute [r] permissions
             #
-            #   @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions]
+            #   @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions, nil]
             optional :permissions,
                      enum: -> {
                        Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions
                      }
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty::Attributes::Permissions]
+            #   attr_writer :permissions
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute verify_name
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] verify_name
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :verify_name, Unit::BooleanModel, api_name: :verifyName
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :verify_name
 
             # @!parse
             #   # @param plaid_processor_token [String]

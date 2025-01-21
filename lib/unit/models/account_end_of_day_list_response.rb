@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class AccountEndOfDayListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::AccountEndOfDayListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::AccountEndOfDayListResponse::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::AccountEndOfDayListResponse::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::AccountEndOfDayListResponse::Data>]
@@ -92,10 +96,14 @@ module Unit
           #   @return [Integer]
           required :hold, Integer
 
-          # @!attribute overdraft_limit
+          # @!attribute [r] overdraft_limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :overdraft_limit, Integer, api_name: :overdraftLimit
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :overdraft_limit
 
           # @!parse
           #   # @param available [Integer]

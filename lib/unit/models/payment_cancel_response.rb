@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class PaymentCancelResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::PaymentCancelResponse::Data]
+      #   @return [Unit::Models::PaymentCancelResponse::Data, nil]
       optional :data, -> { Unit::Models::PaymentCancelResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::PaymentCancelResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::PaymentCancelResponse::Data]
@@ -29,15 +33,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::PaymentCancelResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::PaymentCancelResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::PaymentCancelResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::PaymentCancelResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class RepaymentRetrieveParams < Unit::BaseModel
-      # @!attribute include
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
 
       # @!parse
       #   # @param include [String]

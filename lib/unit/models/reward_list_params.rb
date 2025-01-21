@@ -3,26 +3,42 @@
 module Unit
   module Models
     class RewardListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::RewardListParams::Filter]
+      #   @return [Unit::Models::RewardListParams::Filter, nil]
       optional :filter, -> { Unit::Models::RewardListParams::Filter }
 
-      # @!attribute include
+      # @!parse
+      #   # @return [Unit::Models::RewardListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
 
-      # @!attribute page
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::RewardListParams::Page]
+      #   @return [Unit::Models::RewardListParams::Page, nil]
       optional :page, -> { Unit::Models::RewardListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::RewardListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::RewardListParams::Filter]
@@ -49,50 +65,86 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute card_id
+        # @!attribute [r] card_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :card_id, String, api_name: :cardId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :card_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute receiving_account_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] receiving_account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :receiving_account_id, String, api_name: :receivingAccountId
 
-        # @!attribute rewarded_transaction_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :receiving_account_id
+
+        # @!attribute [r] rewarded_transaction_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :rewarded_transaction_id, String, api_name: :rewardedTransactionId
 
-        # @!attribute since
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :rewarded_transaction_id
+
+        # @!attribute [r] since
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :since, String
 
-        # @!attribute status
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :since
+
+        # @!attribute [r] status
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :status, String
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :status
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
 
-        # @!attribute transaction_id
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
+
+        # @!attribute [r] transaction_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :transaction_id, String, api_name: :transactionId
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :transaction_id
+
+        # @!attribute [r] until_
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :until_, String, api_name: :until
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param card_id [String]
@@ -131,15 +183,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

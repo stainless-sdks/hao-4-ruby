@@ -114,20 +114,32 @@ module Unit
                        Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule
                      }
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param amount [Integer]
@@ -193,41 +205,57 @@ module Unit
                 #   @return [Date]
                 required :next_scheduled_action, Date, api_name: :nextScheduledAction
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param next_scheduled_action [String]
                 #   # @param day_of_month [Integer]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     next_scheduled_action:,
                 #     day_of_month: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super
@@ -268,50 +296,70 @@ module Unit
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::Interval
                          }
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute day_of_week
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] day_of_week
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek, nil]
                 optional :day_of_week,
                          enum: -> {
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek
                          },
                          api_name: :dayOfWeek
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   attr_writer :day_of_week
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param day_of_month [Integer]
                 #   # @param day_of_week [String]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     day_of_month: nil,
                 #     day_of_week: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super
@@ -612,35 +660,59 @@ module Unit
                        Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule
                      }
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute clearing_days_override
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] clearing_days_override
             #
-            #   @return [Integer]
+            #   @return [Integer, nil]
             optional :clearing_days_override, Integer, api_name: :clearingDaysOverride
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [Integer]
+            #   attr_writer :clearing_days_override
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute verify_counterparty_balance
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] verify_counterparty_balance
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :verify_counterparty_balance, Unit::BooleanModel, api_name: :verifyCounterpartyBalance
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :verify_counterparty_balance
 
             # @!parse
             #   # @param amount [Integer]
@@ -722,41 +794,57 @@ module Unit
                 #   @return [Date]
                 required :next_scheduled_action, Date, api_name: :nextScheduledAction
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param next_scheduled_action [String]
                 #   # @param day_of_month [Integer]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     next_scheduled_action:,
                 #     day_of_month: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super
@@ -797,50 +885,70 @@ module Unit
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::Interval
                          }
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute day_of_week
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] day_of_week
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek, nil]
                 optional :day_of_week,
                          enum: -> {
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek
                          },
                          api_name: :dayOfWeek
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   attr_writer :day_of_week
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param day_of_month [Integer]
                 #   # @param day_of_week [String]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     day_of_month: nil,
                 #     day_of_week: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super
@@ -1140,20 +1248,32 @@ module Unit
                        Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule
                      }
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute transaction_summary_override
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param amount [Integer]
@@ -1219,41 +1339,57 @@ module Unit
                 #   @return [Date]
                 required :next_scheduled_action, Date, api_name: :nextScheduledAction
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param next_scheduled_action [String]
                 #   # @param day_of_month [Integer]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     next_scheduled_action:,
                 #     day_of_month: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super
@@ -1294,50 +1430,70 @@ module Unit
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::Interval
                          }
 
-                # @!attribute day_of_month
+                # @!attribute [r] day_of_month
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :day_of_month, Integer, api_name: :dayOfMonth
 
-                # @!attribute day_of_week
+                # @!parse
+                #   # @return [Integer]
+                #   attr_writer :day_of_month
+
+                # @!attribute [r] day_of_week
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek, nil]
                 optional :day_of_week,
                          enum: -> {
                            Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek
                          },
                          api_name: :dayOfWeek
 
-                # @!attribute end_time
+                # @!parse
+                #   # @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek]
+                #   attr_writer :day_of_week
+
+                # @!attribute [r] end_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :end_time, Date, api_name: :endTime
 
-                # @!attribute start_time
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :end_time
+
+                # @!attribute [r] start_time
                 #
-                #   @return [Date]
+                #   @return [Date, nil]
                 optional :start_time, Date, api_name: :startTime
 
-                # @!attribute total_number_of_payments
+                # @!parse
+                #   # @return [Date]
+                #   attr_writer :start_time
+
+                # @!attribute [r] total_number_of_payments
                 #
-                #   @return [Integer]
+                #   @return [Integer, nil]
                 optional :total_number_of_payments, Integer, api_name: :totalNumberOfPayments
 
                 # @!parse
-                #   # @param interval [String]
+                #   # @return [Integer]
+                #   attr_writer :total_number_of_payments
+
+                # @!parse
                 #   # @param day_of_month [Integer]
                 #   # @param day_of_week [String]
                 #   # @param end_time [String]
                 #   # @param start_time [String]
                 #   # @param total_number_of_payments [Integer]
+                #   # @param interval [String]
                 #   #
                 #   def initialize(
-                #     interval:,
                 #     day_of_month: nil,
                 #     day_of_week: nil,
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
+                #     interval:,
                 #     **
                 #   )
                 #     super

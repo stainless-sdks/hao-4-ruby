@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class AccountFreezeResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::Account]
+      #   @return [Unit::Models::Account, nil]
       optional :data, -> { Unit::Models::Account }
+
+      # @!parse
+      #   # @return [Unit::Models::Account]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::Account]

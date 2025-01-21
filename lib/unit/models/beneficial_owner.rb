@@ -14,116 +14,200 @@ module Unit
     # }
     # ```
     class BeneficialOwner < Unit::BaseModel
-      # @!attribute address
+      # @!attribute [r] address
       #
-      #   @return [Unit::Models::BeneficialOwner::Address]
+      #   @return [Unit::Models::BeneficialOwner::Address, nil]
       optional :address, -> { Unit::Models::BeneficialOwner::Address }
 
-      # @!attribute annual_income
+      # @!parse
+      #   # @return [Unit::Models::BeneficialOwner::Address]
+      #   attr_writer :address
+
+      # @!attribute [r] annual_income
       #
-      #   @return [Symbol, Unit::Models::BeneficialOwner::AnnualIncome]
+      #   @return [Symbol, Unit::Models::BeneficialOwner::AnnualIncome, nil]
       optional :annual_income,
                enum: -> {
                  Unit::Models::BeneficialOwner::AnnualIncome
                },
                api_name: :annualIncome
 
-      # @!attribute date_of_birth
+      # @!parse
+      #   # @return [Symbol, Unit::Models::BeneficialOwner::AnnualIncome]
+      #   attr_writer :annual_income
+
+      # @!attribute [r] date_of_birth
       #
-      #   @return [Date]
+      #   @return [Date, nil]
       optional :date_of_birth, Date, api_name: :dateOfBirth
 
-      # @!attribute email
+      # @!parse
+      #   # @return [Date]
+      #   attr_writer :date_of_birth
+
+      # @!attribute [r] email
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :email, String
 
-      # @!attribute evaluation_codes
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :email
+
+      # @!attribute [r] evaluation_codes
       #
       #   @return [Array<String>]
       optional :evaluation_codes, Unit::ArrayOf[String], api_name: :evaluationCodes
 
-      # @!attribute evaluation_flags
+      # @!parse
+      #   # @return [Array<String>]
+      #   attr_writer :evaluation_codes
+
+      # @!attribute [r] evaluation_flags
       #
       #   @return [Array<String>]
       optional :evaluation_flags, Unit::ArrayOf[String], api_name: :evaluationFlags
 
-      # @!attribute evaluation_id
+      # @!parse
+      #   # @return [Array<String>]
+      #   attr_writer :evaluation_flags
+
+      # @!attribute [r] evaluation_id
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :evaluation_id, String, api_name: :evaluationId
 
-      # @!attribute full_name
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :evaluation_id
+
+      # @!attribute [r] full_name
       #
-      #   @return [Unit::Models::BeneficialOwner::FullName]
+      #   @return [Unit::Models::BeneficialOwner::FullName, nil]
       optional :full_name, -> { Unit::Models::BeneficialOwner::FullName }, api_name: :fullName
 
-      # @!attribute id_theft_score
+      # @!parse
+      #   # @return [Unit::Models::BeneficialOwner::FullName]
+      #   attr_writer :full_name
+
+      # @!attribute [r] id_theft_score
       #
-      #   @return [Integer]
+      #   @return [Integer, nil]
       optional :id_theft_score, Integer, api_name: :idTheftScore
 
-      # @!attribute masked_matricula_consular
+      # @!parse
+      #   # @return [Integer]
+      #   attr_writer :id_theft_score
+
+      # @!attribute [r] masked_matricula_consular
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :masked_matricula_consular, String, api_name: :maskedMatriculaConsular
 
-      # @!attribute masked_passport
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :masked_matricula_consular
+
+      # @!attribute [r] masked_passport
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :masked_passport, String, api_name: :maskedPassport
 
-      # @!attribute masked_ssn
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :masked_passport
+
+      # @!attribute [r] masked_ssn
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :masked_ssn, String, api_name: :maskedSSN
 
-      # @!attribute matricula_consular
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :masked_ssn
+
+      # @!attribute [r] matricula_consular
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :matricula_consular, String, api_name: :matriculaConsular
 
-      # @!attribute nationality
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :matricula_consular
+
+      # @!attribute [r] nationality
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :nationality, String
 
-      # @!attribute occupation
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :nationality
+
+      # @!attribute [r] occupation
       #
-      #   @return [Symbol, Unit::Models::BeneficialOwner::Occupation]
+      #   @return [Symbol, Unit::Models::BeneficialOwner::Occupation, nil]
       optional :occupation, enum: -> { Unit::Models::BeneficialOwner::Occupation }
 
-      # @!attribute passport
+      # @!parse
+      #   # @return [Symbol, Unit::Models::BeneficialOwner::Occupation]
+      #   attr_writer :occupation
+
+      # @!attribute [r] passport
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :passport, String
 
-      # @!attribute percentage
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :passport
+
+      # @!attribute [r] percentage
       #
-      #   @return [Integer]
+      #   @return [Integer, nil]
       optional :percentage, Integer
 
-      # @!attribute phone
+      # @!parse
+      #   # @return [Integer]
+      #   attr_writer :percentage
+
+      # @!attribute [r] phone
       #
-      #   @return [Unit::Models::BeneficialOwner::Phone]
+      #   @return [Unit::Models::BeneficialOwner::Phone, nil]
       optional :phone, -> { Unit::Models::BeneficialOwner::Phone }
 
-      # @!attribute source_of_income
+      # @!parse
+      #   # @return [Unit::Models::BeneficialOwner::Phone]
+      #   attr_writer :phone
+
+      # @!attribute [r] source_of_income
       #
-      #   @return [Symbol, Unit::Models::BeneficialOwner::SourceOfIncome]
+      #   @return [Symbol, Unit::Models::BeneficialOwner::SourceOfIncome, nil]
       optional :source_of_income,
                enum: -> { Unit::Models::BeneficialOwner::SourceOfIncome },
                api_name: :sourceOfIncome
 
-      # @!attribute ssn
+      # @!parse
+      #   # @return [Symbol, Unit::Models::BeneficialOwner::SourceOfIncome]
+      #   attr_writer :source_of_income
+
+      # @!attribute [r] ssn
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :ssn, String
 
-      # @!attribute status
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :ssn
+
+      # @!attribute [r] status
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :status, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :status
 
       # @!parse
       #   # @param address [Unit::Models::BeneficialOwner::Address]
@@ -216,7 +300,7 @@ module Unit
         # @!attribute street2
         #
         #   @return [String, nil]
-        optional :street2, String
+        optional :street2, String, nil?: true
 
         # @!parse
         #   # @param city [String]

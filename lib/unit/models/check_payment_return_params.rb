@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CheckPaymentReturnParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CheckPaymentReturnParams::Data]
+      #   @return [Unit::Models::CheckPaymentReturnParams::Data, nil]
       optional :data, -> { Unit::Models::CheckPaymentReturnParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CheckPaymentReturnParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CheckPaymentReturnParams::Data]
@@ -23,15 +27,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::CheckPaymentReturnParams::Data::Attributes]
+        #   @return [Unit::Models::CheckPaymentReturnParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::CheckPaymentReturnParams::Data::Attributes }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::CheckPaymentReturnParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Type]
+        #   @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::CheckPaymentReturnParams::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::CheckPaymentReturnParams::Data::Attributes]
@@ -48,10 +60,14 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute reason
+          # @!attribute [r] reason
           #
-          #   @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason]
+          #   @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason, nil]
           optional :reason, enum: -> { Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason]
+          #   attr_writer :reason
 
           # @!parse
           #   # @param reason [String]

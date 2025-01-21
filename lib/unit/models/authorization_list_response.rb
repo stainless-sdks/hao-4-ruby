@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class AuthorizationListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::Authorization>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::Authorization] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::Authorization>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::Authorization>]

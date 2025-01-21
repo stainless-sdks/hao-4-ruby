@@ -4,10 +4,14 @@ module Unit
   module Models
     module Customers
       class AuthorizedUserCreateParams < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data]
+        #   @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data, nil]
         optional :data, -> { Unit::Models::Customers::AuthorizedUserCreateParams::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Customers::AuthorizedUserCreateParams::Data]
@@ -24,15 +28,23 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes]
+          #   @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes, nil]
           optional :attributes, -> { Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type]
+          #   @return [Symbol, Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Customers::AuthorizedUserCreateParams::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes]
@@ -49,7 +61,7 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute authorized_users
+            # @!attribute [r] authorized_users
             #
             #   @return [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>]
             optional :authorized_users,
@@ -57,6 +69,10 @@ module Unit
                        Unit::ArrayOf[Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser]
                      },
                      api_name: :authorizedUsers
+
+            # @!parse
+            #   # @return [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>]
+            #   attr_writer :authorized_users
 
             # @!parse
             #   # @param authorized_users [Array<Unit::Models::Customers::AuthorizedUserCreateParams::Data::Attributes::AuthorizedUser>]
@@ -98,7 +114,7 @@ module Unit
               # @!attribute jwt_subject
               #
               #   @return [String, nil]
-              optional :jwt_subject, String, api_name: :jwtSubject
+              optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
               # @!parse
               #   # @param email [String]

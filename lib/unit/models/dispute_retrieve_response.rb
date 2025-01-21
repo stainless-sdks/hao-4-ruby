@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class DisputeRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::DisputeRetrieveResponse::Data]
+      #   @return [Unit::Models::DisputeRetrieveResponse::Data, nil]
       optional :data, -> { Unit::Models::DisputeRetrieveResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::DisputeRetrieveResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::DisputeRetrieveResponse::Data]
@@ -46,10 +50,14 @@ module Unit
         #   @return [Symbol, Unit::Models::DisputeRetrieveResponse::Data::Type]
         required :type, enum: -> { Unit::Models::DisputeRetrieveResponse::Data::Type }
 
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::DisputeRetrieveResponse::Data::Attributes]
+        #   @return [Unit::Models::DisputeRetrieveResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::DisputeRetrieveResponse::Data::Attributes }
+
+        # @!parse
+        #   # @return [Unit::Models::DisputeRetrieveResponse::Data::Attributes]
+        #   attr_writer :attributes
 
         # @!parse
         #   # @param id [String]
@@ -360,17 +368,25 @@ module Unit
           #   @return [String]
           required :status, String
 
-          # @!attribute decision_reason
+          # @!attribute [r] decision_reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :decision_reason, String, api_name: :decisionReason
 
-          # @!attribute link
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :decision_reason
+
+          # @!attribute [r] link
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :link, String
 
-          # @!attribute status_history
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :link
+
+          # @!attribute [r] status_history
           #
           #   @return [Array<Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory>]
           optional :status_history,
@@ -378,6 +394,10 @@ module Unit
                      Unit::ArrayOf[Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory]
                    },
                    api_name: :statusHistory
+
+          # @!parse
+          #   # @return [Array<Unit::Models::DisputeRetrieveResponse::Data::Attributes::StatusHistory>]
+          #   attr_writer :status_history
 
           # @!parse
           #   # @param amount [Integer]
@@ -431,15 +451,23 @@ module Unit
           # }
           # ```
           class StatusHistory < Unit::BaseModel
-            # @!attribute type
+            # @!attribute [r] type
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :type, String
 
-            # @!attribute updated_at
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :type
+
+            # @!attribute [r] updated_at
             #
-            #   @return [Time]
+            #   @return [Time, nil]
             optional :updated_at, Time, api_name: :updatedAt
+
+            # @!parse
+            #   # @return [Time]
+            #   attr_writer :updated_at
 
             # @!parse
             #   # @param type [String]

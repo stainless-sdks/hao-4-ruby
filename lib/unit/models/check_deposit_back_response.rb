@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CheckDepositBackResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :data, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [String]

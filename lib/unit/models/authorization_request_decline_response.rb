@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class AuthorizationRequestDeclineResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::AuthorizationRequest]
+      #   @return [Unit::Models::AuthorizationRequest, nil]
       optional :data, -> { Unit::Models::AuthorizationRequest }
+
+      # @!parse
+      #   # @return [Unit::Models::AuthorizationRequest]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::AuthorizationRequest]

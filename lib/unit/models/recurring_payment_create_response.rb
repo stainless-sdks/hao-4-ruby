@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class RecurringPaymentCreateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::RecurringPaymentCreateResponse::Data]
+      #   @return [Unit::Models::RecurringPaymentCreateResponse::Data, nil]
       optional :data, -> { Unit::Models::RecurringPaymentCreateResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::RecurringPaymentCreateResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::RecurringPaymentCreateResponse::Data]
@@ -29,15 +33,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::RecurringPaymentCreateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::RecurringPaymentCreateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::RecurringPaymentCreateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::RecurringPaymentCreateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

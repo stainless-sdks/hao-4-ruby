@@ -42,24 +42,36 @@ module Unit
         # }
         # ```
         class CreateCreditAccount < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes, nil]
           optional :attributes,
                    -> {
                      Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes
                    }
 
-          # @!attribute relationships
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] relationships
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships, nil]
           optional :relationships,
                    -> { Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships]
+          #   attr_writer :relationships
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type]
+          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type, nil]
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes]
@@ -90,15 +102,23 @@ module Unit
             #   @return [String]
             required :credit_terms, String, api_name: :creditTerms
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param credit_limit [Integer]
@@ -225,24 +245,36 @@ module Unit
         # }
         # ```
         class CreateDepositAccount < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes, nil]
           optional :attributes,
                    -> {
                      Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes
                    }
 
-          # @!attribute relationships
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] relationships
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships, nil]
           optional :relationships,
                    -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships]
+          #   attr_writer :relationships
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type]
+          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type, nil]
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes]
@@ -267,15 +299,23 @@ module Unit
             #   @return [String]
             required :deposit_product, String, api_name: :depositProduct
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param deposit_product [String]
@@ -295,17 +335,25 @@ module Unit
           # }
           # ```
           class Relationships < Unit::BaseModel
-            # @!attribute customer
+            # @!attribute [r] customer
             #
-            #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer]
+            #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer, nil]
             optional :customer,
                      -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer }
 
-            # @!attribute customers
+            # @!parse
+            #   # @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer]
+            #   attr_writer :customer
+
+            # @!attribute [r] customers
             #
-            #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers]
+            #   @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers, nil]
             optional :customers,
                      -> { Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers }
+
+            # @!parse
+            #   # @return [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customers]
+            #   attr_writer :customers
 
             # @!parse
             #   # @param customer [Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer]
@@ -415,15 +463,23 @@ module Unit
               # }
               # ```
               class Data < Unit::BaseModel
-                # @!attribute id
+                # @!attribute [r] id
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :id, String
 
-                # @!attribute type
+                # @!parse
+                #   # @return [String]
+                #   attr_writer :id
+
+                # @!attribute [r] type
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :type, String
+
+                # @!parse
+                #   # @return [String]
+                #   attr_writer :type
 
                 # @!parse
                 #   # @param id [String]
@@ -459,24 +515,36 @@ module Unit
         # }
         # ```
         class CreateWalletAccount < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes, nil]
           optional :attributes,
                    -> {
                      Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes
                    }
 
-          # @!attribute relationships
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] relationships
           #
-          #   @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships]
+          #   @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships, nil]
           optional :relationships,
                    -> { Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships]
+          #   attr_writer :relationships
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type]
+          #   @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type, nil]
           optional :type, enum: -> { Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes]
@@ -501,15 +569,23 @@ module Unit
             #   @return [String]
             required :wallet_terms, String, api_name: :walletTerms
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param wallet_terms [String]

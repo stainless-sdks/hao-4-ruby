@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class TaxFormRetrieveResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::TaxFormRetrieveResponse::Data]
+      #   @return [Unit::Models::TaxFormRetrieveResponse::Data, nil]
       optional :data, -> { Unit::Models::TaxFormRetrieveResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::TaxFormRetrieveResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::TaxFormRetrieveResponse::Data]
@@ -46,10 +50,14 @@ module Unit
         #   @return [Symbol, Unit::Models::TaxFormRetrieveResponse::Data::Type]
         required :type, enum: -> { Unit::Models::TaxFormRetrieveResponse::Data::Type }
 
-        # @!attribute relationships
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships]
+        #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::TaxFormRetrieveResponse::Data::Relationships }
+
+        # @!parse
+        #   # @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships]
+        #   attr_writer :relationships
 
         # @!parse
         #   # @param id [String]
@@ -110,20 +118,32 @@ module Unit
         # }
         # ```
         class Relationships < Unit::BaseModel
-          # @!attribute account
+          # @!attribute [r] account
           #
-          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account]
+          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account, nil]
           optional :account, -> { Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account }
 
-          # @!attribute accounts
+          # @!parse
+          #   # @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account]
+          #   attr_writer :account
+
+          # @!attribute [r] accounts
           #
-          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts]
+          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts, nil]
           optional :accounts, -> { Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts }
 
-          # @!attribute customer
+          # @!parse
+          #   # @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Accounts]
+          #   attr_writer :accounts
+
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer }
+
+          # @!parse
+          #   # @return [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
 
           # @!parse
           #   # @param account [Unit::Models::TaxFormRetrieveResponse::Data::Relationships::Account]

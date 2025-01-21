@@ -27,10 +27,14 @@ module Unit
       #   @return [Symbol, Unit::Models::Authorization::Type]
       required :type, enum: -> { Unit::Models::Authorization::Type }
 
-      # @!attribute attributes
+      # @!attribute [r] attributes
       #
-      #   @return [Unit::Models::Authorization::Attributes]
+      #   @return [Unit::Models::Authorization::Attributes, nil]
       optional :attributes, -> { Unit::Models::Authorization::Attributes }
+
+      # @!parse
+      #   # @return [Unit::Models::Authorization::Attributes]
+      #   attr_writer :attributes
 
       # @!parse
       #   # @param id [String]
@@ -62,17 +66,25 @@ module Unit
         #   @return [Unit::Models::Authorization::Relationships::Card]
         required :card, -> { Unit::Models::Authorization::Relationships::Card }
 
-        # @!attribute authorization_request
+        # @!attribute [r] authorization_request
         #
-        #   @return [Unit::Models::Authorization::Relationships::AuthorizationRequest]
+        #   @return [Unit::Models::Authorization::Relationships::AuthorizationRequest, nil]
         optional :authorization_request,
                  -> { Unit::Models::Authorization::Relationships::AuthorizationRequest },
                  api_name: :authorizationRequest
 
-        # @!attribute customer
+        # @!parse
+        #   # @return [Unit::Models::Authorization::Relationships::AuthorizationRequest]
+        #   attr_writer :authorization_request
+
+        # @!attribute [r] customer
         #
-        #   @return [Unit::Models::Authorization::Relationships::Customer]
+        #   @return [Unit::Models::Authorization::Relationships::Customer, nil]
         optional :customer, -> { Unit::Models::Authorization::Relationships::Customer }
+
+        # @!parse
+        #   # @return [Unit::Models::Authorization::Relationships::Customer]
+        #   attr_writer :customer
 
         # @!parse
         #   # @param account [Unit::Models::Authorization::Relationships::Account]
@@ -207,13 +219,17 @@ module Unit
         # }
         # ```
         class AuthorizationRequest < Unit::BaseModel
-          # @!attribute data
+          # @!attribute [r] data
           #
           #   @return [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
           optional :data,
                    -> {
                      Unit::ArrayOf[Unit::Models::Authorization::Relationships::AuthorizationRequest::Data]
                    }
+
+          # @!parse
+          #   # @return [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
+          #   attr_writer :data
 
           # @!parse
           #   # @param data [Array<Unit::Models::Authorization::Relationships::AuthorizationRequest::Data>]
@@ -230,15 +246,23 @@ module Unit
           # }
           # ```
           class Data < Unit::BaseModel
-            # @!attribute id
+            # @!attribute [r] id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :id, String
 
-            # @!attribute type
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :id
+
+            # @!attribute [r] type
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :type, String
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :type
 
             # @!parse
             #   # @param id [String]
@@ -372,47 +396,79 @@ module Unit
         #   @return [String]
         required :status, String
 
-        # @!attribute card_network
+        # @!attribute [r] card_network
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :card_network, String, api_name: :cardNetwork
 
-        # @!attribute card_verification_data
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :card_network
+
+        # @!attribute [r] card_verification_data
         #
-        #   @return [Unit::Models::Authorization::Attributes::CardVerificationData]
+        #   @return [Unit::Models::Authorization::Attributes::CardVerificationData, nil]
         optional :card_verification_data,
                  -> { Unit::Models::Authorization::Attributes::CardVerificationData },
                  api_name: :cardVerificationData
 
-        # @!attribute cash_withdrawal_amount
+        # @!parse
+        #   # @return [Unit::Models::Authorization::Attributes::CardVerificationData]
+        #   attr_writer :card_verification_data
+
+        # @!attribute [r] cash_withdrawal_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :cash_withdrawal_amount, Integer, api_name: :cashWithdrawalAmount
 
-        # @!attribute decline_reason
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :cash_withdrawal_amount
+
+        # @!attribute [r] decline_reason
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :decline_reason, String, api_name: :declineReason
 
-        # @!attribute digital_wallet
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :decline_reason
+
+        # @!attribute [r] digital_wallet
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :digital_wallet, String, api_name: :digitalWallet
 
-        # @!attribute payment_method
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :digital_wallet
+
+        # @!attribute [r] payment_method
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :payment_method, String, api_name: :paymentMethod
 
-        # @!attribute summary
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :payment_method
+
+        # @!attribute [r] summary
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :summary, String
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :summary
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
+
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
 
         # @!parse
         #   # @param amount [Integer]
@@ -478,15 +534,23 @@ module Unit
           #   @return [Integer]
           required :type, Integer
 
-          # @!attribute id
+          # @!attribute [r] id
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :id, String
 
-          # @!attribute location
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :id
+
+          # @!attribute [r] location
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :location, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :location
 
           # @!parse
           #   # @param category [String]

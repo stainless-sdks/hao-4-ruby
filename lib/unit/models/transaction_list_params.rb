@@ -3,26 +3,42 @@
 module Unit
   module Models
     class TransactionListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::TransactionListParams::Filter]
+      #   @return [Unit::Models::TransactionListParams::Filter, nil]
       optional :filter, -> { Unit::Models::TransactionListParams::Filter }
 
-      # @!attribute include
+      # @!parse
+      #   # @return [Unit::Models::TransactionListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] include
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :include, String
 
-      # @!attribute page
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :include
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::TransactionListParams::Page]
+      #   @return [Unit::Models::TransactionListParams::Page, nil]
       optional :page, -> { Unit::Models::TransactionListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::TransactionListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::TransactionListParams::Filter]
@@ -49,27 +65,43 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_id
+        # @!attribute [r] account_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_id, String, api_name: :accountId
 
-        # @!attribute account_type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_id
+
+        # @!attribute [r] account_type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_type, String, api_name: :accountType
 
-        # @!attribute card_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_type
+
+        # @!attribute [r] card_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :card_id, String, api_name: :cardId
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :card_id
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute direction
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] direction
         #
         #   @return [Array<Symbol, Unit::Models::TransactionListParams::Filter::Direction>]
         optional :direction,
@@ -77,45 +109,81 @@ module Unit
                    Unit::ArrayOf[enum: Unit::Models::TransactionListParams::Filter::Direction]
                  }
 
-        # @!attribute exclude_fees
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::TransactionListParams::Filter::Direction>]
+        #   attr_writer :direction
+
+        # @!attribute [r] exclude_fees
         #
-        #   @return [Boolean]
+        #   @return [Boolean, nil]
         optional :exclude_fees, Unit::BooleanModel, api_name: :excludeFees
 
-        # @!attribute from_amount
+        # @!parse
+        #   # @return [Boolean]
+        #   attr_writer :exclude_fees
+
+        # @!attribute [r] from_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :from_amount, Integer, api_name: :fromAmount
 
-        # @!attribute query
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :from_amount
+
+        # @!attribute [r] query
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :query, String
 
-        # @!attribute since
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :query
+
+        # @!attribute [r] since
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :since, String
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :since
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
 
-        # @!attribute to_amount
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
+
+        # @!attribute [r] to_amount
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :to_amount, Integer, api_name: :toAmount
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :to_amount
+
+        # @!attribute [r] type
         #
         #   @return [Array<String>]
         optional :type, Unit::ArrayOf[String]
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :type
+
+        # @!attribute [r] until_
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :until_, String, api_name: :until
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param account_id [String]
@@ -178,15 +246,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

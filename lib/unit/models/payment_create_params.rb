@@ -3,10 +3,14 @@
 module Unit
   module Models
     class PaymentCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment]
+      #   @return [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment, nil]
       optional :data, union: -> { Unit::Models::PaymentCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::PaymentCreateParams::Data::CreateACHPayment, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid, Unit::Models::PaymentCreateParams::Data::CreateBookPayment, Unit::Models::PaymentCreateParams::Data::CreateWirePayment, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment]
@@ -67,10 +71,14 @@ module Unit
                      Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Relationships
                    }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type, nil]
           optional :type, enum: -> { Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes]
@@ -117,34 +125,54 @@ module Unit
                        Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::Direction
                      }
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode]
+            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode, nil]
             optional :sec_code,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode
                      },
                      api_name: :secCode
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPayment::Attributes::SecCode]
+            #   attr_writer :sec_code
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param amount [Integer]
@@ -403,13 +431,17 @@ module Unit
           required :relationships,
                    -> { Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Relationships }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type, nil]
           optional :type,
                    enum: -> {
                      Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type
                    }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes]
@@ -450,39 +482,63 @@ module Unit
                        Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::Direction
                      }
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode]
+            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode, nil]
             optional :sec_code,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode
                      },
                      api_name: :secCode
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentCounterparty::Attributes::SecCode]
+            #   attr_writer :sec_code
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute verify_counterparty_balance
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] verify_counterparty_balance
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :verify_counterparty_balance, Unit::BooleanModel, api_name: :verifyCounterpartyBalance
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :verify_counterparty_balance
 
             # @!parse
             #   # @param amount [Integer]
@@ -751,10 +807,14 @@ module Unit
           required :relationships,
                    -> { Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Relationships }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type, nil]
           optional :type, enum: -> { Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes]
@@ -800,44 +860,72 @@ module Unit
             #   @return [String]
             required :plaid_processor_token, String, api_name: :plaidProcessorToken
 
-            # @!attribute addenda
+            # @!attribute [r] addenda
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :addenda, String
 
-            # @!attribute counterparty_name
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :addenda
+
+            # @!attribute [r] counterparty_name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :counterparty_name, String, api_name: :counterpartyName
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :counterparty_name
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute same_day
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] same_day
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :same_day, Unit::BooleanModel, api_name: :sameDay
 
-            # @!attribute sec_code
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :same_day
+
+            # @!attribute [r] sec_code
             #
-            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode]
+            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode, nil]
             optional :sec_code,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode
                      },
                      api_name: :secCode
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateACHPaymentPlaid::Attributes::SecCode]
+            #   attr_writer :sec_code
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute verify_counterparty_balance
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] verify_counterparty_balance
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :verify_counterparty_balance, Unit::BooleanModel, api_name: :verifyCounterpartyBalance
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :verify_counterparty_balance
 
             # @!parse
             #   # @param amount [Integer]
@@ -1037,10 +1125,14 @@ module Unit
                      Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Relationships
                    }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type, nil]
           optional :type, enum: -> { Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateBookPayment::Attributes]
@@ -1072,20 +1164,32 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute transaction_summary_override
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] transaction_summary_override
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :transaction_summary_override, String, api_name: :transactionSummaryOverride
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :transaction_summary_override
 
             # @!parse
             #   # @param amount [Integer]
@@ -1307,10 +1411,14 @@ module Unit
                      Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Relationships
                    }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type, nil]
           optional :type, enum: -> { Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes]
@@ -1348,23 +1456,35 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute direction
+            # @!attribute [r] direction
             #
-            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction]
+            #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction, nil]
             optional :direction,
                      enum: -> {
                        Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction
                      }
 
-            # @!attribute idempotency_key
+            # @!parse
+            #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreateWirePayment::Attributes::Direction]
+            #   attr_writer :direction
+
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param amount [Integer]
@@ -1458,7 +1578,7 @@ module Unit
                 # @!attribute street2
                 #
                 #   @return [String, nil]
-                optional :street2, String
+                optional :street2, String, nil?: true
 
                 # @!parse
                 #   # @param city [String]
@@ -1619,10 +1739,14 @@ module Unit
           required :relationships,
                    -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Relationships }
 
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type]
+          #   @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type, nil]
           optional :type, enum: -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes]
@@ -1660,15 +1784,23 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute idempotency_key
+            # @!attribute [r] idempotency_key
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :idempotency_key, String, api_name: :idempotencyKey
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :idempotency_key
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param amount [Integer]
@@ -1688,11 +1820,15 @@ module Unit
             # }
             # ```
             class Configuration < Unit::BaseModel
-              # @!attribute astra
+              # @!attribute [r] astra
               #
-              #   @return [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra]
+              #   @return [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra, nil]
               optional :astra,
                        -> { Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra }
+
+              # @!parse
+              #   # @return [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra]
+              #   attr_writer :astra
 
               # @!parse
               #   # @param astra [Unit::Models::PaymentCreateParams::Data::CreatePushToCardPayment::Attributes::Configuration::Astra]
@@ -1743,15 +1879,23 @@ module Unit
                 #   @return [String]
                 required :routing_number, String, api_name: :routingNumber
 
-                # @!attribute account_name
+                # @!attribute [r] account_name
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :account_name, String, api_name: :accountName
 
-                # @!attribute auth_token
+                # @!parse
+                #   # @return [String]
+                #   attr_writer :account_name
+
+                # @!attribute [r] auth_token
                 #
-                #   @return [String]
+                #   @return [String, nil]
                 optional :auth_token, String, api_name: :authToken
+
+                # @!parse
+                #   # @return [String]
+                #   attr_writer :auth_token
 
                 # @!parse
                 #   # @param account_number [String]

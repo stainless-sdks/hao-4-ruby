@@ -83,10 +83,14 @@ module Unit
             #   @return [String]
             required :description, String
 
-            # @!attribute sec_code
+            # @!attribute [r] sec_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :sec_code, String, api_name: :secCode
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :sec_code
 
             # @!parse
             #   # @param amount [Integer]

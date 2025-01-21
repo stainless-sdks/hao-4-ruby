@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class CardListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::Card>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::Card] }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Array<Unit::Models::Card>]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Array<Unit::Models::CardListResponse::Included>>]
       optional :included, -> { Unit::ArrayOf[Unit::ArrayOf[Unit::Models::CardListResponse::Included]] }
+
+      # @!parse
+      #   # @return [Array<Array<Unit::Models::CardListResponse::Included>>]
+      #   attr_writer :included
 
       # @!parse
       #   # @param data [Array<Unit::Models::Card>]
@@ -38,25 +46,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class ApplicationFormCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::ApplicationFormCreateParams::Data]
+      #   @return [Unit::Models::ApplicationFormCreateParams::Data, nil]
       optional :data, -> { Unit::Models::ApplicationFormCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::ApplicationFormCreateParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::ApplicationFormCreateParams::Data]
@@ -29,15 +33,23 @@ module Unit
         #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Type]
         required :type, enum: -> { Unit::Models::ApplicationFormCreateParams::Data::Type }
 
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes]
+        #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::ApplicationFormCreateParams::Data::Relationships]
+        #   @return [Unit::Models::ApplicationFormCreateParams::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::ApplicationFormCreateParams::Data::Relationships }
+
+        # @!parse
+        #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Relationships]
+        #   attr_writer :relationships
 
         # @!parse
         #   # @param type [String]
@@ -73,7 +85,7 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute allowed_application_types
+          # @!attribute [r] allowed_application_types
           #
           #   @return [Array<Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::AllowedApplicationType>]
           optional :allowed_application_types,
@@ -82,43 +94,71 @@ module Unit
                    },
                    api_name: :allowedApplicationTypes
 
-          # @!attribute applicant_details
+          # @!parse
+          #   # @return [Array<Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::AllowedApplicationType>]
+          #   attr_writer :allowed_application_types
+
+          # @!attribute [r] applicant_details
           #
-          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails]
+          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails, nil]
           optional :applicant_details,
                    -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails },
                    api_name: :applicantDetails
 
-          # @!attribute hide_application_progress_tracker
+          # @!parse
+          #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails]
+          #   attr_writer :applicant_details
+
+          # @!attribute [r] hide_application_progress_tracker
           #
-          #   @return [Boolean]
+          #   @return [Boolean, nil]
           optional :hide_application_progress_tracker,
                    Unit::BooleanModel,
                    api_name: :hideApplicationProgressTracker
 
-          # @!attribute lang
+          # @!parse
+          #   # @return [Boolean]
+          #   attr_writer :hide_application_progress_tracker
+
+          # @!attribute [r] lang
           #
-          #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang]
+          #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang, nil]
           optional :lang, enum: -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang }
 
-          # @!attribute require_id_verification
+          # @!parse
+          #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang]
+          #   attr_writer :lang
+
+          # @!attribute [r] require_id_verification
           #
-          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification]
+          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification, nil]
           optional :require_id_verification,
                    -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification },
                    api_name: :requireIdVerification
 
-          # @!attribute settings_override
+          # @!parse
+          #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification]
+          #   attr_writer :require_id_verification
+
+          # @!attribute [r] settings_override
           #
-          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride]
+          #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride, nil]
           optional :settings_override,
                    -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride },
                    api_name: :settingsOverride
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride]
+          #   attr_writer :settings_override
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param allowed_application_types [Array<String>]
@@ -175,22 +215,30 @@ module Unit
           # }
           # ```
           class ApplicantDetails < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address]
+            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address, nil]
             optional :address,
                      -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address }
 
-            # @!attribute application_type
+            # @!parse
+            #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address]
+            #   attr_writer :address
+
+            # @!attribute [r] application_type
             #
-            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType]
+            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType, nil]
             optional :application_type,
                      enum: -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType
                      },
                      api_name: :applicationType
 
-            # @!attribute beneficial_owners
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType]
+            #   attr_writer :application_type
+
+            # @!attribute [r] beneficial_owners
             #
             #   @return [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner>]
             optional :beneficial_owners,
@@ -199,121 +247,197 @@ module Unit
                      },
                      api_name: :beneficialOwners
 
-            # @!attribute business_vertical
+            # @!parse
+            #   # @return [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner>]
+            #   attr_writer :beneficial_owners
+
+            # @!attribute [r] business_vertical
             #
-            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical]
+            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical, nil]
             optional :business_vertical,
                      enum: -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical
                      },
                      api_name: :businessVertical
 
-            # @!attribute contact
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical]
+            #   attr_writer :business_vertical
+
+            # @!attribute [r] contact
             #
-            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact]
+            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact, nil]
             optional :contact,
                      -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact }
 
-            # @!attribute date_of_birth
+            # @!parse
+            #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact]
+            #   attr_writer :contact
+
+            # @!attribute [r] date_of_birth
             #
-            #   @return [Date]
+            #   @return [Date, nil]
             optional :date_of_birth, Date, api_name: :dateOfBirth
 
-            # @!attribute dba
+            # @!parse
+            #   # @return [Date]
+            #   attr_writer :date_of_birth
+
+            # @!attribute [r] dba
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :dba, String
 
-            # @!attribute ein
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :dba
+
+            # @!attribute [r] ein
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ein, String
 
-            # @!attribute email
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ein
+
+            # @!attribute [r] email
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :email, String
 
-            # @!attribute entity_type
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :email
+
+            # @!attribute [r] entity_type
             #
-            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::EntityType]
+            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::EntityType, nil]
             optional :entity_type,
                      enum: -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::EntityType
                      },
                      api_name: :entityType
 
-            # @!attribute full_name
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::EntityType]
+            #   attr_writer :entity_type
+
+            # @!attribute [r] full_name
             #
-            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName]
+            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName, nil]
             optional :full_name,
                      -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName
                      },
                      api_name: :fullName
 
-            # @!attribute industry
+            # @!parse
+            #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::FullName]
+            #   attr_writer :full_name
+
+            # @!attribute [r] industry
             #
-            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Industry]
+            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Industry, nil]
             optional :industry,
                      enum: -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Industry
                      }
 
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Industry]
+            #   attr_writer :industry
+
             # @!attribute jwt_subject
             #
             #   @return [String, nil]
-            optional :jwt_subject, String, api_name: :jwtSubject
+            optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
-            # @!attribute name
+            # @!attribute [r] name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :name, String
 
-            # @!attribute nationality
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :name
+
+            # @!attribute [r] nationality
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :nationality, String
 
-            # @!attribute occupation
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :nationality
+
+            # @!attribute [r] occupation
             #
-            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Occupation]
+            #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Occupation, nil]
             optional :occupation,
                      enum: -> {
                        Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Occupation
                      }
 
-            # @!attribute officer
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Occupation]
+            #   attr_writer :occupation
+
+            # @!attribute [r] officer
             #
-            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer]
+            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer, nil]
             optional :officer,
                      -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer }
 
-            # @!attribute passport
+            # @!parse
+            #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer]
+            #   attr_writer :officer
+
+            # @!attribute [r] passport
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :passport, String
 
-            # @!attribute phone
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :passport
+
+            # @!attribute [r] phone
             #
-            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone]
+            #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone, nil]
             optional :phone,
                      -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone }
 
-            # @!attribute ssn
+            # @!parse
+            #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Phone]
+            #   attr_writer :phone
+
+            # @!attribute [r] ssn
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :ssn, String
 
-            # @!attribute state_of_incorporation
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :ssn
+
+            # @!attribute [r] state_of_incorporation
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :state_of_incorporation, String, api_name: :stateOfIncorporation
 
-            # @!attribute website
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :state_of_incorporation
+
+            # @!attribute [r] website
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :website, String
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :website
 
             # @!parse
             #   # @param address [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address]
@@ -408,7 +532,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -485,65 +609,101 @@ module Unit
               required :phone,
                        -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Phone }
 
-              # @!attribute annual_income
+              # @!attribute [r] annual_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome, nil]
               optional :annual_income,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome
                        },
                        api_name: :annualIncome
 
-              # @!attribute evaluation_params
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::AnnualIncome]
+              #   attr_writer :annual_income
+
+              # @!attribute [r] evaluation_params
               #
-              #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams]
+              #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams, nil]
               optional :evaluation_params,
                        -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams
                        },
                        api_name: :EvaluationParams
 
-              # @!attribute matricula_consular
+              # @!parse
+              #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams]
+              #   attr_writer :evaluation_params
+
+              # @!attribute [r] matricula_consular
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :matricula_consular, String, api_name: :matriculaConsular
 
-              # @!attribute nationality
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :matricula_consular
+
+              # @!attribute [r] nationality
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :nationality, String
 
-              # @!attribute occupation
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :nationality
+
+              # @!attribute [r] occupation
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Occupation]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Occupation, nil]
               optional :occupation,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Occupation
                        }
 
-              # @!attribute passport
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Occupation]
+              #   attr_writer :occupation
+
+              # @!attribute [r] passport
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :passport, String
 
-              # @!attribute percentage
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :passport
+
+              # @!attribute [r] percentage
               #
-              #   @return [Integer]
+              #   @return [Integer, nil]
               optional :percentage, Integer
 
-              # @!attribute source_of_income
+              # @!parse
+              #   # @return [Integer]
+              #   attr_writer :percentage
+
+              # @!attribute [r] source_of_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome, nil]
               optional :source_of_income,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome
                        },
                        api_name: :sourceOfIncome
 
-              # @!attribute ssn
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::SourceOfIncome]
+              #   attr_writer :source_of_income
+
+              # @!attribute [r] ssn
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :ssn, String
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :ssn
 
               # @!parse
               #   # @param address [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::Address]
@@ -622,7 +782,7 @@ module Unit
                 # @!attribute street2
                 #
                 #   @return [String, nil]
-                optional :street2, String
+                optional :street2, String, nil?: true
 
                 # @!parse
                 #   # @param city [String]
@@ -727,19 +887,27 @@ module Unit
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
-                # @!attribute require_id_verification
+                # @!attribute [r] require_id_verification
                 #
-                #   @return [Boolean]
+                #   @return [Boolean, nil]
                 optional :require_id_verification, Unit::BooleanModel, api_name: :requireIdVerification
 
-                # @!attribute use_selfie_verification
+                # @!parse
+                #   # @return [Boolean]
+                #   attr_writer :require_id_verification
+
+                # @!attribute [r] use_selfie_verification
                 #
-                #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification]
+                #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification, nil]
                 optional :use_selfie_verification,
                          enum: -> {
                            Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
                          },
                          api_name: :useSelfieVerification
+
+                # @!parse
+                #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification]
+                #   attr_writer :use_selfie_verification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -928,7 +1096,7 @@ module Unit
               # @!attribute jwt_subject
               #
               #   @return [String, nil]
-              optional :jwt_subject, String, api_name: :jwtSubject
+              optional :jwt_subject, String, api_name: :jwtSubject, nil?: true
 
               # @!parse
               #   # @param email [String]
@@ -1180,60 +1348,92 @@ module Unit
               required :phone,
                        -> { Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Phone }
 
-              # @!attribute annual_income
+              # @!attribute [r] annual_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::AnnualIncome]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::AnnualIncome, nil]
               optional :annual_income,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::AnnualIncome
                        },
                        api_name: :annualIncome
 
-              # @!attribute evaluation_params
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::AnnualIncome]
+              #   attr_writer :annual_income
+
+              # @!attribute [r] evaluation_params
               #
-              #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams]
+              #   @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams, nil]
               optional :evaluation_params,
                        -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams
                        },
                        api_name: :EvaluationParams
 
-              # @!attribute matricula_consular
+              # @!parse
+              #   # @return [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams]
+              #   attr_writer :evaluation_params
+
+              # @!attribute [r] matricula_consular
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :matricula_consular, String, api_name: :matriculaConsular
 
-              # @!attribute nationality
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :matricula_consular
+
+              # @!attribute [r] nationality
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :nationality, String
 
-              # @!attribute passport
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :nationality
+
+              # @!attribute [r] passport
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :passport, String
 
-              # @!attribute source_of_income
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :passport
+
+              # @!attribute [r] source_of_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::SourceOfIncome]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::SourceOfIncome, nil]
               optional :source_of_income,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::SourceOfIncome
                        },
                        api_name: :sourceOfIncome
 
-              # @!attribute ssn
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::SourceOfIncome]
+              #   attr_writer :source_of_income
+
+              # @!attribute [r] ssn
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :ssn, String
 
-              # @!attribute title
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :ssn
+
+              # @!attribute [r] title
               #
-              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Title]
+              #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Title, nil]
               optional :title,
                        enum: -> {
                          Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Title
                        }
+
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Title]
+              #   attr_writer :title
 
               # @!parse
               #   # @param address [Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Address]
@@ -1312,7 +1512,7 @@ module Unit
                 # @!attribute street2
                 #
                 #   @return [String, nil]
-                optional :street2, String
+                optional :street2, String, nil?: true
 
                 # @!parse
                 #   # @param city [String]
@@ -1462,19 +1662,27 @@ module Unit
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
-                # @!attribute require_id_verification
+                # @!attribute [r] require_id_verification
                 #
-                #   @return [Boolean]
+                #   @return [Boolean, nil]
                 optional :require_id_verification, Unit::BooleanModel, api_name: :requireIdVerification
 
-                # @!attribute use_selfie_verification
+                # @!parse
+                #   # @return [Boolean]
+                #   attr_writer :require_id_verification
+
+                # @!attribute [r] use_selfie_verification
                 #
-                #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification]
+                #   @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification, nil]
                 optional :use_selfie_verification,
                          enum: -> {
                            Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
                          },
                          api_name: :useSelfieVerification
+
+                # @!parse
+                #   # @return [Symbol, Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification]
+                #   attr_writer :use_selfie_verification
 
                 # @!parse
                 #   # @param require_id_verification [Boolean]
@@ -1622,20 +1830,32 @@ module Unit
           # }
           # ```
           class RequireIDVerification < Unit::BaseModel
-            # @!attribute beneficial_owners
+            # @!attribute [r] beneficial_owners
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :beneficial_owners, Unit::BooleanModel, api_name: :beneficialOwners
 
-            # @!attribute individual
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :beneficial_owners
+
+            # @!attribute [r] individual
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :individual, Unit::BooleanModel
 
-            # @!attribute officer
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :individual
+
+            # @!attribute [r] officer
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :officer, Unit::BooleanModel
+
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :officer
 
             # @!parse
             #   # @param beneficial_owners [Boolean]
@@ -1659,7 +1879,7 @@ module Unit
           # }
           # ```
           class SettingsOverride < Unit::BaseModel
-            # @!attribute additional_disclosures
+            # @!attribute [r] additional_disclosures
             #
             #   @return [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure>]
             optional :additional_disclosures,
@@ -1668,45 +1888,81 @@ module Unit
                      },
                      api_name: :additionalDisclosures
 
-            # @!attribute cardholder_terms_url
+            # @!parse
+            #   # @return [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure>]
+            #   attr_writer :additional_disclosures
+
+            # @!attribute [r] cardholder_terms_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :cardholder_terms_url, String, api_name: :cardholderTermsUrl
 
-            # @!attribute cash_advanced_terms_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :cardholder_terms_url
+
+            # @!attribute [r] cash_advanced_terms_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :cash_advanced_terms_url, String, api_name: :cashAdvancedTermsUrl
 
-            # @!attribute client_terms_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :cash_advanced_terms_url
+
+            # @!attribute [r] client_terms_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :client_terms_url, String, api_name: :clientTermsUrl
 
-            # @!attribute debit_card_disclosure_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :client_terms_url
+
+            # @!attribute [r] debit_card_disclosure_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :debit_card_disclosure_url, String, api_name: :debitCardDisclosureUrl
 
-            # @!attribute deposit_terms_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :debit_card_disclosure_url
+
+            # @!attribute [r] deposit_terms_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :deposit_terms_url, String, api_name: :depositTermsUrl
 
-            # @!attribute electronic_disclosures_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :deposit_terms_url
+
+            # @!attribute [r] electronic_disclosures_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :electronic_disclosures_url, String, api_name: :electronicDisclosuresUrl
 
-            # @!attribute privacy_policy_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :electronic_disclosures_url
+
+            # @!attribute [r] privacy_policy_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :privacy_policy_url, String, api_name: :privacyPolicyUrl
 
-            # @!attribute redirect_url
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :privacy_policy_url
+
+            # @!attribute [r] redirect_url
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :redirect_url, String, api_name: :redirectUrl
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :redirect_url
 
             # @!parse
             #   # @param additional_disclosures [Array<Unit::Models::ApplicationFormCreateParams::Data::Attributes::SettingsOverride::AdditionalDisclosure>]
@@ -1744,15 +2000,23 @@ module Unit
             # }
             # ```
             class AdditionalDisclosure < Unit::BaseModel
-              # @!attribute title
+              # @!attribute [r] title
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :title, String
 
-              # @!attribute url
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :title
+
+              # @!attribute [r] url
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :url, String
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :url
 
               # @!parse
               #   # @param title [String]

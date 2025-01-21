@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CounterpartyCreateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CounterpartyCreateResponse::Data]
+      #   @return [Unit::Models::CounterpartyCreateResponse::Data, nil]
       optional :data, -> { Unit::Models::CounterpartyCreateResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CounterpartyCreateResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CounterpartyCreateResponse::Data]
@@ -31,25 +35,41 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::CounterpartyCreateResponse::Data::Attributes]
+        #   @return [Unit::Models::CounterpartyCreateResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::CounterpartyCreateResponse::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::CounterpartyCreateResponse::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::CounterpartyCreateResponse::Data::Relationships]
+        #   @return [Unit::Models::CounterpartyCreateResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::CounterpartyCreateResponse::Data::Relationships }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::CounterpartyCreateResponse::Data::Relationships]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::CounterpartyCreateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::CounterpartyCreateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::CounterpartyCreateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::CounterpartyCreateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -111,15 +131,23 @@ module Unit
           #   @return [Symbol, Unit::Models::CounterpartyCreateResponse::Data::Attributes::Type]
           required :type, enum: -> { Unit::Models::CounterpartyCreateResponse::Data::Attributes::Type }
 
-          # @!attribute bank
+          # @!attribute [r] bank
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :bank, String
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :bank
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param account_number [String]

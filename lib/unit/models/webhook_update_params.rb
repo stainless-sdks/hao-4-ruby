@@ -3,10 +3,14 @@
 module Unit
   module Models
     class WebhookUpdateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::WebhookUpdateParams::Data]
+      #   @return [Unit::Models::WebhookUpdateParams::Data, nil]
       optional :data, -> { Unit::Models::WebhookUpdateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::WebhookUpdateParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::WebhookUpdateParams::Data]
@@ -23,15 +27,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::WebhookUpdateParams::Data::Attributes]
+        #   @return [Unit::Models::WebhookUpdateParams::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::WebhookUpdateParams::Data::Attributes }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::WebhookUpdateParams::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::WebhookUpdateParams::Data::Attributes]
@@ -48,10 +60,14 @@ module Unit
         # }
         # ```
         class Attributes < Unit::BaseModel
-          # @!attribute tags
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param tags [Hash{Symbol=>String}]

@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class LimitRetrieveResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Accounts::LimitRetrieveResponse::Data]
+        #   @return [Unit::Models::Accounts::LimitRetrieveResponse::Data, nil]
         optional :data, -> { Unit::Models::Accounts::LimitRetrieveResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Accounts::LimitRetrieveResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Accounts::LimitRetrieveResponse::Data]
@@ -29,10 +33,14 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Accounts::LimitRetrieveResponse::Data::Type]
+          #   @return [Symbol, Unit::Models::Accounts::LimitRetrieveResponse::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Accounts::LimitRetrieveResponse::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Accounts::LimitRetrieveResponse::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param type [String]

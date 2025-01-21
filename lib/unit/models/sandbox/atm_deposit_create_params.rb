@@ -75,24 +75,36 @@ module Unit
             #   @return [String]
             required :last4_digits, String, api_name: :last4Digits
 
-            # @!attribute atm_location
+            # @!attribute [r] atm_location
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :atm_location, String, api_name: :atmLocation
 
-            # @!attribute card_network
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :atm_location
+
+            # @!attribute [r] card_network
             #
-            #   @return [Symbol, Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork]
+            #   @return [Symbol, Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork, nil]
             optional :card_network,
                      enum: -> {
                        Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
                      },
                      api_name: :cardNetwork
 
-            # @!attribute surcharge
+            # @!parse
+            #   # @return [Symbol, Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork]
+            #   attr_writer :card_network
+
+            # @!attribute [r] surcharge
             #
-            #   @return [Integer]
+            #   @return [Integer, nil]
             optional :surcharge, Integer
+
+            # @!parse
+            #   # @return [Integer]
+            #   attr_writer :surcharge
 
             # @!parse
             #   # @param amount [Integer]

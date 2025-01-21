@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class BarcodeCreateResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::CashDeposits::BarcodeCreateResponse::Data]
+        #   @return [Unit::Models::CashDeposits::BarcodeCreateResponse::Data, nil]
         optional :data, -> { Unit::Models::CashDeposits::BarcodeCreateResponse::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::CashDeposits::BarcodeCreateResponse::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::CashDeposits::BarcodeCreateResponse::Data]
@@ -67,20 +71,32 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute barcode_number
+            # @!attribute [r] barcode_number
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :barcode_number, String, api_name: :barcodeNumber
 
-            # @!attribute expiration
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :barcode_number
+
+            # @!attribute [r] expiration
             #
-            #   @return [Time]
+            #   @return [Time, nil]
             optional :expiration, Time
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Time]
+            #   attr_writer :expiration
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param barcode_number [String]

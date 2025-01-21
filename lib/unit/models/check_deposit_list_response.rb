@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CheckDepositListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::CheckDepositListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::CheckDepositListResponse::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::CheckDepositListResponse::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::CheckDepositListResponse::Data>]
@@ -93,40 +97,60 @@ module Unit
           #   @return [Symbol, Unit::Models::CheckDepositListResponse::Data::Attributes::Status]
           required :status, enum: -> { Unit::Models::CheckDepositListResponse::Data::Attributes::Status }
 
-          # @!attribute check_number
+          # @!attribute [r] check_number
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :check_number, String, api_name: :checkNumber
 
-          # @!attribute counterparty
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :check_number
+
+          # @!attribute [r] counterparty
           #
-          #   @return [Unit::Models::CheckDepositListResponse::Data::Attributes::Counterparty]
+          #   @return [Unit::Models::CheckDepositListResponse::Data::Attributes::Counterparty, nil]
           optional :counterparty,
                    -> {
                      Unit::Models::CheckDepositListResponse::Data::Attributes::Counterparty
                    }
 
+          # @!parse
+          #   # @return [Unit::Models::CheckDepositListResponse::Data::Attributes::Counterparty]
+          #   attr_writer :counterparty
+
           # @!attribute reason
           #
           #   @return [String, nil]
-          optional :reason, String
+          optional :reason, String, nil?: true
 
-          # @!attribute reason_text
+          # @!attribute [r] reason_text
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reason_text, String, api_name: :reasonText
 
-          # @!attribute settlement_date
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :reason_text
+
+          # @!attribute [r] settlement_date
           #
-          #   @return [Date]
+          #   @return [Date, nil]
           optional :settlement_date, Date, api_name: :settlementDate
 
-          # @!attribute status_created_at
+          # @!parse
+          #   # @return [Date]
+          #   attr_writer :settlement_date
+
+          # @!attribute [r] status_created_at
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :status_created_at, Time, api_name: :statusCreatedAt
 
-          # @!attribute status_history
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :status_created_at
+
+          # @!attribute [r] status_history
           #
           #   @return [Array<Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory>]
           optional :status_history,
@@ -135,20 +159,36 @@ module Unit
                    },
                    api_name: :statusHistory
 
-          # @!attribute status_set_by
+          # @!parse
+          #   # @return [Array<Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory>]
+          #   attr_writer :status_history
+
+          # @!attribute [r] status_set_by
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :status_set_by, String, api_name: :statusSetBy
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :status_set_by
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
 
-          # @!attribute vendor
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
+
+          # @!attribute [r] vendor
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :vendor, String
+
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :vendor
 
           # @!parse
           #   # @param amount [Integer]
@@ -272,15 +312,23 @@ module Unit
                        Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status
                      }
 
-            # @!attribute updated_at
+            # @!attribute [r] updated_at
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :updated_at, String, api_name: :updatedAt
 
-            # @!attribute updated_by
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :updated_at
+
+            # @!attribute [r] updated_by
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :updated_by, String, api_name: :updatedBy
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :updated_by
 
             # @!parse
             #   # @param status [Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status]
@@ -298,13 +346,17 @@ module Unit
             # }
             # ```
             class Status < Unit::BaseModel
-              # @!attribute type
+              # @!attribute [r] type
               #
-              #   @return [Symbol, Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status::Type]
+              #   @return [Symbol, Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status::Type, nil]
               optional :type,
                        enum: -> {
                          Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status::Type
                        }
+
+              # @!parse
+              #   # @return [Symbol, Unit::Models::CheckDepositListResponse::Data::Attributes::StatusHistory::Status::Type]
+              #   attr_writer :type
 
               # @!parse
               #   # @param type [String]
@@ -364,23 +416,35 @@ module Unit
           #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Account]
           required :account, -> { Unit::Models::CheckDepositListResponse::Data::Relationships::Account }
 
-          # @!attribute customer
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::CheckDepositListResponse::Data::Relationships::Customer }
 
-          # @!attribute org
+          # @!parse
+          #   # @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
+
+          # @!attribute [r] org
           #
-          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Org]
+          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Org, nil]
           optional :org, -> { Unit::Models::CheckDepositListResponse::Data::Relationships::Org }
 
-          # @!attribute transaction
+          # @!parse
+          #   # @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Org]
+          #   attr_writer :org
+
+          # @!attribute [r] transaction
           #
-          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Transaction]
+          #   @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Transaction, nil]
           optional :transaction,
                    -> {
                      Unit::Models::CheckDepositListResponse::Data::Relationships::Transaction
                    }
+
+          # @!parse
+          #   # @return [Unit::Models::CheckDepositListResponse::Data::Relationships::Transaction]
+          #   attr_writer :transaction
 
           # @!parse
           #   # @param account [Unit::Models::CheckDepositListResponse::Data::Relationships::Account]

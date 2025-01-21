@@ -27,10 +27,14 @@ module Unit
       #   @return [Symbol, Unit::Models::DisputeListResponseItem::Type]
       required :type, enum: -> { Unit::Models::DisputeListResponseItem::Type }
 
-      # @!attribute attributes
+      # @!attribute [r] attributes
       #
-      #   @return [Unit::Models::DisputeListResponseItem::Attributes]
+      #   @return [Unit::Models::DisputeListResponseItem::Attributes, nil]
       optional :attributes, -> { Unit::Models::DisputeListResponseItem::Attributes }
+
+      # @!parse
+      #   # @return [Unit::Models::DisputeListResponseItem::Attributes]
+      #   attr_writer :attributes
 
       # @!parse
       #   # @param id [String]
@@ -335,22 +339,34 @@ module Unit
         #   @return [String]
         required :status, String
 
-        # @!attribute decision_reason
+        # @!attribute [r] decision_reason
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :decision_reason, String, api_name: :decisionReason
 
-        # @!attribute link
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :decision_reason
+
+        # @!attribute [r] link
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :link, String
 
-        # @!attribute status_history
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :link
+
+        # @!attribute [r] status_history
         #
         #   @return [Array<Unit::Models::DisputeListResponseItem::Attributes::StatusHistory>]
         optional :status_history,
                  -> { Unit::ArrayOf[Unit::Models::DisputeListResponseItem::Attributes::StatusHistory] },
                  api_name: :statusHistory
+
+        # @!parse
+        #   # @return [Array<Unit::Models::DisputeListResponseItem::Attributes::StatusHistory>]
+        #   attr_writer :status_history
 
         # @!parse
         #   # @param amount [Integer]
@@ -404,15 +420,23 @@ module Unit
         # }
         # ```
         class StatusHistory < Unit::BaseModel
-          # @!attribute type
+          # @!attribute [r] type
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :type, String
 
-          # @!attribute updated_at
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :type
+
+          # @!attribute [r] updated_at
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :updated_at, Time, api_name: :updatedAt
+
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :updated_at
 
           # @!parse
           #   # @param type [String]

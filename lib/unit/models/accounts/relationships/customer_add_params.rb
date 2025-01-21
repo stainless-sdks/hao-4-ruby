@@ -25,15 +25,23 @@ module Unit
           # }
           # ```
           class Data < Unit::BaseModel
-            # @!attribute id
+            # @!attribute [r] id
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :id, String
 
-            # @!attribute type
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :id
+
+            # @!attribute [r] type
             #
-            #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type]
+            #   @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type, nil]
             optional :type, enum: -> { Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type }
+
+            # @!parse
+            #   # @return [Symbol, Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type]
+            #   attr_writer :type
 
             # @!parse
             #   # @param id [String]

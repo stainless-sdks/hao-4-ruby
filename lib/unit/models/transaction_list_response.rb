@@ -11,20 +11,32 @@ module Unit
     # }
     # ```
     class TransactionListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::Accounts::Transaction>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::Accounts::Transaction] }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Array<Unit::Models::Accounts::Transaction>]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::TransactionListResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::TransactionListResponse::Included] }
 
-      # @!attribute meta
+      # @!parse
+      #   # @return [Array<Unit::Models::TransactionListResponse::Included>]
+      #   attr_writer :included
+
+      # @!attribute [r] meta
       #
-      #   @return [Unit::Models::TransactionListResponse::Meta]
+      #   @return [Unit::Models::TransactionListResponse::Meta, nil]
       optional :meta, -> { Unit::Models::TransactionListResponse::Meta }
+
+      # @!parse
+      #   # @return [Unit::Models::TransactionListResponse::Meta]
+      #   attr_writer :meta
 
       # @!parse
       #   # @param data [Array<Unit::Models::Accounts::Transaction>]
@@ -45,25 +57,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -83,10 +111,14 @@ module Unit
       # }
       # ```
       class Meta < Unit::BaseModel
-        # @!attribute pagination
+        # @!attribute [r] pagination
         #
-        #   @return [Unit::Models::TransactionListResponse::Meta::Pagination]
+        #   @return [Unit::Models::TransactionListResponse::Meta::Pagination, nil]
         optional :pagination, -> { Unit::Models::TransactionListResponse::Meta::Pagination }
+
+        # @!parse
+        #   # @return [Unit::Models::TransactionListResponse::Meta::Pagination]
+        #   attr_writer :pagination
 
         # @!parse
         #   # @param pagination [Unit::Models::TransactionListResponse::Meta::Pagination]
@@ -104,20 +136,32 @@ module Unit
         # }
         # ```
         class Pagination < Unit::BaseModel
-          # @!attribute limit
+          # @!attribute [r] limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :limit, Integer
 
-          # @!attribute offset
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :limit
+
+          # @!attribute [r] offset
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :offset, Integer
 
-          # @!attribute total
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :offset
+
+          # @!attribute [r] total
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :total, Integer
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :total
 
           # @!parse
           #   # @param limit [Integer]

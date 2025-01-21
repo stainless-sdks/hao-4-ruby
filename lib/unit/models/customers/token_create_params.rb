@@ -4,10 +4,14 @@ module Unit
   module Models
     module Customers
       class TokenCreateParams < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Customers::TokenCreateParams::Data]
+        #   @return [Unit::Models::Customers::TokenCreateParams::Data, nil]
         optional :data, -> { Unit::Models::Customers::TokenCreateParams::Data }
+
+        # @!parse
+        #   # @return [Unit::Models::Customers::TokenCreateParams::Data]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Customers::TokenCreateParams::Data]
@@ -24,15 +28,23 @@ module Unit
         # }
         # ```
         class Data < Unit::BaseModel
-          # @!attribute attributes
+          # @!attribute [r] attributes
           #
-          #   @return [Unit::Models::Customers::TokenCreateParams::Data::Attributes]
+          #   @return [Unit::Models::Customers::TokenCreateParams::Data::Attributes, nil]
           optional :attributes, -> { Unit::Models::Customers::TokenCreateParams::Data::Attributes }
 
-          # @!attribute type
+          # @!parse
+          #   # @return [Unit::Models::Customers::TokenCreateParams::Data::Attributes]
+          #   attr_writer :attributes
+
+          # @!attribute [r] type
           #
-          #   @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Type]
+          #   @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Type, nil]
           optional :type, enum: -> { Unit::Models::Customers::TokenCreateParams::Data::Type }
+
+          # @!parse
+          #   # @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Type]
+          #   attr_writer :type
 
           # @!parse
           #   # @param attributes [Unit::Models::Customers::TokenCreateParams::Data::Attributes]
@@ -54,17 +66,25 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute expires_in
+            # @!attribute [r] expires_in
             #
-            #   @return [Integer]
+            #   @return [Integer, nil]
             optional :expires_in, Integer, api_name: :expiresIn
 
-            # @!attribute jwt_token
+            # @!parse
+            #   # @return [Integer]
+            #   attr_writer :expires_in
+
+            # @!attribute [r] jwt_token
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :jwt_token, String, api_name: :jwtToken
 
-            # @!attribute resources
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :jwt_token
+
+            # @!attribute [r] resources
             #
             #   @return [Array<Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource>]
             optional :resources,
@@ -72,25 +92,45 @@ module Unit
                        Unit::ArrayOf[Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource]
                      }
 
-            # @!attribute scope
+            # @!parse
+            #   # @return [Array<Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource>]
+            #   attr_writer :resources
+
+            # @!attribute [r] scope
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :scope, String
 
-            # @!attribute upgradable_scope
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :scope
+
+            # @!attribute [r] upgradable_scope
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :upgradable_scope, String, api_name: :upgradableScope
 
-            # @!attribute verification_code
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :upgradable_scope
+
+            # @!attribute [r] verification_code
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :verification_code, String, api_name: :verificationCode
 
-            # @!attribute verification_token
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :verification_code
+
+            # @!attribute [r] verification_token
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :verification_token, String, api_name: :verificationToken
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :verification_token
 
             # @!parse
             #   # @param expires_in [Integer]
@@ -124,18 +164,26 @@ module Unit
             # }
             # ```
             class Resource < Unit::BaseModel
-              # @!attribute ids
+              # @!attribute [r] ids
               #
               #   @return [Array<String>]
               optional :ids, Unit::ArrayOf[String]
 
-              # @!attribute type
+              # @!parse
+              #   # @return [Array<String>]
+              #   attr_writer :ids
+
+              # @!attribute [r] type
               #
-              #   @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type]
+              #   @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type, nil]
               optional :type,
                        enum: -> {
                          Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type
                        }
+
+              # @!parse
+              #   # @return [Symbol, Unit::Models::Customers::TokenCreateParams::Data::Attributes::Resource::Type]
+              #   attr_writer :type
 
               # @!parse
               #   # @param ids [Array<String>]

@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class FeeReverseResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::FeeReverseResponse::Data]
+      #   @return [Unit::Models::FeeReverseResponse::Data, nil]
       optional :data, -> { Unit::Models::FeeReverseResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::FeeReverseResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::FeeReverseResponse::Data]
@@ -30,20 +34,32 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute attributes
+        # @!attribute [r] attributes
         #
-        #   @return [Unit::Models::FeeReverseResponse::Data::Attributes]
+        #   @return [Unit::Models::FeeReverseResponse::Data::Attributes, nil]
         optional :attributes, -> { Unit::Models::FeeReverseResponse::Data::Attributes }
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Unit::Models::FeeReverseResponse::Data::Attributes]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::FeeReverseResponse::Data::Relationships]
+        #   @return [Unit::Models::FeeReverseResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::FeeReverseResponse::Data::Relationships }
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Unit::Models::FeeReverseResponse::Data::Relationships]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::FeeReverseResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::FeeReverseResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::FeeReverseResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::FeeReverseResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param attributes [Unit::Models::FeeReverseResponse::Data::Attributes]
@@ -67,10 +83,14 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute tags
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param description [String]
@@ -89,15 +109,23 @@ module Unit
         # }
         # ```
         class Relationships < Unit::BaseModel
-          # @!attribute account
+          # @!attribute [r] account
           #
-          #   @return [Unit::Models::FeeReverseResponse::Data::Relationships::Account]
+          #   @return [Unit::Models::FeeReverseResponse::Data::Relationships::Account, nil]
           optional :account, -> { Unit::Models::FeeReverseResponse::Data::Relationships::Account }
 
-          # @!attribute transaction
+          # @!parse
+          #   # @return [Unit::Models::FeeReverseResponse::Data::Relationships::Account]
+          #   attr_writer :account
+
+          # @!attribute [r] transaction
           #
-          #   @return [Unit::Models::FeeReverseResponse::Data::Relationships::Transaction]
+          #   @return [Unit::Models::FeeReverseResponse::Data::Relationships::Transaction, nil]
           optional :transaction, -> { Unit::Models::FeeReverseResponse::Data::Relationships::Transaction }
+
+          # @!parse
+          #   # @return [Unit::Models::FeeReverseResponse::Data::Relationships::Transaction]
+          #   attr_writer :transaction
 
           # @!parse
           #   # @param account [Unit::Models::FeeReverseResponse::Data::Relationships::Account]

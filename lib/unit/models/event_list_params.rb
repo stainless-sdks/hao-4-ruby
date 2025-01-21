@@ -3,16 +3,24 @@
 module Unit
   module Models
     class EventListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::EventListParams::Filter]
+      #   @return [Unit::Models::EventListParams::Filter, nil]
       optional :filter, -> { Unit::Models::EventListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::EventListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::EventListParams::Page]
+      #   @return [Unit::Models::EventListParams::Page, nil]
       optional :page, -> { Unit::Models::EventListParams::Page }
+
+      # @!parse
+      #   # @return [Unit::Models::EventListParams::Page]
+      #   attr_writer :page
 
       # @!parse
       #   # @param filter [Unit::Models::EventListParams::Filter]
@@ -32,20 +40,32 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute since
+        # @!attribute [r] since
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :since, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :since
+
+        # @!attribute [r] type
         #
         #   @return [Array<String>]
         optional :type, Unit::ArrayOf[String]
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [Array<String>]
+        #   attr_writer :type
+
+        # @!attribute [r] until_
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :until_, String, api_name: :until
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param since [String]
@@ -65,15 +85,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

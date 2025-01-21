@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class RecurringPaymentDisableResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::RecurringPaymentDisableResponse::Data]
+      #   @return [Unit::Models::RecurringPaymentDisableResponse::Data, nil]
       optional :data, -> { Unit::Models::RecurringPaymentDisableResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::RecurringPaymentDisableResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::RecurringPaymentDisableResponse::Data]
@@ -29,15 +33,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::RecurringPaymentDisableResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::RecurringPaymentDisableResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::RecurringPaymentDisableResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::RecurringPaymentDisableResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]

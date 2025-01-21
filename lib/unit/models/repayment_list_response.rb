@@ -10,15 +10,23 @@ module Unit
     # }
     # ```
     class RepaymentListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::RepaymentListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::RepaymentListResponse::Data] }
 
-      # @!attribute meta
+      # @!parse
+      #   # @return [Array<Unit::Models::RepaymentListResponse::Data>]
+      #   attr_writer :data
+
+      # @!attribute [r] meta
       #
-      #   @return [Unit::Models::RepaymentListResponse::Meta]
+      #   @return [Unit::Models::RepaymentListResponse::Meta, nil]
       optional :meta, -> { Unit::Models::RepaymentListResponse::Meta }
+
+      # @!parse
+      #   # @return [Unit::Models::RepaymentListResponse::Meta]
+      #   attr_writer :meta
 
       # @!parse
       #   # @param data [Array<Unit::Models::RepaymentListResponse::Data>]
@@ -36,15 +44,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::RepaymentListResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::RepaymentListResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::RepaymentListResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::RepaymentListResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -84,10 +100,14 @@ module Unit
       # }
       # ```
       class Meta < Unit::BaseModel
-        # @!attribute pagination
+        # @!attribute [r] pagination
         #
-        #   @return [Unit::Models::RepaymentListResponse::Meta::Pagination]
+        #   @return [Unit::Models::RepaymentListResponse::Meta::Pagination, nil]
         optional :pagination, -> { Unit::Models::RepaymentListResponse::Meta::Pagination }
+
+        # @!parse
+        #   # @return [Unit::Models::RepaymentListResponse::Meta::Pagination]
+        #   attr_writer :pagination
 
         # @!parse
         #   # @param pagination [Unit::Models::RepaymentListResponse::Meta::Pagination]
@@ -105,20 +125,32 @@ module Unit
         # }
         # ```
         class Pagination < Unit::BaseModel
-          # @!attribute limit
+          # @!attribute [r] limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :limit, Integer
 
-          # @!attribute offset
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :limit
+
+          # @!attribute [r] offset
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :offset, Integer
 
-          # @!attribute total
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :offset
+
+          # @!attribute [r] total
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :total, Integer
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :total
 
           # @!parse
           #   # @param limit [Integer]

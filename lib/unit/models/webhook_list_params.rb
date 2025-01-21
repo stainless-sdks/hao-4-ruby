@@ -3,21 +3,33 @@
 module Unit
   module Models
     class WebhookListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::WebhookListParams::Filter]
+      #   @return [Unit::Models::WebhookListParams::Filter, nil]
       optional :filter, -> { Unit::Models::WebhookListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::WebhookListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::WebhookListParams::Page]
+      #   @return [Unit::Models::WebhookListParams::Page, nil]
       optional :page, -> { Unit::Models::WebhookListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::WebhookListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::WebhookListParams::Filter]
@@ -40,25 +52,41 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute from_id
+        # @!attribute [r] from_id
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :from_id, Integer, api_name: :fromId
 
-        # @!attribute since
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :from_id
+
+        # @!attribute [r] since
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :since, String
 
-        # @!attribute to_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :since
+
+        # @!attribute [r] to_id
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :to_id, Integer, api_name: :toId
 
-        # @!attribute until_
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :to_id
+
+        # @!attribute [r] until_
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :until_, String, api_name: :until
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :until_
 
         # @!parse
         #   # @param from_id [Integer]
@@ -79,15 +107,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

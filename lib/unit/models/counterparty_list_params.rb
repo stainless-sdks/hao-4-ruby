@@ -3,21 +3,33 @@
 module Unit
   module Models
     class CounterpartyListParams < Unit::BaseModel
-      # @!attribute filter
+      # @!attribute [r] filter
       #
-      #   @return [Unit::Models::CounterpartyListParams::Filter]
+      #   @return [Unit::Models::CounterpartyListParams::Filter, nil]
       optional :filter, -> { Unit::Models::CounterpartyListParams::Filter }
 
-      # @!attribute page
+      # @!parse
+      #   # @return [Unit::Models::CounterpartyListParams::Filter]
+      #   attr_writer :filter
+
+      # @!attribute [r] page
       #   Parameters for paginated list requests
       #
-      #   @return [Unit::Models::CounterpartyListParams::Page]
+      #   @return [Unit::Models::CounterpartyListParams::Page, nil]
       optional :page, -> { Unit::Models::CounterpartyListParams::Page }
 
-      # @!attribute sort
+      # @!parse
+      #   # @return [Unit::Models::CounterpartyListParams::Page]
+      #   attr_writer :page
+
+      # @!attribute [r] sort
       #
-      #   @return [String]
+      #   @return [String, nil]
       optional :sort, String
+
+      # @!parse
+      #   # @return [String]
+      #   attr_writer :sort
 
       # @!parse
       #   # @param filter [Unit::Models::CounterpartyListParams::Filter]
@@ -41,31 +53,51 @@ module Unit
       # }
       # ```
       class Filter < Unit::BaseModel
-        # @!attribute account_number
+        # @!attribute [r] account_number
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :account_number, String, api_name: :accountNumber
 
-        # @!attribute customer_id
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :account_number
+
+        # @!attribute [r] customer_id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :customer_id, String, api_name: :customerId
 
-        # @!attribute permissions
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :customer_id
+
+        # @!attribute [r] permissions
         #
         #   @return [Array<Symbol, Unit::Models::CounterpartyListParams::Filter::Permission>]
         optional :permissions,
                  -> { Unit::ArrayOf[enum: Unit::Models::CounterpartyListParams::Filter::Permission] }
 
-        # @!attribute routing_number
+        # @!parse
+        #   # @return [Array<Symbol, Unit::Models::CounterpartyListParams::Filter::Permission>]
+        #   attr_writer :permissions
+
+        # @!attribute [r] routing_number
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :routing_number, String, api_name: :routingNumber
 
-        # @!attribute tags
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :routing_number
+
+        # @!attribute [r] tags
         #
-        #   @return [Hash{Symbol=>String}]
+        #   @return [Hash{Symbol=>String}, nil]
         optional :tags, Unit::HashOf[String]
+
+        # @!parse
+        #   # @return [Hash{Symbol=>String}]
+        #   attr_writer :tags
 
         # @!parse
         #   # @param account_number [String]
@@ -106,15 +138,23 @@ module Unit
       # }
       # ```
       class Page < Unit::BaseModel
-        # @!attribute limit
+        # @!attribute [r] limit
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :limit, Integer
 
-        # @!attribute offset
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :limit
+
+        # @!attribute [r] offset
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :offset, Integer
+
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :offset
 
         # @!parse
         #   # Parameters for paginated list requests

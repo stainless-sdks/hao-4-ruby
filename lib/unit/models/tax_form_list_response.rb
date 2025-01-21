@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class TaxFormListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::TaxFormListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::TaxFormListResponse::Data] }
+
+      # @!parse
+      #   # @return [Array<Unit::Models::TaxFormListResponse::Data>]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Array<Unit::Models::TaxFormListResponse::Data>]
@@ -46,10 +50,14 @@ module Unit
         #   @return [Symbol, Unit::Models::TaxFormListResponse::Data::Type]
         required :type, enum: -> { Unit::Models::TaxFormListResponse::Data::Type }
 
-        # @!attribute relationships
+        # @!attribute [r] relationships
         #
-        #   @return [Unit::Models::TaxFormListResponse::Data::Relationships]
+        #   @return [Unit::Models::TaxFormListResponse::Data::Relationships, nil]
         optional :relationships, -> { Unit::Models::TaxFormListResponse::Data::Relationships }
+
+        # @!parse
+        #   # @return [Unit::Models::TaxFormListResponse::Data::Relationships]
+        #   attr_writer :relationships
 
         # @!parse
         #   # @param id [String]
@@ -110,20 +118,32 @@ module Unit
         # }
         # ```
         class Relationships < Unit::BaseModel
-          # @!attribute account
+          # @!attribute [r] account
           #
-          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Account]
+          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Account, nil]
           optional :account, -> { Unit::Models::TaxFormListResponse::Data::Relationships::Account }
 
-          # @!attribute accounts
+          # @!parse
+          #   # @return [Unit::Models::TaxFormListResponse::Data::Relationships::Account]
+          #   attr_writer :account
+
+          # @!attribute [r] accounts
           #
-          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Accounts]
+          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Accounts, nil]
           optional :accounts, -> { Unit::Models::TaxFormListResponse::Data::Relationships::Accounts }
 
-          # @!attribute customer
+          # @!parse
+          #   # @return [Unit::Models::TaxFormListResponse::Data::Relationships::Accounts]
+          #   attr_writer :accounts
+
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::TaxFormListResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::TaxFormListResponse::Data::Relationships::Customer }
+
+          # @!parse
+          #   # @return [Unit::Models::TaxFormListResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
 
           # @!parse
           #   # @param account [Unit::Models::TaxFormListResponse::Data::Relationships::Account]

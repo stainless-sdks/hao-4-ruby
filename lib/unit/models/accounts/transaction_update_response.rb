@@ -10,10 +10,14 @@ module Unit
       # }
       # ```
       class TransactionUpdateResponse < Unit::BaseModel
-        # @!attribute data
+        # @!attribute [r] data
         #
-        #   @return [Unit::Models::Accounts::Transaction]
+        #   @return [Unit::Models::Accounts::Transaction, nil]
         optional :data, -> { Unit::Models::Accounts::Transaction }
+
+        # @!parse
+        #   # @return [Unit::Models::Accounts::Transaction]
+        #   attr_writer :data
 
         # @!parse
         #   # @param data [Unit::Models::Accounts::Transaction]

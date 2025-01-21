@@ -83,66 +83,102 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute annual_revenue
+            # @!attribute [r] annual_revenue
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue, nil]
             optional :annual_revenue,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue
                      },
                      api_name: :annualRevenue
 
-            # @!attribute business_vertical
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue]
+            #   attr_writer :annual_revenue
+
+            # @!attribute [r] business_vertical
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical, nil]
             optional :business_vertical,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical
                      },
                      api_name: :businessVertical
 
-            # @!attribute cash_flow
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical]
+            #   attr_writer :business_vertical
+
+            # @!attribute [r] cash_flow
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow, nil]
             optional :cash_flow,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow
                      },
                      api_name: :cashFlow
 
-            # @!attribute countries_of_operation
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow]
+            #   attr_writer :cash_flow
+
+            # @!attribute [r] countries_of_operation
             #
             #   @return [Array<String>]
             optional :countries_of_operation, Unit::ArrayOf[String], api_name: :countriesOfOperation
 
-            # @!attribute number_of_employees
+            # @!parse
+            #   # @return [Array<String>]
+            #   attr_writer :countries_of_operation
+
+            # @!attribute [r] number_of_employees
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees, nil]
             optional :number_of_employees,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees
                      },
                      api_name: :numberOfEmployees
 
-            # @!attribute stock_symbol
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees]
+            #   attr_writer :number_of_employees
+
+            # @!attribute [r] stock_symbol
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :stock_symbol, String, api_name: :stockSymbol
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :stock_symbol
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute website
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] website
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :website, String
 
-            # @!attribute year_of_incorporation
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :website
+
+            # @!attribute [r] year_of_incorporation
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :year_of_incorporation, String, api_name: :yearOfIncorporation
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :year_of_incorporation
 
             # @!parse
             #   # @param annual_revenue [String]
@@ -345,37 +381,53 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute annual_income
+            # @!attribute [r] annual_income
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome, nil]
             optional :annual_income,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome
                      },
                      api_name: :annualIncome
 
-            # @!attribute occupation
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome]
+            #   attr_writer :annual_income
+
+            # @!attribute [r] occupation
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation, nil]
             optional :occupation,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation
                      }
 
-            # @!attribute relationships
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation]
+            #   attr_writer :occupation
+
+            # @!attribute [r] relationships
             #
-            #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships]
+            #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships, nil]
             optional :relationships,
                      -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships }
 
-            # @!attribute source_of_income
+            # @!parse
+            #   # @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships]
+            #   attr_writer :relationships
+
+            # @!attribute [r] source_of_income
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome, nil]
             optional :source_of_income,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome
                      },
                      api_name: :sourceOfIncome
+
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome]
+            #   attr_writer :source_of_income
 
             # @!parse
             #   # @param annual_income [String]
@@ -467,11 +519,15 @@ module Unit
             # }
             # ```
             class Relationships < Unit::BaseModel
-              # @!attribute application
+              # @!attribute [r] application
               #
-              #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application]
+              #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application, nil]
               optional :application,
                        -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application }
+
+              # @!parse
+              #   # @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application]
+              #   attr_writer :application
 
               # @!parse
               #   # @param application [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application]
@@ -635,42 +691,62 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute annual_revenue
+            # @!attribute [r] annual_revenue
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue, nil]
             optional :annual_revenue,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue
                      },
                      api_name: :annualRevenue
 
-            # @!attribute business_vertical
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue]
+            #   attr_writer :annual_revenue
+
+            # @!attribute [r] business_vertical
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical, nil]
             optional :business_vertical,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical
                      },
                      api_name: :businessVertical
 
-            # @!attribute number_of_employees
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical]
+            #   attr_writer :business_vertical
+
+            # @!attribute [r] number_of_employees
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees, nil]
             optional :number_of_employees,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees
                      },
                      api_name: :numberOfEmployees
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees]
+            #   attr_writer :number_of_employees
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
 
-            # @!attribute website
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
+
+            # @!attribute [r] website
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :website, String
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :website
 
             # @!parse
             #   # @param annual_revenue [String]
@@ -835,36 +911,52 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute annual_income
+            # @!attribute [r] annual_income
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome, nil]
             optional :annual_income,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome
                      },
                      api_name: :annualIncome
 
-            # @!attribute occupation
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome]
+            #   attr_writer :annual_income
+
+            # @!attribute [r] occupation
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation, nil]
             optional :occupation,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation
                      }
 
-            # @!attribute source_of_income
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation]
+            #   attr_writer :occupation
+
+            # @!attribute [r] source_of_income
             #
-            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome]
+            #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome, nil]
             optional :source_of_income,
                      enum: -> {
                        Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome
                      },
                      api_name: :sourceOfIncome
 
-            # @!attribute tags
+            # @!parse
+            #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome]
+            #   attr_writer :source_of_income
+
+            # @!attribute [r] tags
             #
-            #   @return [Hash{Symbol=>String}]
+            #   @return [Hash{Symbol=>String}, nil]
             optional :tags, Unit::HashOf[String]
+
+            # @!parse
+            #   # @return [Hash{Symbol=>String}]
+            #   attr_writer :tags
 
             # @!parse
             #   # @param annual_income [String]
@@ -1029,11 +1121,15 @@ module Unit
           # }
           # ```
           class Attributes < Unit::BaseModel
-            # @!attribute officer
+            # @!attribute [r] officer
             #
-            #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer]
+            #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer, nil]
             optional :officer,
                      -> { Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer }
+
+            # @!parse
+            #   # @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer]
+            #   attr_writer :officer
 
             # @!parse
             #   # @param officer [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer]
@@ -1051,31 +1147,43 @@ module Unit
             # }
             # ```
             class Officer < Unit::BaseModel
-              # @!attribute annual_income
+              # @!attribute [r] annual_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome]
+              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome, nil]
               optional :annual_income,
                        enum: -> {
                          Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome
                        },
                        api_name: :annualIncome
 
-              # @!attribute occupation
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome]
+              #   attr_writer :annual_income
+
+              # @!attribute [r] occupation
               #
-              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation]
+              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation, nil]
               optional :occupation,
                        enum: -> {
                          Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation
                        }
 
-              # @!attribute source_of_income
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation]
+              #   attr_writer :occupation
+
+              # @!attribute [r] source_of_income
               #
-              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome]
+              #   @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome, nil]
               optional :source_of_income,
                        enum: -> {
                          Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome
                        },
                        api_name: :sourceOfIncome
+
+              # @!parse
+              #   # @return [Symbol, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome]
+              #   attr_writer :source_of_income
 
               # @!parse
               #   # @param annual_income [String]

@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CheckPaymentApproveParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CheckPaymentApproveParams::Data]
+      #   @return [Unit::Models::CheckPaymentApproveParams::Data, nil]
       optional :data, -> { Unit::Models::CheckPaymentApproveParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CheckPaymentApproveParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CheckPaymentApproveParams::Data]
@@ -22,10 +26,14 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute type
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::CheckPaymentApproveParams::Data::Type]
+        #   @return [Symbol, Unit::Models::CheckPaymentApproveParams::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::CheckPaymentApproveParams::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::CheckPaymentApproveParams::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param type [String]

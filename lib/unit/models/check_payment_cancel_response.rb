@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CheckPaymentCancelResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CheckPaymentCancelResponse::Data]
+      #   @return [Unit::Models::CheckPaymentCancelResponse::Data, nil]
       optional :data, -> { Unit::Models::CheckPaymentCancelResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CheckPaymentCancelResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CheckPaymentCancelResponse::Data]
@@ -98,71 +102,115 @@ module Unit
           #   @return [Time]
           required :updated_at, Time, api_name: :updatedAt
 
-          # @!attribute additional_verification_status
+          # @!attribute [r] additional_verification_status
           #
-          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::AdditionalVerificationStatus]
+          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::AdditionalVerificationStatus, nil]
           optional :additional_verification_status,
                    enum: -> {
                      Unit::Models::CheckPaymentCancelResponse::Data::Attributes::AdditionalVerificationStatus
                    },
                    api_name: :additionalVerificationStatus
 
-          # @!attribute check_number
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::AdditionalVerificationStatus]
+          #   attr_writer :additional_verification_status
+
+          # @!attribute [r] check_number
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :check_number, String, api_name: :checkNumber
 
-          # @!attribute counterparty
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :check_number
+
+          # @!attribute [r] counterparty
           #
-          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty]
+          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty, nil]
           optional :counterparty,
                    -> {
                      Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty
                    }
 
-          # @!attribute counterparty_routing_number
+          # @!parse
+          #   # @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty]
+          #   attr_writer :counterparty
+
+          # @!attribute [r] counterparty_routing_number
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :counterparty_routing_number, String, api_name: :counterpartyRoutingNumber
 
-          # @!attribute delivery_status
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :counterparty_routing_number
+
+          # @!attribute [r] delivery_status
           #
-          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::DeliveryStatus]
+          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::DeliveryStatus, nil]
           optional :delivery_status,
                    enum: -> { Unit::Models::CheckPaymentCancelResponse::Data::Attributes::DeliveryStatus },
                    api_name: :deliveryStatus
 
-          # @!attribute description
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::DeliveryStatus]
+          #   attr_writer :delivery_status
+
+          # @!attribute [r] description
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :description, String
 
-          # @!attribute expected_delivery
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :description
+
+          # @!attribute [r] expected_delivery
           #
-          #   @return [Date]
+          #   @return [Date, nil]
           optional :expected_delivery, Date, api_name: :expectedDelivery
 
-          # @!attribute expiration_date
+          # @!parse
+          #   # @return [Date]
+          #   attr_writer :expected_delivery
+
+          # @!attribute [r] expiration_date
           #
-          #   @return [Date]
+          #   @return [Date, nil]
           optional :expiration_date, Date, api_name: :expirationDate
 
-          # @!attribute memo
+          # @!parse
+          #   # @return [Date]
+          #   attr_writer :expiration_date
+
+          # @!attribute [r] memo
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :memo, String
 
-          # @!attribute on_us
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :memo
+
+          # @!attribute [r] on_us
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :on_us, String, api_name: :onUs
 
-          # @!attribute on_us_auxiliary
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :on_us
+
+          # @!attribute [r] on_us_auxiliary
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :on_us_auxiliary, String, api_name: :onUsAuxiliary
 
-          # @!attribute pending_review_reasons
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :on_us_auxiliary
+
+          # @!attribute [r] pending_review_reasons
           #
           #   @return [Array<Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::PendingReviewReason>]
           optional :pending_review_reasons,
@@ -171,42 +219,74 @@ module Unit
                    },
                    api_name: :pendingReviewReasons
 
-          # @!attribute postal_code
+          # @!parse
+          #   # @return [Array<Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::PendingReviewReason>]
+          #   attr_writer :pending_review_reasons
+
+          # @!attribute [r] postal_code
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :postal_code, String, api_name: :postalCode
 
-          # @!attribute reject_reason
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :postal_code
+
+          # @!attribute [r] reject_reason
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :reject_reason, String, api_name: :rejectReason
 
-          # @!attribute return_cutoff_time
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :reject_reason
+
+          # @!attribute [r] return_cutoff_time
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :return_cutoff_time, Time, api_name: :returnCutoffTime
 
-          # @!attribute return_reason
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :return_cutoff_time
+
+          # @!attribute [r] return_reason
           #
-          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::ReturnReason]
+          #   @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::ReturnReason, nil]
           optional :return_reason,
                    enum: -> { Unit::Models::CheckPaymentCancelResponse::Data::Attributes::ReturnReason },
                    api_name: :returnReason
 
-          # @!attribute send_at
+          # @!parse
+          #   # @return [Symbol, Unit::Models::CheckPaymentCancelResponse::Data::Attributes::ReturnReason]
+          #   attr_writer :return_reason
+
+          # @!attribute [r] send_at
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :send_at, Time, api_name: :sendAt
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :send_at
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
 
-          # @!attribute tracked_at
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
+
+          # @!attribute [r] tracked_at
           #
-          #   @return [Time]
+          #   @return [Time, nil]
           optional :tracked_at, Time, api_name: :trackedAt
+
+          # @!parse
+          #   # @return [Time]
+          #   attr_writer :tracked_at
 
           # @!parse
           #   # @param amount [Integer]
@@ -316,21 +396,33 @@ module Unit
           # }
           # ```
           class Counterparty < Unit::BaseModel
-            # @!attribute address
+            # @!attribute [r] address
             #
-            #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address]
+            #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address, nil]
             optional :address,
                      -> { Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address }
 
-            # @!attribute counterparty_moved
+            # @!parse
+            #   # @return [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address]
+            #   attr_writer :address
+
+            # @!attribute [r] counterparty_moved
             #
-            #   @return [Boolean]
+            #   @return [Boolean, nil]
             optional :counterparty_moved, Unit::BooleanModel, api_name: :counterpartyMoved
 
-            # @!attribute name
+            # @!parse
+            #   # @return [Boolean]
+            #   attr_writer :counterparty_moved
+
+            # @!attribute [r] name
             #
-            #   @return [String]
+            #   @return [String, nil]
             optional :name, String
+
+            # @!parse
+            #   # @return [String]
+            #   attr_writer :name
 
             # @!parse
             #   # @param address [Unit::Models::CheckPaymentCancelResponse::Data::Attributes::Counterparty::Address]
@@ -380,7 +472,7 @@ module Unit
               # @!attribute street2
               #
               #   @return [String, nil]
-              optional :street2, String
+              optional :street2, String, nil?: true
 
               # @!parse
               #   # @param city [String]
@@ -487,23 +579,35 @@ module Unit
           #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Account]
           required :account, -> { Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Account }
 
-          # @!attribute customer
+          # @!attribute [r] customer
           #
-          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customer]
+          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customer, nil]
           optional :customer, -> { Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customer }
 
-          # @!attribute customers
+          # @!parse
+          #   # @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customer]
+          #   attr_writer :customer
+
+          # @!attribute [r] customers
           #
-          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customers]
+          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customers, nil]
           optional :customers, -> { Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customers }
 
-          # @!attribute transaction
+          # @!parse
+          #   # @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Customers]
+          #   attr_writer :customers
+
+          # @!attribute [r] transaction
           #
-          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Transaction]
+          #   @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Transaction, nil]
           optional :transaction,
                    -> {
                      Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Transaction
                    }
+
+          # @!parse
+          #   # @return [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Transaction]
+          #   attr_writer :transaction
 
           # @!parse
           #   # @param account [Unit::Models::CheckPaymentCancelResponse::Data::Relationships::Account]
@@ -692,15 +796,23 @@ module Unit
             # }
             # ```
             class Data < Unit::BaseModel
-              # @!attribute id
+              # @!attribute [r] id
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :id, String
 
-              # @!attribute type
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :id
+
+              # @!attribute [r] type
               #
-              #   @return [String]
+              #   @return [String, nil]
               optional :type, String
+
+              # @!parse
+              #   # @return [String]
+              #   attr_writer :type
 
               # @!parse
               #   # @param id [String]

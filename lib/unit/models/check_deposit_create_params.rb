@@ -3,10 +3,14 @@
 module Unit
   module Models
     class CheckDepositCreateParams < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CheckDepositCreateParams::Data]
+      #   @return [Unit::Models::CheckDepositCreateParams::Data, nil]
       optional :data, -> { Unit::Models::CheckDepositCreateParams::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CheckDepositCreateParams::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CheckDepositCreateParams::Data]
@@ -69,20 +73,32 @@ module Unit
           #   @return [String]
           required :description, String
 
-          # @!attribute clearing_days_override
+          # @!attribute [r] clearing_days_override
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :clearing_days_override, Integer, api_name: :clearingDaysOverride
 
-          # @!attribute idempotency_key
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :clearing_days_override
+
+          # @!attribute [r] idempotency_key
           #
-          #   @return [String]
+          #   @return [String, nil]
           optional :idempotency_key, String, api_name: :idempotencyKey
 
-          # @!attribute tags
+          # @!parse
+          #   # @return [String]
+          #   attr_writer :idempotency_key
+
+          # @!attribute [r] tags
           #
-          #   @return [Hash{Symbol=>String}]
+          #   @return [Hash{Symbol=>String}, nil]
           optional :tags, Unit::HashOf[String]
+
+          # @!parse
+          #   # @return [Hash{Symbol=>String}]
+          #   attr_writer :tags
 
           # @!parse
           #   # @param amount [Integer]

@@ -11,20 +11,32 @@ module Unit
     # }
     # ```
     class PaymentListResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
       #   @return [Array<Unit::Models::PaymentListResponse::Data>]
       optional :data, -> { Unit::ArrayOf[Unit::Models::PaymentListResponse::Data] }
 
-      # @!attribute included
+      # @!parse
+      #   # @return [Array<Unit::Models::PaymentListResponse::Data>]
+      #   attr_writer :data
+
+      # @!attribute [r] included
       #
       #   @return [Array<Unit::Models::PaymentListResponse::Included>]
       optional :included, -> { Unit::ArrayOf[Unit::Models::PaymentListResponse::Included] }
 
-      # @!attribute meta
+      # @!parse
+      #   # @return [Array<Unit::Models::PaymentListResponse::Included>]
+      #   attr_writer :included
+
+      # @!attribute [r] meta
       #
-      #   @return [Unit::Models::PaymentListResponse::Meta]
+      #   @return [Unit::Models::PaymentListResponse::Meta, nil]
       optional :meta, -> { Unit::Models::PaymentListResponse::Meta }
+
+      # @!parse
+      #   # @return [Unit::Models::PaymentListResponse::Meta]
+      #   attr_writer :meta
 
       # @!parse
       #   # @param data [Array<Unit::Models::PaymentListResponse::Data>]
@@ -43,15 +55,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::PaymentListResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::PaymentListResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::PaymentListResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::PaymentListResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -91,25 +111,41 @@ module Unit
       # }
       # ```
       class Included < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute attributes
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] attributes
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :attributes, Unit::Unknown
 
-        # @!attribute relationships
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :attributes
+
+        # @!attribute [r] relationships
         #
-        #   @return [Object]
+        #   @return [Object, nil]
         optional :relationships, Unit::Unknown
 
-        # @!attribute type
+        # @!parse
+        #   # @return [Object]
+        #   attr_writer :relationships
+
+        # @!attribute [r] type
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :type, String
+
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
@@ -129,10 +165,14 @@ module Unit
       # }
       # ```
       class Meta < Unit::BaseModel
-        # @!attribute pagination
+        # @!attribute [r] pagination
         #
-        #   @return [Unit::Models::PaymentListResponse::Meta::Pagination]
+        #   @return [Unit::Models::PaymentListResponse::Meta::Pagination, nil]
         optional :pagination, -> { Unit::Models::PaymentListResponse::Meta::Pagination }
+
+        # @!parse
+        #   # @return [Unit::Models::PaymentListResponse::Meta::Pagination]
+        #   attr_writer :pagination
 
         # @!parse
         #   # @param pagination [Unit::Models::PaymentListResponse::Meta::Pagination]
@@ -150,20 +190,32 @@ module Unit
         # }
         # ```
         class Pagination < Unit::BaseModel
-          # @!attribute limit
+          # @!attribute [r] limit
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :limit, Integer
 
-          # @!attribute offset
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :limit
+
+          # @!attribute [r] offset
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :offset, Integer
 
-          # @!attribute total
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :offset
+
+          # @!attribute [r] total
           #
-          #   @return [Integer]
+          #   @return [Integer, nil]
           optional :total, Integer
+
+          # @!parse
+          #   # @return [Integer]
+          #   attr_writer :total
 
           # @!parse
           #   # @param limit [Integer]

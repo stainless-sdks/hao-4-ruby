@@ -40,40 +40,68 @@ module Unit
       # }
       # ```
       class Attributes < Unit::BaseModel
-        # @!attribute accept_deposits
+        # @!attribute [r] accept_deposits
         #
-        #   @return [Boolean]
+        #   @return [Boolean, nil]
         optional :accept_deposits, Unit::BooleanModel, api_name: :acceptDeposits
 
-        # @!attribute address
+        # @!parse
+        #   # @return [Boolean]
+        #   attr_writer :accept_deposits
+
+        # @!attribute [r] address
         #
-        #   @return [Unit::Models::AtmLocationListResponseItem::Attributes::Address]
+        #   @return [Unit::Models::AtmLocationListResponseItem::Attributes::Address, nil]
         optional :address, -> { Unit::Models::AtmLocationListResponseItem::Attributes::Address }
 
-        # @!attribute coordinates
+        # @!parse
+        #   # @return [Unit::Models::AtmLocationListResponseItem::Attributes::Address]
+        #   attr_writer :address
+
+        # @!attribute [r] coordinates
         #
-        #   @return [Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates]
+        #   @return [Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates, nil]
         optional :coordinates, -> { Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates }
 
-        # @!attribute distance
+        # @!parse
+        #   # @return [Unit::Models::AtmLocationListResponseItem::Attributes::Coordinates]
+        #   attr_writer :coordinates
+
+        # @!attribute [r] distance
         #
-        #   @return [Integer]
+        #   @return [Integer, nil]
         optional :distance, Integer
 
-        # @!attribute location_name
+        # @!parse
+        #   # @return [Integer]
+        #   attr_writer :distance
+
+        # @!attribute [r] location_name
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :location_name, String, api_name: :locationName
 
-        # @!attribute network
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :location_name
+
+        # @!attribute [r] network
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :network, String
 
-        # @!attribute surcharge_free
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :network
+
+        # @!attribute [r] surcharge_free
         #
-        #   @return [Boolean]
+        #   @return [Boolean, nil]
         optional :surcharge_free, Unit::BooleanModel, api_name: :surchargeFree
+
+        # @!parse
+        #   # @return [Boolean]
+        #   attr_writer :surcharge_free
 
         # @!parse
         #   # @param accept_deposits [Boolean]
@@ -138,7 +166,7 @@ module Unit
           # @!attribute street2
           #
           #   @return [String, nil]
-          optional :street2, String
+          optional :street2, String, nil?: true
 
           # @!parse
           #   # @param city [String]

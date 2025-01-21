@@ -9,10 +9,14 @@ module Unit
     # }
     # ```
     class CustomerUpdateResponse < Unit::BaseModel
-      # @!attribute data
+      # @!attribute [r] data
       #
-      #   @return [Unit::Models::CustomerUpdateResponse::Data]
+      #   @return [Unit::Models::CustomerUpdateResponse::Data, nil]
       optional :data, -> { Unit::Models::CustomerUpdateResponse::Data }
+
+      # @!parse
+      #   # @return [Unit::Models::CustomerUpdateResponse::Data]
+      #   attr_writer :data
 
       # @!parse
       #   # @param data [Unit::Models::CustomerUpdateResponse::Data]
@@ -29,15 +33,23 @@ module Unit
       # }
       # ```
       class Data < Unit::BaseModel
-        # @!attribute id
+        # @!attribute [r] id
         #
-        #   @return [String]
+        #   @return [String, nil]
         optional :id, String
 
-        # @!attribute type
+        # @!parse
+        #   # @return [String]
+        #   attr_writer :id
+
+        # @!attribute [r] type
         #
-        #   @return [Symbol, Unit::Models::CustomerUpdateResponse::Data::Type]
+        #   @return [Symbol, Unit::Models::CustomerUpdateResponse::Data::Type, nil]
         optional :type, enum: -> { Unit::Models::CustomerUpdateResponse::Data::Type }
+
+        # @!parse
+        #   # @return [Symbol, Unit::Models::CustomerUpdateResponse::Data::Type]
+        #   attr_writer :type
 
         # @!parse
         #   # @param id [String]
