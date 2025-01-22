@@ -79,7 +79,7 @@ module Unit
     #
     #   @option req [Class, nil] :page
     #
-    #   @option req [Class, Unit::Converter] :model
+    #   @option req [Class, Unit::Converter, Symbol, Boolean, Integer, Float] :model
     #
     # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] .
     #
@@ -374,7 +374,7 @@ module Unit
     #
     #   @option req [Class, nil] :page
     #
-    #   @option req [Class, Unit::Converter] :model
+    #   @option req [Class, Unit::Converter, Symbol, Boolean, Integer, Float] :model
     #
     # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] .
     #
@@ -427,7 +427,7 @@ module Unit
     #
     #   @option req [Class, nil] :page
     #
-    #   @option req [Class, Unit::Converter] :model
+    #   @option req [Class, Unit::Converter, Symbol, Boolean, Integer, Float] :model
     #
     # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] .
     #
