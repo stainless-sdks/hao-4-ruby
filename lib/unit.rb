@@ -15,10 +15,10 @@ require "uri"
 require "connection_pool"
 
 # Package files.
-require_relative "unit/base_client"
 require_relative "unit/base_model"
 require_relative "unit/errors"
 require_relative "unit/pooled_net_requester"
+require_relative "unit/base_client"
 require_relative "unit/base_page"
 require_relative "unit/request_options"
 require_relative "unit/util"
