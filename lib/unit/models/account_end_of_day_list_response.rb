@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::AccountEndOfDayListResponse::Data::Attributes,
       #   relationships: Unit::Models::AccountEndOfDayListResponse::Data::Relationships,
-      #   type: enum: Unit::Models::AccountEndOfDayListResponse::Data::Type
+      #   type: Unit::Models::AccountEndOfDayListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -169,7 +169,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -244,7 +244,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::AccountEndOfDayListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

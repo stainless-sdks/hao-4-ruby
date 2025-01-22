@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CheckDepositCreateResponse::Data::Attributes,
       #   relationships: Unit::Models::CheckDepositCreateResponse::Data::Relationships,
-      #   type: enum: Unit::Models::CheckDepositCreateResponse::Data::Type
+      #   type: Unit::Models::CheckDepositCreateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -71,7 +71,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   description: String,
-        #   status: enum: Unit::Models::CheckDepositCreateResponse::Data::Attributes::Status,
+        #   status: Unit::Models::CheckDepositCreateResponse::Data::Attributes::Status,
         #   check_number: String,
         #   **_
         # }
@@ -342,7 +342,7 @@ module Unit
             # @example
             # ```ruby
             # status => {
-            #   type: enum: Unit::Models::CheckDepositCreateResponse::Data::Attributes::StatusHistory::Status::Type
+            #   type: Unit::Models::CheckDepositCreateResponse::Data::Attributes::StatusHistory::Status::Type
             # }
             # ```
             class Status < Unit::BaseModel
@@ -482,7 +482,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -557,7 +557,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -676,7 +676,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::CheckDepositCreateResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

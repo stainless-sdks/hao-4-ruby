@@ -26,7 +26,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::BeneficialOwner,
-      #   type: enum: Unit::Models::BeneficialOwnerUpdateResponse::Data::Type
+      #   type: Unit::Models::BeneficialOwnerUpdateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

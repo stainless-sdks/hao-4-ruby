@@ -42,7 +42,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Attributes,
       #   relationships: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships,
-      #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Type
+      #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -418,7 +418,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -493,7 +493,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::ReceivedPaymentRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

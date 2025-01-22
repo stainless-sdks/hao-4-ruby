@@ -54,7 +54,7 @@ module Unit
         # create_individual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Type
         # }
         # ```
         class CreateIndividualDebitCardRequest < Unit::BaseModel
@@ -457,7 +457,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -530,7 +530,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateIndividualDebitCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -644,7 +644,7 @@ module Unit
         # create_business_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Type
         # }
         # ```
         class CreateBusinessDebitCardRequest < Unit::BaseModel
@@ -1168,7 +1168,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1241,7 +1241,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessDebitCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1355,7 +1355,7 @@ module Unit
         # create_business_credit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Type
         # }
         # ```
         class CreateBusinessCreditCardRequest < Unit::BaseModel
@@ -1879,7 +1879,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -1952,7 +1952,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessCreditCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -2066,7 +2066,7 @@ module Unit
         # create_individual_virtual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Type
         # }
         # ```
         class CreateIndividualVirtualDebitCardRequest < Unit::BaseModel
@@ -2334,7 +2334,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -2407,7 +2407,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateIndividualVirtualDebitCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -2521,7 +2521,7 @@ module Unit
         # create_business_virtual_debit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Type
         # }
         # ```
         class CreateBusinessVirtualDebitCardRequest < Unit::BaseModel
@@ -2932,7 +2932,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -3005,7 +3005,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualDebitCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -3119,7 +3119,7 @@ module Unit
         # create_business_virtual_credit_card_request => {
         #   attributes: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Attributes,
         #   relationships: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships,
-        #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Type
+        #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Type
         # }
         # ```
         class CreateBusinessVirtualCreditCardRequest < Unit::BaseModel
@@ -3530,7 +3530,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -3603,7 +3603,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer::Data::Type
+              #   type: Unit::Models::CardCreateParams::Data::CreateBusinessVirtualCreditCardRequest::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

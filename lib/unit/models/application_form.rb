@@ -7,7 +7,7 @@ module Unit
     # application_form => {
     #   id: String,
     #   attributes: Unit::Models::ApplicationForm::Attributes,
-    #   type: enum: Unit::Models::ApplicationForm::Type,
+    #   type: Unit::Models::ApplicationForm::Type,
     #   relationships: Unit::Models::ApplicationForm::Relationships
     # }
     # ```
@@ -172,9 +172,9 @@ module Unit
         # ```ruby
         # applicant_details => {
         #   address: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Address,
-        #   application_type: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType,
+        #   application_type: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::ApplicationType,
         #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner] === _1 },
-        #   business_vertical: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical,
+        #   business_vertical: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BusinessVertical,
         #   contact: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Contact,
         #   **_
         # }
@@ -836,7 +836,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -1257,7 +1257,7 @@ module Unit
           #   date_of_birth: Date,
           #   email: String,
           #   full_name: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::FullName,
-          #   occupation: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::Occupation,
+          #   occupation: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::Occupation,
           #   **_
           # }
           # ```
@@ -1613,7 +1613,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: enum: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: Unit::Models::ApplicationForm::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -2017,7 +2017,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::ApplicationForm::Relationships::Application::Data::Type
+          #   type: Unit::Models::ApplicationForm::Relationships::Application::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

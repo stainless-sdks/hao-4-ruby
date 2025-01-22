@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::EventListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::EventListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::EventListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

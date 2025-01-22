@@ -30,7 +30,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::WebhookDisableResponse::Data::Attributes,
-      #   type: enum: Unit::Models::WebhookDisableResponse::Data::Type
+      #   type: Unit::Models::WebhookDisableResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -62,9 +62,9 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: enum: Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType,
+        #   content_type: Unit::Models::WebhookDisableResponse::Data::Attributes::ContentType,
         #   created_at: Time,
-        #   delivery_mode: enum: Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode,
+        #   delivery_mode: Unit::Models::WebhookDisableResponse::Data::Attributes::DeliveryMode,
         #   label: String,
         #   **_
         # }

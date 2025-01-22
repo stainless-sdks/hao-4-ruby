@@ -7,7 +7,7 @@ module Unit
     # dispute_list_response_item => {
     #   id: String,
     #   relationships: Unit::Models::DisputeListResponseItem::Relationships,
-    #   type: enum: Unit::Models::DisputeListResponseItem::Type,
+    #   type: Unit::Models::DisputeListResponseItem::Type,
     #   attributes: Unit::Models::DisputeListResponseItem::Attributes
     # }
     # ```
@@ -102,7 +102,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Account::Data::Type
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Account::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -174,7 +174,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data::Type
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Customer::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -243,7 +243,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data::Type
+          #   type: Unit::Models::DisputeListResponseItem::Relationships::Transaction::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -304,7 +304,7 @@ module Unit
       #   created_at: Time,
       #   description: String,
       #   external_id: String,
-      #   source: enum: Unit::Models::DisputeListResponseItem::Attributes::Source,
+      #   source: Unit::Models::DisputeListResponseItem::Attributes::Source,
       #   **_
       # }
       # ```

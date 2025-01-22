@@ -33,10 +33,8 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::AccountListParams::Filter]
-      #   #
       #   # @param include [String]
-      #   #
-      #   # @param page [Unit::Models::AccountListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AccountListParams::Page]
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, **) = super
 

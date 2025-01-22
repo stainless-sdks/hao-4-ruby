@@ -24,7 +24,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::RewardCreateParams::Data::Attributes,
       #   relationships: Unit::Models::RewardCreateParams::Data::Relationships,
-      #   type: enum: Unit::Models::RewardCreateParams::Data::Type
+      #   type: Unit::Models::RewardCreateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -174,7 +174,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount::Data::Type
+            #   type: Unit::Models::RewardCreateParams::Data::Relationships::ReceivingAccount::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -19,7 +19,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::ReceivedPaymentUpdateParams::Data::Attributes,
-      #   type: enum: Unit::Models::ReceivedPaymentUpdateParams::Data::Type
+      #   type: Unit::Models::ReceivedPaymentUpdateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

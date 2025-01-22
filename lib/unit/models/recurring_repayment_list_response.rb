@@ -40,7 +40,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: enum: Unit::Models::RecurringRepaymentListResponse::Data::Type
+      #   type: Unit::Models::RecurringRepaymentListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

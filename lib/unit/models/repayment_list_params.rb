@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::RepaymentListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::RepaymentListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::RepaymentListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

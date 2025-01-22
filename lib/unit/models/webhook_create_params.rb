@@ -57,7 +57,7 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: enum: Unit::Models::WebhookCreateParams::Data::Attributes::ContentType,
+        #   content_type: Unit::Models::WebhookCreateParams::Data::Attributes::ContentType,
         #   delivery_mode: String,
         #   label: String,
         #   url: String,

@@ -23,7 +23,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AccountCloseParams::Data::Attributes,
-      #   type: enum: Unit::Models::AccountCloseParams::Data::Type
+      #   type: Unit::Models::AccountCloseParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -56,9 +56,9 @@ module Unit
         # @example
         # ```ruby
         # attributes => {
-        #   bank_reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::BankReason,
-        #   fraud_reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::FraudReason,
-        #   reason: enum: Unit::Models::AccountCloseParams::Data::Attributes::Reason
+        #   bank_reason: Unit::Models::AccountCloseParams::Data::Attributes::BankReason,
+        #   fraud_reason: Unit::Models::AccountCloseParams::Data::Attributes::FraudReason,
+        #   reason: Unit::Models::AccountCloseParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel

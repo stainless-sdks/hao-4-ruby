@@ -40,7 +40,7 @@ module Unit
       # ```ruby
       # included => {
       #   id: String,
-      #   type: enum: Unit::Models::AccountRetrieveResponse::Included::Type
+      #   type: Unit::Models::AccountRetrieveResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

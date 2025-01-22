@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::AuthorizationRequestListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::AuthorizationRequestListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AuthorizationRequestListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

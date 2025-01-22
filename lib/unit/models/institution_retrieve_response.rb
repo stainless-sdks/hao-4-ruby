@@ -29,7 +29,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::InstitutionRetrieveResponse::Data::Attributes,
-      #   type: enum: Unit::Models::InstitutionRetrieveResponse::Data::Type
+      #   type: Unit::Models::InstitutionRetrieveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

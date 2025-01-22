@@ -45,7 +45,7 @@ module Unit
         # ```ruby
         # update_business_application => {
         #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Type
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Type
         # }
         # ```
         class UpdateBusinessApplication < Unit::BaseModel
@@ -74,11 +74,11 @@ module Unit
           # @example
           # ```ruby
           # attributes => {
-          #   annual_revenue: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue,
-          #   business_vertical: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical,
-          #   cash_flow: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow,
+          #   annual_revenue: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::AnnualRevenue,
+          #   business_vertical: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::BusinessVertical,
+          #   cash_flow: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::CashFlow,
           #   countries_of_operation: -> { Unit::ArrayOf[String] === _1 },
-          #   number_of_employees: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees,
+          #   number_of_employees: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication::Attributes::NumberOfEmployees,
           #   **_
           # }
           # ```
@@ -345,7 +345,7 @@ module Unit
         # ```ruby
         # update_business_application_beneficial_owner => {
         #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes,
-        #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Type
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Type
         # }
         # ```
         class UpdateBusinessApplicationBeneficialOwner < Unit::BaseModel
@@ -374,10 +374,10 @@ module Unit
           # @example
           # ```ruby
           # attributes => {
-          #   annual_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome,
-          #   occupation: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation,
+          #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::AnnualIncome,
+          #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Occupation,
           #   relationships: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships,
-          #   source_of_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome
+          #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::SourceOfIncome
           # }
           # ```
           class Attributes < Unit::BaseModel
@@ -560,7 +560,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application::Data::Type
+                #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner::Attributes::Relationships::Application::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel
@@ -654,7 +654,7 @@ module Unit
         # ```ruby
         # update_sole_proprietor_application => {
         #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Type
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Type
         # }
         # ```
         class UpdateSoleProprietorApplication < Unit::BaseModel
@@ -683,9 +683,9 @@ module Unit
           # @example
           # ```ruby
           # attributes => {
-          #   annual_revenue: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue,
-          #   business_vertical: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical,
-          #   number_of_employees: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees,
+          #   annual_revenue: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::AnnualRevenue,
+          #   business_vertical: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::BusinessVertical,
+          #   number_of_employees: Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication::Attributes::NumberOfEmployees,
           #   tags: -> { Unit::HashOf[String] === _1 },
           #   website: String
           # }
@@ -877,7 +877,7 @@ module Unit
         # ```ruby
         # update_individual_application => {
         #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Type
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Type
         # }
         # ```
         class UpdateIndividualApplication < Unit::BaseModel
@@ -904,9 +904,9 @@ module Unit
           # @example
           # ```ruby
           # attributes => {
-          #   annual_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome,
-          #   occupation: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation,
-          #   source_of_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome,
+          #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::AnnualIncome,
+          #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::Occupation,
+          #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication::Attributes::SourceOfIncome,
           #   tags: -> { Unit::HashOf[String] === _1 }
           # }
           # ```
@@ -1088,7 +1088,7 @@ module Unit
         # ```ruby
         # update_business_officer => {
         #   attributes: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes,
-        #   type: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Type
+        #   type: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Type
         # }
         # ```
         class UpdateBusinessOfficer < Unit::BaseModel
@@ -1141,9 +1141,9 @@ module Unit
             # @example
             # ```ruby
             # officer => {
-            #   annual_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome,
-            #   occupation: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation,
-            #   source_of_income: enum: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome
+            #   annual_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::AnnualIncome,
+            #   occupation: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::Occupation,
+            #   source_of_income: Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer::Attributes::Officer::SourceOfIncome
             # }
             # ```
             class Officer < Unit::BaseModel

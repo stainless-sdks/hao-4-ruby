@@ -450,7 +450,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: enum: Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data::Relationships::Customer::Data::Type
+                #   type: Unit::Models::Accounts::Relationships::CustomerRemoveResponse::Data::Relationships::Customer::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel

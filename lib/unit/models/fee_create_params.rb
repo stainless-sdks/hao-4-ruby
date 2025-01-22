@@ -20,7 +20,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::FeeCreateParams::Data::Attributes,
       #   relationships: Unit::Models::FeeCreateParams::Data::Relationships,
-      #   type: enum: Unit::Models::FeeCreateParams::Data::Type
+      #   type: Unit::Models::FeeCreateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -139,7 +139,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::FeeCreateParams::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::FeeCreateParams::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

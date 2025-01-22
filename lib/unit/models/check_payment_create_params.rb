@@ -20,7 +20,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::CheckPaymentCreateParams::Data::Attributes,
       #   relationships: Unit::Models::CheckPaymentCreateParams::Data::Relationships,
-      #   type: enum: Unit::Models::CheckPaymentCreateParams::Data::Type
+      #   type: Unit::Models::CheckPaymentCreateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -268,7 +268,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -340,7 +340,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::CheckPaymentCreateParams::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

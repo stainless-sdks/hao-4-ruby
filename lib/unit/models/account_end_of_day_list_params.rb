@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::AccountEndOfDayListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::AccountEndOfDayListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::AccountEndOfDayListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::RewardCreateResponse::Data::Attributes,
       #   relationships: Unit::Models::RewardCreateResponse::Data::Relationships,
-      #   type: enum: Unit::Models::RewardCreateResponse::Data::Type
+      #   type: Unit::Models::RewardCreateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -71,7 +71,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   description: String,
-        #   status: enum: Unit::Models::RewardCreateResponse::Data::Attributes::Status,
+        #   status: Unit::Models::RewardCreateResponse::Data::Attributes::Status,
         #   tags: -> { Unit::HashOf[String] === _1 }
         # }
         # ```
@@ -243,7 +243,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::RewardCreateResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::RewardCreateResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -365,7 +365,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::RewardCreateResponse::Data::Relationships::ReceivingAccount::Data::Type
+            #   type: Unit::Models::RewardCreateResponse::Data::Relationships::ReceivingAccount::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -531,7 +531,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::RewardCreateResponse::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::RewardCreateResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -21,7 +21,7 @@ module Unit
         # data => {
         #   attributes: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes,
         #   relationships: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships,
-        #   type: enum: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Type
+        #   type: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -58,7 +58,7 @@ module Unit
           #   amount: Integer,
           #   company_name: String,
           #   settlement_date: Date,
-          #   direction: enum: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction,
+          #   direction: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Attributes::Direction,
           #   receiving_entity_name: String
           # }
           # ```
@@ -181,7 +181,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships::Account::Data::Type
+              #   type: Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

@@ -32,7 +32,7 @@ module Unit
           # data => {
           #   id: String,
           #   attributes: Unit::Models::Applications::Documents::BackUploadResponse::Data::Attributes,
-          #   type: enum: Unit::Models::Applications::Documents::BackUploadResponse::Data::Type
+          #   type: Unit::Models::Applications::Documents::BackUploadResponse::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

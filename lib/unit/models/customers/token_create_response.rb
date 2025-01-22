@@ -30,7 +30,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::TokenCreateResponse::Data::Attributes,
-        #   type: enum: Unit::Models::Customers::TokenCreateResponse::Data::Type
+        #   type: Unit::Models::Customers::TokenCreateResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

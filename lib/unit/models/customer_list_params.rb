@@ -33,9 +33,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::CustomerListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::CustomerListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::CustomerListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super

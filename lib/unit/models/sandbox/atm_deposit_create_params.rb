@@ -21,7 +21,7 @@ module Unit
         # data => {
         #   attributes: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes,
         #   relationships: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships,
-        #   type: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Type
+        #   type: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -56,7 +56,7 @@ module Unit
           #   atm_name: String,
           #   last4_digits: String,
           #   atm_location: String,
-          #   card_network: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
+          #   card_network: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Attributes::CardNetwork
           # }
           # ```
           class Attributes < Unit::BaseModel
@@ -192,7 +192,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account::Data::Type
+              #   type: Unit::Models::Sandbox::AtmDepositCreateParams::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

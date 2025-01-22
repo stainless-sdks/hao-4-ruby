@@ -33,9 +33,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::StopPaymentListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::StopPaymentListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::StopPaymentListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super

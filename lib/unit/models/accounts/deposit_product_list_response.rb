@@ -30,7 +30,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Accounts::DepositProductListResponse::Data::Attributes,
-        #   type: enum: Unit::Models::Accounts::DepositProductListResponse::Data::Type
+        #   type: Unit::Models::Accounts::DepositProductListResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

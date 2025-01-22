@@ -7,7 +7,7 @@ module Unit
       # ```ruby
       # transaction => {
       #   id: String,
-      #   type: enum: Unit::Models::Accounts::Transaction::Type
+      #   type: Unit::Models::Accounts::Transaction::Type
       # }
       # ```
       class Transaction < Unit::BaseModel

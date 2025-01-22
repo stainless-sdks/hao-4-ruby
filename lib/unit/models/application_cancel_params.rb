@@ -23,7 +23,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::ApplicationCancelParams::Data::Attributes,
-      #   type: enum: Unit::Models::ApplicationCancelParams::Data::Type
+      #   type: Unit::Models::ApplicationCancelParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

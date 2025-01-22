@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::TaxFormListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::TaxFormListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::TaxFormListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

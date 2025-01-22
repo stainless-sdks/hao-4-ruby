@@ -22,7 +22,7 @@ module Unit
       # @example
       # ```ruby
       # data => {
-      #   type: enum: Unit::Models::ApplicationFormCreateParams::Data::Type,
+      #   type: Unit::Models::ApplicationFormCreateParams::Data::Type,
       #   attributes: Unit::Models::ApplicationFormCreateParams::Data::Attributes,
       #   relationships: Unit::Models::ApplicationFormCreateParams::Data::Relationships
       # }
@@ -79,7 +79,7 @@ module Unit
         #   allowed_application_types: -> { Unit::ArrayOf[enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::AllowedApplicationType] === _1 },
         #   applicant_details: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails,
         #   hide_application_progress_tracker: Unit::BooleanModel,
-        #   lang: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang,
+        #   lang: Unit::Models::ApplicationFormCreateParams::Data::Attributes::Lang,
         #   require_id_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::RequireIDVerification,
         #   **_
         # }
@@ -207,9 +207,9 @@ module Unit
           # ```ruby
           # applicant_details => {
           #   address: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Address,
-          #   application_type: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType,
+          #   application_type: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::ApplicationType,
           #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner] === _1 },
-          #   business_vertical: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical,
+          #   business_vertical: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BusinessVertical,
           #   contact: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Contact,
           #   **_
           # }
@@ -883,7 +883,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::BeneficialOwner::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -1304,7 +1304,7 @@ module Unit
             #   date_of_birth: Date,
             #   email: String,
             #   full_name: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::FullName,
-            #   occupation: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Occupation,
+            #   occupation: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::Occupation,
             #   **_
             # }
             # ```
@@ -1658,7 +1658,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationFormCreateParams::Data::Attributes::ApplicantDetails::Officer::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -2077,7 +2077,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::ApplicationFormCreateParams::Data::Relationships::Application::Data::Type
+            #   type: Unit::Models::ApplicationFormCreateParams::Data::Relationships::Application::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

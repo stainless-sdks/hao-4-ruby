@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CounterpartyListResponse::Data::Attributes,
       #   relationships: Unit::Models::CounterpartyListResponse::Data::Relationships,
-      #   type: enum: Unit::Models::CounterpartyListResponse::Data::Type
+      #   type: Unit::Models::CounterpartyListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -85,10 +85,10 @@ module Unit
         # ```ruby
         # attributes => {
         #   account_number: String,
-        #   account_type: enum: Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType,
+        #   account_type: Unit::Models::CounterpartyListResponse::Data::Attributes::AccountType,
         #   created_at: Time,
         #   name: String,
-        #   permissions: enum: Unit::Models::CounterpartyListResponse::Data::Attributes::Permissions,
+        #   permissions: Unit::Models::CounterpartyListResponse::Data::Attributes::Permissions,
         #   **_
         # }
         # ```
@@ -279,7 +279,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CounterpartyListResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::CounterpartyListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

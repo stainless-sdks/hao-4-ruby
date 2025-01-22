@@ -32,7 +32,7 @@ module Unit
         #   id: String,
         #   attributes: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Attributes,
         #   relationships: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Relationships,
-        #   type: enum: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Type
+        #   type: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -407,7 +407,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Relationships::Account::Data::Type
+              #   type: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -480,7 +480,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Relationships::Customer::Data::Type
+              #   type: Unit::Models::Sandbox::ReceivedPaymentCreateResponse::Data::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

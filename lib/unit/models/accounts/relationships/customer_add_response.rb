@@ -452,7 +452,7 @@ module Unit
                 # ```ruby
                 # data => {
                 #   id: String,
-                #   type: enum: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data::Type
+                #   type: Unit::Models::Accounts::Relationships::CustomerAddResponse::Data::Relationships::Customer::Data::Type
                 # }
                 # ```
                 class Data < Unit::BaseModel

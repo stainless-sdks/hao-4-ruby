@@ -31,7 +31,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Users::APITokenCreateResponse::Data::Attributes,
-        #   type: enum: Unit::Models::Users::APITokenCreateResponse::Data::Type
+        #   type: Unit::Models::Users::APITokenCreateResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
