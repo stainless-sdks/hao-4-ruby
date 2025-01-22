@@ -25,7 +25,7 @@ module Unit
           # ```ruby
           # data => {
           #   attributes: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes,
-          #   type: enum: Unit::Models::Customers::Token::VerificationCreateParams::Data::Type
+          #   type: Unit::Models::Customers::Token::VerificationCreateParams::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel
@@ -53,9 +53,9 @@ module Unit
             # @example
             # ```ruby
             # attributes => {
-            #   channel: enum: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Channel,
+            #   channel: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Channel,
             #   app_hash: String,
-            #   language: enum: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language,
+            #   language: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Language,
             #   phone: Unit::Models::Customers::Token::VerificationCreateParams::Data::Attributes::Phone
             # }
             # ```

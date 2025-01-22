@@ -24,7 +24,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Attributes,
-        #   type: enum: Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type
+        #   type: Unit::Models::Customers::AuthorizedUserDeleteParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

@@ -31,7 +31,7 @@ module Unit
         # data => {
         #   id: String,
         #   attributes: Unit::Models::Applications::DocumentListResponse::Data::Attributes,
-        #   type: enum: Unit::Models::Applications::DocumentListResponse::Data::Type
+        #   type: Unit::Models::Applications::DocumentListResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

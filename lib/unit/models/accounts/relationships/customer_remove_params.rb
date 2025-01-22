@@ -24,7 +24,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::Accounts::Relationships::CustomerRemoveParams::Data::Type
+          #   type: Unit::Models::Accounts::Relationships::CustomerRemoveParams::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

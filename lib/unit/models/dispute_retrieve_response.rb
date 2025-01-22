@@ -30,7 +30,7 @@ module Unit
       # data => {
       #   id: String,
       #   relationships: Unit::Models::DisputeRetrieveResponse::Data::Relationships,
-      #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Type,
+      #   type: Unit::Models::DisputeRetrieveResponse::Data::Type,
       #   attributes: Unit::Models::DisputeRetrieveResponse::Data::Attributes
       # }
       # ```
@@ -128,7 +128,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -200,7 +200,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -272,7 +272,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::DisputeRetrieveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -333,7 +333,7 @@ module Unit
         #   created_at: Time,
         #   description: String,
         #   external_id: String,
-        #   source: enum: Unit::Models::DisputeRetrieveResponse::Data::Attributes::Source,
+        #   source: Unit::Models::DisputeRetrieveResponse::Data::Attributes::Source,
         #   **_
         # }
         # ```

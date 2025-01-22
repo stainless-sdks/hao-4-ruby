@@ -33,9 +33,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::AuthorizationListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::AuthorizationListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::AuthorizationListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super

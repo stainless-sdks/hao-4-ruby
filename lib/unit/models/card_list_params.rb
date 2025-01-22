@@ -42,11 +42,8 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::CardListParams::Filter]
-      #   #
       #   # @param include [String]
-      #   #
-      #   # @param page [Unit::Models::CardListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::CardListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, sort: nil, **) = super

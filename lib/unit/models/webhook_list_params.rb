@@ -33,9 +33,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::WebhookListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::WebhookListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::WebhookListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, page: nil, sort: nil, **) = super

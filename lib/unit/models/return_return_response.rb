@@ -51,7 +51,7 @@ module Unit
         #   balance: Integer,
         #   company_name: String,
         #   created_at: Time,
-        #   direction: enum: Unit::Models::ReturnReturnResponse::Data::Attributes::Direction,
+        #   direction: Unit::Models::ReturnReturnResponse::Data::Attributes::Direction,
         #   **_
         # }
         # ```
@@ -202,7 +202,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -321,7 +321,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::ReturnReturnResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -23,7 +23,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes,
-      #   type: enum: Unit::Models::AuthorizationRequestDeclineParams::Data::Type
+      #   type: Unit::Models::AuthorizationRequestDeclineParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -48,7 +48,7 @@ module Unit
         # @example
         # ```ruby
         # attributes => {
-        #   reason: enum: Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason
+        #   reason: Unit::Models::AuthorizationRequestDeclineParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel

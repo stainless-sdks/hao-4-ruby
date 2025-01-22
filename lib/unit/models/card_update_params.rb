@@ -49,7 +49,7 @@ module Unit
         # ```ruby
         # update_individual_debit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateIndividualDebitCard::Type
         # }
         # ```
         class UpdateIndividualDebitCard < Unit::BaseModel
@@ -269,7 +269,7 @@ module Unit
         # ```ruby
         # update_individual_virtual_debit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateIndividualVirtualDebitCard::Type
         # }
         # ```
         class UpdateIndividualVirtualDebitCard < Unit::BaseModel
@@ -413,7 +413,7 @@ module Unit
         # ```ruby
         # update_business_debit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessDebitCard::Type
         # }
         # ```
         class UpdateBusinessDebitCard < Unit::BaseModel
@@ -763,7 +763,7 @@ module Unit
         # ```ruby
         # update_business_virtual_debit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualDebitCard::Type
         # }
         # ```
         class UpdateBusinessVirtualDebitCard < Unit::BaseModel
@@ -1022,7 +1022,7 @@ module Unit
         # ```ruby
         # update_business_credit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessCreditCard::Type
         # }
         # ```
         class UpdateBusinessCreditCard < Unit::BaseModel
@@ -1370,7 +1370,7 @@ module Unit
         # ```ruby
         # update_business_virtual_credit_card => {
         #   attributes: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Attributes,
-        #   type: enum: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Type
+        #   type: Unit::Models::CardUpdateParams::Data::UpdateBusinessVirtualCreditCard::Type
         # }
         # ```
         class UpdateBusinessVirtualCreditCard < Unit::BaseModel

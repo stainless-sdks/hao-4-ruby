@@ -23,7 +23,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::CheckPaymentReturnParams::Data::Attributes,
-      #   type: enum: Unit::Models::CheckPaymentReturnParams::Data::Type
+      #   type: Unit::Models::CheckPaymentReturnParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -56,7 +56,7 @@ module Unit
         # @example
         # ```ruby
         # attributes => {
-        #   reason: enum: Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason
+        #   reason: Unit::Models::CheckPaymentReturnParams::Data::Attributes::Reason
         # }
         # ```
         class Attributes < Unit::BaseModel

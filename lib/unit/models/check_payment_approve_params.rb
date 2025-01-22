@@ -22,7 +22,7 @@ module Unit
       # @example
       # ```ruby
       # data => {
-      #   type: enum: Unit::Models::CheckPaymentApproveParams::Data::Type
+      #   type: Unit::Models::CheckPaymentApproveParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

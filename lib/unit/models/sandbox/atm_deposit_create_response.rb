@@ -449,7 +449,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::AtmDepositCreateResponse::Data::Relationships::Customer::Data::Type
+              #   type: Unit::Models::Sandbox::AtmDepositCreateResponse::Data::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

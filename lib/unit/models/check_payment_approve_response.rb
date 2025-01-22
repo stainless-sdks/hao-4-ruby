@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CheckPaymentApproveResponse::Data::Attributes,
       #   relationships: Unit::Models::CheckPaymentApproveResponse::Data::Relationships,
-      #   type: enum: Unit::Models::CheckPaymentApproveResponse::Data::Type
+      #   type: Unit::Models::CheckPaymentApproveResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -71,7 +71,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   originated: Unit::BooleanModel,
-        #   status: enum: Unit::Models::CheckPaymentApproveResponse::Data::Attributes::Status,
+        #   status: Unit::Models::CheckPaymentApproveResponse::Data::Attributes::Status,
         #   updated_at: Time,
         #   **_
         # }
@@ -648,7 +648,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -723,7 +723,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -853,7 +853,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::CheckPaymentApproveResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

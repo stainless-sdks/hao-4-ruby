@@ -21,7 +21,7 @@ module Unit
         # data => {
         #   attributes: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Attributes,
         #   relationships: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Relationships,
-        #   type: enum: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Type
+        #   type: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -150,7 +150,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Relationships::Account::Data::Type
+              #   type: Unit::Models::Sandbox::ReceivedPaymentCreateParams::Data::Relationships::Account::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel

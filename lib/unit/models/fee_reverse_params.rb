@@ -20,7 +20,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::FeeReverseParams::Data::Attributes,
       #   relationships: Unit::Models::FeeReverseParams::Data::Relationships,
-      #   type: enum: Unit::Models::FeeReverseParams::Data::Type
+      #   type: Unit::Models::FeeReverseParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -147,7 +147,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::FeeReverseParams::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::FeeReverseParams::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -219,7 +219,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::FeeReverseParams::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::FeeReverseParams::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

@@ -24,7 +24,7 @@ module Unit
         # ```ruby
         # data => {
         #   attributes: Unit::Models::Users::APITokenCreateParams::Data::Attributes,
-        #   type: enum: Unit::Models::Users::APITokenCreateParams::Data::Type
+        #   type: Unit::Models::Users::APITokenCreateParams::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel
@@ -109,7 +109,7 @@ module Unit
             # ```ruby
             # resource => {
             #   ids: -> { Unit::ArrayOf[String] === _1 },
-            #   type: enum: Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource::Type
+            #   type: Unit::Models::Users::APITokenCreateParams::Data::Attributes::Resource::Type
             # }
             # ```
             class Resource < Unit::BaseModel

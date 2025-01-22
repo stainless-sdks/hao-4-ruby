@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::CheckPaymentListResponse::Data::Attributes,
       #   relationships: Unit::Models::CheckPaymentListResponse::Data::Relationships,
-      #   type: enum: Unit::Models::CheckPaymentListResponse::Data::Type
+      #   type: Unit::Models::CheckPaymentListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -71,7 +71,7 @@ module Unit
         #   amount: Integer,
         #   created_at: Time,
         #   originated: Unit::BooleanModel,
-        #   status: enum: Unit::Models::CheckPaymentListResponse::Data::Attributes::Status,
+        #   status: Unit::Models::CheckPaymentListResponse::Data::Attributes::Status,
         #   updated_at: Time,
         #   **_
         # }
@@ -644,7 +644,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentListResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -716,7 +716,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -846,7 +846,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction::Data::Type
+            #   type: Unit::Models::CheckPaymentListResponse::Data::Relationships::Transaction::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

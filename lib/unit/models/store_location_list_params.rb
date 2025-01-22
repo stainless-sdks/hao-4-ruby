@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::StoreLocationListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::StoreLocationListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::StoreLocationListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 
@@ -34,7 +33,7 @@ module Unit
       # @example
       # ```ruby
       # filter => {
-      #   service_type: enum: Unit::Models::StoreLocationListParams::Filter::ServiceType,
+      #   service_type: Unit::Models::StoreLocationListParams::Filter::ServiceType,
       #   coordinates: Unit::Models::StoreLocationListParams::Filter::Coordinates,
       #   postal_code: String
       # }

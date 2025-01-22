@@ -42,11 +42,8 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::RewardListParams::Filter]
-      #   #
       #   # @param include [String]
-      #   #
-      #   # @param page [Unit::Models::RewardListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::RewardListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, sort: nil, **) = super

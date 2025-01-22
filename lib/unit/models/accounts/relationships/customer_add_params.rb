@@ -21,7 +21,7 @@ module Unit
           # ```ruby
           # data => {
           #   id: String,
-          #   type: enum: Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type
+          #   type: Unit::Models::Accounts::Relationships::CustomerAddParams::Data::Type
           # }
           # ```
           class Data < Unit::BaseModel

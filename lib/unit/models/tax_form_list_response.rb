@@ -30,7 +30,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::TaxFormListResponse::Data::Attributes,
-      #   type: enum: Unit::Models::TaxFormListResponse::Data::Type,
+      #   type: Unit::Models::TaxFormListResponse::Data::Type,
       #   relationships: Unit::Models::TaxFormListResponse::Data::Relationships
       # }
       # ```
@@ -177,7 +177,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -252,7 +252,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data::Type
+            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Accounts::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -324,7 +324,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::TaxFormListResponse::Data::Relationships::Customer::Data::Type
+            #   type: Unit::Models::TaxFormListResponse::Data::Relationships::Customer::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

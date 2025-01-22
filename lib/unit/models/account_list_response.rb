@@ -51,7 +51,7 @@ module Unit
       # ```ruby
       # included => {
       #   id: String,
-      #   type: enum: Unit::Models::AccountListResponse::Included::Type
+      #   type: Unit::Models::AccountListResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

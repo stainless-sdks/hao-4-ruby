@@ -37,7 +37,7 @@ module Unit
         # ```ruby
         # create_individual_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Type
+        #   type: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Type
         # }
         # ```
         class CreateIndividualApplication < Unit::BaseModel
@@ -427,7 +427,7 @@ module Unit
             # @example
             # ```ruby
             # device_fingerprint => {
-            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```
@@ -471,7 +471,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -845,7 +845,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateIndividualApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -947,7 +947,7 @@ module Unit
         # ```ruby
         # create_sole_proprietor_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Type
+        #   type: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Type
         # }
         # ```
         class CreateSoleProprietorApplication < Unit::BaseModel
@@ -1504,7 +1504,7 @@ module Unit
             # @example
             # ```ruby
             # device_fingerprint => {
-            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```
@@ -1548,7 +1548,7 @@ module Unit
             # ```ruby
             # evaluation_params => {
             #   require_id_verification: Unit::BooleanModel,
-            #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification
+            #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::EvaluationParams::UseSelfieVerification
             # }
             # ```
             class EvaluationParams < Unit::BaseModel
@@ -1944,7 +1944,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateSoleProprietorApplication::Attributes::PowerOfAttorneyAgent::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -2046,7 +2046,7 @@ module Unit
         # ```ruby
         # create_business_application => {
         #   attributes: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes,
-        #   type: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Type
+        #   type: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Type
         # }
         # ```
         class CreateBusinessApplication < Unit::BaseModel
@@ -2079,7 +2079,7 @@ module Unit
           #   beneficial_owners: -> { Unit::ArrayOf[Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner] === _1 },
           #   contact: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Contact,
           #   ein: String,
-          #   entity_type: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType,
+          #   entity_type: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::EntityType,
           #   **_
           # }
           # ```
@@ -2739,7 +2739,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::BeneficialOwner::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -3002,7 +3002,7 @@ module Unit
             #   date_of_birth: Date,
             #   email: String,
             #   full_name: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::FullName,
-            #   occupation: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Occupation,
+            #   occupation: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::Occupation,
             #   **_
             # }
             # ```
@@ -3356,7 +3356,7 @@ module Unit
               # ```ruby
               # evaluation_params => {
               #   require_id_verification: Unit::BooleanModel,
-              #   use_selfie_verification: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification
+              #   use_selfie_verification: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::Officer::EvaluationParams::UseSelfieVerification
               # }
               # ```
               class EvaluationParams < Unit::BaseModel
@@ -3598,7 +3598,7 @@ module Unit
             # @example
             # ```ruby
             # device_fingerprint => {
-            #   provider: enum: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint::Provider,
+            #   provider: Unit::Models::ApplicationCreateParams::Data::CreateBusinessApplication::Attributes::DeviceFingerprint::Provider,
             #   value: String
             # }
             # ```

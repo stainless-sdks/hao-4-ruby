@@ -6,7 +6,7 @@ module Unit
     # ```ruby
     # authorization_request => {
     #   id: String,
-    #   type: enum: Unit::Models::AuthorizationRequest::Type
+    #   type: Unit::Models::AuthorizationRequest::Type
     # }
     # ```
     class AuthorizationRequest < Unit::BaseModel

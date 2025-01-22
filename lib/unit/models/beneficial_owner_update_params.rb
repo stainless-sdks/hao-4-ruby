@@ -20,7 +20,7 @@ module Unit
       # data => {
       #   attributes: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes,
       #   relationships: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships,
-      #   type: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Type
+      #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -51,9 +51,9 @@ module Unit
         # @example
         # ```ruby
         # attributes => {
-        #   annual_income: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
-        #   occupation: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation,
-        #   source_of_income: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome
+        #   annual_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::AnnualIncome,
+        #   occupation: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::Occupation,
+        #   source_of_income: Unit::Models::BeneficialOwnerUpdateParams::Data::Attributes::SourceOfIncome
         # }
         # ```
         class Attributes < Unit::BaseModel
@@ -250,7 +250,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data::Type
+            #   type: Unit::Models::BeneficialOwnerUpdateParams::Data::Relationships::Application::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

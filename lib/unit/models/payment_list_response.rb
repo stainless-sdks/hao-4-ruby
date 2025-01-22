@@ -51,7 +51,7 @@ module Unit
       # ```ruby
       # data => {
       #   id: String,
-      #   type: enum: Unit::Models::PaymentListResponse::Data::Type
+      #   type: Unit::Models::PaymentListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

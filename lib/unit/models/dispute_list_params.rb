@@ -24,8 +24,7 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::DisputeListParams::Filter]
-      #   #
-      #   # @param page [Unit::Models::DisputeListParams::Page] Parameters for paginated list requests
+      #   # @param page [Unit::Models::DisputeListParams::Page]
       #   #
       #   def initialize(filter: nil, page: nil, **) = super
 

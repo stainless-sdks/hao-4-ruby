@@ -40,7 +40,7 @@ module Unit
       # ```ruby
       # data => {
       #   attributes: Unit::Models::StoreLocationListResponse::Data::Attributes,
-      #   type: enum: Unit::Models::StoreLocationListResponse::Data::Type
+      #   type: Unit::Models::StoreLocationListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel

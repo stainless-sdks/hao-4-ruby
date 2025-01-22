@@ -42,11 +42,8 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::PaymentListParams::Filter]
-      #   #
       #   # @param include [String]
-      #   #
-      #   # @param page [Unit::Models::PaymentListParams::Page] Parameters for paginated list requests
-      #   #
+      #   # @param page [Unit::Models::PaymentListParams::Page]
       #   # @param sort [String]
       #   #
       #   def initialize(filter: nil, include: nil, page: nil, sort: nil, **) = super

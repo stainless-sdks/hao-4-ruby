@@ -29,7 +29,7 @@ module Unit
         # @example
         # ```ruby
         # data => {
-        #   type: enum: Unit::Models::Accounts::LimitRetrieveResponse::Data::Type
+        #   type: Unit::Models::Accounts::LimitRetrieveResponse::Data::Type
         # }
         # ```
         class Data < Unit::BaseModel

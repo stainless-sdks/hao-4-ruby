@@ -41,7 +41,7 @@ module Unit
       # included => {
       #   id: String,
       #   attributes: Unit::Models::ApplicationCancelResponse::Included::Attributes,
-      #   type: enum: Unit::Models::ApplicationCancelResponse::Included::Type
+      #   type: Unit::Models::ApplicationCancelResponse::Included::Type
       # }
       # ```
       class Included < Unit::BaseModel

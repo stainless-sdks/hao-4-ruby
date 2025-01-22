@@ -37,7 +37,7 @@ module Unit
         # ```ruby
         # update_individual_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Attributes,
-        #   type: enum: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
+        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer::Type
         # }
         # ```
         class UpdateIndividualCustomer < Unit::BaseModel
@@ -348,7 +348,7 @@ module Unit
         # ```ruby
         # update_business_customer => {
         #   attributes: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Attributes,
-        #   type: enum: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type
+        #   type: Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer::Type
         # }
         # ```
         class UpdateBusinessCustomer < Unit::BaseModel

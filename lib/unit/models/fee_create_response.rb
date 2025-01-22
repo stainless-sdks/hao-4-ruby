@@ -31,7 +31,7 @@ module Unit
       #   id: String,
       #   attributes: Unit::Models::FeeCreateResponse::Data::Attributes,
       #   relationships: Unit::Models::FeeCreateResponse::Data::Relationships,
-      #   type: enum: Unit::Models::FeeCreateResponse::Data::Type
+      #   type: Unit::Models::FeeCreateResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -161,7 +161,7 @@ module Unit
             # ```ruby
             # data => {
             #   id: String,
-            #   type: enum: Unit::Models::FeeCreateResponse::Data::Relationships::Account::Data::Type
+            #   type: Unit::Models::FeeCreateResponse::Data::Relationships::Account::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel

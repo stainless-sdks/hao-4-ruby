@@ -32,7 +32,7 @@ module Unit
             # ```ruby
             # data => {
             #   attributes: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes,
-            #   type: enum: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type
+            #   type: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Type
             # }
             # ```
             class Data < Unit::BaseModel
@@ -69,7 +69,7 @@ module Unit
               # @example
               # ```ruby
               # attributes => {
-              #   status: enum: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status
+              #   status: Unit::Models::Cards::SecureData::Pin::StatusRetrieveResponse::Data::Attributes::Status
               # }
               # ```
               class Attributes < Unit::BaseModel

@@ -6,7 +6,7 @@ module Unit
     # ```ruby
     # beneficial_owner => {
     #   address: Unit::Models::BeneficialOwner::Address,
-    #   annual_income: enum: Unit::Models::BeneficialOwner::AnnualIncome,
+    #   annual_income: Unit::Models::BeneficialOwner::AnnualIncome,
     #   date_of_birth: Date,
     #   email: String,
     #   evaluation_codes: -> { Unit::ArrayOf[String] === _1 },

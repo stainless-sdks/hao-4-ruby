@@ -30,7 +30,7 @@ module Unit
       # data => {
       #   id: String,
       #   attributes: Unit::Models::WebhookListResponse::Data::Attributes,
-      #   type: enum: Unit::Models::WebhookListResponse::Data::Type
+      #   type: Unit::Models::WebhookListResponse::Data::Type
       # }
       # ```
       class Data < Unit::BaseModel
@@ -62,9 +62,9 @@ module Unit
         # ```ruby
         # attributes => {
         #   token: String,
-        #   content_type: enum: Unit::Models::WebhookListResponse::Data::Attributes::ContentType,
+        #   content_type: Unit::Models::WebhookListResponse::Data::Attributes::ContentType,
         #   created_at: Time,
-        #   delivery_mode: enum: Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode,
+        #   delivery_mode: Unit::Models::WebhookListResponse::Data::Attributes::DeliveryMode,
         #   label: String,
         #   **_
         # }

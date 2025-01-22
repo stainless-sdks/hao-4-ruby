@@ -38,7 +38,7 @@ module Unit
         # create_credit_account => {
         #   attributes: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Attributes,
         #   relationships: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships,
-        #   type: enum: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type
+        #   type: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Type
         # }
         # ```
         class CreateCreditAccount < Unit::BaseModel
@@ -175,7 +175,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships::Customer::Data::Type
+              #   type: Unit::Models::AccountCreateParams::Data::CreateCreditAccount::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -241,7 +241,7 @@ module Unit
         # create_deposit_account => {
         #   attributes: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Attributes,
         #   relationships: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships,
-        #   type: enum: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type
+        #   type: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Type
         # }
         # ```
         class CreateDepositAccount < Unit::BaseModel
@@ -387,7 +387,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer::Data::Type
+              #   type: Unit::Models::AccountCreateParams::Data::CreateDepositAccount::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
@@ -511,7 +511,7 @@ module Unit
         # create_wallet_account => {
         #   attributes: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Attributes,
         #   relationships: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships,
-        #   type: enum: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type
+        #   type: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Type
         # }
         # ```
         class CreateWalletAccount < Unit::BaseModel
@@ -641,7 +641,7 @@ module Unit
               # ```ruby
               # data => {
               #   id: String,
-              #   type: enum: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships::Customer::Data::Type
+              #   type: Unit::Models::AccountCreateParams::Data::CreateWalletAccount::Relationships::Customer::Data::Type
               # }
               # ```
               class Data < Unit::BaseModel
