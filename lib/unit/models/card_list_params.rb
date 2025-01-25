@@ -3,6 +3,10 @@
 module Unit
   module Models
     class CardListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::CardListParams::Filter, nil]
@@ -45,8 +49,9 @@ module Unit
       #   # @param include [String]
       #   # @param page [Unit::Models::CardListParams::Page]
       #   # @param sort [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, include: nil, page: nil, sort: nil, **) = super
+      #   def initialize(filter: nil, include: nil, page: nil, sort: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

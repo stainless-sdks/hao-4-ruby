@@ -8,71 +8,73 @@ module Unit
 
       # Create a counterparty via API
       #
-      # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyCreateParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CounterpartyCreateParams::Data::CreateACHCounterparty, Unit::Models::CounterpartyCreateParams::Data::CreatePlaidCounterparty] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CounterpartyCreateResponse]
       #
-      def create(params = {}, opts = {})
-        parsed = Unit::Models::CounterpartyCreateParams.dump(params)
-        req = {
+      def create(params = {})
+        parsed, options = Unit::Models::CounterpartyCreateParams.dump_request(params)
+        @client.request(
           method: :post,
           path: "counterparties",
           headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
           body: parsed,
-          model: Unit::Models::CounterpartyCreateResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CounterpartyCreateResponse,
+          options: options
+        )
       end
 
       # Get a Counterparty from API
       #
       # @param counterparty_id [String] ID of the counterparty to get
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param params [Unit::Models::CounterpartyRetrieveParams, Hash{Symbol=>Object}] .
+      #
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CounterpartyRetrieveResponse]
       #
-      def retrieve(counterparty_id, opts = {})
-        req = {
+      def retrieve(counterparty_id, params = {})
+        @client.request(
           method: :get,
           path: ["counterparties/%0s", counterparty_id],
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::CounterpartyRetrieveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CounterpartyRetrieveResponse,
+          options: params[:request_options]
+        )
       end
 
       # Update a Counterparty via API
       #
       # @param counterparty_id [String] ID of the counterparty to update
       #
-      # @param params [Unit::Models::CounterpartyUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyUpdateParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CounterpartyUpdateParams::Data] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CounterpartyUpdateResponse]
       #
-      def update(counterparty_id, params = {}, opts = {})
-        parsed = Unit::Models::CounterpartyUpdateParams.dump(params)
-        req = {
+      def update(counterparty_id, params)
+        parsed, options = Unit::Models::CounterpartyUpdateParams.dump_request(params)
+        @client.request(
           method: :patch,
           path: ["counterparties/%0s", counterparty_id],
           headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
           body: parsed,
-          model: Unit::Models::CounterpartyUpdateResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CounterpartyUpdateResponse,
+          options: options
+        )
       end
 
       # Get Counterparties List from API
       #
-      # @param params [Unit::Models::CounterpartyListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CounterpartyListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CounterpartyListParams::Filter] :filter
       #
@@ -80,37 +82,39 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CounterpartyListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::CounterpartyListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::CounterpartyListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "counterparties",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::CounterpartyListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CounterpartyListResponse,
+          options: options
+        )
       end
 
       # Delete Counterparty via API
       #
       # @param counterparty_id [String] ID of the counterparty to delete
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param params [Unit::Models::CounterpartyDeleteParams, Hash{Symbol=>Object}] .
+      #
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [nil]
       #
-      def delete(counterparty_id, opts = {})
-        req = {
+      def delete(counterparty_id, params = {})
+        @client.request(
           method: :delete,
           path: ["counterparties/%0s", counterparty_id],
-          model: NilClass
-        }
-        @client.request(req, opts)
+          model: NilClass,
+          options: params[:request_options]
+        )
       end
 
       # @param client [Unit::Client]

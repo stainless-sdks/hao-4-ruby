@@ -8,17 +8,19 @@ module Unit
         #
         # @param card_id [String] ID of the card to activate
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param params [Unit::Models::Sandbox::CardActivateParams, Hash{Symbol=>Object}] .
+        #
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [nil]
         #
-        def activate(card_id, opts = {})
-          req = {
+        def activate(card_id, params = {})
+          @client.request(
             method: :post,
             path: ["sandbox/cards/%0s/activate", card_id],
-            model: NilClass
-          }
-          @client.request(req, opts)
+            model: NilClass,
+            options: params[:request_options]
+          )
         end
 
         # @param client [Unit::Client]

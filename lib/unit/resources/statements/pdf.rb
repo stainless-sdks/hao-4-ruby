@@ -8,18 +8,20 @@ module Unit
         #
         # @param statement_id [String] ID of the statement to get
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param params [Unit::Models::Statements::PdfRetrieveParams, Hash{Symbol=>Object}] .
+        #
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Object]
         #
-        def retrieve(statement_id, opts = {})
-          req = {
+        def retrieve(statement_id, params = {})
+          @client.request(
             method: :get,
             path: ["statements/%0s/pdf", statement_id],
             headers: {"Accept" => "application/pdf"},
-            model: Unit::Unknown
-          }
-          @client.request(req, opts)
+            model: Unit::Unknown,
+            options: params[:request_options]
+          )
         end
 
         # @param client [Unit::Client]

@@ -3,6 +3,10 @@
 module Unit
   module Models
     class AccountFreezeParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] data
       #
       #   @return [Unit::Models::AccountFreezeParams::Data, nil]
@@ -14,8 +18,9 @@ module Unit
 
       # @!parse
       #   # @param data [Unit::Models::AccountFreezeParams::Data]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(data: nil, **) = super
+      #   def initialize(data: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

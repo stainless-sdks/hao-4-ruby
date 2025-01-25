@@ -7,29 +7,29 @@ module Unit
       #
       # @param authorization_id [String] ID of the authorization to get
       #
-      # @param params [Unit::Models::AuthorizationRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationRetrieveParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Boolean] :include_none_authorized
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::AuthorizationRetrieveResponse]
       #
-      def retrieve(authorization_id, params = {}, opts = {})
-        parsed = Unit::Models::AuthorizationRetrieveParams.dump(params)
-        req = {
+      def retrieve(authorization_id, params = {})
+        parsed, options = Unit::Models::AuthorizationRetrieveParams.dump_request(params)
+        @client.request(
           method: :get,
           path: ["authorizations/%0s", authorization_id],
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::AuthorizationRetrieveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::AuthorizationRetrieveResponse,
+          options: options
+        )
       end
 
       # Get List Authorizations from API
       #
-      # @param params [Unit::Models::AuthorizationListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AuthorizationListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::AuthorizationListParams::Filter] :filter
       #
@@ -37,20 +37,20 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::AuthorizationListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::AuthorizationListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::AuthorizationListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "authorizations",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::AuthorizationListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::AuthorizationListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

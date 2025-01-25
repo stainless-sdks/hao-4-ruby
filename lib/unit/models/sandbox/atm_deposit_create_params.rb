@@ -4,6 +4,10 @@ module Unit
   module Models
     module Sandbox
       class AtmDepositCreateParams < Unit::BaseModel
+        # @!parse
+        #   extend Unit::RequestParameters::Converter
+        include Unit::RequestParameters
+
         # @!attribute data
         #
         #   @return [Unit::Models::Sandbox::AtmDepositCreateParams::Data]
@@ -11,8 +15,9 @@ module Unit
 
         # @!parse
         #   # @param data [Unit::Models::Sandbox::AtmDepositCreateParams::Data]
+        #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
         #   #
-        #   def initialize(data:, **) = super
+        #   def initialize(data:, request_options: {}, **) = super
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 

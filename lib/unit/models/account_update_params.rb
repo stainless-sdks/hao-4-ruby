@@ -3,6 +3,10 @@
 module Unit
   module Models
     class AccountUpdateParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute data
       #
       #   @return [Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount, Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount]
@@ -10,8 +14,9 @@ module Unit
 
       # @!parse
       #   # @param data [Unit::Models::AccountUpdateParams::Data::UpdateDepositAccount, Unit::Models::AccountUpdateParams::Data::UpdateCreditAccount]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(data:, **) = super
+      #   def initialize(data:, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

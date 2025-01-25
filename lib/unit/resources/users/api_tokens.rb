@@ -8,68 +8,70 @@ module Unit
         #
         # @param user_id [String] ID of the user to create token for
         #
-        # @param params [Unit::Models::Users::APITokenCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenCreateParams, Hash{Symbol=>Object}] .
         #
         #   @option params [Unit::Models::Users::APITokenCreateParams::Data] :data
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Users::APITokenCreateResponse]
         #
-        def create(user_id, params = {}, opts = {})
-          parsed = Unit::Models::Users::APITokenCreateParams.dump(params)
-          req = {
+        def create(user_id, params = {})
+          parsed, options = Unit::Models::Users::APITokenCreateParams.dump_request(params)
+          @client.request(
             method: :post,
             path: ["users/%0s/api-tokens", user_id],
             headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
             body: parsed,
-            model: Unit::Models::Users::APITokenCreateResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Users::APITokenCreateResponse,
+            options: options
+          )
         end
 
         # Get List Org API Tokens from API
         #
         # @param user_id [String] ID of the user to revoke token
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param params [Unit::Models::Users::APITokenListParams, Hash{Symbol=>Object}] .
+        #
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Users::APITokenListResponse]
         #
-        def list(user_id, opts = {})
-          req = {
+        def list(user_id, params = {})
+          @client.request(
             method: :get,
             path: ["users/%0s/api-tokens", user_id],
             headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-            model: Unit::Models::Users::APITokenListResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Users::APITokenListResponse,
+            options: params[:request_options]
+          )
         end
 
         # Get a Reward from API
         #
         # @param token_id [String] ID of the token to revoke
         #
-        # @param params [Unit::Models::Users::APITokenDeleteParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Users::APITokenDeleteParams, Hash{Symbol=>Object}] .
         #
         #   @option params [String] :user_id ID of the user to revoke token
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Users::APITokenDeleteResponse]
         #
-        def delete(token_id, params = {}, opts = {})
-          parsed = Unit::Models::Users::APITokenDeleteParams.dump(params)
+        def delete(token_id, params)
+          parsed, options = Unit::Models::Users::APITokenDeleteParams.dump_request(params)
           user_id = parsed.fetch(:user_id) do
             raise ArgumentError.new("missing required path argument #{_1}")
           end
-          req = {
+          @client.request(
             method: :delete,
             path: ["users/%0s/api-tokens/%1s", user_id, token_id],
             headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-            model: Unit::Models::Users::APITokenDeleteResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Users::APITokenDeleteResponse,
+            options: options
+          )
         end
 
         # @param client [Unit::Client]

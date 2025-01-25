@@ -3,6 +3,10 @@
 module Unit
   module Models
     class ReceivedPaymentRetrieveParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] included
       #
       #   @return [String, nil]
@@ -14,8 +18,9 @@ module Unit
 
       # @!parse
       #   # @param included [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(included: nil, **) = super
+      #   def initialize(included: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
     end

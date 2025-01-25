@@ -8,18 +8,20 @@ module Unit
         #
         # @param account_id [String] ID of the account to get
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param params [Unit::Models::Accounts::LimitRetrieveParams, Hash{Symbol=>Object}] .
+        #
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Accounts::LimitRetrieveResponse]
         #
-        def retrieve(account_id, opts = {})
-          req = {
+        def retrieve(account_id, params = {})
+          @client.request(
             method: :get,
             path: ["accounts/%0s/limits", account_id],
             headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-            model: Unit::Models::Accounts::LimitRetrieveResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Accounts::LimitRetrieveResponse,
+            options: params[:request_options]
+          )
         end
 
         # @param client [Unit::Client]

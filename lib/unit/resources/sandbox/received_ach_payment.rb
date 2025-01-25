@@ -6,24 +6,24 @@ module Unit
       class ReceivedACHPayment
         # Create Incoming ACH Payment Simulation via API
         #
-        # @param params [Unit::Models::Sandbox::ReceivedACHPaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Sandbox::ReceivedACHPaymentCreateParams, Hash{Symbol=>Object}] .
         #
         #   @option params [Unit::Models::Sandbox::ReceivedACHPaymentCreateParams::Data] :data
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse]
         #
-        def create(params = {}, opts = {})
-          parsed = Unit::Models::Sandbox::ReceivedACHPaymentCreateParams.dump(params)
-          req = {
+        def create(params)
+          parsed, options = Unit::Models::Sandbox::ReceivedACHPaymentCreateParams.dump_request(params)
+          @client.request(
             method: :post,
             path: "sandbox/received-ach-payment",
             headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
             body: parsed,
-            model: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Sandbox::ReceivedACHPaymentCreateResponse,
+            options: options
+          )
         end
 
         # @param client [Unit::Client]

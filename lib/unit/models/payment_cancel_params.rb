@@ -3,6 +3,10 @@
 module Unit
   module Models
     class PaymentCancelParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute body
       #
       #   @return [Object, nil]
@@ -10,8 +14,9 @@ module Unit
 
       # @!parse
       #   # @param body [Object, nil]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(body:, **) = super
+      #   def initialize(body:, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
     end

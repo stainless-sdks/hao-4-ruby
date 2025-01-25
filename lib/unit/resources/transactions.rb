@@ -5,7 +5,7 @@ module Unit
     class Transactions
       # Get List Transactions from API
       #
-      # @param params [Unit::Models::TransactionListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::TransactionListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::TransactionListParams::Filter] :filter
       #
@@ -15,20 +15,20 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::TransactionListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::TransactionListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::TransactionListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "transactions",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json"},
-          model: Unit::Models::TransactionListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::TransactionListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

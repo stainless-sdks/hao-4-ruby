@@ -3,6 +3,10 @@
 module Unit
   module Models
     class RecurringPaymentCreateParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute data
       #
       #   @return [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment]
@@ -10,8 +14,9 @@ module Unit
 
       # @!parse
       #   # @param data [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(data:, **) = super
+      #   def initialize(data:, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 
