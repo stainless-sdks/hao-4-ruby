@@ -52,7 +52,7 @@ module Unit
         # create_recurring_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Type
+        #   type: :recurringAchRepayment
         # }
         # ```
         class CreateRecurringACHRepayment < Unit::BaseModel
@@ -70,18 +70,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Type
-                   }
+          #   @return [Symbol, :recurringAchRepayment]
+          required :type, const: :recurringAchRepayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringAchRepayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -399,19 +396,6 @@ module Unit
               end
             end
           end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringAchRepayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_ACH_REPAYMENT = :recurringAchRepayment
-
-            finalize!
-          end
         end
 
         # @example
@@ -419,7 +403,7 @@ module Unit
         # create_recurring_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Type
+        #   type: :recurringBookRepayment
         # }
         # ```
         class CreateRecurringBookRepayment < Unit::BaseModel
@@ -437,18 +421,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Type
-                   }
+          #   @return [Symbol, :recurringBookRepayment]
+          required :type, const: :recurringBookRepayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringBookRepayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -751,19 +732,6 @@ module Unit
               end
             end
           end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringBookRepayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_BOOK_REPAYMENT = :recurringBookRepayment
-
-            finalize!
-          end
         end
 
         # @example
@@ -771,7 +739,7 @@ module Unit
         # create_recurring_capital_partner_ach_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Type
+        #   type: :recurringCapitalPartnerAchRepayment
         # }
         # ```
         class CreateRecurringCapitalPartnerACHRepayment < Unit::BaseModel
@@ -789,18 +757,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Type
-                   }
+          #   @return [Symbol, :recurringCapitalPartnerAchRepayment]
+          required :type, const: :recurringCapitalPartnerAchRepayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringCapitalPartnerAchRepayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -1122,19 +1087,6 @@ module Unit
               end
             end
           end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringCapitalPartnerAchRepayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_CAPITAL_PARTNER_ACH_REPAYMENT = :recurringCapitalPartnerAchRepayment
-
-            finalize!
-          end
         end
 
         # @example
@@ -1142,7 +1094,7 @@ module Unit
         # create_recurring_capital_partner_book_repayment => {
         #   attributes: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Attributes,
         #   relationships: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships,
-        #   type: Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Type
+        #   type: :recurringCapitalPartnerBookRepayment
         # }
         # ```
         class CreateRecurringCapitalPartnerBookRepayment < Unit::BaseModel
@@ -1160,18 +1112,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Type
-                   }
+          #   @return [Symbol, :recurringCapitalPartnerBookRepayment]
+          required :type, const: :recurringCapitalPartnerBookRepayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringCapitalPartnerBookRepayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -1392,19 +1341,6 @@ module Unit
                 end
               end
             end
-          end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringCapitalPartnerBookRepayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_CAPITAL_PARTNER_BOOK_REPAYMENT = :recurringCapitalPartnerBookRepayment
-
-            finalize!
           end
         end
       end

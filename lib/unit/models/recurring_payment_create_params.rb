@@ -52,7 +52,7 @@ module Unit
         # create_recurring_credit_ach_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes,
         #   relationships: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Relationships,
-        #   type: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Type
+        #   type: :recurringCreditAchPayment
         # }
         # ```
         class CreateRecurringCreditACHPayment < Unit::BaseModel
@@ -70,18 +70,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Type
-                   }
+          #   @return [Symbol, :recurringCreditAchPayment]
+          required :type, const: :recurringCreditAchPayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringCreditAchPayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -184,7 +181,7 @@ module Unit
               # @example
               # ```ruby
               # weekly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule::Interval,
+              #   interval: :Weekly,
               #   next_scheduled_action: Date,
               #   day_of_month: Integer,
               #   end_time: Date,
@@ -194,11 +191,8 @@ module Unit
               class WeeklySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::WeeklySchedule::Interval
-                         }
+                #   @return [Symbol, :Weekly]
+                required :interval, const: :Weekly
 
                 # @!attribute next_scheduled_action
                 #
@@ -255,32 +249,19 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Weekly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Weekly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  WEEKLY = :Weekly
-
-                  finalize!
-                end
               end
 
               # @example
               # ```ruby
               # monthly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::Interval,
+              #   interval: :Monthly,
               #   day_of_month: Integer,
               #   day_of_week: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek,
               #   end_time: Date,
@@ -290,11 +271,8 @@ module Unit
               class MonthlySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditACHPayment::Attributes::Schedule::MonthlySchedule::Interval
-                         }
+                #   @return [Symbol, :Monthly]
+                required :interval, const: :Monthly
 
                 # @!attribute [r] day_of_month
                 #
@@ -359,26 +337,13 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Monthly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Monthly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  MONTHLY = :Monthly
-
-                  finalize!
-                end
 
                 # @example
                 # ```ruby
@@ -577,19 +542,6 @@ module Unit
               end
             end
           end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringCreditAchPayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_CREDIT_ACH_PAYMENT = :recurringCreditAchPayment
-
-            finalize!
-          end
         end
 
         # @example
@@ -597,7 +549,7 @@ module Unit
         # create_recurring_debit_ach_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes,
         #   relationships: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships,
-        #   type: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Type
+        #   type: :recurringDebitAchPayment
         # }
         # ```
         class CreateRecurringDebitACHPayment < Unit::BaseModel
@@ -615,18 +567,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Type
-                   }
+          #   @return [Symbol, :recurringDebitAchPayment]
+          required :type, const: :recurringDebitAchPayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringDebitAchPayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -773,7 +722,7 @@ module Unit
               # @example
               # ```ruby
               # weekly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule::Interval,
+              #   interval: :Weekly,
               #   next_scheduled_action: Date,
               #   day_of_month: Integer,
               #   end_time: Date,
@@ -783,11 +732,8 @@ module Unit
               class WeeklySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::WeeklySchedule::Interval
-                         }
+                #   @return [Symbol, :Weekly]
+                required :interval, const: :Weekly
 
                 # @!attribute next_scheduled_action
                 #
@@ -844,32 +790,19 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Weekly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Weekly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  WEEKLY = :Weekly
-
-                  finalize!
-                end
               end
 
               # @example
               # ```ruby
               # monthly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::Interval,
+              #   interval: :Monthly,
               #   day_of_month: Integer,
               #   day_of_week: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek,
               #   end_time: Date,
@@ -879,11 +812,8 @@ module Unit
               class MonthlySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringDebitACHPayment::Attributes::Schedule::MonthlySchedule::Interval
-                         }
+                #   @return [Symbol, :Monthly]
+                required :interval, const: :Monthly
 
                 # @!attribute [r] day_of_month
                 #
@@ -948,26 +878,13 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Monthly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Monthly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  MONTHLY = :Monthly
-
-                  finalize!
-                end
 
                 # @example
                 # ```ruby
@@ -1166,19 +1083,6 @@ module Unit
               end
             end
           end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringDebitAchPayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_DEBIT_ACH_PAYMENT = :recurringDebitAchPayment
-
-            finalize!
-          end
         end
 
         # @example
@@ -1186,7 +1090,7 @@ module Unit
         # create_recurring_credit_book_payment => {
         #   attributes: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes,
         #   relationships: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Relationships,
-        #   type: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Type
+        #   type: :recurringCreditBookPayment
         # }
         # ```
         class CreateRecurringCreditBookPayment < Unit::BaseModel
@@ -1204,18 +1108,15 @@ module Unit
 
           # @!attribute type
           #
-          #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Type]
-          required :type,
-                   enum: -> {
-                     Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Type
-                   }
+          #   @return [Symbol, :recurringCreditBookPayment]
+          required :type, const: :recurringCreditBookPayment
 
           # @!parse
           #   # @param attributes [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes]
           #   # @param relationships [Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Relationships]
           #   # @param type [String]
           #   #
-          #   def initialize(attributes:, relationships:, type:, **) = super
+          #   def initialize(attributes:, relationships:, type: :recurringCreditBookPayment, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 
@@ -1318,7 +1219,7 @@ module Unit
               # @example
               # ```ruby
               # weekly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule::Interval,
+              #   interval: :Weekly,
               #   next_scheduled_action: Date,
               #   day_of_month: Integer,
               #   end_time: Date,
@@ -1328,11 +1229,8 @@ module Unit
               class WeeklySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::WeeklySchedule::Interval
-                         }
+                #   @return [Symbol, :Weekly]
+                required :interval, const: :Weekly
 
                 # @!attribute next_scheduled_action
                 #
@@ -1389,32 +1287,19 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Weekly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Weekly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  WEEKLY = :Weekly
-
-                  finalize!
-                end
               end
 
               # @example
               # ```ruby
               # monthly_schedule => {
-              #   interval: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::Interval,
+              #   interval: :Monthly,
               #   day_of_month: Integer,
               #   day_of_week: Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::DayOfWeek,
               #   end_time: Date,
@@ -1424,11 +1309,8 @@ module Unit
               class MonthlySchedule < Unit::BaseModel
                 # @!attribute interval
                 #
-                #   @return [Symbol, Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::Interval]
-                required :interval,
-                         enum: -> {
-                           Unit::Models::RecurringPaymentCreateParams::Data::CreateRecurringCreditBookPayment::Attributes::Schedule::MonthlySchedule::Interval
-                         }
+                #   @return [Symbol, :Monthly]
+                required :interval, const: :Monthly
 
                 # @!attribute [r] day_of_month
                 #
@@ -1493,26 +1375,13 @@ module Unit
                 #     end_time: nil,
                 #     start_time: nil,
                 #     total_number_of_payments: nil,
-                #     interval:,
+                #     interval: :Monthly,
                 #     **
                 #   )
                 #     super
                 #   end
 
                 # def initialize: (Hash | Unit::BaseModel) -> void
-
-                # @example
-                # ```ruby
-                # case interval
-                # in :Monthly
-                #   # ...
-                # end
-                # ```
-                class Interval < Unit::Enum
-                  MONTHLY = :Monthly
-
-                  finalize!
-                end
 
                 # @example
                 # ```ruby
@@ -1716,19 +1585,6 @@ module Unit
                 end
               end
             end
-          end
-
-          # @example
-          # ```ruby
-          # case type
-          # in :recurringCreditBookPayment
-          #   # ...
-          # end
-          # ```
-          class Type < Unit::Enum
-            RECURRING_CREDIT_BOOK_PAYMENT = :recurringCreditBookPayment
-
-            finalize!
           end
         end
       end
