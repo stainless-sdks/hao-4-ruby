@@ -3,6 +3,10 @@
 module Unit
   module Models
     class RecurringRepaymentDisableParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute body
       #
       #   @return [Object, nil]
@@ -20,8 +24,9 @@ module Unit
       # @!parse
       #   # @param body [Object, nil]
       #   # @param include [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(body:, include: nil, **) = super
+      #   def initialize(body:, include: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
     end

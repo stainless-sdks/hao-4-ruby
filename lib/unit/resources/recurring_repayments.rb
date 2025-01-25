@@ -5,17 +5,17 @@ module Unit
     class RecurringRepayments
       # Create a Recurring Repayment via API
       #
-      # @param params [Unit::Models::RecurringRepaymentCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentCreateParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringBookRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerACHRepayment, Unit::Models::RecurringRepaymentCreateParams::Data::CreateRecurringCapitalPartnerBookRepayment] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RecurringRepaymentCreateResponse]
       #
-      def create(params = {}, opts = {})
-        parsed = Unit::Models::RecurringRepaymentCreateParams.dump(params)
-        req = {
+      def create(params = {})
+        parsed, options = Unit::Models::RecurringRepaymentCreateParams.dump_request(params)
+        @client.request(
           method: :post,
           path: "recurring-repayments",
           headers: {
@@ -23,38 +23,38 @@ module Unit
             "Accept" => "application/vnd.api+json; charset=utf-8"
           },
           body: parsed,
-          model: Unit::Models::RecurringRepaymentCreateResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RecurringRepaymentCreateResponse,
+          options: options
+        )
       end
 
       # Get a Recurring Repayment from API
       #
       # @param recurring_repayment_id [String] ID of the recurring repayment to get
       #
-      # @param params [Unit::Models::RecurringRepaymentRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentRetrieveParams, Hash{Symbol=>Object}] .
       #
       #   @option params [String] :include
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RecurringRepaymentRetrieveResponse]
       #
-      def retrieve(recurring_repayment_id, params = {}, opts = {})
-        parsed = Unit::Models::RecurringRepaymentRetrieveParams.dump(params)
-        req = {
+      def retrieve(recurring_repayment_id, params = {})
+        parsed, options = Unit::Models::RecurringRepaymentRetrieveParams.dump_request(params)
+        @client.request(
           method: :get,
           path: ["recurring-repayments/%0s", recurring_repayment_id],
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::RecurringRepaymentRetrieveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RecurringRepaymentRetrieveResponse,
+          options: options
+        )
       end
 
       # Get List Recurring Repayments from API
       #
-      # @param params [Unit::Models::RecurringRepaymentListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::RecurringRepaymentListParams::Filter] :filter
       #
@@ -62,39 +62,39 @@ module Unit
       #
       #   @option params [Symbol, Unit::Models::RecurringRepaymentListParams::Sort] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RecurringRepaymentListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::RecurringRepaymentListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::RecurringRepaymentListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "recurring-repayments",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::RecurringRepaymentListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RecurringRepaymentListResponse,
+          options: options
+        )
       end
 
       # Disable a Recurring Repayment
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to disable
       #
-      # @param params [Unit::Models::RecurringRepaymentDisableParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentDisableParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Object, nil] :body Body param:
       #
       #   @option params [String] :include Query param:
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RecurringRepaymentDisableResponse]
       #
-      def disable(recurring_repayment_id, params = {}, opts = {})
-        parsed = Unit::Models::RecurringRepaymentDisableParams.dump(params)
-        req = {
+      def disable(recurring_repayment_id, params)
+        parsed, options = Unit::Models::RecurringRepaymentDisableParams.dump_request(params)
+        @client.request(
           method: :post,
           path: ["recurring-repayments/%0s/disable", recurring_repayment_id],
           query: parsed.except(:body),
@@ -103,28 +103,28 @@ module Unit
             "Accept" => "application/vnd.api+json; charset=utf-8"
           },
           body: parsed[:body],
-          model: Unit::Models::RecurringRepaymentDisableResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RecurringRepaymentDisableResponse,
+          options: options
+        )
       end
 
       # Enable a Recurring Repayment
       #
       # @param recurring_repayment_id [String] Path param: ID of the recurring repayment to enable
       #
-      # @param params [Unit::Models::RecurringRepaymentEnableParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RecurringRepaymentEnableParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Object, nil] :body Body param:
       #
       #   @option params [String] :include Query param:
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RecurringRepaymentEnableResponse]
       #
-      def enable(recurring_repayment_id, params = {}, opts = {})
-        parsed = Unit::Models::RecurringRepaymentEnableParams.dump(params)
-        req = {
+      def enable(recurring_repayment_id, params)
+        parsed, options = Unit::Models::RecurringRepaymentEnableParams.dump_request(params)
+        @client.request(
           method: :post,
           path: ["recurring-repayments/%0s/enable", recurring_repayment_id],
           query: parsed.except(:body),
@@ -133,9 +133,9 @@ module Unit
             "Accept" => "application/vnd.api+json; charset=utf-8"
           },
           body: parsed[:body],
-          model: Unit::Models::RecurringRepaymentEnableResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RecurringRepaymentEnableResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

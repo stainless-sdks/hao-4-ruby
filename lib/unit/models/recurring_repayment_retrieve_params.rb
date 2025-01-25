@@ -3,6 +3,10 @@
 module Unit
   module Models
     class RecurringRepaymentRetrieveParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] include
       #
       #   @return [String, nil]
@@ -14,8 +18,9 @@ module Unit
 
       # @!parse
       #   # @param include [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(include: nil, **) = super
+      #   def initialize(include: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
     end

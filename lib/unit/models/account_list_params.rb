@@ -3,6 +3,10 @@
 module Unit
   module Models
     class AccountListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::AccountListParams::Filter, nil]
@@ -35,8 +39,9 @@ module Unit
       #   # @param filter [Unit::Models::AccountListParams::Filter]
       #   # @param include [String]
       #   # @param page [Unit::Models::AccountListParams::Page]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, include: nil, page: nil, **) = super
+      #   def initialize(filter: nil, include: nil, page: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

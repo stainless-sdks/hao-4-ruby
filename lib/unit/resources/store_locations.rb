@@ -5,26 +5,26 @@ module Unit
     class StoreLocations
       # Get Cash Deposit Store Locations List By Coordinates from API
       #
-      # @param params [Unit::Models::StoreLocationListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::StoreLocationListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::StoreLocationListParams::Filter] :filter
       #
       #   @option params [Unit::Models::StoreLocationListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::StoreLocationListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::StoreLocationListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::StoreLocationListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "store-locations",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::StoreLocationListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::StoreLocationListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

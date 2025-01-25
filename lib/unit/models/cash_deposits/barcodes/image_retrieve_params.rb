@@ -6,7 +6,13 @@ module Unit
       module Barcodes
         class ImageRetrieveParams < Unit::BaseModel
           # @!parse
-          #   def initialize(**) = super
+          #   extend Unit::RequestParameters::Converter
+          include Unit::RequestParameters
+
+          # @!parse
+          #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
+          #   #
+          #   def initialize(request_options: {}, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
         end

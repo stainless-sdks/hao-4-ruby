@@ -5,6 +5,10 @@ module Unit
     module Applications
       module Documents
         class BackUploadParams < Unit::BaseModel
+          # @!parse
+          #   extend Unit::RequestParameters::Converter
+          include Unit::RequestParameters
+
           # @!attribute application_id
           #
           #   @return [String]
@@ -26,8 +30,9 @@ module Unit
           #   # @param application_id [String]
           #   # @param file [String]
           #   # @param file_type [String]
+          #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
           #   #
-          #   def initialize(application_id:, file:, file_type:, **) = super
+          #   def initialize(application_id:, file:, file_type:, request_options: {}, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 

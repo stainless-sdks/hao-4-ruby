@@ -8,55 +8,55 @@ module Unit
         #
         # @param transaction_id [String] ID of the transaction
         #
-        # @param params [Unit::Models::Accounts::TransactionRetrieveParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionRetrieveParams, Hash{Symbol=>Object}] .
         #
         #   @option params [String] :account_id ID of the account to get transaction from
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Accounts::TransactionRetrieveResponse]
         #
-        def retrieve(transaction_id, params = {}, opts = {})
-          parsed = Unit::Models::Accounts::TransactionRetrieveParams.dump(params)
+        def retrieve(transaction_id, params)
+          parsed, options = Unit::Models::Accounts::TransactionRetrieveParams.dump_request(params)
           account_id = parsed.fetch(:account_id) do
             raise ArgumentError.new("missing required path argument #{_1}")
           end
-          req = {
+          @client.request(
             method: :get,
             path: ["accounts/%0s/transactions/%1s", account_id, transaction_id],
             headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-            model: Unit::Models::Accounts::TransactionRetrieveResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Accounts::TransactionRetrieveResponse,
+            options: options
+          )
         end
 
         # Update a Transaction via API
         #
         # @param transaction_id [String] Path param: ID of the transaction to update
         #
-        # @param params [Unit::Models::Accounts::TransactionUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Accounts::TransactionUpdateParams, Hash{Symbol=>Object}] .
         #
         #   @option params [String] :account_id Path param: ID of the account to update transaction from
         #
         #   @option params [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction] :data Body param:
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Accounts::TransactionUpdateResponse]
         #
-        def update(transaction_id, params = {}, opts = {})
-          parsed = Unit::Models::Accounts::TransactionUpdateParams.dump(params)
+        def update(transaction_id, params)
+          parsed, options = Unit::Models::Accounts::TransactionUpdateParams.dump_request(params)
           account_id = parsed.fetch(:account_id) do
             raise ArgumentError.new("missing required path argument #{_1}")
           end
-          req = {
+          @client.request(
             method: :patch,
             path: ["accounts/%0s/transactions/%1s", account_id, transaction_id],
             headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
             body: parsed.except(:account_id),
-            model: Unit::Models::Accounts::TransactionUpdateResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Accounts::TransactionUpdateResponse,
+            options: options
+          )
         end
 
         # @param client [Unit::Client]

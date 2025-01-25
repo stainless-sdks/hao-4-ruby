@@ -5,24 +5,24 @@ module Unit
     class AtmLocations
       # Get List ATM Locations from API
       #
-      # @param params [Unit::Models::AtmLocationListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AtmLocationListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::AtmLocationListParams::Filter] :filter
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Array<Unit::Models::AtmLocationListResponseItem>]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::AtmLocationListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::AtmLocationListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "atm-locations",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::ArrayOf[Unit::Models::AtmLocationListResponseItem]
-        }
-        @client.request(req, opts)
+          model: Unit::ArrayOf[Unit::Models::AtmLocationListResponseItem],
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

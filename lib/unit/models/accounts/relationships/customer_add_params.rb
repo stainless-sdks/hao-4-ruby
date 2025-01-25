@@ -5,6 +5,10 @@ module Unit
     module Accounts
       module Relationships
         class CustomerAddParams < Unit::BaseModel
+          # @!parse
+          #   extend Unit::RequestParameters::Converter
+          include Unit::RequestParameters
+
           # @!attribute data
           #
           #   @return [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>]
@@ -12,8 +16,9 @@ module Unit
 
           # @!parse
           #   # @param data [Array<Unit::Models::Accounts::Relationships::CustomerAddParams::Data>]
+          #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
           #   #
-          #   def initialize(data:, **) = super
+          #   def initialize(data:, request_options: {}, **) = super
 
           # def initialize: (Hash | Unit::BaseModel) -> void
 

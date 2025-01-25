@@ -4,6 +4,10 @@ module Unit
   module Models
     module Users
       class APITokenCreateParams < Unit::BaseModel
+        # @!parse
+        #   extend Unit::RequestParameters::Converter
+        include Unit::RequestParameters
+
         # @!attribute [r] data
         #
         #   @return [Unit::Models::Users::APITokenCreateParams::Data, nil]
@@ -15,8 +19,9 @@ module Unit
 
         # @!parse
         #   # @param data [Unit::Models::Users::APITokenCreateParams::Data]
+        #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
         #   #
-        #   def initialize(data: nil, **) = super
+        #   def initialize(data: nil, request_options: {}, **) = super
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 

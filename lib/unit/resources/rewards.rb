@@ -5,47 +5,49 @@ module Unit
     class Rewards
       # Create a Reward via API
       #
-      # @param params [Unit::Models::RewardCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RewardCreateParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::RewardCreateParams::Data] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RewardCreateResponse]
       #
-      def create(params = {}, opts = {})
-        parsed = Unit::Models::RewardCreateParams.dump(params)
-        req = {
+      def create(params = {})
+        parsed, options = Unit::Models::RewardCreateParams.dump_request(params)
+        @client.request(
           method: :post,
           path: "rewards",
           headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
           body: parsed,
-          model: Unit::Models::RewardCreateResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RewardCreateResponse,
+          options: options
+        )
       end
 
       # Get a Reward from API
       #
       # @param reward_id [String] ID of the reward to get
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param params [Unit::Models::RewardRetrieveParams, Hash{Symbol=>Object}] .
+      #
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RewardRetrieveResponse]
       #
-      def retrieve(reward_id, opts = {})
-        req = {
+      def retrieve(reward_id, params = {})
+        @client.request(
           method: :get,
           path: ["rewards/%0s", reward_id],
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::RewardRetrieveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RewardRetrieveResponse,
+          options: params[:request_options]
+        )
       end
 
       # Get Rewards List from API
       #
-      # @param params [Unit::Models::RewardListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::RewardListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::RewardListParams::Filter] :filter
       #
@@ -55,20 +57,20 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::RewardListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::RewardListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::RewardListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "rewards",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::RewardListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::RewardListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

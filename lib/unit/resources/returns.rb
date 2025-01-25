@@ -7,17 +7,17 @@ module Unit
       #
       # @param transaction_id [String] ID of the transaction to return
       #
-      # @param params [Unit::Models::ReturnReturnParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::ReturnReturnParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::ReturnReturnParams::Data] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::ReturnReturnResponse]
       #
-      def return_(transaction_id, params = {}, opts = {})
-        parsed = Unit::Models::ReturnReturnParams.dump(params)
-        req = {
+      def return_(transaction_id, params)
+        parsed, options = Unit::Models::ReturnReturnParams.dump_request(params)
+        @client.request(
           method: :post,
           path: ["returns/%0s", transaction_id],
           headers: {
@@ -25,9 +25,9 @@ module Unit
             "Accept" => "application/vnd.api+json; charset=utf-8"
           },
           body: parsed,
-          model: Unit::Models::ReturnReturnResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::ReturnReturnResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

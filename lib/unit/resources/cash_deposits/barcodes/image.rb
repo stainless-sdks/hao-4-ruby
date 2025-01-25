@@ -9,18 +9,20 @@ module Unit
           #
           # @param barcode_number [String]
           #
-          # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+          # @param params [Unit::Models::CashDeposits::Barcodes::ImageRetrieveParams, Hash{Symbol=>Object}] .
+          #
+          #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
           #
           # @return [Object]
           #
-          def retrieve(barcode_number, opts = {})
-            req = {
+          def retrieve(barcode_number, params = {})
+            @client.request(
               method: :get,
               path: ["cash-deposits/barcodes/%0s/image", barcode_number],
               headers: {"Accept" => "image/png"},
-              model: Unit::Unknown
-            }
-            @client.request(req, opts)
+              model: Unit::Unknown,
+              options: params[:request_options]
+            )
           end
 
           # @param client [Unit::Client]

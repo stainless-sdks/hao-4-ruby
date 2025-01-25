@@ -3,6 +3,10 @@
 module Unit
   module Models
     class AtmLocationListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::AtmLocationListParams::Filter, nil]
@@ -14,8 +18,9 @@ module Unit
 
       # @!parse
       #   # @param filter [Unit::Models::AtmLocationListParams::Filter]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, **) = super
+      #   def initialize(filter: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

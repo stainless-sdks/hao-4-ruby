@@ -4,6 +4,10 @@ module Unit
   module Models
     module Applications
       class DocumentDownloadBackParams < Unit::BaseModel
+        # @!parse
+        #   extend Unit::RequestParameters::Converter
+        include Unit::RequestParameters
+
         # @!attribute application_id
         #
         #   @return [String]
@@ -11,8 +15,9 @@ module Unit
 
         # @!parse
         #   # @param application_id [String]
+        #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
         #   #
-        #   def initialize(application_id:, **) = super
+        #   def initialize(application_id:, request_options: {}, **) = super
 
         # def initialize: (Hash | Unit::BaseModel) -> void
       end

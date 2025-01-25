@@ -116,7 +116,7 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      unit.stop_payments.retrieve("stopPaymentId", max_retries: 3)
+      unit.stop_payments.retrieve("stopPaymentId", request_options: {max_retries: 3})
     end
 
     assert_equal(4, requester.attempts.length)
@@ -132,7 +132,7 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      unit.stop_payments.retrieve("stopPaymentId", max_retries: 4)
+      unit.stop_payments.retrieve("stopPaymentId", request_options: {max_retries: 4})
     end
 
     assert_equal(5, requester.attempts.length)
@@ -210,7 +210,10 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => nil})
+      unit.stop_payments.retrieve(
+        "stopPaymentId",
+        request_options: {extra_headers: {"x-stainless-retry-count" => nil}}
+      )
     end
 
     retry_count_headers = requester.attempts.map { |a| a[:headers]["x-stainless-retry-count"] }
@@ -223,7 +226,10 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::InternalServerError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"x-stainless-retry-count" => "42"})
+      unit.stop_payments.retrieve(
+        "stopPaymentId",
+        request_options: {extra_headers: {"x-stainless-retry-count" => "42"}}
+      )
     end
 
     retry_count_headers = requester.attempts.map { |a| a[:headers]["x-stainless-retry-count"] }
@@ -236,7 +242,7 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {})
+      unit.stop_payments.retrieve("stopPaymentId", request_options: {extra_headers: {}})
     end
 
     assert_equal("/redirected", requester.attempts.last[:url].path)
@@ -254,7 +260,7 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {})
+      unit.stop_payments.retrieve("stopPaymentId", request_options: {extra_headers: {}})
     end
 
     assert_equal("/redirected", requester.attempts.last[:url].path)
@@ -269,7 +275,10 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
+      unit.stop_payments.retrieve(
+        "stopPaymentId",
+        request_options: {extra_headers: {"Authorization" => "Bearer xyz"}}
+      )
     end
 
     assert_equal(
@@ -284,7 +293,10 @@ class UnitTest < Minitest::Test
     unit.requester = requester
 
     assert_raises(Unit::APIConnectionError) do
-      unit.stop_payments.retrieve("stopPaymentId", extra_headers: {"Authorization" => "Bearer xyz"})
+      unit.stop_payments.retrieve(
+        "stopPaymentId",
+        request_options: {extra_headers: {"Authorization" => "Bearer xyz"}}
+      )
     end
 
     assert_nil(requester.attempts.last[:headers]["Authorization"])

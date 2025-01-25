@@ -14,7 +14,7 @@ module Unit
 
       # Get List Statements from API
       #
-      # @param params [Unit::Models::StatementListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::StatementListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::StatementListParams::Filter] :filter
       #
@@ -22,20 +22,20 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::StatementListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::StatementListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::StatementListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "statements",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::StatementListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::StatementListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

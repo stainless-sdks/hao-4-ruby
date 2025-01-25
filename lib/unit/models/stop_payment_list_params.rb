@@ -3,6 +3,10 @@
 module Unit
   module Models
     class StopPaymentListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::StopPaymentListParams::Filter, nil]
@@ -35,8 +39,9 @@ module Unit
       #   # @param filter [Unit::Models::StopPaymentListParams::Filter]
       #   # @param page [Unit::Models::StopPaymentListParams::Page]
       #   # @param sort [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, page: nil, sort: nil, **) = super
+      #   def initialize(filter: nil, page: nil, sort: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

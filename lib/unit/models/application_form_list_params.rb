@@ -3,6 +3,10 @@
 module Unit
   module Models
     class ApplicationFormListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::ApplicationFormListParams::Filter, nil]
@@ -35,8 +39,9 @@ module Unit
       #   # @param filter [Unit::Models::ApplicationFormListParams::Filter]
       #   # @param page [Unit::Models::ApplicationFormListParams::Page]
       #   # @param sort [String]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, page: nil, sort: nil, **) = super
+      #   def initialize(filter: nil, page: nil, sort: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

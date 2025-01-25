@@ -3,6 +3,10 @@
 module Unit
   module Models
     class DisputeListParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute [r] filter
       #
       #   @return [Unit::Models::DisputeListParams::Filter, nil]
@@ -25,8 +29,9 @@ module Unit
       # @!parse
       #   # @param filter [Unit::Models::DisputeListParams::Filter]
       #   # @param page [Unit::Models::DisputeListParams::Page]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(filter: nil, page: nil, **) = super
+      #   def initialize(filter: nil, page: nil, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

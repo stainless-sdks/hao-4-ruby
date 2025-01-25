@@ -5,26 +5,26 @@ module Unit
     class AccountEndOfDay
       # Get Account Balance History List from API
       #
-      # @param params [Unit::Models::AccountEndOfDayListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::AccountEndOfDayListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::AccountEndOfDayListParams::Filter] :filter
       #
       #   @option params [Unit::Models::AccountEndOfDayListParams::Page] :page Parameters for paginated list requests
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::AccountEndOfDayListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::AccountEndOfDayListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::AccountEndOfDayListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "account-end-of-day",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::AccountEndOfDayListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::AccountEndOfDayListResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

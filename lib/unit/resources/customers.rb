@@ -13,47 +13,49 @@ module Unit
       #
       # @param customer_id [String] ID of the customer to get
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      # @param params [Unit::Models::CustomerRetrieveParams, Hash{Symbol=>Object}] .
+      #
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CustomerRetrieveResponse]
       #
-      def retrieve(customer_id, opts = {})
-        req = {
+      def retrieve(customer_id, params = {})
+        @client.request(
           method: :get,
           path: ["customers/%0s", customer_id],
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::CustomerRetrieveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CustomerRetrieveResponse,
+          options: params[:request_options]
+        )
       end
 
       # Update an Customer via API
       #
       # @param customer_id [String] ID of the customer to update
       #
-      # @param params [Unit::Models::CustomerUpdateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerUpdateParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CustomerUpdateParams::Data::UpdateIndividualCustomer, Unit::Models::CustomerUpdateParams::Data::UpdateBusinessCustomer] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CustomerUpdateResponse]
       #
-      def update(customer_id, params = {}, opts = {})
-        parsed = Unit::Models::CustomerUpdateParams.dump(params)
-        req = {
+      def update(customer_id, params = {})
+        parsed, options = Unit::Models::CustomerUpdateParams.dump_request(params)
+        @client.request(
           method: :patch,
           path: ["customers/%0s", customer_id],
           headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
           body: parsed,
-          model: Unit::Models::CustomerUpdateResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CustomerUpdateResponse,
+          options: options
+        )
       end
 
       # Get Customers List from API
       #
-      # @param params [Unit::Models::CustomerListParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerListParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CustomerListParams::Filter] :filter
       #
@@ -61,37 +63,37 @@ module Unit
       #
       #   @option params [String] :sort
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CustomerListResponse]
       #
-      def list(params = {}, opts = {})
-        parsed = Unit::Models::CustomerListParams.dump(params)
-        req = {
+      def list(params = {})
+        parsed, options = Unit::Models::CustomerListParams.dump_request(params)
+        @client.request(
           method: :get,
           path: "customers",
           query: parsed,
           headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-          model: Unit::Models::CustomerListResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CustomerListResponse,
+          options: options
+        )
       end
 
       # Archive a Customer via API
       #
       # @param customer_id [String] ID of the customer to archive
       #
-      # @param params [Unit::Models::CustomerArchiveParams, Hash{Symbol=>Object}] Attributes to send in this request.
+      # @param params [Unit::Models::CustomerArchiveParams, Hash{Symbol=>Object}] .
       #
       #   @option params [Unit::Models::CustomerArchiveParams::Data] :data
       #
-      # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+      #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
       #
       # @return [Unit::Models::CustomerArchiveResponse]
       #
-      def archive(customer_id, params = {}, opts = {})
-        parsed = Unit::Models::CustomerArchiveParams.dump(params)
-        req = {
+      def archive(customer_id, params = {})
+        parsed, options = Unit::Models::CustomerArchiveParams.dump_request(params)
+        @client.request(
           method: :post,
           path: ["customers/%0s/archive", customer_id],
           headers: {
@@ -99,9 +101,9 @@ module Unit
             "Accept" => "application/vnd.api+json; charset=utf-8"
           },
           body: parsed,
-          model: Unit::Models::CustomerArchiveResponse
-        }
-        @client.request(req, opts)
+          model: Unit::Models::CustomerArchiveResponse,
+          options: options
+        )
       end
 
       # @param client [Unit::Client]

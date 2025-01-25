@@ -9,17 +9,17 @@ module Unit
           #
           # @param customer_id [String] ID of the customer to create token for
           #
-          # @param params [Unit::Models::Customers::Token::VerificationCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+          # @param params [Unit::Models::Customers::Token::VerificationCreateParams, Hash{Symbol=>Object}] .
           #
           #   @option params [Unit::Models::Customers::Token::VerificationCreateParams::Data] :data
           #
-          # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+          #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
           #
           # @return [Unit::Models::Customers::Token::VerificationCreateResponse]
           #
-          def create(customer_id, params = {}, opts = {})
-            parsed = Unit::Models::Customers::Token::VerificationCreateParams.dump(params)
-            req = {
+          def create(customer_id, params = {})
+            parsed, options = Unit::Models::Customers::Token::VerificationCreateParams.dump_request(params)
+            @client.request(
               method: :post,
               path: ["customers/%0s/token/verification", customer_id],
               headers: {
@@ -27,9 +27,9 @@ module Unit
                 "Accept" => "application/vnd.api+json; charset=utf-8"
               },
               body: parsed,
-              model: Unit::Models::Customers::Token::VerificationCreateResponse
-            }
-            @client.request(req, opts)
+              model: Unit::Models::Customers::Token::VerificationCreateResponse,
+              options: options
+            )
           end
 
           # @param client [Unit::Client]

@@ -3,6 +3,10 @@
 module Unit
   module Models
     class ApplicationUpdateParams < Unit::BaseModel
+      # @!parse
+      #   extend Unit::RequestParameters::Converter
+      include Unit::RequestParameters
+
       # @!attribute data
       #
       #   @return [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer]
@@ -10,8 +14,9 @@ module Unit
 
       # @!parse
       #   # @param data [Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessApplicationBeneficialOwner, Unit::Models::ApplicationUpdateParams::Data::UpdateSoleProprietorApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateIndividualApplication, Unit::Models::ApplicationUpdateParams::Data::UpdateBusinessOfficer]
+      #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
       #   #
-      #   def initialize(data:, **) = super
+      #   def initialize(data:, request_options: {}, **) = super
 
       # def initialize: (Hash | Unit::BaseModel) -> void
 

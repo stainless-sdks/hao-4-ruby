@@ -4,6 +4,10 @@ module Unit
   module Models
     module Accounts
       class TransactionUpdateParams < Unit::BaseModel
+        # @!parse
+        #   extend Unit::RequestParameters::Converter
+        include Unit::RequestParameters
+
         # @!attribute account_id
         #
         #   @return [String]
@@ -17,8 +21,9 @@ module Unit
         # @!parse
         #   # @param account_id [String]
         #   # @param data [Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateTransactionTags, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateBookTransaction, Unit::Models::Accounts::TransactionUpdateParams::Data::UpdateChargebackTransaction]
+        #   # @param request_options [Unit::RequestOptions, Hash{Symbol=>Object}]
         #   #
-        #   def initialize(account_id:, data:, **) = super
+        #   def initialize(account_id:, data:, request_options: {}, **) = super
 
         # def initialize: (Hash | Unit::BaseModel) -> void
 

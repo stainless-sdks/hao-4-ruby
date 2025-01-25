@@ -6,24 +6,24 @@ module Unit
       class AtmDeposits
         # Create Atm Deposit Simulation via API
         #
-        # @param params [Unit::Models::Sandbox::AtmDepositCreateParams, Hash{Symbol=>Object}] Attributes to send in this request.
+        # @param params [Unit::Models::Sandbox::AtmDepositCreateParams, Hash{Symbol=>Object}] .
         #
         #   @option params [Unit::Models::Sandbox::AtmDepositCreateParams::Data] :data
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Sandbox::AtmDepositCreateResponse]
         #
-        def create(params = {}, opts = {})
-          parsed = Unit::Models::Sandbox::AtmDepositCreateParams.dump(params)
-          req = {
+        def create(params)
+          parsed, options = Unit::Models::Sandbox::AtmDepositCreateParams.dump_request(params)
+          @client.request(
             method: :post,
             path: "sandbox/atm-deposits",
             headers: {"Content-Type" => "application/vnd.api+json", "Accept" => "application/vnd.api+json"},
             body: parsed,
-            model: Unit::Models::Sandbox::AtmDepositCreateResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Sandbox::AtmDepositCreateResponse,
+            options: options
+          )
         end
 
         # @param client [Unit::Client]

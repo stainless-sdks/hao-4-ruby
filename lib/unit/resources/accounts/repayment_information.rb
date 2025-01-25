@@ -8,18 +8,20 @@ module Unit
         #
         # @param account_id [String] ID of the account to get repayment information for
         #
-        # @param opts [Hash{Symbol=>Object}, Unit::RequestOptions] Options to specify HTTP behaviour for this request.
+        # @param params [Unit::Models::Accounts::RepaymentInformationRetrieveParams, Hash{Symbol=>Object}] .
+        #
+        #   @option params [Unit::RequestOptions, Hash{Symbol=>Object}] :request_options
         #
         # @return [Unit::Models::Accounts::RepaymentInformationRetrieveResponse]
         #
-        def retrieve(account_id, opts = {})
-          req = {
+        def retrieve(account_id, params = {})
+          @client.request(
             method: :get,
             path: ["accounts/%0s/repayment-information", account_id],
             headers: {"Accept" => "application/vnd.api+json; charset=utf-8"},
-            model: Unit::Models::Accounts::RepaymentInformationRetrieveResponse
-          }
-          @client.request(req, opts)
+            model: Unit::Models::Accounts::RepaymentInformationRetrieveResponse,
+            options: params[:request_options]
+          )
         end
 
         # @param client [Unit::Client]
